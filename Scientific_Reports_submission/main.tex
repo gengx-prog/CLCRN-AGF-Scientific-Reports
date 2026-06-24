@@ -248,9 +248,11 @@ adaptive graph branch. The full gated model has the lowest mean MAE and RMSE,
 but the mean-fusion variant remains close and was completed under the
 mixed-precision caveat described above. We therefore treat this block as
 sensitivity evidence that supports adaptive graph mixing, not as a definitive
-precision-matched test of the gate. The 20-epoch screening run reaches the
-same qualitative warning: relative humidity is the most sensitive task,
-whereas wind, temperature, and cloud-cover screening results are mixed.
+precision-matched test of the gate. Figure~\ref{fig:ablation} visualizes the
+two full-budget ablation blocks with seed-level points. The 20-epoch screening
+run reaches the same qualitative warning: relative humidity is the most
+sensitive task, whereas wind, temperature, and cloud-cover screening results
+are mixed.
 
 \begin{table}[htbp]
 \caption{Component ablations. The first two blocks report 100-epoch
@@ -293,6 +295,18 @@ for the three-seed blocks. The humidity w/o gated fusion run used automatic
 mixed precision for training; all reported test metrics use the same
 zero-inclusive evaluator.}
 \end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\linewidth]{fig_component_ablation_100ep.pdf}
+\caption{\textbf{Full-budget component ablations for temperature and relative
+humidity.} Bars show mean $\pm$ sample standard deviation across seeds
+2023--2025, and dots show individual seed results. Panels a--b show test MAE;
+panels c--d show test RMSE. The relative-humidity w/o gated fusion run used
+automatic mixed precision during training; all reported test metrics use the
+same zero-inclusive evaluator. Lower is better.}
+\label{fig:ablation}
+\end{figure}
 
 \subsection*{Computational cost}
 The AGF encoder approximately doubles the number of trainable parameters and
