@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "completed_runs": 1,
+  "total_runs": 1,
+  "current_variant": null,
+  "current_dataset": null,
+  "completed_items": [
+    "wo_gated_fusion/humidity"
+  ]
+}

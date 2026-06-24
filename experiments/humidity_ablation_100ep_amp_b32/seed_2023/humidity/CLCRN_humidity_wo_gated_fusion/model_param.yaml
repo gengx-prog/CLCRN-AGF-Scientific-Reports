@@ -1,0 +1,56 @@
+base_dir: data/model
+log_level: INFO
+data:
+  batch_size: 32
+  dataset_dir: D:\CLCRN-main\Weather Bench_dataset\humidity
+  position_file: D:\CLCRN-main\Weather Bench_dataset\humidity\position_info.pkl
+  test_batch_size: 128
+  num_workers: 0
+model:
+  model_name: CLCRN
+  cl_decay_steps: 2000
+  horizon: 12
+  input_dim: 1
+  output_dim: 1
+  l1_decay: 0
+  max_view: 1
+  node_num: 2048
+  layer_num: 2
+  rnn_units: 32
+  seq_len: 12
+  use_curriculum_learning: true
+  embed_dim: 8
+  lck_structure:
+  - 10
+  - 8
+  - 6
+  location_dim: 2
+  use_asttn_encoder: true
+  asttn_node_dim: 10
+  asttn_hidden_dim: 8
+  asttn_heads: 2
+  asttn_topk: 4
+  asttn_fusion_mode: mean
+train:
+  base_lr: 0.01
+  dropout: 0
+  epoch: 0
+  epochs: 100
+  epsilon: 0.001
+  log_dir: D:\CLCRN-main\experiments\humidity_ablation_100ep_amp_b32\seed_2023\humidity
+  lr_decay_ratio: 0.95
+  max_grad_norm: 5
+  max_to_keep: 100
+  min_learning_rate: 1.0e-08
+  optimizer: adam
+  patience: 50
+  steps:
+  - 10
+  - 20
+  - 30
+  - 40
+  - 50
+  test_every_n_epochs: 10
+  experiment_name: CLCRN_humidity_wo_gated_fusion
+  use_amp: true
+gpu: 0

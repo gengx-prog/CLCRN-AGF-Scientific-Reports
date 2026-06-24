@@ -1,0 +1,54 @@
+{
+  "seed": 2025,
+  "epochs": 100,
+  "datasets": [
+    "humidity"
+  ],
+  "variants": [
+    {
+      "id": "wo_gated_fusion",
+      "label": "w/o Gated Fusion",
+      "model_overrides": {
+        "use_asttn_encoder": true,
+        "asttn_fusion_mode": "mean"
+      }
+    }
+  ],
+  "results": [
+    {
+      "dataset": "humidity",
+      "best_epoch": 84,
+      "best_val_mae": 4.556149005889893,
+      "mae": 4.622537612915039,
+      "rmse": 7.133840864908597,
+      "mape": 0.07285220175981522,
+      "step_metrics": {
+        "mae_3": 1.9902586936950684,
+        "rmse_3": 3.3843557834625244,
+        "mape_3": 0.02947114408016205,
+        "mae_6": 3.1822454929351807,
+        "rmse_6": 5.214471340179443,
+        "mape_6": 0.04904653877019882,
+        "mae_12": 4.622537612915039,
+        "rmse_12": 7.133841037750244,
+        "mape_12": 0.07285220175981522
+      },
+      "variant": "wo_gated_fusion",
+      "variant_label": "w/o Gated Fusion"
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "humidity",
+      "wo_gated_fusion": {
+        "mae": 4.622537612915039,
+        "rmse": 7.133840864908597,
+        "best_val_mae": 4.556149005889893
+      },
+      "original": {
+        "mae": 4.677337646484375,
+        "rmse": 7.308723713602625
+      }
+    }
+  ]
+}

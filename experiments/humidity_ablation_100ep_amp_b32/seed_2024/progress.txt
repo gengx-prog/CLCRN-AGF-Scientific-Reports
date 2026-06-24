@@ -1,0 +1,7 @@
+status: completed
+completed: 1/1
+current_variant: None
+current_dataset: None
+
+completed_items:
+- wo_gated_fusion/humidity

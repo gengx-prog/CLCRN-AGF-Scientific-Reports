@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "current_seed": null,
+  "completed": 3,
+  "total": 3,
+  "seeds": [
+    2023,
+    2024,
+    2025
+  ],
+  "batch_size": 32,
+  "test_batch_size": 128,
+  "use_amp": true
+}
