@@ -30,30 +30,24 @@
 \begin{abstract}
 Conditional Local Convolution Recurrent Network (CLCRN) is an established
 graph-recurrent model for meteorological forecasting. Rather than pursuing a
-leaderboard result, we ask under controlled conditions whether augmenting this
-backbone with non-local adaptive structure yields reproducible,
-architecture-attributable gains, and for which variables. We examine whether a
-compact adaptive graph-fusion (AGF) encoder can improve CLCRN by learning
-non-local node dependencies before the original recurrent backbone. The
-extension builds a directed adjacency from trainable source and destination
-node embeddings, keeps a renormalized top-$k$ neighbourhood, and fuses the
-graph-aggregated representation with a residual projection through a learned
-gate. Experiments use the WeatherBench preprocessing and
-four tasks from the original CLCRN study: 2-m temperature, relative humidity,
-10-m surface wind, and total cloud cover. We compare CLCRN-AGF with a
-schedule-matched CLCRN control over five seed replicates. The clearest
-effect is relative humidity: CLCRN-AGF reduces mean absolute error by 2.28\%
-and root mean squared error by 3.02\%; all seeds improve (Welch tests:
-$p=7.6\times10^{-4}$ and $p=8.4\times10^{-5}$). Effects on
-temperature, wind, and cloud cover are small or metric-dependent. Component
-ablations show that the adaptive graph branch contributes most clearly for
-humidity, whereas replacing the learned gate by mean fusion remains
-competitive. These results narrow the contribution of adaptive graph fusion:
-it is useful for the humidity task but is not a uniformly beneficial
-replacement for the original CLCRN encoder. More broadly, the study shows how a
-schedule-matched control, multi-seed replication, and significance testing
-separate genuine architectural gains from optimization and reporting effects---
-a discipline directly transferable to other spatio-temporal forecasting models.
+leaderboard result, we ask whether augmenting this backbone with a compact
+adaptive graph-fusion (AGF) encoder---which learns non-local node dependencies
+before the unchanged recurrent backbone---yields reproducible,
+architecture-attributable gains, and for which variables. The extension builds
+a directed adjacency from trainable source and destination node embeddings,
+keeps a renormalized top-$k$ neighbourhood, and fuses the graph-aggregated
+representation with a residual projection through a learned gate. Using the
+WeatherBench preprocessing and four tasks from the original CLCRN study (2-m
+temperature, relative humidity, 10-m surface wind, and total cloud cover), we
+compare CLCRN-AGF with a schedule-matched CLCRN control over five seed
+replicates. The clearest effect is on relative humidity, where CLCRN-AGF
+reduces mean absolute error by 2.28\% and root mean squared error by 3.02\%,
+improving in every replicate and surviving multiple-comparison correction.
+Effects on temperature, wind, and cloud cover are small or metric-dependent,
+and component ablations attribute the humidity gain chiefly to the adaptive
+graph branch. The study shows how schedule-matched controls, multi-seed
+replication, and significance testing separate genuine architectural gains
+from optimization and reporting effects.
 \end{abstract}
 
 \begin{document}
@@ -976,362 +970,273 @@ editing to improve readability and organization. The authors reviewed and
 edited all generated content and take full responsibility for the final
 manuscript.
 
-\begin{thebibliography}{99}
+\begin{thebibliography}{58}
 
 \bibitem{bauer2015quiet}
-  P.~Bauer, A.~Thorpe, and G.~Brunet.
-  \newblock The quiet revolution of numerical weather prediction.
-  \newblock \textit{Nature}, 525(7567):47--55, 2015.
+  Bauer, P., Thorpe, A. \& Brunet, G. The quiet revolution of numerical
+  weather prediction. \textit{Nature} \textbf{525,} 47--55 (2015).
 
 \bibitem{rasp2020weatherbench}
-  S.~Rasp, P.~D.~Dueben, S.~Scher, J.~A.~Weyn, S.~Mouatadid, and N.~Thuerey.
-  \newblock WeatherBench: A benchmark data set for data-driven weather
-    forecasting.
-  \newblock \textit{J.\ Adv.\ Model.\ Earth Syst.}, 12(11):e2020MS002203, 2020.
-
-\bibitem{weyn2020improving}
-  J.~A.~Weyn, D.~R.~Durran, and R.~Caruana.
-  \newblock Improving data-driven global weather prediction using deep
-    convolutional neural networks on a cubed sphere.
-  \newblock \textit{J.\ Adv.\ Model.\ Earth Syst.}, 12(9):e2020MS002109, 2020.
-
-\bibitem{pathak2022fourcastnet}
-  J.~Pathak et al.
-  \newblock {FourCastNet}: A global data-driven high-resolution weather model
-    using adaptive {Fourier} neural operators.
-  \newblock \textit{arXiv preprint arXiv:2202.11214}, 2022.
-
-\bibitem{bi2023accurate}
-  K.~Bi, L.~Xie, H.~Zhang, X.~Chen, X.~Gu, and Q.~Tian.
-  \newblock Accurate medium-range global weather forecasting with 3D neural
-    networks.
-  \newblock \textit{Nature}, 619(7970):533--538, 2023.
-
-\bibitem{lam2023learning}
-  R.~Lam et al.
-  \newblock Learning skillful medium-range global weather forecasting.
-  \newblock \textit{Science}, 382(6677):1416--1421, 2023.
-
-\bibitem{nguyen2023climax}
-  T.~Nguyen, J.~Brandstetter, A.~Kapoor, J.~K.~Gupta, and A.~Grover.
-  \newblock {ClimaX}: A foundation model for weather and climate.
-  \newblock In \textit{International Conference on Machine Learning (ICML)},
-    25904--25938, 2023.
-
-\bibitem{bonev2023spherical}
-  B.~Bonev, T.~Kurth, C.~Hundt, J.~Pathak, M.~Baust, K.~Kashinath, and
-    A.~Anandkumar.
-  \newblock Spherical {Fourier} neural operators: Learning stable dynamics on
-    the sphere.
-  \newblock In \textit{International Conference on Machine Learning (ICML)},
-    2806--2823, 2023.
-
-\bibitem{kochkov2024neural}
-  D.~Kochkov et al.
-  \newblock Neural general circulation models for weather and climate.
-  \newblock \textit{Nature}, 632(8027):1060--1066, 2024.
-
-\bibitem{price2025probabilistic}
-  I.~Price et al.
-  \newblock Probabilistic weather forecasting with machine learning.
-  \newblock \textit{Nature}, 637(8044):84--90, 2025.
-
-\bibitem{lin2022conditional}
-  H.~Lin, Z.~Gao, Y.~Xu, L.~Wu, L.~Li, and S.~Z.~Li.
-  \newblock Conditional local convolution for spatio-temporal meteorological
-    forecasting.
-  \newblock \textit{Proc.\ AAAI Conf.\ Artif.\ Intell.}, 36(7):7470--7478, 2022.
-  \newblock doi:10.1609/aaai.v36i7.20711.
-
-\bibitem{defferrard2016chebnet}
-  M.~Defferrard, X.~Bresson, and P.~Vandergheynst.
-  \newblock Convolutional neural networks on graphs with fast localized
-    spectral filtering.
-  \newblock In \textit{NeurIPS}, 3844--3852, 2016.
-
-\bibitem{kipf2017semi}
-  T.~N.~Kipf and M.~Welling.
-  \newblock Semi-supervised classification with graph convolutional networks.
-  \newblock In \textit{ICLR}, 2017.
-
-\bibitem{velickovic2018graph}
-  P.~Veli\v{c}kovi\'c, G.~Cucurull, A.~Casanova, A.~Romero, P.~Li\`o, and
-    Y.~Bengio.
-  \newblock Graph attention networks.
-  \newblock In \textit{ICLR}, 2018.
-
-\bibitem{hamilton2017inductive}
-  W.~L.~Hamilton, R.~Ying, and J.~Leskovec.
-  \newblock Inductive representation learning on large graphs.
-  \newblock In \textit{NeurIPS}, 1024--1034, 2017.
-
-\bibitem{li2018diffusion}
-  Y.~Li, R.~Yu, C.~Shahabi, and Y.~Liu.
-  \newblock Diffusion convolutional recurrent neural network: Data-driven
-    traffic forecasting.
-  \newblock In \textit{ICLR}, 2018.
-
-\bibitem{yu2018spatio}
-  B.~Yu, H.~Yin, and Z.~Zhu.
-  \newblock Spatio-temporal graph convolutional networks: A deep learning
-    framework for traffic forecasting.
-  \newblock In \textit{IJCAI}, 3634--3640, 2018.
-
-\bibitem{guo2019attention}
-  S.~Guo, Y.~Lin, N.~Feng, C.~Song, and H.~Wan.
-  \newblock Attention based spatial-temporal graph convolutional networks for
-    traffic flow forecasting.
-  \newblock In \textit{AAAI}, 922--929, 2019.
-
-\bibitem{wu2019graph}
-  Z.~Wu, S.~Pan, G.~Long, J.~Jiang, and C.~Zhang.
-  \newblock Graph WaveNet for deep spatial-temporal graph modeling.
-  \newblock In \textit{IJCAI}, 1907--1913, 2019.
-
-\bibitem{bai2020adaptive}
-  L.~Bai, L.~Yao, C.~Li, X.~Wang, and C.~Wang.
-  \newblock Adaptive graph convolutional recurrent network for traffic
-    forecasting.
-  \newblock In \textit{NeurIPS}, 17804--17815, 2020.
-
-\bibitem{wu2020connecting}
-  Z.~Wu, S.~Pan, G.~Long, J.~Jiang, X.~Chang, and C.~Zhang.
-  \newblock Connecting the dots: Multivariate time series forecasting with
-    graph neural networks.
-  \newblock In \textit{KDD}, 753--763, 2020.
-
-\bibitem{zheng2020gman}
-  C.~Zheng, X.~Fan, C.~Wang, and J.~Qi.
-  \newblock {GMAN}: A graph multi-attention network for traffic prediction.
-  \newblock In \textit{AAAI}, 1234--1241, 2020.
-
-\bibitem{fang2021spatial}
-  Z.~Fang, Q.~Long, G.~Song, and K.~Xie.
-  \newblock Spatial-temporal graph {ODE} networks for traffic flow forecasting.
-  \newblock In \textit{KDD}, 364--373, 2021.
-
-\bibitem{lan2022dstagnn}
-  S.~Lan, Y.~Ma, W.~Huang, W.~Wang, H.~Yang, and P.~Li.
-  \newblock {DSTAGNN}: Dynamic spatial-temporal aware graph neural network for
-    traffic flow forecasting.
-  \newblock In \textit{ICML}, 11906--11917, 2022.
-
-\bibitem{jin2023spatio}
-  G.~Jin, Y.~Liang, Y.~Fang, Z.~Shao, J.~Huang, J.~Zhang, and Y.~Zheng.
-  \newblock Spatio-temporal graph neural networks for predictive learning in
-    urban computing: A survey.
-  \newblock \textit{IEEE Trans.\ Knowl.\ Data Eng.}, 36(10):5388--5408, 2023.
-
-\bibitem{shang2021discrete}
-  C.~Shang, J.~Chen, and J.~Bi.
-  \newblock Discrete graph structure learning for forecasting multiple time
-    series.
-  \newblock In \textit{ICLR}, 2021.
-
-\bibitem{jiang2023pdformer}
-  J.~Jiang, C.~Han, W.~X.~Zhao, and J.~Wang.
-  \newblock {PDFormer}: Propagation delay-aware dynamic long-range transformer
-    for traffic flow prediction.
-  \newblock In \textit{AAAI}, 4365--4373, 2023.
-
-\bibitem{liu2023spatio}
-  H.~Liu, Z.~Dong, R.~Jiang, J.~Deng, J.~Deng, Q.~Chen, and X.~Song.
-  \newblock Spatio-temporal adaptive embedding makes vanilla transformer
-    {SOTA} for traffic forecasting.
-  \newblock In \textit{CIKM}, 4125--4129, 2023.
-
-\bibitem{feng2022adaptive}
-  A.~Feng and L.~Tassiulas.
-  \newblock Adaptive graph spatial-temporal transformer network for traffic
-    flow forecasting.
-  \newblock \textit{arXiv preprint arXiv:2207.05064}, 2022.
-
-\bibitem{huang2023adaptive}
-  B.~Huang, H.~Dou, Y.~Luo, J.~Li, J.~Wang, and T.~Zhou.
-  \newblock Adaptive spatiotemporal transformer graph network for traffic flow
-    forecasting by {IoT} loop detectors.
-  \newblock \textit{IEEE Internet of Things Journal}, 10(2):1642--1653, 2023.
-
-\bibitem{vaswani2017attention}
-  A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N.~Gomez,
-    {\L}.~Kaiser, and I.~Polosukhin.
-  \newblock Attention is all you need.
-  \newblock In \textit{NeurIPS}, 5998--6008, 2017.
-
-\bibitem{zhou2021informer}
-  H.~Zhou, S.~Zhang, J.~Peng, S.~Zhang, J.~Li, H.~Xiong, and W.~Zhang.
-  \newblock Informer: Beyond efficient transformer for long sequence
-    time-series forecasting.
-  \newblock In \textit{AAAI}, 11106--11115, 2021.
-
-\bibitem{wu2021autoformer}
-  H.~Wu, J.~Xu, J.~Wang, and M.~Long.
-  \newblock Autoformer: Decomposition transformers with auto-correlation for
-    long-term series forecasting.
-  \newblock In \textit{NeurIPS}, 22419--22430, 2021.
-
-\bibitem{zeng2023transformers}
-  A.~Zeng, M.~Chen, L.~Zhang, and Q.~Xu.
-  \newblock Are transformers effective for time series forecasting?
-  \newblock In \textit{AAAI}, 11121--11128, 2023.
-
-\bibitem{nie2023time}
-  Y.~Nie, N.~H.~Nguyen, P.~Sinthong, and J.~Kalagnanam.
-  \newblock A time series is worth 64 words: Long-term forecasting with
-    transformers.
-  \newblock In \textit{ICLR}, 2023.
-
-\bibitem{wu2023timesnet}
-  H.~Wu, T.~Hu, Y.~Liu, H.~Zhou, J.~Wang, and M.~Long.
-  \newblock {TimesNet}: Temporal 2D-variation modeling for general time series
-    analysis.
-  \newblock In \textit{ICLR}, 2023.
-
-\bibitem{zhang2023crossformer}
-  Y.~Zhang and J.~Yan.
-  \newblock Crossformer: Transformer utilizing cross-dimension dependency for
-    multivariate time series forecasting.
-  \newblock In \textit{ICLR}, 2023.
-
-\bibitem{liu2024itransformer}
-  Y.~Liu, T.~Hu, H.~Zhang, H.~Wu, S.~Wang, L.~Ma, and M.~Long.
-  \newblock {iTransformer}: Inverted transformers are effective for time series
-    forecasting.
-  \newblock In \textit{ICLR}, 2024.
-
-\bibitem{gu2023mamba}
-  A.~Gu and T.~Dao.
-  \newblock Mamba: Linear-time sequence modeling with selective state spaces.
-  \newblock \textit{arXiv preprint arXiv:2312.00752}, 2023.
-
-\bibitem{cao2020spectral}
-  D.~Cao et al.
-  \newblock Spectral temporal graph neural network for multivariate time-series
-    forecasting.
-  \newblock In \textit{NeurIPS}, 17766--17778, 2020.
-
-\bibitem{oreshkin2020nbeats}
-  B.~N.~Oreshkin, D.~Carpov, N.~Chapados, and Y.~Bengio.
-  \newblock {N-BEATS}: Neural basis expansion analysis for interpretable time
-    series forecasting.
-  \newblock In \textit{ICLR}, 2020.
-
-\bibitem{frnda2022ecmwf}
-  J.~Frnda, M.~Durica, J.~Rozhon, M.~Vojtekova, J.~Nedoma, and R.~Martinek.
-  \newblock ECMWF short-term prediction accuracy improvement by deep learning.
-  \newblock \textit{Scientific Reports}, 12:7898, 2022.
-  \newblock doi:10.1038/s41598-022-11936-9.
-
-\bibitem{zanchi2023microclimate}
-  M.~Zanchi, S.~Zapperi, and C.~A.~M.~La Porta.
-  \newblock Harnessing deep learning to forecast local microclimate using
-    global climate data.
-  \newblock \textit{Scientific Reports}, 13:21062, 2023.
-  \newblock doi:10.1038/s41598-023-48028-1.
-
-\bibitem{guo2024monthly}
-  Q.~Guo, Z.~He, and Z.~Wang.
-  \newblock Monthly climate prediction using deep convolutional neural network
-    and long short-term memory.
-  \newblock \textit{Scientific Reports}, 14:17748, 2024.
-  \newblock doi:10.1038/s41598-024-68906-6.
-
-\bibitem{hu2025spherical}
-  Y.~Hu, F.~Yin, W.~Zhang, K.~Ren, J.~Song, K.~Deng, and D.~Zhang.
-  \newblock Spherical multigrid neural operator for improving autoregressive
-    global weather forecasting.
-  \newblock \textit{Scientific Reports}, 15:11522, 2025.
-  \newblock doi:10.1038/s41598-025-96208-y.
-
-\bibitem{alves2025spatiotemporal}
-  D.~Alves, F.~Mendon\c{c}a, S.~S.~Mostafa, and F.~Morgado-Dias.
-  \newblock A deep learning approach for improving spatiotemporal resolution
-    of numerical weather prediction forecasts.
-  \newblock \textit{Scientific Reports}, 15:32796, 2025.
-  \newblock doi:10.1038/s41598-025-17867-5.
-
-\bibitem{chen2025multiscale}
-  H.~Chen, J.~Huang, Y.~Lu, and J.~Huang.
-  \newblock Multi-scale spatio-temporal graph neural network for urban traffic
-    flow prediction.
-  \newblock \textit{Scientific Reports}, 15:26732, 2025.
-  \newblock doi:10.1038/s41598-025-11072-0.
-
-\bibitem{xiao2025adaptive}
-  Z.~Xiao, Q.~Shen, C.~Li, D.~Li, and Q.~Liu.
-  \newblock An adaptive spatiotemporal dynamic graph convolutional network for
-    traffic prediction.
-  \newblock \textit{Scientific Reports}, 15:27098, 2025.
-  \newblock doi:10.1038/s41598-025-12261-7.
-
-\bibitem{xiao2025graph}
-  H.~Xiao, B.~Zou, and J.~Xiao.
-  \newblock Graph convolution networks based on adaptive spatiotemporal
-    attention for traffic flow forecasting.
-  \newblock \textit{Scientific Reports}, 15:8935, 2025.
-  \newblock doi:10.1038/s41598-025-88706-w.
-
-\bibitem{cheon2026costefficient}
-  M.~Cheon, J.-H.~Kim, Y.~Choi, Y.-H.~Choi, S.-Y.~Kang, J.-G.~Lee,
-    Y.-G.~Ham, J.~Y.~Kim, and D.~Kang.
-  \newblock Understanding machine learning weather prediction by designing a
-    cost-efficient model with knowledge-oriented modules.
-  \newblock \textit{Scientific Reports}, 16:2413, 2026.
-  \newblock doi:10.1038/s41598-025-32366-3.
+  Rasp, S. et al. WeatherBench: A benchmark data set for data-driven weather
+  forecasting. \textit{J. Adv. Model. Earth Syst.} \textbf{12,}
+  e2020MS002203 (2020).
 
 \bibitem{hersbach2020era5}
-  H.~Hersbach et al.
-  \newblock The {ERA5} global reanalysis.
-  \newblock \textit{Q.\ J.\ R.\ Meteorol.\ Soc.}, 146(730):1999--2049, 2020.
+  Hersbach, H. et al. The ERA5 global reanalysis. \textit{Q. J. R. Meteorol.
+  Soc.} \textbf{146,} 1999--2049 (2020).
+
+\bibitem{weyn2020improving}
+  Weyn, J. A., Durran, D. R. \& Caruana, R. Improving data-driven global
+  weather prediction using deep convolutional neural networks on a cubed
+  sphere. \textit{J. Adv. Model. Earth Syst.} \textbf{12,} e2020MS002109
+  (2020).
+
+\bibitem{pathak2022fourcastnet}
+  Pathak, J. et al. FourCastNet: A global data-driven high-resolution weather
+  model using adaptive Fourier neural operators. Preprint at
+  https://arxiv.org/abs/2202.11214 (2022).
+
+\bibitem{bi2023accurate}
+  Bi, K. et al. Accurate medium-range global weather forecasting with 3D
+  neural networks. \textit{Nature} \textbf{619,} 533--538 (2023).
+
+\bibitem{lam2023learning}
+  Lam, R. et al. Learning skillful medium-range global weather forecasting.
+  \textit{Science} \textbf{382,} 1416--1421 (2023).
+
+\bibitem{nguyen2023climax}
+  Nguyen, T., Brandstetter, J., Kapoor, A., Gupta, J. K. \& Grover, A.
+  ClimaX: A foundation model for weather and climate. In
+  \textit{International Conference on Machine Learning (ICML)} 25904--25938
+  (2023).
+
+\bibitem{bonev2023spherical}
+  Bonev, B. et al. Spherical Fourier neural operators: Learning stable
+  dynamics on the sphere. In \textit{International Conference on Machine
+  Learning (ICML)} 2806--2823 (2023).
+
+\bibitem{kochkov2024neural}
+  Kochkov, D. et al. Neural general circulation models for weather and
+  climate. \textit{Nature} \textbf{632,} 1060--1066 (2024).
+
+\bibitem{price2025probabilistic}
+  Price, I. et al. Probabilistic weather forecasting with machine learning.
+  \textit{Nature} \textbf{637,} 84--90 (2025).
+
+\bibitem{lin2022conditional}
+  Lin, H. et al. Conditional local convolution for spatio-temporal
+  meteorological forecasting. \textit{Proc. AAAI Conf. Artif. Intell.}
+  \textbf{36,} 7470--7478 (2022).
+
+\bibitem{defferrard2016chebnet}
+  Defferrard, M., Bresson, X. \& Vandergheynst, P. Convolutional neural
+  networks on graphs with fast localized spectral filtering. In
+  \textit{NeurIPS} 3844--3852 (2016).
+
+\bibitem{kipf2017semi}
+  Kipf, T. N. \& Welling, M. Semi-supervised classification with graph
+  convolutional networks. In \textit{ICLR} (2017).
+
+\bibitem{velickovic2018graph}
+  Veli\v{c}kovi\'c, P. et al. Graph attention networks. In \textit{ICLR}
+  (2018).
+
+\bibitem{hamilton2017inductive}
+  Hamilton, W. L., Ying, R. \& Leskovec, J. Inductive representation
+  learning on large graphs. In \textit{NeurIPS} 1024--1034 (2017).
 
 \bibitem{cohen2019gauge}
-  T.~S.~Cohen, M.~Geiger, J.~K\"ohler, and M.~Welling.
-  \newblock Gauge equivariant convolutional networks and the icosahedral {CNN}.
-  \newblock In \textit{ICML}, 1321--1330, 2019.
+  Cohen, T. S., Geiger, M., K\"ohler, J. \& Welling, M. Gauge equivariant
+  convolutional networks and the icosahedral CNN. In \textit{International
+  Conference on Machine Learning (ICML)} 1321--1330 (2019).
 
-\bibitem{seo2018structured}
-  Y.~Seo, M.~Defferrard, P.~Vandergheynst, and X.~Bresson.
-  \newblock Structured sequence modeling with graph convolutional recurrent
-    networks.
-  \newblock In \textit{ICONIP}, 362--373, 2018.
+\bibitem{li2018diffusion}
+  Li, Y., Yu, R., Shahabi, C. \& Liu, Y. Diffusion convolutional recurrent
+  neural network: Data-driven traffic forecasting. In \textit{ICLR} (2018).
 
-\bibitem{zhao2019tgcn}
-  L.~Zhao, Y.~Song, C.~Zhang, Y.~Liu, P.~Wang, T.~Lin, M.~Deng, and H.~Li.
-  \newblock {T-GCN}: A temporal graph convolutional network for traffic
-    prediction.
-  \newblock \textit{IEEE Trans.\ Intell.\ Transp.\ Syst.}, 21(9):3848--3858, 2020.
+\bibitem{yu2018spatio}
+  Yu, B., Yin, H. \& Zhu, Z. Spatio-temporal graph convolutional networks: A
+  deep learning framework for traffic forecasting. In \textit{IJCAI}
+  3634--3640 (2018).
 
-\bibitem{qi2017pointnet}
-  C.~R.~Qi, H.~Su, K.~Mo, and L.~J.~Guibas.
-  \newblock {PointNet}: Deep learning on point sets for 3D classification and
-    segmentation.
-  \newblock In \textit{CVPR}, 652--660, 2017.
+\bibitem{guo2019attention}
+  Guo, S., Lin, Y., Feng, N., Song, C. \& Wan, H. Attention based
+  spatial-temporal graph convolutional networks for traffic flow
+  forecasting. In \textit{AAAI} 922--929 (2019).
 
-\bibitem{wang2019dynamic}
-  Y.~Wang, Y.~Sun, Z.~Liu, S.~E.~Sarma, M.~M.~Bronstein, and J.~M.~Solomon.
-  \newblock Dynamic graph {CNN} for learning on point clouds.
-  \newblock \textit{ACM Trans.\ Graph.}, 38(5):146, 2019.
+\bibitem{wu2019graph}
+  Wu, Z., Pan, S., Long, G., Jiang, J. \& Zhang, C. Graph WaveNet for deep
+  spatial-temporal graph modeling. In \textit{IJCAI} 1907--1913 (2019).
+
+\bibitem{bai2020adaptive}
+  Bai, L., Yao, L., Li, C., Wang, X. \& Wang, C. Adaptive graph
+  convolutional recurrent network for traffic forecasting. In
+  \textit{NeurIPS} 17804--17815 (2020).
+
+\bibitem{wu2020connecting}
+  Wu, Z. et al. Connecting the dots: Multivariate time series forecasting
+  with graph neural networks. In \textit{KDD} 753--763 (2020).
+
+\bibitem{zheng2020gman}
+  Zheng, C., Fan, X., Wang, C. \& Qi, J. GMAN: A graph multi-attention
+  network for traffic prediction. In \textit{AAAI} 1234--1241 (2020).
+
+\bibitem{fang2021spatial}
+  Fang, Z., Long, Q., Song, G. \& Xie, K. Spatial-temporal graph ODE
+  networks for traffic flow forecasting. In \textit{KDD} 364--373 (2021).
+
+\bibitem{lan2022dstagnn}
+  Lan, S. et al. DSTAGNN: Dynamic spatial-temporal aware graph neural
+  network for traffic flow forecasting. In \textit{International Conference
+  on Machine Learning (ICML)} 11906--11917 (2022).
+
+\bibitem{jin2023spatio}
+  Jin, G. et al. Spatio-temporal graph neural networks for predictive
+  learning in urban computing: A survey. \textit{IEEE Trans. Knowl. Data
+  Eng.} \textbf{36,} 5388--5408 (2023).
 
 \bibitem{cini2023scalable}
-  A.~Cini, I.~Marisca, F.~M.~Bianchi, and C.~Alippi.
-  \newblock Scalable spatiotemporal graph neural networks.
-  \newblock In \textit{AAAI}, 7218--7226, 2023.
+  Cini, A., Marisca, I., Bianchi, F. M. \& Alippi, C. Scalable
+  spatiotemporal graph neural networks. In \textit{AAAI} 7218--7226 (2023).
 
 \bibitem{zambon2023graph}
-  D.~Zambon, A.~Cini, L.~Livi, and C.~Alippi.
-  \newblock Graph state-space models.
-  \newblock \textit{arXiv preprint arXiv:2301.01741}, 2023.
+  Zambon, D., Cini, A., Livi, L. \& Alippi, C. Graph state-space models.
+  Preprint at https://arxiv.org/abs/2301.01741 (2023).
 
 \bibitem{wen2023diffstg}
-  H.~Wen, Y.~Lin, Y.~Xia, H.~Wan, Q.~Wen, R.~Zimmermann, and Y.~Liang.
-  \newblock {DiffSTG}: Probabilistic spatio-temporal graph forecasting with
-    denoising diffusion models.
-  \newblock In \textit{ACM SIGSPATIAL}, 1--12, 2023.
+  Wen, H. et al. DiffSTG: Probabilistic spatio-temporal graph forecasting
+  with denoising diffusion models. In \textit{ACM SIGSPATIAL} 1--12 (2023).
 
 \bibitem{oskarsson2023temporal}
-  J.~Oskarsson, P.~Sid\'en, and F.~Lindsten.
-  \newblock Temporal graph neural networks for irregular data.
-  \newblock In \textit{AISTATS}, 4515--4531, 2023.
+  Oskarsson, J., Sid\'en, P. \& Lindsten, F. Temporal graph neural networks
+  for irregular data. In \textit{AISTATS} 4515--4531 (2023).
+
+\bibitem{shang2021discrete}
+  Shang, C., Chen, J. \& Bi, J. Discrete graph structure learning for
+  forecasting multiple time series. In \textit{ICLR} (2021).
+
+\bibitem{qi2017pointnet}
+  Qi, C. R., Su, H., Mo, K. \& Guibas, L. J. PointNet: Deep learning on
+  point sets for 3D classification and segmentation. In \textit{CVPR}
+  652--660 (2017).
+
+\bibitem{wang2019dynamic}
+  Wang, Y. et al. Dynamic graph CNN for learning on point clouds.
+  \textit{ACM Trans. Graph.} \textbf{38,} 146 (2019).
+
+\bibitem{jiang2023pdformer}
+  Jiang, J., Han, C., Zhao, W. X. \& Wang, J. PDFormer: Propagation
+  delay-aware dynamic long-range transformer for traffic flow prediction.
+  In \textit{AAAI} 4365--4373 (2023).
+
+\bibitem{liu2023spatio}
+  Liu, H. et al. Spatio-temporal adaptive embedding makes vanilla
+  transformer SOTA for traffic forecasting. In \textit{CIKM} 4125--4129
+  (2023).
+
+\bibitem{feng2022adaptive}
+  Feng, A. \& Tassiulas, L. Adaptive graph spatial-temporal transformer
+  network for traffic flow forecasting. Preprint at
+  https://arxiv.org/abs/2207.05064 (2022).
+
+\bibitem{huang2023adaptive}
+  Huang, B. et al. Adaptive spatiotemporal transformer graph network for
+  traffic flow forecasting by IoT loop detectors. \textit{IEEE Internet
+  Things J.} \textbf{10,} 1642--1653 (2023).
+
+\bibitem{vaswani2017attention}
+  Vaswani, A. et al. Attention is all you need. In \textit{NeurIPS}
+  5998--6008 (2017).
+
+\bibitem{zhou2021informer}
+  Zhou, H. et al. Informer: Beyond efficient transformer for long sequence
+  time-series forecasting. In \textit{AAAI} 11106--11115 (2021).
+
+\bibitem{wu2021autoformer}
+  Wu, H., Xu, J., Wang, J. \& Long, M. Autoformer: Decomposition
+  transformers with auto-correlation for long-term series forecasting. In
+  \textit{NeurIPS} 22419--22430 (2021).
+
+\bibitem{nie2023time}
+  Nie, Y., Nguyen, N. H., Sinthong, P. \& Kalagnanam, J. A time series is
+  worth 64 words: Long-term forecasting with transformers. In \textit{ICLR}
+  (2023).
+
+\bibitem{wu2023timesnet}
+  Wu, H. et al. TimesNet: Temporal 2D-variation modeling for general time
+  series analysis. In \textit{ICLR} (2023).
+
+\bibitem{zhang2023crossformer}
+  Zhang, Y. \& Yan, J. Crossformer: Transformer utilizing cross-dimension
+  dependency for multivariate time series forecasting. In \textit{ICLR}
+  (2023).
+
+\bibitem{liu2024itransformer}
+  Liu, Y. et al. iTransformer: Inverted transformers are effective for time
+  series forecasting. In \textit{ICLR} (2024).
+
+\bibitem{gu2023mamba}
+  Gu, A. \& Dao, T. Mamba: Linear-time sequence modeling with selective
+  state spaces. Preprint at https://arxiv.org/abs/2312.00752 (2023).
+
+\bibitem{cao2020spectral}
+  Cao, D. et al. Spectral temporal graph neural network for multivariate
+  time-series forecasting. In \textit{NeurIPS} 17766--17778 (2020).
+
+\bibitem{oreshkin2020nbeats}
+  Oreshkin, B. N., Carpov, D., Chapados, N. \& Bengio, Y. N-BEATS: Neural
+  basis expansion analysis for interpretable time series forecasting. In
+  \textit{ICLR} (2020).
+
+\bibitem{zeng2023transformers}
+  Zeng, A., Chen, M., Zhang, L. \& Xu, Q. Are transformers effective for
+  time series forecasting? In \textit{AAAI} 11121--11128 (2023).
+
+\bibitem{chen2025multiscale}
+  Chen, H., Huang, J., Lu, Y. \& Huang, J. Multi-scale spatio-temporal graph
+  neural network for urban traffic flow prediction. \textit{Sci. Rep.}
+  \textbf{15,} 26732; 10.1038/s41598-025-11072-0 (2025).
+
+\bibitem{xiao2025adaptive}
+  Xiao, Z., Shen, Q., Li, C., Li, D. \& Liu, Q. An adaptive spatiotemporal
+  dynamic graph convolutional network for traffic prediction.
+  \textit{Sci. Rep.} \textbf{15,} 27098; 10.1038/s41598-025-12261-7 (2025).
+
+\bibitem{xiao2025graph}
+  Xiao, H., Zou, B. \& Xiao, J. Graph convolution networks based on adaptive
+  spatiotemporal attention for traffic flow forecasting. \textit{Sci. Rep.}
+  \textbf{15,} 8935; 10.1038/s41598-025-88706-w (2025).
+
+\bibitem{frnda2022ecmwf}
+  Frnda, J. et al. ECMWF short-term prediction accuracy improvement by deep
+  learning. \textit{Sci. Rep.} \textbf{12,} 7898; 10.1038/s41598-022-11936-9
+  (2022).
+
+\bibitem{zanchi2023microclimate}
+  Zanchi, M., Zapperi, S. \& La Porta, C. A. M. Harnessing deep learning to
+  forecast local microclimate using global climate data. \textit{Sci. Rep.}
+  \textbf{13,} 21062; 10.1038/s41598-023-48028-1 (2023).
+
+\bibitem{guo2024monthly}
+  Guo, Q., He, Z. \& Wang, Z. Monthly climate prediction using deep
+  convolutional neural network and long short-term memory.
+  \textit{Sci. Rep.} \textbf{14,} 17748; 10.1038/s41598-024-68906-6 (2024).
+
+\bibitem{alves2025spatiotemporal}
+  Alves, D., Mendon\c{c}a, F., Mostafa, S. S. \& Morgado-Dias, F. A deep
+  learning approach for improving spatiotemporal resolution of numerical
+  weather prediction forecasts. \textit{Sci. Rep.} \textbf{15,} 32796;
+  10.1038/s41598-025-17867-5 (2025).
+
+\bibitem{seo2018structured}
+  Seo, Y., Defferrard, M., Vandergheynst, P. \& Bresson, X. Structured
+  sequence modeling with graph convolutional recurrent networks. In
+  \textit{ICONIP} 362--373 (2018).
+
+\bibitem{zhao2019tgcn}
+  Zhao, L. et al. T-GCN: A temporal graph convolutional network for traffic
+  prediction. \textit{IEEE Trans. Intell. Transp. Syst.} \textbf{21,}
+  3848--3858 (2020).
 
 \end{thebibliography}
 
