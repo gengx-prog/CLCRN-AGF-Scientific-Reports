@@ -3,9 +3,7 @@ import math
 import sys
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 import torch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,22 +66,6 @@ def evaluate_missing_nodes(supervisor: Supervisor, best_epoch: int, missing_rati
         }
 
 
-def plot_metric(rows, metric: str, stem: str, title: str):
-    sns.set_theme(style="whitegrid")
-    fig, ax = plt.subplots(figsize=(8.5, 5.4))
-    for row in rows:
-        ratios = [item["missing_ratio"] for item in row["curve"]]
-        values = [item[metric] for item in row["curve"]]
-        ax.plot(ratios, values, marker="o", linewidth=2.4, label=dataset_label(row["dataset"]))
-    ax.set_xlabel("Missing Node Ratio")
-    ax.set_ylabel(metric.upper())
-    ax.set_title(title)
-    ax.legend(frameon=False, ncol=2)
-    fig.savefig(OUT_DIR / f"{stem}.png", bbox_inches="tight", dpi=300)
-    fig.savefig(OUT_DIR / f"{stem}.pdf", bbox_inches="tight")
-    plt.close(fig)
-
-
 def build_markdown(rows):
     lines = [
         "# Missing-Node Robustness",
@@ -119,8 +101,12 @@ def main():
     payload = {"missing_ratios": MISSING_RATIOS, "results": rows}
     (OUT_DIR / "robustness_summary.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     (OUT_DIR / "robustness_summary.md").write_text(build_markdown(rows), encoding="utf-8")
-    plot_metric(rows, "mae", "fig_missing_nodes_mae", "Improved CLCRN Under Missing-Node Stress")
-    plot_metric(rows, "rmse", "fig_missing_nodes_rmse", "Improved CLCRN RMSE Under Missing-Node Stress")
+
+    from scripts.replot_missing_node_robustness import load_frame, plot_metric
+
+    frame = load_frame()
+    plot_metric(frame, "mae", "fig_missing_nodes_mae")
+    plot_metric(frame, "rmse", "fig_missing_nodes_rmse")
     print(f"Saved robustness summary to {OUT_DIR}")
 
 

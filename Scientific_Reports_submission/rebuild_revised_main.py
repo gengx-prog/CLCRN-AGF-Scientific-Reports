@@ -452,7 +452,7 @@ summaries will be supplied with submission, and a versioned public repository
 will be archived before publication.
 """
 
-tail = r"""
+declarations = r"""
 \section*{Funding}
 This research received no specific grant from any funding agency in the
 public, commercial, or not-for-profit sectors.
@@ -471,8 +471,6 @@ During preparation of this manuscript, the authors used AI-assisted language
 editing to improve readability and organization. The authors reviewed and
 edited all generated content and take full responsibility for the final
 manuscript.
-
-\end{document}
 """
 
 citation_order = []
@@ -490,10 +488,11 @@ bibliography = "\n\n".join(entries[key] for key in citation_order)
 document = (
     preamble
     + body
-    + "\n\n\\FloatBarrier\n\\begin{thebibliography}{99}\n\n"
+    + "\n\n\\FloatBarrier\n"
+    + declarations
+    + "\n\n\\begin{thebibliography}{99}\n\n"
     + bibliography
-    + "\n\n\\end{thebibliography}\n\n"
-    + tail
+    + "\n\n\\end{thebibliography}\n\n\\end{document}\n"
 )
 CURRENT.write_text(document, encoding="utf-8", newline="\n")
 print(f"Wrote {CURRENT} with {len(citation_order)} references")

@@ -32,8 +32,8 @@ datasets = [
     ("cloud_cover", "Cloud cover"),
 ]
 
-fig, axes = plt.subplots(1, 4, figsize=(12.5, 3.2))
-for ax, (key, label) in zip(axes, datasets):
+fig, axes = plt.subplots(1, 4, figsize=(12.5, 2.9))
+for panel, (ax, (key, label)) in zip("abcd", zip(axes, datasets)):
     full_by_seed = {row["seed"]: row["mae"] for row in rows["agf"][key]}
     control_by_seed = {row["seed"]: row["mae"] for row in rows["control"][key]}
     seeds = sorted(full_by_seed)
@@ -56,13 +56,20 @@ for ax, (key, label) in zip(axes, datasets):
         linewidth=1.2,
         zorder=4,
     )
-    delta = 100.0 * (full_values.mean() - control_values.mean()) / control_values.mean()
-    ax.set_title(f"{label}\nmean change {delta:+.2f}%", fontsize=10)
+    ax.text(
+        0.02,
+        0.96,
+        panel,
+        transform=ax.transAxes,
+        ha="left",
+        va="top",
+        fontsize=11,
+        fontweight="bold",
+    )
     ax.set_xticks([0, 1], ["Control", "CLCRN-AGF"])
     ax.set_ylabel("Test MAE")
     ax.grid(axis="y", alpha=0.25)
 
-fig.suptitle("Five-replicate comparison of the adaptive graph-fusion extension", fontsize=12)
 fig.tight_layout()
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 fig.savefig(OUTPUT, bbox_inches="tight")
