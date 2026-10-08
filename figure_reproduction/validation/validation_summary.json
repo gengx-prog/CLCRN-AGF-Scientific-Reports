@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "input_files_verified": 134,
+  "scope": "CPU-only plotting and statistical verification; no model training or GPU inference in this restyling step.",
+  "figures": [
+    {
+      "figure": 1,
+      "pdf_pages": 1,
+      "raster_images": 1,
+      "text_inside_page": true
+    },
+    {
+      "figure": 2,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    },
+    {
+      "figure": 3,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    },
+    {
+      "figure": 4,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    },
+    {
+      "figure": 5,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    },
+    {
+      "figure": 6,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    },
+    {
+      "figure": 7,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    },
+    {
+      "figure": 8,
+      "pdf_pages": 1,
+      "raster_images": 0,
+      "text_inside_page": true
+    }
+  ],
+  "table_numeric_checks": 320,
+  "table_maximum_absolute_error": 1.6653345369377348e-16,
+  "preview_pages": 10,
+  "original_motivation_png_unchanged": true,
+  "environment": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.4.2",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "pymupdf": "1.28.2",
+      "Pillow": "12.1.0"
+    }
+  }
+}

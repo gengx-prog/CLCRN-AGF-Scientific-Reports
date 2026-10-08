@@ -1,0 +1,33 @@
+{
+  "style": "Original three-panel composition, upward pipeline, round pastel boxes, dotted node graphs, matrix grids, recurrent cell and projection icons, and original Comic Sans typography.",
+  "font": "Comic Sans MS",
+  "native_vector": true,
+  "illustrative_only": "All traces, graph node positions and matrix cells are schematic, not experimental data.",
+  "corrections": [
+    "AGF is applied before CLConv-GRU",
+    "Original weather and embeddings bypass AGF and are concatenated with z",
+    "Learned adjacency uses softmax(Es Et.T), not an antisymmetric matrix",
+    "Self plus three other neighbours gives total k=4",
+    "Both projected branches originate from the same F",
+    "Gate weights graph q as g and residual r as 1-g",
+    "One actual kernel view, not multi-hop propagation",
+    "No fictitious binary/distance/adaptive triple-graph fusion",
+    "Teacher forcing only during training"
+  ],
+  "code_alignment": {
+    "node_num": 2048,
+    "seq_len": 12,
+    "horizon": 12,
+    "k_neighbors": 25,
+    "max_view": 1,
+    "layer_num": 2,
+    "asttn_topk": 4
+  },
+  "caption": "CLCRN-AGF architecture retaining the original three-panel visual design. (a) Standardized weather inputs are projected and concatenated with learned node embeddings to form F. AGF acts on F before the recurrent backbone; its output z is concatenated with F and the standardized weather input. A two-layer CLConv-GRU encoder and autoregressive decoder predict the next 12 hours. Scheduled sampling is used only during training. (b) The local kernel combines learned coordinate-dependent weights, geodesic decay and angular weighting over 25 geographic neighbours. These experiments use a single kernel view in the recurrent cells. (c) Row-wise softmax of learned source and destination embeddings defines an input-independent adjacency for each checkpoint. Self plus the three strongest other neighbours are retained and renormalized. Graph-aggregated and residual projections q and r use the same pre-CLConv F; their input-dependent gate forms z=g*q+(1-g)*r. The control omits z and retains the original weather and node embeddings. Traces, node positions and matrix cells are illustrative.",
+  "script_sha256": "ba40227004a2afd5dd23bf6f8c907800920b4615ce77c652c03b867735ec80a0",
+  "outputs": {
+    "fig2_architecture.pdf": "43e13ac7d4b064b88df9a13e5610bbcfaef5c6e6700d07c47bf2673240046b1c",
+    "fig2_architecture.png": "ea9a38f93df6f90edbee91ab2dc8b1aee9b0e335c8e4cb14813c5cd578e20e2c",
+    "fig2_architecture.svg": "0d79f09be00adc8e065b230faf95175e1da09f0d6e7bf2af356b58af2290e7fe"
+  }
+}

@@ -1,0 +1,129 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(tables_preview.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (tables_preview.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg)
+(table1.tex
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd))
+(table2.tex) [1{C:/Users/xinch/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map
+}{C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+(table3.tex) (table4.tex) [2] (tables_preview.aux) )<C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/xinch/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+xinch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pf
+b><C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb
+><C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on tables_preview.pdf (2 pages, 71407 bytes).
+Transcript written on tables_preview.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(tables_preview.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (tables_preview.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg)
+(table1.tex
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd))
+(table2.tex) [1{C:/Users/xinch/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map
+}{C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+(table3.tex) (table4.tex) [2] (tables_preview.aux) )<C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/xinch/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+xinch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pf
+b><C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb
+><C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on tables_preview.pdf (2 pages, 71407 bytes).
+Transcript written on tables_preview.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

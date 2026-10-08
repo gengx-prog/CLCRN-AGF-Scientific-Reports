@@ -1,0 +1,12 @@
+test_csv_roundoff_does_not_hide_changed_values_or_rows (test_reviewer_tools.VerificationGuards.test_csv_roundoff_does_not_hide_changed_values_or_rows) ... ok
+test_external_data_hash_check_reads_portable_windows_provenance (test_reviewer_tools.VerificationGuards.test_external_data_hash_check_reads_portable_windows_provenance) ... Hashing external data for temperature; the training file is several GB...
+Hashing external data for temperature; the training file is several GB...
+ok
+test_hash_guard_rejects_same_size_corruption (test_reviewer_tools.VerificationGuards.test_hash_guard_rejects_same_size_corruption) ... ok
+test_manifest_paths_cannot_escape (test_reviewer_tools.VerificationGuards.test_manifest_paths_cannot_escape) ... ok
+test_size_and_missing_file_fail_before_hash_acceptance (test_reviewer_tools.VerificationGuards.test_size_and_missing_file_fail_before_hash_acceptance) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.049s
+
+OK

@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\caption{Gate-activation statistics pooled over all five CLCRN-AGF seeds and the full test set. The gate balances a graph-aggregated projection and a residual linear projection of the same input, before CLConv. Standard deviations describe the pooled population of scalar gates.}
+\label{tab:gate}
+\centering
+\small
+\fitTable{\begin{tabular}{lrrrr}
+\toprule
+Variable & Mean $\mu$ & Std $\sigma$ & Min & Max\\
+\midrule
+Temperature & 0.600 & 0.196 & 0.001 & 1.000 \\
+Relative humidity & 0.570 & 0.244 & 0.001 & 1.000 \\
+Surface wind & 0.508 & 0.130 & 0.049 & 0.954 \\
+Cloud cover & 0.475 & 0.208 & 0.002 & 0.997 \\
+\bottomrule
+\end{tabular}}
+\vspace{2pt}\par\parbox{\linewidth}{\footnotesize Each task includes $5\times657\times12\times2{,}048\times8=645{,}857{,}280$ scalar gates (seeds, test examples, input steps, nodes and channels). Channels are retained individually; no channel averaging or test-set subsampling is applied.}
+\end{table}

@@ -1,0 +1,226 @@
+{
+  "input_data_root": "G:\\SR_review_release_20261008\\figure_reproduction\\data",
+  "source_files": [
+    {
+      "path": "primary_per_seed.csv",
+      "sha256": "ae1c0c7e333556a363c6e80589de365620b11ed656c72e1d970ef68965024f1b"
+    },
+    {
+      "path": "table1_primary_statistics.csv",
+      "sha256": "1b7d495b3a286ed7566303c14fb464ed7731e3e2d485d8bd3f9baca4e5f0c99b"
+    },
+    {
+      "path": "table2_current_context.csv",
+      "sha256": "366f85e48a053c5a380dad963bb017bc8780ce19c3bfd05bc161a6ae39326741"
+    }
+  ],
+  "scope": "New 2026-10-08 46-run study; these three figures use its 40 primary runs and deterministic persistence, not the six mean-fusion ablations.",
+  "metric_definition": "Zero-inclusive, spatially unweighted errors over all 657 test windows and all leads t+1:t+12; training was FP32, 100 epochs; selected checkpoints minimize validation MAE.",
+  "validation": {
+    "status": "passed",
+    "tolerance": 1e-12,
+    "comparisons": [
+      {
+        "task": "temperature",
+        "metric": "mae",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "temperature",
+        "metric": "mae",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "temperature",
+        "metric": "rmse",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "temperature",
+        "metric": "rmse",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "humidity",
+        "metric": "mae",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "humidity",
+        "metric": "mae",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "humidity",
+        "metric": "rmse",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "humidity",
+        "metric": "rmse",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "component_of_wind",
+        "metric": "mae",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "component_of_wind",
+        "metric": "mae",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "component_of_wind",
+        "metric": "rmse",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "component_of_wind",
+        "metric": "rmse",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "cloud_cover",
+        "metric": "mae",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "cloud_cover",
+        "metric": "mae",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "cloud_cover",
+        "metric": "rmse",
+        "kind": "control",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      },
+      {
+        "task": "cloud_cover",
+        "metric": "rmse",
+        "kind": "agf",
+        "mean_vs_table1": 0.0,
+        "sd_vs_table1": 0.0,
+        "mean_vs_table2": 0.0
+      }
+    ],
+    "sample_sd_ddof": 1,
+    "unique_primary_runs": 40,
+    "seeds_per_variant_task": 5
+  },
+  "figures": {
+    "fig3_context_heatmap": {
+      "old_to_new": "Preserve the original annotated 8-column heatmap, task separators and outlined AGF row. Replace unsupported seven-model historical comparison with three methods actually evaluated on the current split. Colours retain the user-requested RdYlGn style; cell labels and ranks provide redundant encoding.",
+      "caption": "Current-split cumulative 12-hour MAE and RMSE for persistence and the two trained variants. Control and CLCRN-AGF values are means across five training seeds; persistence is deterministic. All results use the same zero-inclusive, spatially unweighted evaluator and agree with the current context table. Colours use independent min–max normalization within each task/metric column; the numbers retain physical units. Rankings are descriptive, not significance tests. Temperature is in K, relative humidity in percentage points (pp), wind in m s−1, and cloud cover in fraction.",
+      "source_csv": "fig3_context_heatmap.csv"
+    },
+    "fig4_primary_replicates": {
+      "old_to_new": "Preserve four aligned panels, blue control dots, orange AGF dots, black diamonds and error bars, and signed mean-change annotations. Recalculate every mark and annotation from the current five-seed data. Separate physical-unit axes preserve the original focused MAE comparison; RMSE remains available in the statistical table.",
+      "caption": "Cumulative 12-hour test MAE across five independently trained replicates for each variant and task. Coloured points show individual seeds; black diamonds and bars show the mean plus or minus sample standard deviation (ddof = 1). The percentage above each panel is 100 × (AGF mean / control mean − 1); a negative value denotes lower MAE. These are the same 40 primary checkpoints used in the current statistical table. Seed labels are not treated as matched random streams. Panels have task-specific units and focused vertical scales.",
+      "source_csv": "fig4_primary_replicates.csv"
+    },
+    "fig6_primary_bars": {
+      "old_to_new": "Retain the original grouped-column aesthetic, blue shades, control hatching, numeric annotations and mean-error bars. Remove unsupported original-reproduction/paper-target columns and causal schedule-decomposition claims. Separate the four task groups into aligned panels with zero-based, task-specific physical axes. Both model variants now use the same five-seed protocol.",
+      "caption": "Cumulative 12-hour test MAE for CLCRN control and CLCRN-AGF under the same current training and evaluation protocol. Bars show five-seed means; error bars show plus or minus one sample standard deviation (ddof = 1). These values exactly match the primary statistical table and Figure 4. All axes start at zero; panels use different physical units and independent scales. This comparison does not isolate a training-schedule effect.",
+      "source_csv": "fig6_primary_bars.csv"
+    }
+  },
+  "chart_sources": [
+    {
+      "path": "source_data\\fig3_context_heatmap.csv",
+      "sha256": "4bc8c00285bff4cef81caeadc3a6a3bf5dc5e73b6406325d5759dcb71996661e"
+    },
+    {
+      "path": "source_data\\fig4_primary_replicates.csv",
+      "sha256": "a0332b90b0a99eb259bbdccf668f9f2a836d5c872fe6ed9371560df1add84e29"
+    },
+    {
+      "path": "source_data\\fig6_primary_bars.csv",
+      "sha256": "9097a2ba43c6fde07c37ca4d3a6d2c17f5a5ad310ef0db2b4a4e848aaa2d2b87"
+    }
+  ],
+  "script_sha256": "7e435a45e18960a0a84aa5c79f2a196fac5eafa95b5f43945b8204391119d69e",
+  "exports": [
+    {
+      "path": "figures\\fig3_context_heatmap.pdf",
+      "sha256": "5da2d67f5f03e6f0bbf8914a008bc296d06ac1856e9cda5fe4a90e56729e5827"
+    },
+    {
+      "path": "figures\\fig3_context_heatmap.svg",
+      "sha256": "387d7ac5bf8a5fd30ce96cd853199c9fa6b04a8d170dbc2411cfcf13a95faaf3"
+    },
+    {
+      "path": "figures\\fig3_context_heatmap.png",
+      "sha256": "aa108a1d7823052fb3ed80f40e9b1b6e083a47c88725e80ddd5e77f0b9bec78e"
+    },
+    {
+      "path": "figures\\fig4_primary_replicates.pdf",
+      "sha256": "2ff182ba670bc7ce05af344cd0550e33dff36fc5f4ef5fa93209c1d5960270f4"
+    },
+    {
+      "path": "figures\\fig4_primary_replicates.svg",
+      "sha256": "b73e14018587f30c608e4761fad99ba040b679a38920c890fbb2e39e18f697ff"
+    },
+    {
+      "path": "figures\\fig4_primary_replicates.png",
+      "sha256": "a72e651621f8d78a605907d7424ccc7da9d8ad90a5bfd7aecf3f9a1ad1496bd4"
+    },
+    {
+      "path": "figures\\fig6_primary_bars.pdf",
+      "sha256": "1ace4be02afa5e8f5b88b41403bf7f04c189be140fa07d6b5aef9d13e7f4272a"
+    },
+    {
+      "path": "figures\\fig6_primary_bars.svg",
+      "sha256": "4a330a629b0be021f771479126832be81d134992c3827f77db09c3f76c350669"
+    },
+    {
+      "path": "figures\\fig6_primary_bars.png",
+      "sha256": "d767a66f020f5ed63d9be33e1e84149feb886c04d96ea978559539c4b96c36db"
+    }
+  ]
+}

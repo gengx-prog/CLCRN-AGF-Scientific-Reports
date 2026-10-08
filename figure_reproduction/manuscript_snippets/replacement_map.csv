@@ -1,0 +1,9 @@
+﻿figure,original_file,replacement,content_change
+1,fig1_background.png,figures/fig1_motivation.pdf,Original conceptual art retained; illustrative meaning clarified.
+2,fig_architecture_overview.png,figures/fig2_architecture.pdf,Pastel three-panel design redrawn to match implemented pre-CLConv fusion.
+3,fig_A1_main_baselines.pdf,figures/fig3_context_heatmap.pdf,Heatmap retains eight metric columns; rows are the three measured current methods.
+4,fig_primary_replicate_comparison.pdf,figures/fig4_primary_replicates.pdf,Five-seed scatter and sample SD; all points and change labels recalculated.
+5,fig_A2_horizon_curves.pdf,figures/fig5_horizon_curves.pdf,"Same four-panel curve styles; five AGF seeds and sample SD, full 657 windows."
+6,fig_B2_schedule_decomp_mae.pdf,figures/fig6_primary_bars.pdf,Grouped bars retained; current control/AGF in four task-specific axes.
+7,fig_missing_nodes_mae.pdf,figures/fig7_missing_node_robustness.pdf,Four-colour line style retained; relative MAE on matched 64-window subset.
+8,fig_gate_distribution.pdf,figures/fig8_gate_distribution.pdf,"Horizontal distributions retained; all four tasks, full scalar gates, binned quantiles."

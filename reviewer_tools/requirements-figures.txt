@@ -1,0 +1,5 @@
+# Install after requirements-cpu.txt or requirements-cu128.txt.
+# System TeX (pdflatex on PATH) is additionally required for table PDFs.
+-r requirements-base.txt
+PyMuPDF==1.28.2
+Pillow==12.1.0

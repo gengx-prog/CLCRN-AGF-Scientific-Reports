@@ -1,0 +1,9 @@
+﻿dataset,kind,metric,mean,sample_sd,n_seed,units,bar_baseline
+temperature,control,mae,1.257990563469587,0.06025926138444893,5,K,0
+temperature,agf,mae,1.2910080096612102,0.10749802385785569,5,K,0
+humidity,control,mae,4.647975580455883,0.01739136559063373,5,percentage points,0
+humidity,agf,mae,4.537174296221648,0.03893360647784903,5,percentage points,0
+component_of_wind,control,mae,1.2420089338787013,0.011386881136598354,5,m s^{-1},0
+component_of_wind,agf,mae,1.2556686124662615,0.037217036695335215,5,m s^{-1},0
+cloud_cover,control,mae,0.1479050657509322,0.0017188155436273743,5,fraction,0
+cloud_cover,agf,mae,0.1483572416324575,0.0019515035254328507,5,fraction,0

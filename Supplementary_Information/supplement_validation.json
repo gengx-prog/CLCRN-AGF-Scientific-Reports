@@ -1,0 +1,1807 @@
+{
+  "passed": true,
+  "checks_passed": 356,
+  "checks": [
+    {
+      "name": "46 unique inventory models",
+      "passed": true
+    },
+    {
+      "name": "100 epochs for all inventory models",
+      "passed": true
+    },
+    {
+      "name": "40 primary models",
+      "passed": true
+    },
+    {
+      "name": "five models per primary task and variant",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/agf/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/agf/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/agf/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/agf/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/agf/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/agf/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/agf/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/agf/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/agf/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/agf/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/agf/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/agf/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/agf/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/agf/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/agf/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/agf/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/agf/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/agf/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/agf/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/agf/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/agf/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/agf/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/agf/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/agf/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/agf/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/agf/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/agf/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/agf/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/agf/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/agf/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/agf/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/agf/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/agf/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/agf/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/agf/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/agf/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/agf/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/agf/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/agf/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/agf/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/control/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/control/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/control/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/control/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/control/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/control/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/control/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/control/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics cloud_cover/control/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity cloud_cover/control/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/control/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/control/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/control/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/control/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/control/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/control/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/control/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/control/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics component_of_wind/control/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity component_of_wind/control/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/control/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/control/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/control/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/control/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/control/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/control/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/control/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/control/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics humidity/control/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity humidity/control/2025",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/control/2021",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/control/2021",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/control/2022",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/control/2022",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/control/2023",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/control/2023",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/control/2024",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/control/2024",
+      "passed": true
+    },
+    {
+      "name": "inventory metrics temperature/control/2025",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "checkpoint identity temperature/control/2025",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p temperature/mae",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.7763568394002505e-14
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement temperature/mae",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p temperature/rmse",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.881784197001252e-16
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement temperature/rmse",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p humidity/mae",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 2.7533531010703882e-14
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement humidity/mae",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p humidity/rmse",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.881784197001252e-16
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement humidity/rmse",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p component_of_wind/mae",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.881784197001252e-15
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement component_of_wind/mae",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p component_of_wind/rmse",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement component_of_wind/rmse",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p cloud_cover/mae",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.7470027081099033e-14
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement cloud_cover/mae",
+      "passed": true
+    },
+    {
+      "name": "primary mean SD CI p cloud_cover/rmse",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 5.562217353372034e-14
+      }
+    },
+    {
+      "name": "primary rounded mean/SD in supplement cloud_cover/rmse",
+      "passed": true
+    },
+    {
+      "name": "primary Welch BH family",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.4416913763379853e-15
+      }
+    },
+    {
+      "name": "exact-permutation BH family",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "name": "480 horizon rows",
+      "passed": true
+    },
+    {
+      "name": "all 40 cumulative MAE endpoints",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.881784197001252e-16
+      }
+    },
+    {
+      "name": "all 40 cumulative RMSE endpoints",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.7763568394002505e-15
+      }
+    },
+    {
+      "name": "rounded horizon cloud_cover/agf/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/agf/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/agf/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/agf/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/control/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/control/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/control/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon cloud_cover/control/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/agf/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/agf/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/agf/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/agf/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/control/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/control/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/control/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon component_of_wind/control/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/agf/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/agf/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/agf/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/agf/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/control/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/control/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/control/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon humidity/control/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/agf/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/agf/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/agf/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/agf/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/control/6/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/control/6/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/control/12/exact_mae",
+      "passed": true
+    },
+    {
+      "name": "rounded horizon temperature/control/12/exact_rmse",
+      "passed": true
+    },
+    {
+      "name": "520 robustness records on 64 windows",
+      "passed": true
+    },
+    {
+      "name": "relative masked errors",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.7053025658242404e-13
+      }
+    },
+    {
+      "name": "five nested robustness seeds temperature/control/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/control/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds temperature/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/control/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.9539925233402755e-14
+      }
+    },
+    {
+      "name": "rounded robustness temperature/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/control/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 2.842170943040401e-14
+      }
+    },
+    {
+      "name": "rounded robustness temperature/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/control/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.7763568394002505e-14
+      }
+    },
+    {
+      "name": "rounded robustness temperature/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/control/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.1368683772161603e-13
+      }
+    },
+    {
+      "name": "rounded robustness temperature/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/agf/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/agf/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds temperature/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/agf/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 4.263256414560601e-14
+      }
+    },
+    {
+      "name": "rounded robustness temperature/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/agf/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.197442310920451e-14
+      }
+    },
+    {
+      "name": "rounded robustness temperature/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/agf/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness temperature/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds temperature/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary temperature/agf/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.1368683772161603e-13
+      }
+    },
+    {
+      "name": "rounded robustness temperature/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/control/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/control/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds humidity/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/control/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.493206138382448e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/control/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 4.551914400963142e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/control/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.885780586188048e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/control/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 9.103828801926284e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/agf/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/agf/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds humidity/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/agf/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 4.218847493575595e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/agf/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/agf/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness humidity/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds humidity/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary humidity/agf/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.4210854715202004e-14
+      }
+    },
+    {
+      "name": "rounded robustness humidity/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/control/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/control/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/control/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.0658141036401503e-14
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/control/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/control/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.4210854715202004e-14
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/control/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 4.263256414560601e-14
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/agf/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/agf/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/agf/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/agf/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.021405182655144e-14
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/agf/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.1086244689504383e-15
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds component_of_wind/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary component_of_wind/agf/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.4210854715202004e-14
+      }
+    },
+    {
+      "name": "rounded robustness component_of_wind/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/control/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/control/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/control/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.604228440844963e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/control/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/control/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.885780586188048e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/control/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/control/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.552713678800501e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/control/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/control/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/control/0.4",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/agf/0.0",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/agf/0.0",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/agf/0.1",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 2.220446049250313e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/agf/0.1",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/agf/0.2",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 2.220446049250313e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/agf/0.2",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/agf/0.3",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 8.881784197001252e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/agf/0.3",
+      "passed": true
+    },
+    {
+      "name": "five nested robustness seeds cloud_cover/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "nested robustness summary cloud_cover/agf/0.4",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 7.105427357601002e-15
+      }
+    },
+    {
+      "name": "rounded robustness cloud_cover/agf/0.4",
+      "passed": true
+    },
+    {
+      "name": "20 complete scalar-gate streams",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support cloud_cover/2021",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support cloud_cover/2022",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support cloud_cover/2023",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support cloud_cover/2024",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support cloud_cover/2025",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support component_of_wind/2021",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support component_of_wind/2022",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support component_of_wind/2023",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support component_of_wind/2024",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support component_of_wind/2025",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support humidity/2021",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support humidity/2022",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support humidity/2023",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support humidity/2024",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support humidity/2025",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support temperature/2021",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support temperature/2022",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support temperature/2023",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support temperature/2024",
+      "passed": true
+    },
+    {
+      "name": "100-bin full gate support temperature/2025",
+      "passed": true
+    },
+    {
+      "name": "pooled full-stream gate moments temperature",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "name": "gate total temperature",
+      "passed": true
+    },
+    {
+      "name": "pooled full-stream gate moments humidity",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 3.0531133177191805e-16
+      }
+    },
+    {
+      "name": "gate total humidity",
+      "passed": true
+    },
+    {
+      "name": "pooled full-stream gate moments component_of_wind",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 1.3877787807814457e-16
+      }
+    },
+    {
+      "name": "gate total component_of_wind",
+      "passed": true
+    },
+    {
+      "name": "pooled full-stream gate moments cloud_cover",
+      "passed": true,
+      "detail": {
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "gate total cloud_cover",
+      "passed": true
+    },
+    {
+      "name": "main binned gate limitation disclosed",
+      "passed": true
+    },
+    {
+      "name": "six supplementary figures",
+      "passed": true
+    },
+    {
+      "name": "both-variant robustness preserved",
+      "passed": true
+    },
+    {
+      "name": "both-variant horizon preserved",
+      "passed": true
+    },
+    {
+      "name": "outdated docx excluded",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data ablation_per_seed.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data dataset_cloud_cover.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data dataset_component_of_wind.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data dataset_humidity.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data dataset_temperature.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data gate_histogram.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data gate_per_seed.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data horizon_per_seed.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_cloud_cover_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_cloud_cover_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_cloud_cover_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_cloud_cover_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_cloud_cover_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_component_of_wind_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_component_of_wind_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_component_of_wind_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_component_of_wind_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_component_of_wind_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_humidity_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_humidity_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_humidity_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_humidity_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_humidity_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_temperature_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_temperature_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_temperature_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_temperature_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_agf_temperature_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_cloud_cover_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_cloud_cover_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_cloud_cover_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_cloud_cover_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_cloud_cover_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_component_of_wind_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_component_of_wind_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_component_of_wind_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_component_of_wind_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_component_of_wind_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_humidity_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_humidity_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_humidity_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_humidity_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_humidity_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_temperature_2021.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_temperature_2022.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_temperature_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_temperature_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_control_temperature_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_mean_fusion_humidity_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_mean_fusion_humidity_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_mean_fusion_humidity_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_mean_fusion_temperature_2023.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_mean_fusion_temperature_2024.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data inference_mean_fusion_temperature_2025.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data latitude_weighted_sensitivity.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data persistence_cloud_cover.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data persistence_component_of_wind.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data persistence_humidity.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data persistence_temperature.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data primary_per_seed.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data raw_target_zero_fractions.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data robustness_indices_cloud_cover.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data robustness_indices_component_of_wind.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data robustness_indices_humidity.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data robustness_indices_temperature.json",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data robustness_per_seed_mask.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data robustness_summary.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data table1_primary_statistics.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data table2_current_context.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data table3_ablation_statistics.csv",
+      "passed": true
+    },
+    {
+      "name": "same main/supplement data table4_gate_statistics.csv",
+      "passed": true
+    }
+  ],
+  "shared_main_data_files": [
+    "ablation_per_seed.csv",
+    "dataset_cloud_cover.json",
+    "dataset_component_of_wind.json",
+    "dataset_humidity.json",
+    "dataset_temperature.json",
+    "gate_histogram.csv",
+    "gate_per_seed.csv",
+    "horizon_per_seed.csv",
+    "inference_agf_cloud_cover_2021.json",
+    "inference_agf_cloud_cover_2022.json",
+    "inference_agf_cloud_cover_2023.json",
+    "inference_agf_cloud_cover_2024.json",
+    "inference_agf_cloud_cover_2025.json",
+    "inference_agf_component_of_wind_2021.json",
+    "inference_agf_component_of_wind_2022.json",
+    "inference_agf_component_of_wind_2023.json",
+    "inference_agf_component_of_wind_2024.json",
+    "inference_agf_component_of_wind_2025.json",
+    "inference_agf_humidity_2021.json",
+    "inference_agf_humidity_2022.json",
+    "inference_agf_humidity_2023.json",
+    "inference_agf_humidity_2024.json",
+    "inference_agf_humidity_2025.json",
+    "inference_agf_temperature_2021.json",
+    "inference_agf_temperature_2022.json",
+    "inference_agf_temperature_2023.json",
+    "inference_agf_temperature_2024.json",
+    "inference_agf_temperature_2025.json",
+    "inference_control_cloud_cover_2021.json",
+    "inference_control_cloud_cover_2022.json",
+    "inference_control_cloud_cover_2023.json",
+    "inference_control_cloud_cover_2024.json",
+    "inference_control_cloud_cover_2025.json",
+    "inference_control_component_of_wind_2021.json",
+    "inference_control_component_of_wind_2022.json",
+    "inference_control_component_of_wind_2023.json",
+    "inference_control_component_of_wind_2024.json",
+    "inference_control_component_of_wind_2025.json",
+    "inference_control_humidity_2021.json",
+    "inference_control_humidity_2022.json",
+    "inference_control_humidity_2023.json",
+    "inference_control_humidity_2024.json",
+    "inference_control_humidity_2025.json",
+    "inference_control_temperature_2021.json",
+    "inference_control_temperature_2022.json",
+    "inference_control_temperature_2023.json",
+    "inference_control_temperature_2024.json",
+    "inference_control_temperature_2025.json",
+    "inference_mean_fusion_humidity_2023.json",
+    "inference_mean_fusion_humidity_2024.json",
+    "inference_mean_fusion_humidity_2025.json",
+    "inference_mean_fusion_temperature_2023.json",
+    "inference_mean_fusion_temperature_2024.json",
+    "inference_mean_fusion_temperature_2025.json",
+    "latitude_weighted_sensitivity.csv",
+    "persistence_cloud_cover.json",
+    "persistence_component_of_wind.json",
+    "persistence_humidity.json",
+    "persistence_temperature.json",
+    "primary_per_seed.csv",
+    "raw_target_zero_fractions.csv",
+    "robustness_indices_cloud_cover.json",
+    "robustness_indices_component_of_wind.json",
+    "robustness_indices_humidity.json",
+    "robustness_indices_temperature.json",
+    "robustness_per_seed_mask.csv",
+    "robustness_summary.csv",
+    "table1_primary_statistics.csv",
+    "table2_current_context.csv",
+    "table3_ablation_statistics.csv",
+    "table4_gate_statistics.csv"
+  ],
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "supplement_tex_sha256": "d32734d45cfe4e4d426325c9c05328bc8fd7b2591d5861f56bf168f3ca457494",
+  "method": "CPU recomputation of recorded metrics; no new training or inference",
+  "changes": [
+    "Preserved S1-S4",
+    "Added S5 both-variant robustness and S6 both-variant horizons",
+    "Clarified main AGF-only diagnostics and binned gate quantiles",
+    "Replaced unavailable build-script/manifest references with local companions",
+    "Excluded stale Word copy from revised output"
+  ],
+  "compiled_pdf_sha256": "8948d5bfd3a1f8bfe1e035638b92c14eb26e41e64c7745e54fce94f4bad96c77",
+  "latex_unresolved_references": false,
+  "latex_overfull_boxes": false
+}

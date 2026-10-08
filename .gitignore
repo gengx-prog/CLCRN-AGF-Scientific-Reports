@@ -8,4 +8,15 @@ Thumbs.db
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-
+.venv-review/
+reviewer_check/
+reviewer_train_smoke/
+rebuilt_figures/
+*.out
+reviewer_ci/
+validation/paper_page_previews/
+!figure_reproduction/validation/*.log
+!figure_reproduction/tables/tables_preview.log
+!figure_reproduction/tables/tables_preview.aux
+!validation/*.log
+!validation/paper_build_logs/*.log

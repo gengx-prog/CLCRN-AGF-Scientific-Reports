@@ -1,0 +1,444 @@
+{
+  "purpose": "Old manuscript figure styling with new, internally consistent experimental data",
+  "data_root": "G:\\SR_review_release_20261008\\figure_reproduction\\data",
+  "sources": [
+    {
+      "file": "horizon_per_seed.csv",
+      "sha256": "4cd1acb63f2eab6c7ac27ae03b994b9f514247916a0ab2546611c988a26696c6"
+    },
+    {
+      "file": "robustness_per_seed_mask.csv",
+      "sha256": "031d9912f1b2a843cce93d8622824326720de894cd54890a11f2da1f1bc15b97"
+    },
+    {
+      "file": "gate_histogram.csv",
+      "sha256": "f21c4b51e8a3ea1efe43d64de53b244c4897ebbafb79601e50434455fb1b82e4"
+    },
+    {
+      "file": "gate_per_seed.csv",
+      "sha256": "c61bc7f01e7bfacd02862e0dd17ba4a371da50aaae8aec37e482dc3504a4f0fe"
+    },
+    {
+      "file": "table1_primary_statistics.csv",
+      "sha256": "1b7d495b3a286ed7566303c14fb464ed7731e3e2d485d8bd3f9baca4e5f0c99b"
+    },
+    {
+      "file": "table4_gate_statistics.csv",
+      "sha256": "d493250fbe4523c46c6ea7511a934ff82d0e7ea7d6090d830c93dd6f61bce409"
+    }
+  ],
+  "software": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "matplotlib": "3.10.8"
+  },
+  "figures": {
+    "fig5": {
+      "caption": "Per-step forecast error of five CLCRN-AGF models per task on all 657 test windows. Solid circles show exact-lead MAE, dashed squares show MAE accumulated over leads 1 through h, and grey triangles show exact-lead RMSE. Lines denote the training-seed mean and shading denotes one sample standard deviation (ddof=1). These 20 AGF checkpoints are the AGF half of the 40 primary runs in Table 1. At 12 h the cumulative MAE equals the corresponding Table 1 value. Independent vertical scales retain each task's physical units. Valid zero targets are included and spatial weights are uniform.",
+      "styling_notes": "Preserves the old 2-by-2 serif layout, task colours and three line/marker encodings; adds sample-SD bands and explicit physical units. Cumulative RMSE is checked against Table 1 in the exported source data but is not plotted.",
+      "checks": {
+        "per_seed_horizon_rows": 240,
+        "inference_sources": [
+          {
+            "file": "inference_agf_cloud_cover_2021.json",
+            "sha256": "2c57a7c2ca9fc80165ede6d34908f3ad1a19a60ab1eae6a3842e6105a0a5ec55",
+            "test_examples": 657,
+            "checkpoint_sha256": "83b00ac7593fbfd6c7b6703144d0e3218189e31d72fb2e082d45ccd712f51b59"
+          },
+          {
+            "file": "inference_agf_cloud_cover_2022.json",
+            "sha256": "884b54248a703515ebf762e5e20c3803dae59a27ddf7f50e985d82fae8a5f25f",
+            "test_examples": 657,
+            "checkpoint_sha256": "eb3ac2ac0472afa97163b251e596247fde9f65b06911495c253002f9532e8551"
+          },
+          {
+            "file": "inference_agf_cloud_cover_2023.json",
+            "sha256": "8244b4bc792f98aa725f849857e35f43e04f4aefc2762e63b8e18485d0cd23b3",
+            "test_examples": 657,
+            "checkpoint_sha256": "4aca7773fda2f2ceaa70bef8ef752401fbd7ec1fc4687e454c2ce4b7121df9a9"
+          },
+          {
+            "file": "inference_agf_cloud_cover_2024.json",
+            "sha256": "88f1b0708a127c30de8424de73c705e96a9d11ea4aee17244390a1199973be94",
+            "test_examples": 657,
+            "checkpoint_sha256": "cbf9a235977a9b513e8cc4cd25d87365e21c13cf9fadd0f1ab9e0bb7481444e4"
+          },
+          {
+            "file": "inference_agf_cloud_cover_2025.json",
+            "sha256": "b45b3d549196455b4d528e1b7a6e0c357e02d9fa688eec789266363246433370",
+            "test_examples": 657,
+            "checkpoint_sha256": "61e195d0f2f507a8c36e7c49c919ac754320b746a8611d64ee25ec2f4e104112"
+          },
+          {
+            "file": "inference_agf_component_of_wind_2021.json",
+            "sha256": "e4f95fedab87a1165e0f58494de1d5d80f9ed42426a559ad55511da63c36b3b4",
+            "test_examples": 657,
+            "checkpoint_sha256": "a3950948446f286d997021bd29a51ff5b01eb7943289fc96fbaf76364ecc6b7c"
+          },
+          {
+            "file": "inference_agf_component_of_wind_2022.json",
+            "sha256": "a35df379c3a9d788b3f6e6ae00d68b367f58e785352cd0546c41a2467b06ec27",
+            "test_examples": 657,
+            "checkpoint_sha256": "e01801a4adfac5ad2d30815fedfc552800c46a525d75d4bd41661ebac0e703e3"
+          },
+          {
+            "file": "inference_agf_component_of_wind_2023.json",
+            "sha256": "20e56795fd322bfe7abdd18a78f596c19196fcfb8014e3c61e4f51866c0f9809",
+            "test_examples": 657,
+            "checkpoint_sha256": "9f0cdf074ffe481f2e14fbdea128b5987c4d110b265da52a4b5a5c2204391575"
+          },
+          {
+            "file": "inference_agf_component_of_wind_2024.json",
+            "sha256": "563dd99feabfadb2e61f6bb6ee96727bb51b88a47c8f478a550cc389890133cd",
+            "test_examples": 657,
+            "checkpoint_sha256": "4c0e2051afbc84b81ba40fe39ba653391367f4080f1b958625f6e93476fba0e5"
+          },
+          {
+            "file": "inference_agf_component_of_wind_2025.json",
+            "sha256": "b270d1f78269a71568be36ad6a941b9d1c4fd11bdaefdcc85172cd4fadb4d841",
+            "test_examples": 657,
+            "checkpoint_sha256": "c4f8964c7c45efc183bf65bd10705f5fa59b27fee768efa7aaabfe03d7a68cb3"
+          },
+          {
+            "file": "inference_agf_humidity_2021.json",
+            "sha256": "f67f40ae22fdad979d4e123669a0d7cb80db0093aeeb955ebb75419ef21e39d4",
+            "test_examples": 657,
+            "checkpoint_sha256": "3ee8e0868466d65047bce2524743c278e44df38d73eef43aefdc394092afe25e"
+          },
+          {
+            "file": "inference_agf_humidity_2022.json",
+            "sha256": "5ac994c4b383b2740ea3f05e2b151109976ce123661653e81761261898a1da07",
+            "test_examples": 657,
+            "checkpoint_sha256": "19513eb36fa660953e6e90e3c778b229d33175fb045e51fae1fd21d72404f61d"
+          },
+          {
+            "file": "inference_agf_humidity_2023.json",
+            "sha256": "b1cdd888bfabd1b5da3a525b5f7e3cc0b5c312017b589f31750d83a98c3380e1",
+            "test_examples": 657,
+            "checkpoint_sha256": "6a93eb6500932e7006c80684255958590154752065fad7bbbe6d41df79d9a15d"
+          },
+          {
+            "file": "inference_agf_humidity_2024.json",
+            "sha256": "e4c73e9984d2e3e4598c781518af5825cf5694df942b77dfeb13d0d865053510",
+            "test_examples": 657,
+            "checkpoint_sha256": "cd5e444c13c75591f89f09b63461dc2fff1024fe184fd3265fd0d8e8c76b42d0"
+          },
+          {
+            "file": "inference_agf_humidity_2025.json",
+            "sha256": "7ef9d684c09bbdf0ae85ee08f77c11eef57aefbc9bb1c7131fe05e2c3276e78f",
+            "test_examples": 657,
+            "checkpoint_sha256": "9cc43a815db221ea5037a3ea3ebb3f62421850905768ba66085a3ef658d1eb61"
+          },
+          {
+            "file": "inference_agf_temperature_2021.json",
+            "sha256": "ed66c0cf1c8b79283758bb5ef3044c74e33fa539b8a27396d01ef091a7bb5e46",
+            "test_examples": 657,
+            "checkpoint_sha256": "b74783874d5e2bba9d0b7014d1903e40e21f05493188a0950708047f9aaa58a9"
+          },
+          {
+            "file": "inference_agf_temperature_2022.json",
+            "sha256": "2481e56177b48af1dac3789346fff8b77c2350462894a165dd6409617a29b7ac",
+            "test_examples": 657,
+            "checkpoint_sha256": "d9483ef4a5d5ad0f3cfd5e1841bfe36fbc65d6f19ddde32b78a0182f66a45e6e"
+          },
+          {
+            "file": "inference_agf_temperature_2023.json",
+            "sha256": "05fa719f961b7041cf54fa72706b7107941aa9129ec3589de0ccb34f5428c66e",
+            "test_examples": 657,
+            "checkpoint_sha256": "ee66072380c8824de448b525421aaf50d22d1ccb86044590dc43430cc0418c9d"
+          },
+          {
+            "file": "inference_agf_temperature_2024.json",
+            "sha256": "753565ba3e287928c063b0422e7b972862a4d1dd14ab28c8504ca19e2ee81b8b",
+            "test_examples": 657,
+            "checkpoint_sha256": "89520814367d5bb69a3dd5f342542e67fc27b023e9988cf8f9665ad12adca2b6"
+          },
+          {
+            "file": "inference_agf_temperature_2025.json",
+            "sha256": "59d45535afb4ae1e1e3c128a021dda0be7da9e5f674c07fbe3e61b8567ae746c",
+            "test_examples": 657,
+            "checkpoint_sha256": "f0bfdfa2ff7a776752e2c24bfc30be5c8c4cfae78f2b3238bd856b0f8c4ccfb0"
+          }
+        ],
+        "table1_endpoints": [
+          {
+            "dataset": "temperature",
+            "metric": "mae",
+            "statistic": "mean",
+            "difference_from_table1": 0.0
+          },
+          {
+            "dataset": "temperature",
+            "metric": "mae",
+            "statistic": "std",
+            "difference_from_table1": 1.249000902703301e-16
+          },
+          {
+            "dataset": "temperature",
+            "metric": "rmse",
+            "statistic": "mean",
+            "difference_from_table1": 0.0
+          },
+          {
+            "dataset": "temperature",
+            "metric": "rmse",
+            "statistic": "std",
+            "difference_from_table1": 0.0
+          },
+          {
+            "dataset": "humidity",
+            "metric": "mae",
+            "statistic": "mean",
+            "difference_from_table1": 0.0
+          },
+          {
+            "dataset": "humidity",
+            "metric": "mae",
+            "statistic": "std",
+            "difference_from_table1": 4.996003610813204e-16
+          },
+          {
+            "dataset": "humidity",
+            "metric": "rmse",
+            "statistic": "mean",
+            "difference_from_table1": 0.0
+          },
+          {
+            "dataset": "humidity",
+            "metric": "rmse",
+            "statistic": "std",
+            "difference_from_table1": -6.938893903907228e-17
+          },
+          {
+            "dataset": "component_of_wind",
+            "metric": "mae",
+            "statistic": "mean",
+            "difference_from_table1": 0.0
+          },
+          {
+            "dataset": "component_of_wind",
+            "metric": "mae",
+            "statistic": "std",
+            "difference_from_table1": -9.020562075079397e-17
+          },
+          {
+            "dataset": "component_of_wind",
+            "metric": "rmse",
+            "statistic": "mean",
+            "difference_from_table1": -4.440892098500626e-16
+          },
+          {
+            "dataset": "component_of_wind",
+            "metric": "rmse",
+            "statistic": "std",
+            "difference_from_table1": 1.3877787807814457e-17
+          },
+          {
+            "dataset": "cloud_cover",
+            "metric": "mae",
+            "statistic": "mean",
+            "difference_from_table1": -5.551115123125783e-17
+          },
+          {
+            "dataset": "cloud_cover",
+            "metric": "mae",
+            "statistic": "std",
+            "difference_from_table1": 3.382710778154774e-17
+          },
+          {
+            "dataset": "cloud_cover",
+            "metric": "rmse",
+            "statistic": "mean",
+            "difference_from_table1": -1.1102230246251565e-16
+          },
+          {
+            "dataset": "cloud_cover",
+            "metric": "rmse",
+            "statistic": "std",
+            "difference_from_table1": 6.678685382510707e-17
+          }
+        ]
+      },
+      "source_data": [
+        "fig5_horizon_per_seed.csv",
+        "fig5_horizon_summary.csv"
+      ]
+    },
+    "fig7": {
+      "caption": "Missing-input-node sensitivity of five AGF checkpoints per task, evaluated on the same fixed subset of 64 test windows at every ratio. The same node mask is applied across all 12 input hours and signal channels; standardized values are set to zero, corresponding to training-mean imputation. The plotted quantity is 100 times (masked MAE / clean MAE - 1), with each checkpoint's clean MAE measured on that same subset. At each nonzero missing-node ratio, mask seeds 11, 22 and 33 are averaged within a training seed before computing the mean and sample standard deviation across five training seeds. The clean point is zero by definition. Shaded bands indicate descriptive training-seed variation, not confidence intervals or a significance test. Tasks use distinct colours and line patterns. This diagnostic uses 64 of the 657 test windows.",
+      "styling_notes": "Preserves the old grey plot surface, white grid and task-specific line patterns and palette. The common axis now uses percent MAE changes rather than combining errors in different physical units.",
+      "checks": {
+        "mask_rows": 260,
+        "training_seed_rows": 100,
+        "summary_rows": 20,
+        "test_windows": 64,
+        "training_seeds": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "mask_seeds": [
+          11,
+          22,
+          33
+        ],
+        "subset_indices": [
+          {
+            "file": "robustness_indices_temperature.json",
+            "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+          },
+          {
+            "file": "robustness_indices_humidity.json",
+            "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+          },
+          {
+            "file": "robustness_indices_component_of_wind.json",
+            "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+          },
+          {
+            "file": "robustness_indices_cloud_cover.json",
+            "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+          }
+        ]
+      },
+      "source_data": [
+        "fig7_robustness_per_mask.csv",
+        "fig7_robustness_per_seed.csv",
+        "fig7_robustness_summary.csv"
+      ]
+    },
+    "fig8": {
+      "caption": "Distribution of scalar gate activations for all four tasks. Each task pools 645,857,280 activations from five AGF checkpoints, all 657 test windows per checkpoint, 12 input steps, 2,048 nodes and all eight channels, without channel averaging. Mirrored profiles interpolate the centres of the recorded 100-bin histogram on [0,1]; widths are normalized separately within each task. White boxes, centre lines and whiskers are approximate 25th–75th, 50th and 5th–95th percentiles computed by linear interpolation of the binned cumulative counts. Diamonds and right-side mean and population standard deviation are the exact full-stream statistics reported in Table 4. The dashed line is g=0.5. The gate combines a graph-aggregated projection and a residual linear projection of the same pre-CLConv input.",
+      "styling_notes": "Preserves the horizontal mirrored distribution, white IQR box, mean diamond, g=0.5 reference and right-side moment annotations. Adds temperature and uses the full [0,1] gate range. No artificial samples or normal-distribution assumption are used; neither moments nor shapes come from the old channel-averaged arrays.",
+      "checks": [
+        {
+          "dataset": "temperature",
+          "histogram_count_equals_table4": true,
+          "pooled_moments_equal_table4": true,
+          "scalar_gates": 645857280
+        },
+        {
+          "dataset": "humidity",
+          "histogram_count_equals_table4": true,
+          "pooled_moments_equal_table4": true,
+          "scalar_gates": 645857280
+        },
+        {
+          "dataset": "component_of_wind",
+          "histogram_count_equals_table4": true,
+          "pooled_moments_equal_table4": true,
+          "scalar_gates": 645857280
+        },
+        {
+          "dataset": "cloud_cover",
+          "histogram_count_equals_table4": true,
+          "pooled_moments_equal_table4": true,
+          "scalar_gates": 645857280
+        }
+      ],
+      "source_data": [
+        "fig8_gate_histogram_per_seed.csv",
+        "fig8_gate_statistics_per_seed.csv",
+        "fig8_gate_histogram_pooled.csv",
+        "fig8_gate_summary.csv"
+      ],
+      "limitation": "Raw per-scalar gates are not stored in the supplied current package. Distribution shape is represented by the actual 100-bin histogram; displayed quantiles are binned approximations, whereas means and population SDs are exact recorded stream statistics."
+    }
+  },
+  "artifacts": [
+    {
+      "file": "figures/fig5_horizon_curves.pdf",
+      "bytes": 38576,
+      "sha256": "583ce89d5f72600e036f8e112f859bb79d0b2bbf8a22e7f853ff25fc37c011c8"
+    },
+    {
+      "file": "figures/fig5_horizon_curves.png",
+      "bytes": 344009,
+      "sha256": "f1855f725f283b6bc3f85e6d4dbd41ce9586c692d88fb8bf55a010f78d11a4d1"
+    },
+    {
+      "file": "figures/fig5_horizon_curves.svg",
+      "bytes": 89237,
+      "sha256": "fe18af896652b32d16cdbdd2dbad831a6dbcacb5bc498a83263021caf58e289b"
+    },
+    {
+      "file": "figures/fig7_missing_node_robustness.pdf",
+      "bytes": 16145,
+      "sha256": "8851ed975ac4a744b0e4185a993c382b98121b7e1bdbe9a780aa0f7d56c96ef5"
+    },
+    {
+      "file": "figures/fig7_missing_node_robustness.png",
+      "bytes": 181451,
+      "sha256": "e5c1d29d2d7e8461a5c9111d3de59607c55840da69c75d9b35493a08689ed20a"
+    },
+    {
+      "file": "figures/fig7_missing_node_robustness.svg",
+      "bytes": 13685,
+      "sha256": "df4235603acedb8370a9b619c1620436ab54c4404b62501b4e544f6376142d70"
+    },
+    {
+      "file": "figures/fig8_gate_distribution.pdf",
+      "bytes": 35018,
+      "sha256": "4f731eb81e56779f41b5132c94cf17d2c2692751d93b742ec5a3f04dde633062"
+    },
+    {
+      "file": "figures/fig8_gate_distribution.png",
+      "bytes": 190459,
+      "sha256": "2b5f786ba9fd779686aad9feea3522949afeca5fad708ce8943327cace38679f"
+    },
+    {
+      "file": "figures/fig8_gate_distribution.svg",
+      "bytes": 55373,
+      "sha256": "88bd64dd0bb44dda2d0f8d69f7f0d8f7610e4ba0fa35478519b3bf5cf3aa6b46"
+    },
+    {
+      "file": "source_data/fig5_horizon_per_seed.csv",
+      "bytes": 24350,
+      "sha256": "c03f261d6912f11f2605b9394cc21205957ce1122270ddae0adb1e94358342ad"
+    },
+    {
+      "file": "source_data/fig5_horizon_summary.csv",
+      "bytes": 9124,
+      "sha256": "037c2f07c2eb022efb881a65e9e23e418674b75fdb605f9093f6abec596a1e24"
+    },
+    {
+      "file": "source_data/fig7_robustness_per_mask.csv",
+      "bytes": 31590,
+      "sha256": "ff4846e1fac0dd8058a29a0c4c96d27116b60f143e618730fd169e7442386bc6"
+    },
+    {
+      "file": "source_data/fig7_robustness_per_seed.csv",
+      "bytes": 9398,
+      "sha256": "12dfcdc323253e17493399ea1dc8265c669e93b1eb4811a9f8bfe9aab16ed1e3"
+    },
+    {
+      "file": "source_data/fig7_robustness_summary.csv",
+      "bytes": 1748,
+      "sha256": "07504fcc7e7bc7ddca6bee9915941e9ae26c7e9eb046d799720a6d3064c41c37"
+    },
+    {
+      "file": "source_data/fig8_gate_histogram_per_seed.csv",
+      "bytes": 117953,
+      "sha256": "7786426ab7d71c0226178645a1ddcde5f7f23694dd1bc072b698da33a543daec"
+    },
+    {
+      "file": "source_data/fig8_gate_histogram_pooled.csv",
+      "bytes": 29593,
+      "sha256": "b259c4ad4c3add8e9921f2affa36ba657c92d8d682a845b7c62ba8b839e4bdbd"
+    },
+    {
+      "file": "source_data/fig8_gate_statistics_per_seed.csv",
+      "bytes": 2514,
+      "sha256": "3c39e65f2085eb622ba413a5c2d6b4a0359c58f85dfc04984a6544e39b4c3535"
+    },
+    {
+      "file": "source_data/fig8_gate_summary.csv",
+      "bytes": 893,
+      "sha256": "405c93d1af3c8f01bf538ff49516889562c11bebe821b6df8024ff74cd3517f2"
+    }
+  ],
+  "script_sha256": "454eb9b49739d6efa8d8fbc19a7bc0893dcb92400b95336e4940309596461b41"
+}

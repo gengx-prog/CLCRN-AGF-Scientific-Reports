@@ -1,0 +1,1888 @@
+{
+  "table_data": "46-run revision dated 2026-10-08",
+  "scope": "40 primary runs, with six additional mean-fusion runs supporting the matched three-seed ablation",
+  "preserved_style": "Original booktabs three-line rules, Times text/math, 9-point table text, grouped task columns, compact aligned numeric columns; no vertical rules.",
+  "tables": [
+    {
+      "number": 1,
+      "csv": "tables/table1_primary_statistics.csv",
+      "latex": "tables/table1.tex",
+      "caption_latex": "Five-replicate comparison of CLCRN-AGF and the schedule-matched CLCRN control. Values are mean$\\pm$sample standard deviation across seeds 2021--2025. Differences are CLCRN-AGF minus control; negative values favour CLCRN-AGF. Confidence intervals and two-sided $p$-values use Welch's unequal-variance approximation.",
+      "source": "table1_primary_statistics.csv",
+      "source_sha256": "1b7d495b3a286ed7566303c14fb464ed7731e3e2d485d8bd3f9baca4e5f0c99b",
+      "content_change": "Updated all 40-run means, sample SDs, differences, Welch CIs and p-values; BH q-values retained in CSV and the note."
+    },
+    {
+      "number": 2,
+      "csv": "tables/table2_current_context.csv",
+      "latex": "tables/table2.tex",
+      "caption_latex": "Contextual test results on the same test split. Persistence is deterministic; control and CLCRN-AGF are means across five seeds. All methods use the same zero-inclusive, spatially unweighted evaluation over the full 12-hour forecast. Lower is better.",
+      "source": "table2_current_context.csv",
+      "source_sha256": "366f85e48a053c5a380dad963bb017bc8780ce19c3bfd05bc161a6ae39326741",
+      "content_change": "Restricted contextual comparison to current Persistence, control and AGF results; no unmatched historical single runs or external values."
+    },
+    {
+      "number": 3,
+      "csv": "tables/table3_ablation_statistics.csv",
+      "latex": "tables/table3.tex",
+      "caption_latex": "Component ablations with a matched 100-epoch FP32 training protocol. All entries report mean$\\pm$sample standard deviation over seeds 2023--2025 on the full 12-hour test forecast. Lower is better.",
+      "source": "table3_ablation_statistics.csv",
+      "source_sha256": "95ae6deb6b80b0511da58c7e4ac27d1a9407db2c98885ee8e2bd636cad7fc01d",
+      "content_change": "Used three variants, two tasks and three matched seeds trained for 100 epochs in FP32; removed the unavailable 20-epoch screening block."
+    },
+    {
+      "number": 4,
+      "csv": "tables/table4_gate_statistics.csv",
+      "latex": "tables/table4.tex",
+      "caption_latex": "Gate-activation statistics pooled over all five CLCRN-AGF seeds and the full test set. The gate balances a graph-aggregated projection and a residual linear projection of the same input, before CLConv. Standard deviations describe the pooled population of scalar gates.",
+      "source": "table4_gate_statistics.csv",
+      "source_sha256": "d493250fbe4523c46c6ea7511a934ff82d0e7ea7d6090d830c93dd6f61bce409",
+      "content_change": "Included all four tasks and all channels across the full test set for five seeds; distinguished pooled population SD from between-seed SD."
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "numeric_checks": 320,
+    "maximum_absolute_error": 1.6653345369377348e-16,
+    "primary_runs": 40,
+    "additional_mean_fusion_runs": 6,
+    "source_files": [
+      {
+        "path": "ablation_per_seed.csv",
+        "sha256": "ce30c898dda776e2a8f09d19ecdeceb984747cd9a10c1d76eb0ba56cbc688744"
+      },
+      {
+        "path": "gate_per_seed.csv",
+        "sha256": "c61bc7f01e7bfacd02862e0dd17ba4a371da50aaae8aec37e482dc3504a4f0fe"
+      },
+      {
+        "path": "inference_agf_cloud_cover_2021.json",
+        "sha256": "2c57a7c2ca9fc80165ede6d34908f3ad1a19a60ab1eae6a3842e6105a0a5ec55"
+      },
+      {
+        "path": "inference_agf_cloud_cover_2022.json",
+        "sha256": "884b54248a703515ebf762e5e20c3803dae59a27ddf7f50e985d82fae8a5f25f"
+      },
+      {
+        "path": "inference_agf_cloud_cover_2023.json",
+        "sha256": "8244b4bc792f98aa725f849857e35f43e04f4aefc2762e63b8e18485d0cd23b3"
+      },
+      {
+        "path": "inference_agf_cloud_cover_2024.json",
+        "sha256": "88f1b0708a127c30de8424de73c705e96a9d11ea4aee17244390a1199973be94"
+      },
+      {
+        "path": "inference_agf_cloud_cover_2025.json",
+        "sha256": "b45b3d549196455b4d528e1b7a6e0c357e02d9fa688eec789266363246433370"
+      },
+      {
+        "path": "inference_agf_component_of_wind_2021.json",
+        "sha256": "e4f95fedab87a1165e0f58494de1d5d80f9ed42426a559ad55511da63c36b3b4"
+      },
+      {
+        "path": "inference_agf_component_of_wind_2022.json",
+        "sha256": "a35df379c3a9d788b3f6e6ae00d68b367f58e785352cd0546c41a2467b06ec27"
+      },
+      {
+        "path": "inference_agf_component_of_wind_2023.json",
+        "sha256": "20e56795fd322bfe7abdd18a78f596c19196fcfb8014e3c61e4f51866c0f9809"
+      },
+      {
+        "path": "inference_agf_component_of_wind_2024.json",
+        "sha256": "563dd99feabfadb2e61f6bb6ee96727bb51b88a47c8f478a550cc389890133cd"
+      },
+      {
+        "path": "inference_agf_component_of_wind_2025.json",
+        "sha256": "b270d1f78269a71568be36ad6a941b9d1c4fd11bdaefdcc85172cd4fadb4d841"
+      },
+      {
+        "path": "inference_agf_humidity_2021.json",
+        "sha256": "f67f40ae22fdad979d4e123669a0d7cb80db0093aeeb955ebb75419ef21e39d4"
+      },
+      {
+        "path": "inference_agf_humidity_2022.json",
+        "sha256": "5ac994c4b383b2740ea3f05e2b151109976ce123661653e81761261898a1da07"
+      },
+      {
+        "path": "inference_agf_humidity_2023.json",
+        "sha256": "b1cdd888bfabd1b5da3a525b5f7e3cc0b5c312017b589f31750d83a98c3380e1"
+      },
+      {
+        "path": "inference_agf_humidity_2024.json",
+        "sha256": "e4c73e9984d2e3e4598c781518af5825cf5694df942b77dfeb13d0d865053510"
+      },
+      {
+        "path": "inference_agf_humidity_2025.json",
+        "sha256": "7ef9d684c09bbdf0ae85ee08f77c11eef57aefbc9bb1c7131fe05e2c3276e78f"
+      },
+      {
+        "path": "inference_agf_temperature_2021.json",
+        "sha256": "ed66c0cf1c8b79283758bb5ef3044c74e33fa539b8a27396d01ef091a7bb5e46"
+      },
+      {
+        "path": "inference_agf_temperature_2022.json",
+        "sha256": "2481e56177b48af1dac3789346fff8b77c2350462894a165dd6409617a29b7ac"
+      },
+      {
+        "path": "inference_agf_temperature_2023.json",
+        "sha256": "05fa719f961b7041cf54fa72706b7107941aa9129ec3589de0ccb34f5428c66e"
+      },
+      {
+        "path": "inference_agf_temperature_2024.json",
+        "sha256": "753565ba3e287928c063b0422e7b972862a4d1dd14ab28c8504ca19e2ee81b8b"
+      },
+      {
+        "path": "inference_agf_temperature_2025.json",
+        "sha256": "59d45535afb4ae1e1e3c128a021dda0be7da9e5f674c07fbe3e61b8567ae746c"
+      },
+      {
+        "path": "inference_control_cloud_cover_2021.json",
+        "sha256": "fe58b192778c1f95ad460e8665dab7231764fdd2166430a0c6ad21909358eb28"
+      },
+      {
+        "path": "inference_control_cloud_cover_2022.json",
+        "sha256": "5236eb3ec934a70188324a67defc42e23354545d215cdee43e10735ffb6e9122"
+      },
+      {
+        "path": "inference_control_cloud_cover_2023.json",
+        "sha256": "bb3b252daf4019ed762ce20584c5bf78243e314c49476d749c629142694319ea"
+      },
+      {
+        "path": "inference_control_cloud_cover_2024.json",
+        "sha256": "9b0132feec9ed739629c02a31f946de4b1d6b6e9f55da957956cec7c03560c81"
+      },
+      {
+        "path": "inference_control_cloud_cover_2025.json",
+        "sha256": "a3ef7bbeb611b59d40a5616aa97903ec59c3fba867c21855c97be59712c81cfc"
+      },
+      {
+        "path": "inference_control_component_of_wind_2021.json",
+        "sha256": "cb7ee9b14d494ba3ba731873411648b8f1ef980cd79101138974bc735c02ad86"
+      },
+      {
+        "path": "inference_control_component_of_wind_2022.json",
+        "sha256": "f271514140880d83dc8bfe2a4b1728aa90d3fea8b9f79242d04b85796510c6e1"
+      },
+      {
+        "path": "inference_control_component_of_wind_2023.json",
+        "sha256": "88feb32ee4a9b064df1acc62e9d03bcc978cea5d2b2f7409f7af71207f384efa"
+      },
+      {
+        "path": "inference_control_component_of_wind_2024.json",
+        "sha256": "734344507d227f3eb87483543b73158f9ae0a9f916e4fcace19910b0a3c8b655"
+      },
+      {
+        "path": "inference_control_component_of_wind_2025.json",
+        "sha256": "338762dd05b8339a7e70c3240134c520fc3e4bbb7d1143cbed39b5f1e1a446ad"
+      },
+      {
+        "path": "inference_control_humidity_2021.json",
+        "sha256": "103296ce7be063b691c7e4ae7a61ad89d516b32876823b20d8a89f615a085411"
+      },
+      {
+        "path": "inference_control_humidity_2022.json",
+        "sha256": "89e55c41c24b856a9b8607cf7ebf49d43d4f3ce5f9220fe5af397ce42af79bb3"
+      },
+      {
+        "path": "inference_control_humidity_2023.json",
+        "sha256": "8d770838eda9a7a1ee890f3070bc2f67e17aa36439bbd23faf3e3650426b7a71"
+      },
+      {
+        "path": "inference_control_humidity_2024.json",
+        "sha256": "7f3f13816654c1e2e5a2e6aea5bb86ac3746066f24955c8ecf6c455a9aad8a11"
+      },
+      {
+        "path": "inference_control_humidity_2025.json",
+        "sha256": "187973a2cf97d15025c9bd306460ea78da0e6b44fa628594d30309668208e4c1"
+      },
+      {
+        "path": "inference_control_temperature_2021.json",
+        "sha256": "a1332a9d9349b98a1268865b30034ac7f55eb326e696ee7f0a2ec26a29ee4017"
+      },
+      {
+        "path": "inference_control_temperature_2022.json",
+        "sha256": "6e0f85b6306ac0a600c8c32dd4b9a37ae1b5da59beb2c238cdccc842212ce899"
+      },
+      {
+        "path": "inference_control_temperature_2023.json",
+        "sha256": "b110b4e51a95fa8c24a6d81bd2cada1486751052dd780908e7ed4f06608f6092"
+      },
+      {
+        "path": "inference_control_temperature_2024.json",
+        "sha256": "6815cf0e64100782d24f004a0278053bbfbb28556cc198dc7f51e5f1649dd8c1"
+      },
+      {
+        "path": "inference_control_temperature_2025.json",
+        "sha256": "caa8da8224e844420e27cd4c67d5f1424cda1c7dd8944afc6b16179da41b25b3"
+      },
+      {
+        "path": "inference_mean_fusion_humidity_2023.json",
+        "sha256": "6918a0b455c97a6e5116dfe0cc44a49cbe2b5ad46138df4c7e063356b3c5139a"
+      },
+      {
+        "path": "inference_mean_fusion_humidity_2024.json",
+        "sha256": "43120f0bb7fe1b54a9c2381c78ea59045c9a292d06081db9759b0af3f02596a3"
+      },
+      {
+        "path": "inference_mean_fusion_humidity_2025.json",
+        "sha256": "e538ca65f095e68658bee52d837020842a8eb210b42f09099d25cfb63faa42ac"
+      },
+      {
+        "path": "inference_mean_fusion_temperature_2023.json",
+        "sha256": "82558686951d6dbbce74d4a7c6efab70fdf946e5ec91143f8b9c9a710e0eb282"
+      },
+      {
+        "path": "inference_mean_fusion_temperature_2024.json",
+        "sha256": "17a189170e2c9ed3e47fd6f7a246cb640611aaa6e7a0ba36143a26f6f32500c0"
+      },
+      {
+        "path": "inference_mean_fusion_temperature_2025.json",
+        "sha256": "5b7d73e69c2ec3c52e2f722a5e02ce27374590befd8d5a1d11b6be903592f4d9"
+      },
+      {
+        "path": "persistence_cloud_cover.json",
+        "sha256": "1f60039cbe6445ab53e901028413c0d31f68dd56b8630e659bcd2fdbcc4a0503"
+      },
+      {
+        "path": "persistence_component_of_wind.json",
+        "sha256": "89589da1cb5fcdae3db40ad0d77ef254c0fce7fa7732a4bff6d55bf04f268ba5"
+      },
+      {
+        "path": "persistence_humidity.json",
+        "sha256": "55f62abba98545f36453cea6ba9ee2b34544662c6aa748f5f71c08884bb37286"
+      },
+      {
+        "path": "persistence_temperature.json",
+        "sha256": "6ade781e7d63f79e1e6db4e40a3041047fcdd0ddd959795b090b8c3ecd6ee311"
+      },
+      {
+        "path": "primary_per_seed.csv",
+        "sha256": "ae1c0c7e333556a363c6e80589de365620b11ed656c72e1d970ef68965024f1b"
+      },
+      {
+        "path": "table1_primary_statistics.csv",
+        "sha256": "1b7d495b3a286ed7566303c14fb464ed7731e3e2d485d8bd3f9baca4e5f0c99b"
+      },
+      {
+        "path": "table2_current_context.csv",
+        "sha256": "366f85e48a053c5a380dad963bb017bc8780ce19c3bfd05bc161a6ae39326741"
+      },
+      {
+        "path": "table3_ablation_statistics.csv",
+        "sha256": "95ae6deb6b80b0511da58c7e4ac27d1a9407db2c98885ee8e2bd636cad7fc01d"
+      },
+      {
+        "path": "table4_gate_statistics.csv",
+        "sha256": "d493250fbe4523c46c6ea7511a934ff82d0e7ea7d6090d830c93dd6f61bce409"
+      }
+    ],
+    "checks": [
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_cloud_cover_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_component_of_wind_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_humidity_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_agf_temperature_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_cloud_cover_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_component_of_wind_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_humidity_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2021.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2021.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2022.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2022.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "per_seed:inference_control_temperature_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:control_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:control_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:n_control",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:agf_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:agf_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:n_agf",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:difference",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:ci95_low",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:ci95_high",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:welch_df",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:welch_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:exact_permutation_p",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:relative_change_percent",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:mae:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:temperature:rmse:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:mae:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:humidity:rmse:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:mae:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:component_of_wind:rmse:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:mae:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:welch_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table1:cloud_cover:rmse:permutation_bh_q",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:temperature:Persistence:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:temperature:Persistence:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:temperature:Control:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:temperature:Control:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:temperature:CLCRN-AGF:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:temperature:CLCRN-AGF:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:humidity:Persistence:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:humidity:Persistence:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:humidity:Control:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:humidity:Control:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:humidity:CLCRN-AGF:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:humidity:CLCRN-AGF:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:component_of_wind:Persistence:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:component_of_wind:Persistence:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:component_of_wind:Control:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:component_of_wind:Control:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:component_of_wind:CLCRN-AGF:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:component_of_wind:CLCRN-AGF:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:cloud_cover:Persistence:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:cloud_cover:Persistence:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:cloud_cover:Control:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:cloud_cover:Control:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:cloud_cover:CLCRN-AGF:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table2:cloud_cover:CLCRN-AGF:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_temperature_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_temperature_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_temperature_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_temperature_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_temperature_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_temperature_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_temperature_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_temperature_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_temperature_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_temperature_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_temperature_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_temperature_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_temperature_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_temperature_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_temperature_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_temperature_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_temperature_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_temperature_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_humidity_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_humidity_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_humidity_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_humidity_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_humidity_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_control_humidity_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_humidity_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_humidity_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_humidity_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_humidity_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_humidity_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_mean_fusion_humidity_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_humidity_2023.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_humidity_2023.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_humidity_2024.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_humidity_2024.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_humidity_2025.json:mae",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "ablation_per_seed:inference_agf_humidity_2025.json:rmse",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:w/o adaptive graph:mae_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:w/o adaptive graph:mae_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:w/o adaptive graph:rmse_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:w/o adaptive graph:rmse_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Mean fusion:mae_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Mean fusion:mae_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Mean fusion:rmse_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Mean fusion:rmse_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Full CLCRN-AGF:mae_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Full CLCRN-AGF:mae_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Full CLCRN-AGF:rmse_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:temperature:Full CLCRN-AGF:rmse_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:w/o adaptive graph:mae_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:w/o adaptive graph:mae_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:w/o adaptive graph:rmse_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:w/o adaptive graph:rmse_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Mean fusion:mae_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Mean fusion:mae_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Mean fusion:rmse_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Mean fusion:rmse_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Full CLCRN-AGF:mae_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Full CLCRN-AGF:mae_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Full CLCRN-AGF:rmse_mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table3:humidity:Full CLCRN-AGF:rmse_sd",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:pooled_population_std",
+        "absolute_error": 5.551115123125783e-17,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:min",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:max",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:n_scalar_gates",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:n_seeds",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:n_test_examples_per_seed",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:gate_channels",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:temperature:input_steps",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:mean",
+        "absolute_error": 1.1102230246251565e-16,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:pooled_population_std",
+        "absolute_error": 1.6653345369377348e-16,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:min",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:max",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:n_scalar_gates",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:n_seeds",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:n_test_examples_per_seed",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:gate_channels",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:humidity:input_steps",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:pooled_population_std",
+        "absolute_error": 1.3877787807814457e-16,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:min",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:max",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:n_scalar_gates",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:n_seeds",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:n_test_examples_per_seed",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:gate_channels",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:component_of_wind:input_steps",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:mean",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:pooled_population_std",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:min",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:max",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:n_scalar_gates",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:n_seeds",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:n_test_examples_per_seed",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:gate_channels",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      },
+      {
+        "check": "table4:cloud_cover:input_steps",
+        "absolute_error": 0.0,
+        "tolerance": 2e-11
+      }
+    ]
+  },
+  "compilation": {
+    "status": "passed",
+    "compiler": "C:\\Users\\xinch\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+    "layout_warnings": [],
+    "pdf_sha256": "107fc72408e784311a21098e66678c56661e5f7a6d136441fb478f1320323a7b"
+  }
+}

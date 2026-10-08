@@ -1,0 +1,57 @@
+% Paths are relative to the replacement-pack root. Requires graphicx.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig1_motivation.pdf}
+\caption{Conceptual illustration of spatial geometry in weather modelling. The left panel illustrates variation in geodesic distance and relative orientation on the sphere; the right panel schematically depicts graph convolution and geometry-sensitive weighting. All surfaces, node positions and colour gradients are illustrative and are not measured forecasts or quantitative evidence of improved regularization.}
+\label{fig:restyled_1}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig2_architecture.pdf}
+\caption{Implementation-aligned CLCRN-AGF architecture. (a) Standardized weather inputs are projected and concatenated with learned node embeddings to form F. AGF acts on F before the recurrent backbone; its output z is concatenated with F and the standardized weather input. A two-layer CLConv-GRU encoder and autoregressive decoder predict the next 12 hours. Scheduled sampling is used only during training. (b) The local kernel combines learned coordinate-dependent weights, geodesic decay and angular weighting over 25 geographic neighbours. These experiments use a single kernel view in the recurrent cells. (c) Row-wise softmax of learned source and destination embeddings defines an input-independent adjacency for each checkpoint. Self plus the three strongest other neighbours are retained and renormalized. Graph-aggregated and residual projections q and r use the same pre-CLConv F; their input-dependent gate forms z=g*q+(1-g)*r. The control omits z and retains the original weather and node embeddings. Traces, node positions and matrix cells are illustrative.}
+\label{fig:restyled_2}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig3_context_heatmap.pdf}
+\caption{Current-split cumulative 12-hour MAE and RMSE for persistence and the two trained variants. Control and CLCRN-AGF values are means across five training seeds; persistence is deterministic. All results use the same zero-inclusive, spatially unweighted evaluator and agree with the current context table. Colours use independent min--max normalization within each task/metric column; the numbers retain physical units. Rankings are descriptive, not significance tests. Temperature is in K, relative humidity in percentage points (pp), wind in m s$-$1, and cloud cover in fraction.}
+\label{fig:restyled_3}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig4_primary_replicates.pdf}
+\caption{Cumulative 12-hour test MAE across five independently trained replicates for each variant and task. Coloured points show individual seeds; black diamonds and bars show the mean plus or minus sample standard deviation (ddof = 1). The percentage above each panel is 100 $\times$ (AGF mean / control mean $-$ 1); a negative value denotes lower MAE. These are the same 40 primary checkpoints used in the current statistical table. Seed labels are not treated as matched random streams. Panels have task-specific units and focused vertical scales.}
+\label{fig:restyled_4}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig5_horizon_curves.pdf}
+\caption{Per-step forecast error of five CLCRN-AGF models per task on all 657 test windows. Solid circles show exact-lead MAE, dashed squares show MAE accumulated over leads 1 through h, and grey triangles show exact-lead RMSE. Lines denote the training-seed mean and shading denotes one sample standard deviation (ddof=1). These 20 AGF checkpoints are the AGF half of the 40 primary runs in Table 1. At 12 h the cumulative MAE equals the corresponding Table 1 value. Independent vertical scales retain each task's physical units. Valid zero targets are included and spatial weights are uniform.}
+\label{fig:restyled_5}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig6_primary_bars.pdf}
+\caption{Cumulative 12-hour test MAE for CLCRN control and CLCRN-AGF under the same current training and evaluation protocol. Bars show five-seed means; error bars show plus or minus one sample standard deviation (ddof = 1). These values exactly match the primary statistical table and Figure 4. All axes start at zero; panels use different physical units and independent scales. This comparison does not isolate a training-schedule effect.}
+\label{fig:restyled_6}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig7_missing_node_robustness.pdf}
+\caption{Missing-input-node sensitivity of five AGF checkpoints per task, evaluated on the same fixed subset of 64 test windows at every ratio. The same node mask is applied across all 12 input hours and signal channels; standardized values are set to zero, corresponding to training-mean imputation. The plotted quantity is 100 times (masked MAE / clean MAE - 1), with each checkpoint's clean MAE measured on that same subset. At each nonzero missing-node ratio, mask seeds 11, 22 and 33 are averaged within a training seed before computing the mean and sample standard deviation across five training seeds. The clean point is zero by definition. Shaded bands indicate descriptive training-seed variation, not confidence intervals or a significance test. Tasks use distinct colours and line patterns. This diagnostic uses 64 of the 657 test windows.}
+\label{fig:restyled_7}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig8_gate_distribution.pdf}
+\caption{Distribution of scalar gate activations for all four tasks. Each task pools 645,857,280 activations from five AGF checkpoints, all 657 test windows per checkpoint, 12 input steps, 2,048 nodes and all eight channels, without channel averaging. Mirrored profiles interpolate the centres of the recorded 100-bin histogram on [0,1]; widths are normalized separately within each task. White boxes, centre lines and whiskers are approximate 25th--75th, 50th and 5th--95th percentiles computed by linear interpolation of the binned cumulative counts. Diamonds and right-side mean and population standard deviation are the exact full-stream statistics reported in Table 4. The dashed line is g=0.5. The gate combines a graph-aggregated projection and a residual linear projection of the same pre-CLConv input.}
+\label{fig:restyled_8}
+\end{figure}

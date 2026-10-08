@@ -7,3 +7,9 @@
 # Frozen sources, results, histories, and manifests are verified byte for byte.
 revision_2026_10_08/** -text
 Supplementary_Information/data/** -text
+figure_reproduction/** -text
+Scientific_Reports_submission/figures/** -text
+validation/** -text
+*.zip binary
+*.bin binary
+*.svg binary

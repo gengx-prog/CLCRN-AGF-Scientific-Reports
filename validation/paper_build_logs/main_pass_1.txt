@@ -1,0 +1,668 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(wlscirep.cls
+Document Class: wlscirep 08/08/2020, v1.4
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df)) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\fleqn.clo)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty)
+ (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty) 
+))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
+) (jabbrv.sty (jabbrv-ltwa-all.ldf) (jabbrv-ltwa-en.ldf))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
+No file main.aux.
+
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+
+LaTeX Warning: Citation `bauer2015quiet' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Citation `rasp2020weatherbench' on page 1 undefined on input lin
+e 45.
+
+
+LaTeX Warning: Citation `hersbach2020era5' on page 1 undefined on input line 46
+.
+
+
+LaTeX Warning: Citation `weyn2020improving' on page 1 undefined on input line 4
+8.
+
+
+LaTeX Warning: Citation `pathak2022fourcastnet' on page 1 undefined on input li
+ne 49.
+
+
+LaTeX Warning: Citation `bi2023accurate' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `lam2023learning' on page 1 undefined on input line 51.
+
+
+
+LaTeX Warning: Citation `nguyen2023climax' on page 1 undefined on input line 55
+.
+
+
+LaTeX Warning: Citation `bonev2023spherical' on page 1 undefined on input line 
+56.
+
+
+LaTeX Warning: Citation `kochkov2024neural' on page 1 undefined on input line 5
+7.
+
+
+LaTeX Warning: Citation `price2025probabilistic' on page 1 undefined on input l
+ine 58.
+
+
+LaTeX Warning: Citation `frnda2022ecmwf' on page 1 undefined on input line 59.
+
+
+LaTeX Warning: Citation `zanchi2023microclimate' on page 1 undefined on input l
+ine 60.
+
+
+LaTeX Warning: Citation `guo2024monthly' on page 1 undefined on input line 61.
+
+
+LaTeX Warning: Citation `alves2025spatiotemporal' on page 1 undefined on input 
+line 62.
+
+
+LaTeX Warning: Citation `lin2022conditional' on page 1 undefined on input line 
+65.
+
+
+LaTeX Warning: Reference `fig:background' on page 1 undefined on input line 69.
+
+
+
+
+pdfTeX warning: pdflatex.EXE (file ./figures/fig1_motivation.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+
+LaTeX Warning: Citation `defferrard2016chebnet' on page 1 undefined on input li
+ne 81.
+
+
+LaTeX Warning: Citation `kipf2017semi' on page 1 undefined on input line 82.
+
+
+LaTeX Warning: Citation `hamilton2017inductive' on page 1 undefined on input li
+ne 83.
+
+
+LaTeX Warning: Citation `velickovic2018graph' on page 1 undefined on input line
+ 84.
+
+
+LaTeX Warning: Citation `qi2017pointnet' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `wang2019dynamic' on page 1 undefined on input line 86.
+
+
+
+LaTeX Warning: Citation `cohen2019gauge' on page 1 undefined on input line 87.
+
+[1{C:/Users/xinch/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/xi
+nch/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/xinch/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/xinch/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/xinch/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+LaTeX Warning: Citation `jin2023spatio' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `seo2018structured' on page 2 undefined on input line 9
+1.
+
+
+LaTeX Warning: Citation `li2018diffusion' on page 2 undefined on input line 92.
+
+
+
+LaTeX Warning: Citation `yu2018spatio' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `zhao2019tgcn' on page 2 undefined on input line 94.
+
+
+LaTeX Warning: Citation `guo2019attention' on page 2 undefined on input line 95
+.
+
+
+LaTeX Warning: Citation `zheng2020gman' on page 2 undefined on input line 96.
+
+
+LaTeX Warning: Citation `fang2021spatial' on page 2 undefined on input line 97.
+
+
+
+LaTeX Warning: Citation `oskarsson2023temporal' on page 2 undefined on input li
+ne 98.
+
+
+LaTeX Warning: Citation `wu2019graph' on page 2 undefined on input line 103.
+
+
+LaTeX Warning: Citation `bai2020adaptive' on page 2 undefined on input line 104
+.
+
+
+LaTeX Warning: Citation `wu2020connecting' on page 2 undefined on input line 10
+5.
+
+
+LaTeX Warning: Citation `shang2021discrete' on page 2 undefined on input line 1
+06.
+
+
+LaTeX Warning: Citation `lan2022dstagnn' on page 2 undefined on input line 107.
+
+
+
+LaTeX Warning: Citation `zambon2023graph' on page 2 undefined on input line 108
+.
+
+
+LaTeX Warning: Citation `cao2020spectral' on page 2 undefined on input line 109
+.
+
+
+LaTeX Warning: Citation `cini2023scalable' on page 2 undefined on input line 11
+3.
+
+
+LaTeX Warning: Citation `wen2023diffstg' on page 2 undefined on input line 114.
+
+
+
+LaTeX Warning: Citation `jiang2023pdformer' on page 2 undefined on input line 1
+15.
+
+
+LaTeX Warning: Citation `liu2023spatio' on page 2 undefined on input line 116.
+
+
+LaTeX Warning: Citation `chen2025multiscale' on page 2 undefined on input line 
+117.
+
+
+LaTeX Warning: Citation `xiao2025adaptive' on page 2 undefined on input line 11
+8.
+
+
+LaTeX Warning: Citation `xiao2025graph' on page 2 undefined on input line 119.
+
+[2 <./figures/fig1_motivation.pdf>]
+
+LaTeX Warning: Citation `feng2022adaptive' on page 3 undefined on input line 12
+2.
+
+
+LaTeX Warning: Citation `huang2023adaptive' on page 3 undefined on input line 1
+23.
+
+
+LaTeX Warning: Citation `vaswani2017attention' on page 3 undefined on input lin
+e 130.
+
+
+LaTeX Warning: Citation `zhou2021informer' on page 3 undefined on input line 13
+1.
+
+
+LaTeX Warning: Citation `wu2021autoformer' on page 3 undefined on input line 13
+2.
+
+
+LaTeX Warning: Citation `nie2023time' on page 3 undefined on input line 133.
+
+
+LaTeX Warning: Citation `zhang2023crossformer' on page 3 undefined on input lin
+e 134.
+
+
+LaTeX Warning: Citation `liu2024itransformer' on page 3 undefined on input line
+ 135.
+
+
+LaTeX Warning: Citation `wu2023timesnet' on page 3 undefined on input line 136.
+
+
+
+LaTeX Warning: Citation `oreshkin2020nbeats' on page 3 undefined on input line 
+137.
+
+
+LaTeX Warning: Citation `gu2023mamba' on page 3 undefined on input line 138.
+
+
+LaTeX Warning: Citation `zeng2023transformers' on page 3 undefined on input lin
+e 139.
+
+
+LaTeX Warning: Citation `lin2022conditional' on page 3 undefined on input line 
+153.
+
+
+LaTeX Warning: Citation `rasp2020weatherbench' on page 3 undefined on input lin
+e 154.
+
+[3]
+
+LaTeX Warning: Citation `feng2022adaptive' on page 4 undefined on input line 19
+9.
+
+
+LaTeX Warning: Reference `fig:overview' on page 4 undefined on input line 232.
+
+[4{C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
+c}] [5 <./figures/fig2_architecture.pdf>]
+
+LaTeX Warning: Citation `lin2022conditional' on page 6 undefined on input line 
+335.
+
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+
+LaTeX Warning: Reference `tab:primary' on page 6 undefined on input line 361.
+
+(tables/table1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]\T1/lmr/m/n/8 All scores in-clude valid zero tar-gets and use equal spa-tial 
+weights over the full 12-hour fore-cast and 657 test ex-am-ples. Er-rors are
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 in K for tem-per-a-ture, per-cent-age points for rel-a-tive hu-mi
+d-ity, ms$[]$ for sur-face wind, and frac-tions for cloud cover. Benjamini--
+)
+
+LaTeX Warning: Reference `tab:context' on page 6 undefined on input line 376.
+
+
+LaTeX Warning: Reference `fig:context' on page 6 undefined on input line 377.
+
+(tables/table2.tex
+
+LaTeX Warning: Reference `tab:primary' on page 6 undefined on input line 17.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\T1/lmr/m/n/8 Errors are in K for tem-per-a-ture, per-cent-age points for rel
+-a-tive hu-mid-ity, ms$[]$ for sur-face wind, and frac-tions for cloud cover. V
+ari-a-
+)
+
+LaTeX Warning: Reference `tab:context' on page 6 undefined on input line 398.
+
+
+LaTeX Warning: Reference `tab:context' on page 6 undefined on input line 398.
+
+
+LaTeX Warning: Reference `fig:primary' on page 6 undefined on input line 402.
+
+
+LaTeX Warning: Reference `tab:primary' on page 6 undefined on input line 418.
+
+
+LaTeX Warning: Reference `tab:primary' on page 6 undefined on input line 418.
+
+[6] [7 <./figures/fig3_context_heatmap.pdf>]
+
+LaTeX Warning: Reference `fig:horizon' on page 8 undefined on input line 441.
+
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 446.
+
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 461.
+
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 461.
+
+
+LaTeX Warning: Reference `fig:primary_bars' on page 8 undefined on input line 4
+65.
+
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 467.
+
+
+LaTeX Warning: Reference `fig:primary' on page 8 undefined on input line 467.
+
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Reference `fig:primary' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Reference `fig:primary' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Reference `tab:ablation' on page 8 undefined on input line 494.
+
+(tables/table3.tex
+
+LaTeX Warning: Reference `tab:primary' on page 8 undefined on input line 19.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]\T1/lmr/m/n/8 The con-trol re-moves the en-tire AGF mod-ule, in-clud-ing its 
+resid-ual pro-jec-tion, chang-ing the en-coder in-put width and pa-ram-e-ter co
+unt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 The un-gated vari-ant uses a fixed equal av-er-age of the graph a
+nd resid-ual branches. The con-trol and full-model rows use the same
+)
+
+LaTeX Warning: Reference `fig:robust' on page 8 undefined on input line 510.
+
+[8 <./figures/fig4_primary_replicates.pdf>] [9 <./figures/fig5_horizon_curves.p
+df> <./figures/fig6_primary_bars.pdf>]
+
+LaTeX Warning: Reference `tab:gate' on page 10 undefined on input line 545.
+
+
+LaTeX Warning: Reference `fig:gate' on page 10 undefined on input line 545.
+
+
+LaTeX Warning: Reference `eq:agf_fusion' on page 10 undefined on input line 548
+.
+
+
+LaTeX Warning: Reference `fig:gate' on page 10 undefined on input line 553.
+
+(tables/table4.tex)
+
+LaTeX Warning: Reference `tab:gate' on page 10 undefined on input line 577.
+
+
+LaTeX Warning: Reference `tab:gate' on page 10 undefined on input line 577.
+
+[10]
+
+LaTeX Warning: Reference `tab:large_weather_context' on page 11 undefined on in
+put line 593.
+
+
+LaTeX Warning: Citation `rasp2026weathernext3' on page 11 undefined on input li
+ne 596.
+
+
+LaTeX Warning: Citation `bonev2025fourcastnet3' on page 11 undefined on input l
+ine 598.
+
+
+LaTeX Warning: Citation `rasp2026weathernext3' on page 11 undefined on input li
+ne 609.
+
+
+LaTeX Warning: Citation `bonev2025fourcastnet3' on page 11 undefined on input l
+ine 611.
+
+
+LaTeX Warning: Reference `tab:large_weather_context' on page 11 undefined on in
+put line 614.
+
+[11 <./figures/fig7_missing_node_robustness.pdf>]
+
+LaTeX Warning: Citation `google2026wn3docs' on page 12 undefined on input line 
+628.
+
+
+LaTeX Warning: Citation `google2026wn3docs' on page 12 undefined on input line 
+628.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
+[]\T1/lmr/m/n/9 Spatial/temporal out-put and
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+[]\T1/lmr/m/n/9 CLCRN-AGF (this
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+[]\T1/lmr/m/n/9 Separate tem-per-a-ture, relative-
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+\T1/lmr/m/n/9 humidity, wind and cloud-
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+[]\T1/lmr/m/n/9 Single RTX 5090 Lap-top
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+\T1/lmr/m/n/9 GPU; historical-weight
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+\T1/lmr/m/n/9 batch pro-file only; no new-
+
+LaTeX Warning: Citation `rasp2026weathernext3' on page 12 undefined on input li
+ne 635.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+[]$\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 1[]$ \T1/lmr/m/n/9 sur-face,
+ $\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 25[]$ \T1/lmr/m/n/9 pres-sure
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+\T1/lmr/m/n/9 lev-els, $\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 05[]$ \
+T1/lmr/m/n/9 sta-tion head;
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+\T1/lmr/m/n/9 hourly sur-face out-put; 15 days
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+[]\T1/lmr/m/n/9 Surface/upper-air fields, cloud,
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+\T1/lmr/m/n/9 ra-di-a-tion, pre-cip-i-ta-tion and
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
+[]\T1/lmr/m/n/9 About 6.3 min per mem-
+
+LaTeX Warning: Citation `bonev2025fourcastnet3' on page 12 undefined on input l
+ine 636.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+[]$\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 25[]$\T1/lmr/m/n/9 ; 6-hourl
+y; 15-day skill
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+\T1/lmr/m/n/9 eval-u-a-tion, roll-outs as-sessed to
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+[]\T1/lmr/m/n/9 72 chan-nels: 7 sur-face fields
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+\T1/lmr/m/n/9 and 5 vari-ables at 13 pres-sure
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
+[]\T1/lmr/m/n/9 About 1 min per 15-day
+[12 <./figures/fig8_gate_distribution.pdf>]
+Underfull \hbox (badness 1137) in paragraph at lines 713--728
+\T1/lmr/m/n/10 a-ture batch is re-tained un-der \T1/lmtt/m/n/10 historical_cont
+ext \T1/lmr/m/n/10 solely for the sep-a-rately la-belled his-tor-i-cal in-fer-e
+nce 
+[13] [14] [15] [16]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 1040.
+
+
+ )
+(see the transcript file for additional information)<C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/xinch/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/x
+inch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/x
+inch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx6.pfb><C:/Users/xi
+nch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx7.pfb><C:/Users/xin
+ch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/xinc
+h/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/xinc
+h/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/xinc
+h/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/xinch
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/xinch/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/xinch/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/xinch/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/xinch/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/xinch/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/xinch/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/xinch/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/xinch/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/xinch/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/xinch/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/xinch/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/xinch/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/xinch/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (16 pages, 8523310 bytes).
+Transcript written on main.log.
+
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

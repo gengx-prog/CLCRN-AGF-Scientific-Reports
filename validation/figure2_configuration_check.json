@@ -1,0 +1,75 @@
+{
+  "node_num": {
+    "2048": 46
+  },
+  "seq_len": {
+    "12": 46
+  },
+  "horizon": {
+    "12": 46
+  },
+  "max_view": {
+    "1": 46
+  },
+  "layer_num": {
+    "2": 46
+  },
+  "lck_structure": {
+    "[10, 8, 6]": 46
+  },
+  "k_neighbors": {
+    "25": 46
+  },
+  "asttn_topk_enabled": {
+    "4": 26
+  },
+  "model_count": 46,
+  "all_config_source_hashes": {
+    "seed_2021\\cloud_cover\\agf\\model_param.json": "976af19f14f7c35b50936575dead6332bbe24d7b0853f6b89964fc490372e31d",
+    "seed_2021\\cloud_cover\\control\\model_param.json": "40a5fbf9eda2e28cdb7419c12c64c66eb279075379d7f5d9e8d550bcaad18a4a",
+    "seed_2021\\component_of_wind\\agf\\model_param.json": "d43910f8183f3819f832f99583ee18fd0a2c9a4026b97bc54ddceed99db01f18",
+    "seed_2021\\component_of_wind\\control\\model_param.json": "e63381f79b5c7f05765c7424690b8482ac2d649f6d7c6d5d71e4ca48ab1dde17",
+    "seed_2021\\humidity\\agf\\model_param.json": "325eb6a469b9fb6439b19236461d1f3a7d7aa2b8b7b34dbf8238dca93b2dddde",
+    "seed_2021\\humidity\\control\\model_param.json": "97508835c0c30d03419b20eda69b2a7152695175d59279c02b09f9024fe49d93",
+    "seed_2021\\temperature\\agf\\model_param.json": "7123d430b6d81bd57ddf847dc9e58434306403e56e49b3eb0fce8dca31dd757d",
+    "seed_2021\\temperature\\control\\model_param.json": "6baa81efec19593f5636bf6ad98dffe793907d10c6b6d68a6623158f0a7b3080",
+    "seed_2022\\cloud_cover\\agf\\model_param.json": "59c921889a748232177c33e9547d3e811fcadf07d7d396d596eb115f0afa61d9",
+    "seed_2022\\cloud_cover\\control\\model_param.json": "5cf6f16cc01c892ea95d80cdaea90612083e931f6de042aaf6366bfc950f2b00",
+    "seed_2022\\component_of_wind\\agf\\model_param.json": "d76f437ceeaff8505afcd9f22849f4a09fdc005164b6a4f4bdbc86e9fbbd5df5",
+    "seed_2022\\component_of_wind\\control\\model_param.json": "3ded4c9ff4e3350557fb61cd10fe18b10fb88b4661bdff1ac40417857a0a145e",
+    "seed_2022\\humidity\\agf\\model_param.json": "1638c34165be1c6cd30dcf390e8f7edbd447d6f6ae3f27ed01f8f67e5940346e",
+    "seed_2022\\humidity\\control\\model_param.json": "709a4ac4287dd6c1f3c99b4659473462de29320719dfb87c027ea8e0c6687af4",
+    "seed_2022\\temperature\\agf\\model_param.json": "1d2d25501c51bf0ae612e477643a172ee17b1d41c0d22714e106e16dc88786ae",
+    "seed_2022\\temperature\\control\\model_param.json": "8817cca767154bf74f9b0a10ffbdf461c846dc9d27f91e01b91f0fad381107be",
+    "seed_2023\\cloud_cover\\agf\\model_param.json": "ed42335080a5e045e89d17963ea470472b6671bdf00f1cc9c97926bbca25d6da",
+    "seed_2023\\cloud_cover\\control\\model_param.json": "8085e637caffe8857f1ddd0bb5351a6242e5c1da123762202d54b7d4d98aa5a4",
+    "seed_2023\\component_of_wind\\agf\\model_param.json": "399164538fe3544a3316ed96789654e915930444ca2751ab6231455c82ab33a3",
+    "seed_2023\\component_of_wind\\control\\model_param.json": "017665716c7fe3ee643fe34808143d28cb8c0cbb20dadf7cfb1cf00e2088e1e3",
+    "seed_2023\\humidity\\agf\\model_param.json": "b35405a3969e3122f48594c97e401d8be7876486bd2250345a255286333591d8",
+    "seed_2023\\humidity\\control\\model_param.json": "1a4254e35c7c07f4343f552e070b687c62393d54c7bc6927c244f46663c23160",
+    "seed_2023\\humidity\\mean_fusion\\model_param.json": "db234270cdc5cff3de1af5246c50d8a11c9708dba840f1d5a6ebc59bd8a3a3fa",
+    "seed_2023\\temperature\\agf\\model_param.json": "a1433133bd6e03896d36e8ca4e45aee0b90efc1712659d71ddc1180263c1810d",
+    "seed_2023\\temperature\\control\\model_param.json": "d8eef1447ba1ac776ca2007d4f9a89382eae9633e8c20c4f96b53f66c903b1eb",
+    "seed_2023\\temperature\\mean_fusion\\model_param.json": "e7f7cedf69fb5900ae283e60bb76be31665607caa882543239722c050a2cd285",
+    "seed_2024\\cloud_cover\\agf\\model_param.json": "f7efc77dad17a1b1ad7ba504bafccc1258b77508a945acd927cbf6699a05daa0",
+    "seed_2024\\cloud_cover\\control\\model_param.json": "6caaedc5f8bca262966614209cd63d33d5af3b572af4567fc1c2d11cab7c5606",
+    "seed_2024\\component_of_wind\\agf\\model_param.json": "142e792d2c8ec4cbd314224a78dd08757ff88f11e412ff653e7139bb21b7e0fb",
+    "seed_2024\\component_of_wind\\control\\model_param.json": "8448166a54c8d1bbd826de60cbfb47700d3b81eb0371ad906f146c81bf21003d",
+    "seed_2024\\humidity\\agf\\model_param.json": "b6dc134a4a566131d242e035a12905a1c403523489c312c8a3c4ff354c714c08",
+    "seed_2024\\humidity\\control\\model_param.json": "723a7f3aa702d8588e26c250ae00e8966e5529e177d613e7857aadcbdaa8ff90",
+    "seed_2024\\humidity\\mean_fusion\\model_param.json": "9ad0a4d08aaaec8c2c49cbf052d6f1fef3a93dda1bd15fdd56a0028c9bd82735",
+    "seed_2024\\temperature\\agf\\model_param.json": "0b3bdc60e95970a9e58663bf37ee8558b79b0ec002ce7402ed78c4ee24cd63a7",
+    "seed_2024\\temperature\\control\\model_param.json": "c30bc2022c9a4f59f314ef8ba5310a5105a9b06944f4425b59445966cdb9bf45",
+    "seed_2024\\temperature\\mean_fusion\\model_param.json": "e09cb32b4df76bf4411e58fcea220beba6edb5bbd571e33e4981e8252e04ed7f",
+    "seed_2025\\cloud_cover\\agf\\model_param.json": "eb429d2aba8a23d1e22a821ea936bc43da06a6f9853b61094a7a68e756af93af",
+    "seed_2025\\cloud_cover\\control\\model_param.json": "ccf77915986f6e9b1595e2e8fc857e3858f68443cdb8f81f8be1a1d3e10ce19d",
+    "seed_2025\\component_of_wind\\agf\\model_param.json": "c85fffa80f38dc86a0d3c1ea18a9470d48fde6bda2bd7b1ae06697a3c1d3a6ba",
+    "seed_2025\\component_of_wind\\control\\model_param.json": "428703301b9d656ad27768230a34c66ecd97562aff4bcbb886329bc53de4e6a2",
+    "seed_2025\\humidity\\agf\\model_param.json": "97260efd56da0f1c93572ad6d0aeab7892b8b3674d69c7573de78c58c6b7e329",
+    "seed_2025\\humidity\\control\\model_param.json": "ea4d1a756cdafd81ecc3acf462fc360843df28598d0305325b33fb62c84c0c05",
+    "seed_2025\\humidity\\mean_fusion\\model_param.json": "47ebe06d79bef8f13470e4a18ffe79b1c5aa826e6b0e848fc2b99ebab0214ef4",
+    "seed_2025\\temperature\\agf\\model_param.json": "d056b75b95d99f608afa6f52055c08bdc275eb1510097477e841457a6c400384",
+    "seed_2025\\temperature\\control\\model_param.json": "d85c5e9cfe0f288a383ff2ce3cf4965a47f3195992ad684858739727ec711a6a",
+    "seed_2025\\temperature\\mean_fusion\\model_param.json": "3345949818e402ff67eaee6b19a000ccde9ef58def27dae9c238f805c0f6f1b6"
+  }
+}

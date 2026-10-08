@@ -1,0 +1,84 @@
+{
+  "figures": {
+    "fig1": {
+      "caption": "Conceptual illustration of spatial geometry in weather modelling. The left panel illustrates variation in geodesic distance and relative orientation on the sphere; the right panel schematically depicts graph convolution and geometry-sensitive weighting. All surfaces, node positions and colour gradients are illustrative and are not measured forecasts or quantitative evidence of improved regularization.",
+      "format": "Original 5740 by 2482 pixel raster retained; PDF and SVG embed the unchanged illustration.",
+      "original_sha256": "77aa083f0726a303b0c9b6d7e907accb288119ef31223afb5e51936751c976b3",
+      "unchanged_png": true
+    },
+    "fig2": {
+      "style": "Original three-panel composition, upward pipeline, round pastel boxes, dotted node graphs, matrix grids, recurrent cell and projection icons, and original Comic Sans typography.",
+      "font": "Comic Sans MS",
+      "native_vector": true,
+      "illustrative_only": "All traces, graph node positions and matrix cells are schematic, not experimental data.",
+      "corrections": [
+        "AGF is applied before CLConv-GRU",
+        "Original weather and embeddings bypass AGF and are concatenated with z",
+        "Learned adjacency uses softmax(Es Et.T), not an antisymmetric matrix",
+        "Self plus three other neighbours gives total k=4",
+        "Both projected branches originate from the same F",
+        "Gate weights graph q as g and residual r as 1-g",
+        "One actual kernel view, not multi-hop propagation",
+        "No fictitious binary/distance/adaptive triple-graph fusion",
+        "Teacher forcing only during training"
+      ],
+      "code_alignment": {
+        "node_num": 2048,
+        "seq_len": 12,
+        "horizon": 12,
+        "k_neighbors": 25,
+        "max_view": 1,
+        "layer_num": 2,
+        "asttn_topk": 4
+      },
+      "caption": "Implementation-aligned CLCRN-AGF architecture. (a) Standardized weather inputs are projected and concatenated with learned node embeddings to form F. AGF acts on F before the recurrent backbone; its output z is concatenated with F and the standardized weather input. A two-layer CLConv-GRU encoder and autoregressive decoder predict the next 12 hours. Scheduled sampling is used only during training. (b) The local kernel combines learned coordinate-dependent weights, geodesic decay and angular weighting over 25 geographic neighbours. These experiments use a single kernel view in the recurrent cells. (c) Row-wise softmax of learned source and destination embeddings defines an input-independent adjacency for each checkpoint. Self plus the three strongest other neighbours are retained and renormalized. Graph-aggregated and residual projections q and r use the same pre-CLConv F; their input-dependent gate forms z=g*q+(1-g)*r. The control omits z and retains the original weather and node embeddings. Traces, node positions and matrix cells are illustrative.",
+      "script_sha256": "ba40227004a2afd5dd23bf6f8c907800920b4615ce77c652c03b867735ec80a0",
+      "outputs": {
+        "fig2_architecture.pdf": "43e13ac7d4b064b88df9a13e5610bbcfaef5c6e6700d07c47bf2673240046b1c",
+        "fig2_architecture.png": "ea9a38f93df6f90edbee91ab2dc8b1aee9b0e335c8e4cb14813c5cd578e20e2c",
+        "fig2_architecture.svg": "0d79f09be00adc8e065b230faf95175e1da09f0d6e7bf2af356b58af2290e7fe"
+      },
+      "code_sources": [
+        {
+          "path": "reference_code/adaptive_attention.py",
+          "sha256": "05b1fc67eda9bb1fba160e5c48a70de7d401a34c63ef4fbb19640ace36b0d82e"
+        },
+        {
+          "path": "reference_code/clconv.py",
+          "sha256": "c07dfd30df610c0a16464aa1dd05493cc44352b180ceee24c47f334ea56e5906"
+        },
+        {
+          "path": "reference_code/seq2seq_model.py",
+          "sha256": "8d2d73688a3f0d179451dad738d8e54a2ade45082fd4ccbac49d4dc252156960"
+        }
+      ]
+    }
+  },
+  "script_sha256": "a67e53f571de133c0ebabfb015d482390fe6ca6a485906eb4ffbf1b09fe9aae6",
+  "artifacts": [
+    {
+      "file": "figures/fig1_motivation.pdf",
+      "sha256": "c3b71de5155fc422a5bfbef69e166b3d1837ede63efb80df892aacbcbb2e6686"
+    },
+    {
+      "file": "figures/fig1_motivation.png",
+      "sha256": "77aa083f0726a303b0c9b6d7e907accb288119ef31223afb5e51936751c976b3"
+    },
+    {
+      "file": "figures/fig1_motivation.svg",
+      "sha256": "b7efb7d47ae37a83df5feb9bf154b2eef066abb9bec414c550ce492e22fb3f6f"
+    },
+    {
+      "file": "figures/fig2_architecture.pdf",
+      "sha256": "43e13ac7d4b064b88df9a13e5610bbcfaef5c6e6700d07c47bf2673240046b1c"
+    },
+    {
+      "file": "figures/fig2_architecture.png",
+      "sha256": "ea9a38f93df6f90edbee91ab2dc8b1aee9b0e335c8e4cb14813c5cd578e20e2c"
+    },
+    {
+      "file": "figures/fig2_architecture.svg",
+      "sha256": "0d79f09be00adc8e065b230faf95175e1da09f0d6e7bf2af356b58af2290e7fe"
+    }
+  ]
+}

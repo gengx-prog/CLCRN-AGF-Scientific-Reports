@@ -1,0 +1,25 @@
+﻿dataset,method,metric,value,n_seed,units,column_minmax_score,descriptive_rank
+temperature,Persistence,mae,1.4213722371697077,1,K,0.0,3
+temperature,Persistence,rmse,2.700103725447809,1,K,0.0,3
+humidity,Persistence,mae,6.424777759608583,1,percentage points,0.0,3
+humidity,Persistence,rmse,10.447111321293935,1,percentage points,0.0,3
+component_of_wind,Persistence,mae,1.5371871151764573,1,m s^{-1},0.0,3
+component_of_wind,Persistence,rmse,2.5353753795448086,1,m s^{-1},0.0,3
+cloud_cover,Persistence,mae,0.16199090954891296,1,fraction,0.0,3
+cloud_cover,Persistence,rmse,0.2725298396854077,1,fraction,0.0,3
+temperature,Control,mae,1.257990563469587,5,K,1.0,1
+temperature,Control,rmse,2.101232441384352,5,K,1.0,1
+humidity,Control,mae,4.647975580455883,5,percentage points,0.9413005504686754,2
+humidity,Control,rmse,7.2484444098746454,5,percentage points,0.9305474149819403,2
+component_of_wind,Control,mae,1.2420089338787013,5,m s^{-1},1.0,1
+component_of_wind,Control,rmse,1.972291368664053,5,m s^{-1},1.0,1
+cloud_cover,Control,mae,0.1479050657509322,5,fraction,1.0,1
+cloud_cover,Control,rmse,0.24998801017821437,5,fraction,0.9567451546360478,2
+temperature,CLCRN-AGF,mae,1.2910080096612102,5,K,0.7979121804552864,2
+temperature,CLCRN-AGF,rmse,2.1180523212478155,5,K,0.9719140317609868,2
+humidity,CLCRN-AGF,mae,4.537174296221648,5,percentage points,1.0,1
+humidity,CLCRN-AGF,rmse,7.009707853270365,5,percentage points,1.0,1
+component_of_wind,CLCRN-AGF,mae,1.2556686124662615,5,m s^{-1},0.9537239557222515,2
+component_of_wind,CLCRN-AGF,rmse,2.0155409098225077,5,m s^{-1},0.9231916724276983,2
+cloud_cover,CLCRN-AGF,mae,0.1483572416324575,5,fraction,0.9678985591484326,2
+cloud_cover,CLCRN-AGF,rmse,0.2489688847143126,5,fraction,1.0,1

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "captured_utc": "2026-10-08T11:43:24.178304+00:00",
+  "scope": "Fresh CPU-only virtual environment; failure-path regression guards and frozen synthetic train/save/reload/independent metric checks, NOT WeatherBench accuracy",
+  "python": "3.13.7",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.4.2",
+  "device": "cpu",
+  "guard_test_count": 5,
+  "checks": {
+    "guard_tests": {
+      "exit_code": 0,
+      "seconds": 0.15565289999358356,
+      "log": "validation/clean_cpu_guard_tests.txt"
+    },
+    "synthetic_training": {
+      "exit_code": 0,
+      "seconds": 8.716665500076488,
+      "log": "validation/clean_cpu_synthetic_training.txt"
+    }
+  },
+  "synthetic_training": {
+    "status": "passed",
+    "metrics": "zero/negative inclusion, explicit legacy zero exclusion, missing targets, finite gradients, invalid-prediction rejection passed",
+    "graph": "self-inclusive normalized top-k, independent dense formula, gate operand order, backward gradients, k=1 and k=N passed",
+    "variants": [
+      {
+        "variant": "agf",
+        "status": "passed",
+        "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+      },
+      {
+        "variant": "control",
+        "status": "passed",
+        "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+      },
+      {
+        "variant": "mean_fusion",
+        "status": "passed",
+        "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+      },
+      {
+        "variant": "legacy_agf",
+        "status": "passed",
+        "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+      }
+    ]
+  }
+}

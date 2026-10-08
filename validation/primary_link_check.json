@@ -1,0 +1,466 @@
+[
+  {
+    "key": "bauer2015quiet",
+    "url": "https://www.nature.com/articles/nature14956",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/nature14956",
+    "title": "The quiet revolution of numerical weather prediction | Nature",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "rasp2020weatherbench",
+    "url": "https://doi.org/10.1029/2020MS002203",
+    "status_code": 403,
+    "resolved_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020MS002203",
+    "title": "Just a moment...",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "key": "hersbach2020era5",
+    "url": "https://doi.org/10.1002/qj.3803",
+    "status_code": 403,
+    "resolved_url": "https://rmets.onlinelibrary.wiley.com/doi/10.1002/qj.3803",
+    "title": "Just a moment...",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "key": "weyn2020improving",
+    "url": "https://doi.org/10.1029/2020MS002109",
+    "status_code": 403,
+    "resolved_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020MS002109",
+    "title": "Just a moment...",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "key": "pathak2022fourcastnet",
+    "url": "https://arxiv.org/abs/2202.11214",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2202.11214",
+    "title": "[2202.11214] FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "bi2023accurate",
+    "url": "https://www.nature.com/articles/s41586-023-06185-3",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41586-023-06185-3",
+    "title": "Accurate medium-range global weather forecasting with 3D neural networks | Nature",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "lam2023learning",
+    "url": "https://doi.org/10.1126/science.adi2336",
+    "status_code": 403,
+    "resolved_url": "https://www.science.org/doi/10.1126/science.adi2336",
+    "title": "Just a moment...",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "key": "nguyen2023climax",
+    "url": "https://arxiv.org/abs/2301.10343",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2301.10343",
+    "title": "[2301.10343] ClimaX: A foundation model for weather and climate",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "bonev2023spherical",
+    "url": "https://arxiv.org/abs/2306.03838",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2306.03838",
+    "title": "[2306.03838] Spherical Fourier Neural Operators: Learning Stable Dynamics on the Sphere",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "kochkov2024neural",
+    "url": "https://www.nature.com/articles/s41586-024-07744-y",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41586-024-07744-y",
+    "title": "Neural general circulation models for weather and climate | Nature",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "price2025probabilistic",
+    "url": "https://www.nature.com/articles/s41586-024-08252-9",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41586-024-08252-9",
+    "title": "Probabilistic weather forecasting with machine learning | Nature",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "lin2022conditional",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/20711",
+    "status_code": 200,
+    "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/20711",
+    "title": "Conditional Local Convolution for Spatio-Temporal Meteorological Forecasting\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "defferrard2016chebnet",
+    "url": "https://arxiv.org/abs/1606.09375",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1606.09375",
+    "title": "[1606.09375] Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "kipf2017semi",
+    "url": "https://arxiv.org/abs/1609.02907",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1609.02907",
+    "title": "[1609.02907] Semi-Supervised Classification with Graph Convolutional Networks",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "velickovic2018graph",
+    "url": "https://arxiv.org/abs/1710.10903",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1710.10903",
+    "title": "[1710.10903] Graph Attention Networks",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "hamilton2017inductive",
+    "url": "https://arxiv.org/abs/1706.02216",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1706.02216",
+    "title": "[1706.02216] Inductive Representation Learning on Large Graphs",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "cohen2019gauge",
+    "url": "https://proceedings.mlr.press/v97/cohen19d.html",
+    "status_code": 200,
+    "resolved_url": "https://proceedings.mlr.press/v97/cohen19d.html",
+    "title": "Gauge Equivariant Convolutional Networks and the Icosahedral CNN",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "li2018diffusion",
+    "url": "https://arxiv.org/abs/1707.01926",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1707.01926",
+    "title": "[1707.01926] Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "yu2018spatio",
+    "url": "https://arxiv.org/abs/1709.04875",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1709.04875",
+    "title": "[1709.04875] Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "guo2019attention",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/3881",
+    "status_code": 200,
+    "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/3881",
+    "title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "wu2019graph",
+    "url": "https://www.ijcai.org/proceedings/2019/264",
+    "status_code": 200,
+    "resolved_url": "https://www.ijcai.org/proceedings/2019/264",
+    "title": "Graph WaveNet for Deep Spatial-Temporal Graph Modeling | IJCAI",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "bai2020adaptive",
+    "url": "https://arxiv.org/abs/2007.02842",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2007.02842",
+    "title": "[2007.02842] Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "wu2020connecting",
+    "url": "https://arxiv.org/abs/2005.11650",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2005.11650",
+    "title": "[2005.11650] Connecting the Dots: Multivariate Time Series Forecasting with Graph Neural Networks",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zheng2020gman",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/5477",
+    "status_code": 200,
+    "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/5477",
+    "title": "GMAN: A Graph Multi-Attention Network for Traffic Prediction\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "fang2021spatial",
+    "url": "https://arxiv.org/abs/2106.12931",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2106.12931",
+    "title": "[2106.12931] Spatial-Temporal Graph ODE Networks for Traffic Flow Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "lan2022dstagnn",
+    "url": "https://proceedings.mlr.press/v162/lan22a.html",
+    "status_code": 200,
+    "resolved_url": "https://proceedings.mlr.press/v162/lan22a.html",
+    "title": "DSTAGNN: Dynamic Spatial-Temporal Aware Graph Neural Network for Traffic Flow Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "jin2023spatio",
+    "url": "https://zezhishao.github.io/assets/pdf/2024_TKDE_STGNN_Survey.pdf",
+    "status_code": 200,
+    "resolved_url": "https://zezhishao.github.io/assets/pdf/2024_TKDE_STGNN_Survey.pdf",
+    "title": "",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "cini2023scalable",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/25880",
+    "status_code": 200,
+    "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25880",
+    "title": "Scalable Spatiotemporal Graph Neural Networks\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zambon2023graph",
+    "url": "https://arxiv.org/abs/2301.01741v1",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2301.01741v1",
+    "title": "[2301.01741v1] Graph state-space models",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "wen2023diffstg",
+    "url": "https://arxiv.org/abs/2301.13629",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2301.13629",
+    "title": "[2301.13629] DiffSTG: Probabilistic Spatio-Temporal Graph Forecasting with Denoising Diffusion Models",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "oskarsson2023temporal",
+    "url": "https://proceedings.mlr.press/v206/oskarsson23a.html",
+    "status_code": 200,
+    "resolved_url": "https://proceedings.mlr.press/v206/oskarsson23a.html",
+    "title": "Temporal Graph Neural Networks for Irregular Data",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "shang2021discrete",
+    "url": "https://arxiv.org/abs/2101.06861",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2101.06861",
+    "title": "[2101.06861] Discrete Graph Structure Learning for Forecasting Multiple Time Series",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qi2017pointnet",
+    "url": "https://arxiv.org/abs/1612.00593",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1612.00593",
+    "title": "[1612.00593] PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "wang2019dynamic",
+    "url": "https://arxiv.org/abs/1801.07829",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1801.07829",
+    "title": "[1801.07829] Dynamic Graph CNN for Learning on Point Clouds",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "jiang2023pdformer",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/25556",
+    "status_code": 200,
+    "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25556",
+    "title": "PDFormer: Propagation Delay-Aware Dynamic Long-Range Transformer for Traffic Flow Prediction\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "liu2023spatio",
+    "url": "https://arxiv.org/abs/2308.10425",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2308.10425",
+    "title": "[2308.10425] STAEformer: Spatio-Temporal Adaptive Embedding Makes Vanilla Transformer SOTA for Traffic Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "feng2022adaptive",
+    "url": "https://arxiv.org/abs/2207.05064",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2207.05064",
+    "title": "[2207.05064] Adaptive Graph Spatial-Temporal Transformer Network for Traffic Flow Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "huang2023adaptive",
+    "url": "https://doi.org/10.1109/JIOT.2022.3209523",
+    "status_code": 202,
+    "resolved_url": "https://ieeexplore.ieee.org/document/9903002/",
+    "title": "",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "key": "vaswani2017attention",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1706.03762",
+    "title": "[1706.03762] Attention Is All You Need",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zhou2021informer",
+    "url": "https://arxiv.org/abs/2012.07436",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2012.07436",
+    "title": "[2012.07436] Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "wu2021autoformer",
+    "url": "https://arxiv.org/abs/2106.13008",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2106.13008",
+    "title": "[2106.13008] Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "nie2023time",
+    "url": "https://arxiv.org/abs/2211.14730",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2211.14730",
+    "title": "[2211.14730] A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "wu2023timesnet",
+    "url": "https://arxiv.org/abs/2210.02186",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2210.02186",
+    "title": "[2210.02186] TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zhang2023crossformer",
+    "url": "https://github.com/Thinklab-SJTU/Crossformer",
+    "status_code": 200,
+    "resolved_url": "https://github.com/Thinklab-SJTU/Crossformer",
+    "title": "GitHub - Thinklab-SJTU/Crossformer: Official implementation of our ICLR 2023 paper \"Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting\" · GitHub",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "liu2024itransformer",
+    "url": "https://arxiv.org/abs/2310.06625",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2310.06625",
+    "title": "[2310.06625] iTransformer: Inverted Transformers Are Effective for Time Series Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "gu2023mamba",
+    "url": "https://arxiv.org/abs/2312.00752v1",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2312.00752v1",
+    "title": "[2312.00752v1] Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "cao2020spectral",
+    "url": "https://arxiv.org/abs/2103.07719",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2103.07719",
+    "title": "[2103.07719] Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "oreshkin2020nbeats",
+    "url": "https://arxiv.org/abs/1905.10437",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1905.10437",
+    "title": "[1905.10437] N-BEATS: Neural basis expansion analysis for interpretable time series forecasting",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zeng2023transformers",
+    "url": "https://arxiv.org/abs/2205.13504",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/2205.13504",
+    "title": "[2205.13504] Are Transformers Effective for Time Series Forecasting?",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "chen2025multiscale",
+    "url": "https://www.nature.com/articles/s41598-025-11072-0",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-025-11072-0",
+    "title": "Multi-scale spatio-temporal graph neural network for urban traffic flow prediction | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "xiao2025adaptive",
+    "url": "https://www.nature.com/articles/s41598-025-12261-7",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-025-12261-7",
+    "title": "An adaptive spatiotemporal dynamic graph convolutional network for traffic prediction | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "xiao2025graph",
+    "url": "https://www.nature.com/articles/s41598-025-88706-w",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-025-88706-w",
+    "title": "Graph convolution networks based on adaptive spatiotemporal attention for traffic flow forecasting | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "frnda2022ecmwf",
+    "url": "https://www.nature.com/articles/s41598-022-11936-9",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-022-11936-9",
+    "title": "ECMWF short-term prediction accuracy improvement by deep learning | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zanchi2023microclimate",
+    "url": "https://www.nature.com/articles/s41598-023-48028-1",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-023-48028-1",
+    "title": "Harnessing deep learning to forecast local microclimate using global climate data | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "guo2024monthly",
+    "url": "https://www.nature.com/articles/s41598-024-68906-6",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-024-68906-6",
+    "title": "Monthly climate prediction using deep convolutional neural network and long short-term memory | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "alves2025spatiotemporal",
+    "url": "https://www.nature.com/articles/s41598-025-17867-5",
+    "status_code": 200,
+    "resolved_url": "https://www.nature.com/articles/s41598-025-17867-5",
+    "title": "A deep learning approach for improving spatiotemporal resolution of numerical weather prediction forecasts | Scientific Reports",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "seo2018structured",
+    "url": "https://arxiv.org/abs/1612.07659",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1612.07659",
+    "title": "[1612.07659] Structured Sequence Modeling with Graph Convolutional Recurrent Networks",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "zhao2019tgcn",
+    "url": "https://arxiv.org/abs/1811.05320",
+    "status_code": 200,
+    "resolved_url": "https://arxiv.org/abs/1811.05320",
+    "title": "[1811.05320] T-GCN: A Temporal Graph ConvolutionalNetwork for Traffic Prediction",
+    "content_type": "text/html; charset=utf-8"
+  }
+]

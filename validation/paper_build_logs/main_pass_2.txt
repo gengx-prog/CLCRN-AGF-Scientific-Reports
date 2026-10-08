@@ -1,0 +1,269 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(wlscirep.cls
+Document Class: wlscirep 08/08/2020, v1.4
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df)) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\fleqn.clo)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty)
+ (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty) 
+))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def)))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
+) (jabbrv.sty (jabbrv-ltwa-all.ldf) (jabbrv-ltwa-en.ldf))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd))
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
+(main.aux)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(main.out) (main.out)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+
+pdfTeX warning: pdflatex.EXE (file ./figures/fig1_motivation.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+[1{C:/Users/xinch/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/xi
+nch/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/xinch/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/xinch/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/xinch/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [2 <./figures/fig1
+_motivation.pdf>] [3] [4{C:/Users/xinch/AppData/Local/Programs/MiKTeX/fonts/enc
+/dvips/lm/lm-mathex.enc}] [5 <./figures/fig2_architecture.pdf>]
+(C:\Users\xinch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+(tables/table1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]\T1/lmr/m/n/8 All scores in-clude valid zero tar-gets and use equal spa-tial 
+weights over the full 12-hour fore-cast and 657 test ex-am-ples. Er-rors are
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 in K for tem-per-a-ture, per-cent-age points for rel-a-tive hu-mi
+d-ity, ms$[]$ for sur-face wind, and frac-tions for cloud cover. Benjamini--
+) (tables/table2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\T1/lmr/m/n/8 Errors are in K for tem-per-a-ture, per-cent-age points for rel
+-a-tive hu-mid-ity, ms$[]$ for sur-face wind, and frac-tions for cloud cover. V
+ari-a-
+) [6] [7 <./figures/fig3_context_heatmap.pdf>] (tables/table3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]\T1/lmr/m/n/8 The con-trol re-moves the en-tire AGF mod-ule, in-clud-ing its 
+resid-ual pro-jec-tion, chang-ing the en-coder in-put width and pa-ram-e-ter co
+unt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 The un-gated vari-ant uses a fixed equal av-er-age of the graph a
+nd resid-ual branches. The con-trol and full-model rows use the same
+) [8 <./figures/fig4_primary_replicates.pdf>] [9 <./figures/fig5_horizon_curves
+.pdf> <./figures/fig6_primary_bars.pdf>] (tables/table4.tex) [10] [11 <./figure
+s/fig7_missing_node_robustness.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
+[]\T1/lmr/m/n/9 Spatial/temporal out-put and
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+[]\T1/lmr/m/n/9 CLCRN-AGF (this
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+[]\T1/lmr/m/n/9 Separate tem-per-a-ture, relative-
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+\T1/lmr/m/n/9 humidity, wind and cloud-
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+[]\T1/lmr/m/n/9 Single RTX 5090 Lap-top
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+\T1/lmr/m/n/9 GPU; historical-weight
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+\T1/lmr/m/n/9 batch pro-file only; no new-
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+[]$\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 1[]$ \T1/lmr/m/n/9 sur-face,
+ $\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 25[]$ \T1/lmr/m/n/9 pres-sure
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+\T1/lmr/m/n/9 lev-els, $\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 05[]$ \
+T1/lmr/m/n/9 sta-tion head;
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+\T1/lmr/m/n/9 hourly sur-face out-put; 15 days
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+[]\T1/lmr/m/n/9 Surface/upper-air fields, cloud,
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
+\T1/lmr/m/n/9 ra-di-a-tion, pre-cip-i-ta-tion and
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
+[]\T1/lmr/m/n/9 About 6.3 min per mem-
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+[]$\OT1/lmr/m/n/9 0\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 25[]$\T1/lmr/m/n/9 ; 6-hourl
+y; 15-day skill
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+\T1/lmr/m/n/9 eval-u-a-tion, roll-outs as-sessed to
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+[]\T1/lmr/m/n/9 72 chan-nels: 7 sur-face fields
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
+\T1/lmr/m/n/9 and 5 vari-ables at 13 pres-sure
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
+[]\T1/lmr/m/n/9 About 1 min per 15-day
+[12 <./figures/fig8_gate_distribution.pdf>]
+Underfull \hbox (badness 1137) in paragraph at lines 713--728
+\T1/lmr/m/n/10 a-ture batch is re-tained un-der \T1/lmtt/m/n/10 historical_cont
+ext \T1/lmr/m/n/10 solely for the sep-a-rately la-belled his-tor-i-cal in-fer-e
+nce 
+[13] [14] [15] [16]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(main.aux) )
+(see the transcript file for additional information)<C:/Users/xinch/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/xinch/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/x
+inch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/x
+inch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/x
+inch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/x
+inch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/xi
+nch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/xin
+ch/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/xinc
+h/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/xinch
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/xinch/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/xinch/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/xinch/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/xinch/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/xinch/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/xinch/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/xinch/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/xinch/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/xinch/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/xinch/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/xinch/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/xinch/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/xinch/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (16 pages, 8492711 bytes).
+Transcript written on main.log.
+
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

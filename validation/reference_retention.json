@@ -1,0 +1,1261 @@
+{
+  "date": "2026-10-08",
+  "original_reference_count": 58,
+  "retained_original_count": 58,
+  "excluded_count": 0,
+  "new_reference_count": 61,
+  "corrected_original_count": 3,
+  "added_current_references": [
+    {
+      "key": "rasp2026weathernext3",
+      "source_url": "https://arxiv.org/abs/2609.03582"
+    },
+    {
+      "key": "bonev2025fourcastnet3",
+      "source_url": "https://arxiv.org/abs/2507.12144"
+    },
+    {
+      "key": "google2026wn3docs",
+      "source_url": "https://developers.google.com/weathernext/guides/models"
+    }
+  ],
+  "intro_word_count_approx": 1112,
+  "intro_grouped_citations": 0,
+  "intro_adjacent_citation_clusters": 0,
+  "intro_single_key_citations": 58,
+  "source_sha256": {
+    "original_main_tex": "4d895462043f8f4986e2493aebba6d37e252f00d93280bddcff80a44d6b50340",
+    "current_main_tex": "ce0e32c56af6b74716c531234c50a122dfe63fd067896798e2d91e441965057f"
+  },
+  "editorial_note": "Methodological context is cited one paper per sentence. The current 46-run results, conclusions, Methods and Results prose are not changed by these snippets. Parent integration must also split the remaining grouped citations outside Introduction.",
+  "references": [
+    {
+      "original_key": "bauer2015quiet",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/nature14956"
+      ],
+      "citation_sentence": "Numerical weather prediction integrates physical governing equations and remains central to operational forecasting~\\cite{bauer2015quiet}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 1,
+      "original_bibliography": "Bauer, P., Thorpe, A. \\& Brunet, G. The quiet revolution of numerical\n  weather prediction. \\textit{Nature} \\textbf{525,} 47--55 (2015).",
+      "revised_bibliography": "Bauer, P., Thorpe, A. \\& Brunet, G. The quiet revolution of numerical\n  weather prediction. \\textit{Nature} \\textbf{525,} 47--55 (2015).",
+      "primary_link_check": {
+        "key": "bauer2015quiet",
+        "url": "https://www.nature.com/articles/nature14956",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/nature14956",
+        "title": "The quiet revolution of numerical weather prediction | Nature",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "rasp2020weatherbench",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://doi.org/10.1029/2020MS002203",
+        "https://arxiv.org/abs/2002.00469"
+      ],
+      "citation_sentence": "WeatherBench established a shared setting for evaluating data-driven forecasts~\\cite{rasp2020weatherbench}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 2,
+      "original_bibliography": "Rasp, S. et al. WeatherBench: A benchmark data set for data-driven weather\n  forecasting. \\textit{J. Adv. Model. Earth Syst.} \\textbf{12,}\n  e2020MS002203 (2020).",
+      "revised_bibliography": "Rasp, S. et al. WeatherBench: A benchmark data set for data-driven weather\n  forecasting. \\textit{J. Adv. Model. Earth Syst.} \\textbf{12,}\n  e2020MS002203 (2020).",
+      "primary_link_check": {
+        "key": "rasp2020weatherbench",
+        "url": "https://doi.org/10.1029/2020MS002203",
+        "status_code": 403,
+        "resolved_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020MS002203",
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "original_key": "hersbach2020era5",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://doi.org/10.1002/qj.3803"
+      ],
+      "citation_sentence": "The ERA5 reanalysis provides a widely used source of atmospheric training and verification fields~\\cite{hersbach2020era5}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 3,
+      "original_bibliography": "Hersbach, H. et al. The ERA5 global reanalysis. \\textit{Q. J. R. Meteorol.\n  Soc.} \\textbf{146,} 1999--2049 (2020).",
+      "revised_bibliography": "Hersbach, H. et al. The ERA5 global reanalysis. \\textit{Q. J. R. Meteorol.\n  Soc.} \\textbf{146,} 1999--2049 (2020).",
+      "primary_link_check": {
+        "key": "hersbach2020era5",
+        "url": "https://doi.org/10.1002/qj.3803",
+        "status_code": 403,
+        "resolved_url": "https://rmets.onlinelibrary.wiley.com/doi/10.1002/qj.3803",
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "original_key": "weyn2020improving",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://doi.org/10.1029/2020MS002109",
+        "https://arxiv.org/abs/2003.11927"
+      ],
+      "citation_sentence": "Cubed-sphere convolutional forecasting illustrates one approach to representing the globe~\\cite{weyn2020improving}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 4,
+      "original_bibliography": "Weyn, J. A., Durran, D. R. \\& Caruana, R. Improving data-driven global\n  weather prediction using deep convolutional neural networks on a cubed\n  sphere. \\textit{J. Adv. Model. Earth Syst.} \\textbf{12,} e2020MS002109\n  (2020).",
+      "revised_bibliography": "Weyn, J. A., Durran, D. R. \\& Caruana, R. Improving data-driven global\n  weather prediction using deep convolutional neural networks on a cubed\n  sphere. \\textit{J. Adv. Model. Earth Syst.} \\textbf{12,} e2020MS002109\n  (2020).",
+      "primary_link_check": {
+        "key": "weyn2020improving",
+        "url": "https://doi.org/10.1029/2020MS002109",
+        "status_code": 403,
+        "resolved_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020MS002109",
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "original_key": "pathak2022fourcastnet",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2202.11214"
+      ],
+      "citation_sentence": "FourCastNet instead uses adaptive Fourier neural operators for high-resolution global prediction~\\cite{pathak2022fourcastnet}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 5,
+      "original_bibliography": "Pathak, J. et al. FourCastNet: A global data-driven high-resolution weather\n  model using adaptive Fourier neural operators. Preprint at\n  https://arxiv.org/abs/2202.11214 (2022).",
+      "revised_bibliography": "Pathak, J. et al. FourCastNet: A global data-driven high-resolution weather\n  model using adaptive Fourier neural operators. Preprint at\n  \\url{https://arxiv.org/abs/2202.11214} (2022).",
+      "primary_link_check": {
+        "key": "pathak2022fourcastnet",
+        "url": "https://arxiv.org/abs/2202.11214",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2202.11214",
+        "title": "[2202.11214] FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "bi2023accurate",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41586-023-06185-3"
+      ],
+      "citation_sentence": "Pangu-Weather develops three-dimensional neural networks for medium-range forecasts~\\cite{bi2023accurate}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 6,
+      "original_bibliography": "Bi, K. et al. Accurate medium-range global weather forecasting with 3D\n  neural networks. \\textit{Nature} \\textbf{619,} 533--538 (2023).",
+      "revised_bibliography": "Bi, K. et al. Accurate medium-range global weather forecasting with 3D\n  neural networks. \\textit{Nature} \\textbf{619,} 533--538 (2023).",
+      "primary_link_check": {
+        "key": "bi2023accurate",
+        "url": "https://www.nature.com/articles/s41586-023-06185-3",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41586-023-06185-3",
+        "title": "Accurate medium-range global weather forecasting with 3D neural networks | Nature",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "lam2023learning",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://doi.org/10.1126/science.adi2336",
+        "https://arxiv.org/abs/2212.12794"
+      ],
+      "citation_sentence": "GraphCast demonstrates graph-based prediction of global atmospheric states~\\cite{lam2023learning}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 7,
+      "original_bibliography": "Lam, R. et al. Learning skillful medium-range global weather forecasting.\n  \\textit{Science} \\textbf{382,} 1416--1421 (2023).",
+      "revised_bibliography": "Lam, R. et al. Learning skillful medium-range global weather forecasting.\n  \\textit{Science} \\textbf{382,} 1416--1421 (2023).",
+      "primary_link_check": {
+        "key": "lam2023learning",
+        "url": "https://doi.org/10.1126/science.adi2336",
+        "status_code": 403,
+        "resolved_url": "https://www.science.org/doi/10.1126/science.adi2336",
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "original_key": "nguyen2023climax",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2301.10343"
+      ],
+      "citation_sentence": "ClimaX investigates pretraining across weather and climate datasets~\\cite{nguyen2023climax}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 8,
+      "original_bibliography": "Nguyen, T., Brandstetter, J., Kapoor, A., Gupta, J. K. \\& Grover, A.\n  ClimaX: A foundation model for weather and climate. In\n  \\textit{International Conference on Machine Learning (ICML)} 25904--25938\n  (2023).",
+      "revised_bibliography": "Nguyen, T., Brandstetter, J., Kapoor, A., Gupta, J. K. \\& Grover, A.\n  ClimaX: A foundation model for weather and climate. In\n  \\textit{International Conference on Machine Learning (ICML)} 25904--25938\n  (2023).",
+      "primary_link_check": {
+        "key": "nguyen2023climax",
+        "url": "https://arxiv.org/abs/2301.10343",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2301.10343",
+        "title": "[2301.10343] ClimaX: A foundation model for weather and climate",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "bonev2023spherical",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2306.03838"
+      ],
+      "citation_sentence": "Spherical Fourier neural operators incorporate the geometry of the sphere into operator learning~\\cite{bonev2023spherical}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 9,
+      "original_bibliography": "Bonev, B. et al. Spherical Fourier neural operators: Learning stable\n  dynamics on the sphere. In \\textit{International Conference on Machine\n  Learning (ICML)} 2806--2823 (2023).",
+      "revised_bibliography": "Bonev, B. et al. Spherical Fourier neural operators: Learning stable\n  dynamics on the sphere. In \\textit{International Conference on Machine\n  Learning (ICML)} 2806--2823 (2023).",
+      "primary_link_check": {
+        "key": "bonev2023spherical",
+        "url": "https://arxiv.org/abs/2306.03838",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2306.03838",
+        "title": "[2306.03838] Spherical Fourier Neural Operators: Learning Stable Dynamics on the Sphere",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "kochkov2024neural",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41586-024-07744-y"
+      ],
+      "citation_sentence": "Neural general circulation models combine a dynamical core with learned components~\\cite{kochkov2024neural}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 10,
+      "original_bibliography": "Kochkov, D. et al. Neural general circulation models for weather and\n  climate. \\textit{Nature} \\textbf{632,} 1060--1066 (2024).",
+      "revised_bibliography": "Kochkov, D. et al. Neural general circulation models for weather and\n  climate. \\textit{Nature} \\textbf{632,} 1060--1066 (2024).",
+      "primary_link_check": {
+        "key": "kochkov2024neural",
+        "url": "https://www.nature.com/articles/s41586-024-07744-y",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41586-024-07744-y",
+        "title": "Neural general circulation models for weather and climate | Nature",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "price2025probabilistic",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41586-024-08252-9"
+      ],
+      "citation_sentence": "GenCast addresses probabilistic medium-range prediction~\\cite{price2025probabilistic}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 11,
+      "original_bibliography": "Price, I. et al. Probabilistic weather forecasting with machine learning.\n  \\textit{Nature} \\textbf{637,} 84--90 (2025).",
+      "revised_bibliography": "Price, I. et al. Probabilistic weather forecasting with machine learning.\n  \\textit{Nature} \\textbf{637,} 84--90 (2025).",
+      "primary_link_check": {
+        "key": "price2025probabilistic",
+        "url": "https://www.nature.com/articles/s41586-024-08252-9",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41586-024-08252-9",
+        "title": "Probabilistic weather forecasting with machine learning | Nature",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "lin2022conditional",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/20711"
+      ],
+      "citation_sentence": "This study builds on the Conditional Local Convolution Recurrent Network (CLCRN), introduced by Lin et al.~\\cite{lin2022conditional}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 16,
+      "original_bibliography": "Lin, H. et al. Conditional local convolution for spatio-temporal\n  meteorological forecasting. \\textit{Proc. AAAI Conf. Artif. Intell.}\n  \\textbf{36,} 7470--7478 (2022).",
+      "revised_bibliography": "Lin, H. et al. Conditional local convolution for spatio-temporal\n  meteorological forecasting. \\textit{Proc. AAAI Conf. Artif. Intell.}\n  \\textbf{36,} 7470--7478 (2022). \\url{https://doi.org/10.1609/aaai.v36i7.20711}.",
+      "primary_link_check": {
+        "key": "lin2022conditional",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/20711",
+        "status_code": 200,
+        "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/20711",
+        "title": "Conditional Local Convolution for Spatio-Temporal Meteorological Forecasting\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "defferrard2016chebnet",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1606.09375"
+      ],
+      "citation_sentence": "Chebyshev spectral filtering constructs localized graph convolutions~\\cite{defferrard2016chebnet}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 17,
+      "original_bibliography": "Defferrard, M., Bresson, X. \\& Vandergheynst, P. Convolutional neural\n  networks on graphs with fast localized spectral filtering. In\n  \\textit{NeurIPS} 3844--3852 (2016).",
+      "revised_bibliography": "Defferrard, M., Bresson, X. \\& Vandergheynst, P. Convolutional neural\n  networks on graphs with fast localized spectral filtering. In\n  \\textit{NeurIPS} 3844--3852 (2016).",
+      "primary_link_check": {
+        "key": "defferrard2016chebnet",
+        "url": "https://arxiv.org/abs/1606.09375",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1606.09375",
+        "title": "[1606.09375] Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "kipf2017semi",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1609.02907"
+      ],
+      "citation_sentence": "The graph convolutional network of Kipf and Welling simplifies neighborhood propagation~\\cite{kipf2017semi}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 18,
+      "original_bibliography": "Kipf, T. N. \\& Welling, M. Semi-supervised classification with graph\n  convolutional networks. In \\textit{ICLR} (2017).",
+      "revised_bibliography": "Kipf, T. N. \\& Welling, M. Semi-supervised classification with graph\n  convolutional networks. In \\textit{ICLR} (2017).",
+      "primary_link_check": {
+        "key": "kipf2017semi",
+        "url": "https://arxiv.org/abs/1609.02907",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1609.02907",
+        "title": "[1609.02907] Semi-Supervised Classification with Graph Convolutional Networks",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "velickovic2018graph",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1710.10903"
+      ],
+      "citation_sentence": "Graph attention assigns learned weights to neighboring features~\\cite{velickovic2018graph}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 20,
+      "original_bibliography": "Veli\\v{c}kovi\\'c, P. et al. Graph attention networks. In \\textit{ICLR}\n  (2018).",
+      "revised_bibliography": "Veli\\v{c}kovi\\'c, P. et al. Graph attention networks. In \\textit{ICLR}\n  (2018).",
+      "primary_link_check": {
+        "key": "velickovic2018graph",
+        "url": "https://arxiv.org/abs/1710.10903",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1710.10903",
+        "title": "[1710.10903] Graph Attention Networks",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "hamilton2017inductive",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1706.02216"
+      ],
+      "citation_sentence": "GraphSAGE learns aggregators that can be applied inductively to new nodes~\\cite{hamilton2017inductive}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 19,
+      "original_bibliography": "Hamilton, W. L., Ying, R. \\& Leskovec, J. Inductive representation\n  learning on large graphs. In \\textit{NeurIPS} 1024--1034 (2017).",
+      "revised_bibliography": "Hamilton, W. L., Ying, R. \\& Leskovec, J. Inductive representation\n  learning on large graphs. In \\textit{NeurIPS} 1024--1034 (2017).",
+      "primary_link_check": {
+        "key": "hamilton2017inductive",
+        "url": "https://arxiv.org/abs/1706.02216",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1706.02216",
+        "title": "[1706.02216] Inductive Representation Learning on Large Graphs",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "cohen2019gauge",
+      "status": "corrected",
+      "reason": "Corrected authors from Geiger and Koehler to Weiler and Kicanaoglu, as listed in the official ICML proceedings.",
+      "source_urls": [
+        "https://proceedings.mlr.press/v97/cohen19d.html"
+      ],
+      "citation_sentence": "Gauge-equivariant convolution provides a different, explicitly geometric treatment of signals on manifolds~\\cite{cohen2019gauge}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 23,
+      "original_bibliography": "Cohen, T. S., Geiger, M., K\\\"ohler, J. \\& Welling, M. Gauge equivariant\n  convolutional networks and the icosahedral CNN. In \\textit{International\n  Conference on Machine Learning (ICML)} 1321--1330 (2019).",
+      "revised_bibliography": "Cohen, T., Weiler, M., Kicanaoglu, B. \\& Welling, M. Gauge equivariant\nconvolutional networks and the icosahedral CNN. In \\textit{International\nConference on Machine Learning (ICML)} 1321--1330 (2019).",
+      "primary_link_check": {
+        "key": "cohen2019gauge",
+        "url": "https://proceedings.mlr.press/v97/cohen19d.html",
+        "status_code": 200,
+        "resolved_url": "https://proceedings.mlr.press/v97/cohen19d.html",
+        "title": "Gauge Equivariant Convolutional Networks and the Icosahedral CNN",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "li2018diffusion",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1707.01926"
+      ],
+      "citation_sentence": "DCRNN models directed spatial dependence using diffusion convolution~\\cite{li2018diffusion}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 26,
+      "original_bibliography": "Li, Y., Yu, R., Shahabi, C. \\& Liu, Y. Diffusion convolutional recurrent\n  neural network: Data-driven traffic forecasting. In \\textit{ICLR} (2018).",
+      "revised_bibliography": "Li, Y., Yu, R., Shahabi, C. \\& Liu, Y. Diffusion convolutional recurrent\n  neural network: Data-driven traffic forecasting. In \\textit{ICLR} (2018).",
+      "primary_link_check": {
+        "key": "li2018diffusion",
+        "url": "https://arxiv.org/abs/1707.01926",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1707.01926",
+        "title": "[1707.01926] Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "yu2018spatio",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1709.04875"
+      ],
+      "citation_sentence": "STGCN combines spatial graph convolution with temporal convolution~\\cite{yu2018spatio}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 27,
+      "original_bibliography": "Yu, B., Yin, H. \\& Zhu, Z. Spatio-temporal graph convolutional networks: A\n  deep learning framework for traffic forecasting. In \\textit{IJCAI}\n  3634--3640 (2018).",
+      "revised_bibliography": "Yu, B., Yin, H. \\& Zhu, Z. Spatio-temporal graph convolutional networks: A\n  deep learning framework for traffic forecasting. In \\textit{IJCAI}\n  3634--3640 (2018).",
+      "primary_link_check": {
+        "key": "yu2018spatio",
+        "url": "https://arxiv.org/abs/1709.04875",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1709.04875",
+        "title": "[1709.04875] Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "guo2019attention",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/3881"
+      ],
+      "citation_sentence": "ASTGCN adds spatial and temporal attention to graph-convolutional forecasting~\\cite{guo2019attention}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 29,
+      "original_bibliography": "Guo, S., Lin, Y., Feng, N., Song, C. \\& Wan, H. Attention based\n  spatial-temporal graph convolutional networks for traffic flow\n  forecasting. In \\textit{AAAI} 922--929 (2019).",
+      "revised_bibliography": "Guo, S., Lin, Y., Feng, N., Song, C. \\& Wan, H. Attention based\n  spatial-temporal graph convolutional networks for traffic flow\n  forecasting. In \\textit{AAAI} 922--929 (2019).",
+      "primary_link_check": {
+        "key": "guo2019attention",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/3881",
+        "status_code": 200,
+        "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/3881",
+        "title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "wu2019graph",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.ijcai.org/proceedings/2019/264"
+      ],
+      "citation_sentence": "Graph WaveNet uses an adaptive dependency matrix alongside temporal convolution~\\cite{wu2019graph}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 33,
+      "original_bibliography": "Wu, Z., Pan, S., Long, G., Jiang, J. \\& Zhang, C. Graph WaveNet for deep\n  spatial-temporal graph modeling. In \\textit{IJCAI} 1907--1913 (2019).",
+      "revised_bibliography": "Wu, Z., Pan, S., Long, G., Jiang, J. \\& Zhang, C. Graph WaveNet for deep\n  spatial-temporal graph modeling. In \\textit{IJCAI} 1907--1913 (2019).",
+      "primary_link_check": {
+        "key": "wu2019graph",
+        "url": "https://www.ijcai.org/proceedings/2019/264",
+        "status_code": 200,
+        "resolved_url": "https://www.ijcai.org/proceedings/2019/264",
+        "title": "Graph WaveNet for Deep Spatial-Temporal Graph Modeling | IJCAI",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "bai2020adaptive",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2007.02842"
+      ],
+      "citation_sentence": "AGCRN combines adaptive graph learning with node-specific parameterization~\\cite{bai2020adaptive}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 34,
+      "original_bibliography": "Bai, L., Yao, L., Li, C., Wang, X. \\& Wang, C. Adaptive graph\n  convolutional recurrent network for traffic forecasting. In\n  \\textit{NeurIPS} 17804--17815 (2020).",
+      "revised_bibliography": "Bai, L., Yao, L., Li, C., Wang, X. \\& Wang, C. Adaptive graph\n  convolutional recurrent network for traffic forecasting. In\n  \\textit{NeurIPS} 17804--17815 (2020).",
+      "primary_link_check": {
+        "key": "bai2020adaptive",
+        "url": "https://arxiv.org/abs/2007.02842",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2007.02842",
+        "title": "[2007.02842] Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "wu2020connecting",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2005.11650"
+      ],
+      "citation_sentence": "MTGNN learns directed relations for multivariate time-series forecasting~\\cite{wu2020connecting}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 35,
+      "original_bibliography": "Wu, Z. et al. Connecting the dots: Multivariate time series forecasting\n  with graph neural networks. In \\textit{KDD} 753--763 (2020).",
+      "revised_bibliography": "Wu, Z. et al. Connecting the dots: Multivariate time series forecasting\n  with graph neural networks. In \\textit{KDD} 753--763 (2020).",
+      "primary_link_check": {
+        "key": "wu2020connecting",
+        "url": "https://arxiv.org/abs/2005.11650",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2005.11650",
+        "title": "[2005.11650] Connecting the Dots: Multivariate Time Series Forecasting with Graph Neural Networks",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zheng2020gman",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/5477"
+      ],
+      "citation_sentence": "GMAN develops a graph multi-attention architecture~\\cite{zheng2020gman}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 30,
+      "original_bibliography": "Zheng, C., Fan, X., Wang, C. \\& Qi, J. GMAN: A graph multi-attention\n  network for traffic prediction. In \\textit{AAAI} 1234--1241 (2020).",
+      "revised_bibliography": "Zheng, C., Fan, X., Wang, C. \\& Qi, J. GMAN: A graph multi-attention\n  network for traffic prediction. In \\textit{AAAI} 1234--1241 (2020).",
+      "primary_link_check": {
+        "key": "zheng2020gman",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/5477",
+        "status_code": 200,
+        "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/5477",
+        "title": "GMAN: A Graph Multi-Attention Network for Traffic Prediction\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "fang2021spatial",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2106.12931"
+      ],
+      "citation_sentence": "Continuous-time graph dynamics are explored by STGODE~\\cite{fang2021spatial}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 31,
+      "original_bibliography": "Fang, Z., Long, Q., Song, G. \\& Xie, K. Spatial-temporal graph ODE\n  networks for traffic flow forecasting. In \\textit{KDD} 364--373 (2021).",
+      "revised_bibliography": "Fang, Z., Long, Q., Song, G. \\& Xie, K. Spatial-temporal graph ODE\n  networks for traffic flow forecasting. In \\textit{KDD} 364--373 (2021).",
+      "primary_link_check": {
+        "key": "fang2021spatial",
+        "url": "https://arxiv.org/abs/2106.12931",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2106.12931",
+        "title": "[2106.12931] Spatial-Temporal Graph ODE Networks for Traffic Flow Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "lan2022dstagnn",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://proceedings.mlr.press/v162/lan22a.html"
+      ],
+      "citation_sentence": "DSTAGNN models dynamic spatial--temporal dependencies in traffic networks~\\cite{lan2022dstagnn}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 37,
+      "original_bibliography": "Lan, S. et al. DSTAGNN: Dynamic spatial-temporal aware graph neural\n  network for traffic flow forecasting. In \\textit{International Conference\n  on Machine Learning (ICML)} 11906--11917 (2022).",
+      "revised_bibliography": "Lan, S. et al. DSTAGNN: Dynamic spatial-temporal aware graph neural\n  network for traffic flow forecasting. In \\textit{International Conference\n  on Machine Learning (ICML)} 11906--11917 (2022).",
+      "primary_link_check": {
+        "key": "lan2022dstagnn",
+        "url": "https://proceedings.mlr.press/v162/lan22a.html",
+        "status_code": 200,
+        "resolved_url": "https://proceedings.mlr.press/v162/lan22a.html",
+        "title": "DSTAGNN: Dynamic Spatial-Temporal Aware Graph Neural Network for Traffic Flow Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "jin2023spatio",
+      "status": "corrected",
+      "reason": "Corrected publication year to 2024 for the final TKDE volume 36, pages 5388--5408; 2023 is the preprint/online-first year.",
+      "source_urls": [
+        "https://zezhishao.github.io/assets/pdf/2024_TKDE_STGNN_Survey.pdf"
+      ],
+      "citation_sentence": "Combining graph operators with temporal dynamics has been studied extensively in forecasting, as organized in the survey by Jin et al.~\\cite{jin2023spatio}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 24,
+      "original_bibliography": "Jin, G. et al. Spatio-temporal graph neural networks for predictive\n  learning in urban computing: A survey. \\textit{IEEE Trans. Knowl. Data\n  Eng.} \\textbf{36,} 5388--5408 (2023).",
+      "revised_bibliography": "Jin, G. et al. Spatio-temporal graph neural networks for predictive\n  learning in urban computing: A survey. \\textit{IEEE Trans. Knowl. Data\n  Eng.} \\textbf{36,} 5388--5408 (2024).",
+      "primary_link_check": {
+        "key": "jin2023spatio",
+        "url": "https://zezhishao.github.io/assets/pdf/2024_TKDE_STGNN_Survey.pdf",
+        "status_code": 200,
+        "resolved_url": "https://zezhishao.github.io/assets/pdf/2024_TKDE_STGNN_Survey.pdf",
+        "title": "",
+        "content_type": "application/pdf"
+      }
+    },
+    {
+      "original_key": "cini2023scalable",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/25880"
+      ],
+      "citation_sentence": "Scalable spatiotemporal graph networks use precomputed representations to reduce training cost~\\cite{cini2023scalable}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 40,
+      "original_bibliography": "Cini, A., Marisca, I., Bianchi, F. M. \\& Alippi, C. Scalable\n  spatiotemporal graph neural networks. In \\textit{AAAI} 7218--7226 (2023).",
+      "revised_bibliography": "Cini, A., Marisca, I., Bianchi, F. M. \\& Alippi, C. Scalable\n  spatiotemporal graph neural networks. In \\textit{AAAI} 7218--7226 (2023).",
+      "primary_link_check": {
+        "key": "cini2023scalable",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/25880",
+        "status_code": 200,
+        "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25880",
+        "title": "Scalable Spatiotemporal Graph Neural Networks\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zambon2023graph",
+      "status": "corrected",
+      "reason": "Pinned the arXiv URL to version 1, preserving the 2023 title and four-author list; the 2026 version 2 has a changed title and author list.",
+      "source_urls": [
+        "https://arxiv.org/abs/2301.01741v1"
+      ],
+      "citation_sentence": "Graph state-space models investigate latent relational structure within probabilistic temporal dynamics~\\cite{zambon2023graph}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 38,
+      "original_bibliography": "Zambon, D., Cini, A., Livi, L. \\& Alippi, C. Graph state-space models.\n  Preprint at https://arxiv.org/abs/2301.01741 (2023).",
+      "revised_bibliography": "Zambon, D., Cini, A., Livi, L. \\& Alippi, C. Graph state-space models.\n  Preprint at \\url{https://arxiv.org/abs/2301.01741v1} (2023).",
+      "primary_link_check": {
+        "key": "zambon2023graph",
+        "url": "https://arxiv.org/abs/2301.01741v1",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2301.01741v1",
+        "title": "[2301.01741v1] Graph state-space models",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "wen2023diffstg",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2301.13629"
+      ],
+      "citation_sentence": "DiffSTG uses denoising diffusion for probabilistic graph forecasting~\\cite{wen2023diffstg}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 41,
+      "original_bibliography": "Wen, H. et al. DiffSTG: Probabilistic spatio-temporal graph forecasting\n  with denoising diffusion models. In \\textit{ACM SIGSPATIAL} 1--12 (2023).",
+      "revised_bibliography": "Wen, H. et al. DiffSTG: Probabilistic spatio-temporal graph forecasting\n  with denoising diffusion models. In \\textit{ACM SIGSPATIAL} 1--12 (2023).",
+      "primary_link_check": {
+        "key": "wen2023diffstg",
+        "url": "https://arxiv.org/abs/2301.13629",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2301.13629",
+        "title": "[2301.13629] DiffSTG: Probabilistic Spatio-Temporal Graph Forecasting with Denoising Diffusion Models",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "oskarsson2023temporal",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://proceedings.mlr.press/v206/oskarsson23a.html"
+      ],
+      "citation_sentence": "TGNN4I addresses irregular observation times and partially observed graphs~\\cite{oskarsson2023temporal}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 32,
+      "original_bibliography": "Oskarsson, J., Sid\\'en, P. \\& Lindsten, F. Temporal graph neural networks\n  for irregular data. In \\textit{AISTATS} 4515--4531 (2023).",
+      "revised_bibliography": "Oskarsson, J., Sid\\'en, P. \\& Lindsten, F. Temporal graph neural networks\n  for irregular data. In \\textit{AISTATS} 4515--4531 (2023).",
+      "primary_link_check": {
+        "key": "oskarsson2023temporal",
+        "url": "https://proceedings.mlr.press/v206/oskarsson23a.html",
+        "status_code": 200,
+        "resolved_url": "https://proceedings.mlr.press/v206/oskarsson23a.html",
+        "title": "Temporal Graph Neural Networks for Irregular Data",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "shang2021discrete",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2101.06861"
+      ],
+      "citation_sentence": "Discrete graph-structure learning treats the dependency structure itself as a learned forecasting component~\\cite{shang2021discrete}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 36,
+      "original_bibliography": "Shang, C., Chen, J. \\& Bi, J. Discrete graph structure learning for\n  forecasting multiple time series. In \\textit{ICLR} (2021).",
+      "revised_bibliography": "Shang, C., Chen, J. \\& Bi, J. Discrete graph structure learning for\n  forecasting multiple time series. In \\textit{ICLR} (2021).",
+      "primary_link_check": {
+        "key": "shang2021discrete",
+        "url": "https://arxiv.org/abs/2101.06861",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2101.06861",
+        "title": "[2101.06861] Discrete Graph Structure Learning for Forecasting Multiple Time Series",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "qi2017pointnet",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1612.00593"
+      ],
+      "citation_sentence": "For geometric data, PointNet demonstrates permutation-invariant processing of point sets~\\cite{qi2017pointnet}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 21,
+      "original_bibliography": "Qi, C. R., Su, H., Mo, K. \\& Guibas, L. J. PointNet: Deep learning on\n  point sets for 3D classification and segmentation. In \\textit{CVPR}\n  652--660 (2017).",
+      "revised_bibliography": "Qi, C. R., Su, H., Mo, K. \\& Guibas, L. J. PointNet: Deep learning on\n  point sets for 3D classification and segmentation. In \\textit{CVPR}\n  652--660 (2017).",
+      "primary_link_check": {
+        "key": "qi2017pointnet",
+        "url": "https://arxiv.org/abs/1612.00593",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1612.00593",
+        "title": "[1612.00593] PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "wang2019dynamic",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1801.07829"
+      ],
+      "citation_sentence": "Dynamic Graph CNN constructs feature-space neighborhoods for point-cloud processing~\\cite{wang2019dynamic}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 22,
+      "original_bibliography": "Wang, Y. et al. Dynamic graph CNN for learning on point clouds.\n  \\textit{ACM Trans. Graph.} \\textbf{38,} 146 (2019).",
+      "revised_bibliography": "Wang, Y. et al. Dynamic graph CNN for learning on point clouds.\n  \\textit{ACM Trans. Graph.} \\textbf{38,} 146 (2019).",
+      "primary_link_check": {
+        "key": "wang2019dynamic",
+        "url": "https://arxiv.org/abs/1801.07829",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1801.07829",
+        "title": "[1801.07829] Dynamic Graph CNN for Learning on Point Clouds",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "jiang2023pdformer",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/25556"
+      ],
+      "citation_sentence": "PDFormer models propagation delays and long-range spatial dependencies~\\cite{jiang2023pdformer}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 42,
+      "original_bibliography": "Jiang, J., Han, C., Zhao, W. X. \\& Wang, J. PDFormer: Propagation\n  delay-aware dynamic long-range transformer for traffic flow prediction.\n  In \\textit{AAAI} 4365--4373 (2023).",
+      "revised_bibliography": "Jiang, J., Han, C., Zhao, W. X. \\& Wang, J. PDFormer: Propagation\n  delay-aware dynamic long-range transformer for traffic flow prediction.\n  In \\textit{AAAI} 4365--4373 (2023).",
+      "primary_link_check": {
+        "key": "jiang2023pdformer",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/25556",
+        "status_code": 200,
+        "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25556",
+        "title": "PDFormer: Propagation Delay-Aware Dynamic Long-Range Transformer for Traffic Flow Prediction\n\t\t\t\t\t\t\t| Proceedings of the AAAI Conference on Artificial Intelligence",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "liu2023spatio",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2308.10425"
+      ],
+      "citation_sentence": "STAEformer emphasizes the role of adaptive spatiotemporal embeddings in a transformer~\\cite{liu2023spatio}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 43,
+      "original_bibliography": "Liu, H. et al. Spatio-temporal adaptive embedding makes vanilla\n  transformer SOTA for traffic forecasting. In \\textit{CIKM} 4125--4129\n  (2023).",
+      "revised_bibliography": "Liu, H. et al. Spatio-temporal adaptive embedding makes vanilla\n  transformer SOTA for traffic forecasting. In \\textit{CIKM} 4125--4129\n  (2023).",
+      "primary_link_check": {
+        "key": "liu2023spatio",
+        "url": "https://arxiv.org/abs/2308.10425",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2308.10425",
+        "title": "[2308.10425] STAEformer: Spatio-Temporal Adaptive Embedding Makes Vanilla Transformer SOTA for Traffic Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "feng2022adaptive",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2207.05064"
+      ],
+      "citation_sentence": "The adaptive-graph and fusion design here is inspired by ASTTN, which combines geographical and learned-graph representations~\\cite{feng2022adaptive}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 47,
+      "original_bibliography": "Feng, A. \\& Tassiulas, L. Adaptive graph spatial-temporal transformer\n  network for traffic flow forecasting. Preprint at\n  https://arxiv.org/abs/2207.05064 (2022).",
+      "revised_bibliography": "Feng, A. \\& Tassiulas, L. Adaptive graph spatial-temporal transformer\n  network for traffic flow forecasting. Preprint at\n  \\url{https://arxiv.org/abs/2207.05064} (2022).",
+      "primary_link_check": {
+        "key": "feng2022adaptive",
+        "url": "https://arxiv.org/abs/2207.05064",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2207.05064",
+        "title": "[2207.05064] Adaptive Graph Spatial-Temporal Transformer Network for Traffic Flow Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "huang2023adaptive",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://doi.org/10.1109/JIOT.2022.3209523",
+        "https://api.crossref.org/works/10.1109%2FJIOT.2022.3209523"
+      ],
+      "citation_sentence": "The distinct ASTTGN architecture studies adaptive spatiotemporal transformer graph modelling for traffic measured by loop detectors~\\cite{huang2023adaptive}.",
+      "verification_scope": "Publisher DOI resolved; publisher-deposited Crossref metadata confirms title, authors, 2023 publication year, volume 10 and pages 1642--1653. Publisher HTML requires a browser challenge; no full-text inspection is claimed.",
+      "new_reference_number": 48,
+      "original_bibliography": "Huang, B. et al. Adaptive spatiotemporal transformer graph network for\n  traffic flow forecasting by IoT loop detectors. \\textit{IEEE Internet\n  Things J.} \\textbf{10,} 1642--1653 (2023).",
+      "revised_bibliography": "Huang, B. et al. Adaptive spatiotemporal transformer graph network for\n  traffic flow forecasting by IoT loop detectors. \\textit{IEEE Internet\n  Things J.} \\textbf{10,} 1642--1653 (2023).",
+      "primary_link_check": {
+        "key": "huang2023adaptive",
+        "url": "https://doi.org/10.1109/JIOT.2022.3209523",
+        "status_code": 202,
+        "resolved_url": "https://ieeexplore.ieee.org/document/9903002/",
+        "title": "",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "original_key": "vaswani2017attention",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "citation_sentence": "The transformer introduced attention-based sequence modelling~\\cite{vaswani2017attention}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 49,
+      "original_bibliography": "Vaswani, A. et al. Attention is all you need. In \\textit{NeurIPS}\n  5998--6008 (2017).",
+      "revised_bibliography": "Vaswani, A. et al. Attention is all you need. In \\textit{NeurIPS}\n  5998--6008 (2017).",
+      "primary_link_check": {
+        "key": "vaswani2017attention",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1706.03762",
+        "title": "[1706.03762] Attention Is All You Need",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zhou2021informer",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2012.07436"
+      ],
+      "citation_sentence": "Informer investigates efficient attention for long-sequence forecasting~\\cite{zhou2021informer}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 50,
+      "original_bibliography": "Zhou, H. et al. Informer: Beyond efficient transformer for long sequence\n  time-series forecasting. In \\textit{AAAI} 11106--11115 (2021).",
+      "revised_bibliography": "Zhou, H. et al. Informer: Beyond efficient transformer for long sequence\n  time-series forecasting. In \\textit{AAAI} 11106--11115 (2021).",
+      "primary_link_check": {
+        "key": "zhou2021informer",
+        "url": "https://arxiv.org/abs/2012.07436",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2012.07436",
+        "title": "[2012.07436] Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "wu2021autoformer",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2106.13008"
+      ],
+      "citation_sentence": "Autoformer combines decomposition with an autocorrelation mechanism~\\cite{wu2021autoformer}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 51,
+      "original_bibliography": "Wu, H., Xu, J., Wang, J. \\& Long, M. Autoformer: Decomposition\n  transformers with auto-correlation for long-term series forecasting. In\n  \\textit{NeurIPS} 22419--22430 (2021).",
+      "revised_bibliography": "Wu, H., Xu, J., Wang, J. \\& Long, M. Autoformer: Decomposition\n  transformers with auto-correlation for long-term series forecasting. In\n  \\textit{NeurIPS} 22419--22430 (2021).",
+      "primary_link_check": {
+        "key": "wu2021autoformer",
+        "url": "https://arxiv.org/abs/2106.13008",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2106.13008",
+        "title": "[2106.13008] Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "nie2023time",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2211.14730"
+      ],
+      "citation_sentence": "PatchTST uses patches to represent time series~\\cite{nie2023time}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 52,
+      "original_bibliography": "Nie, Y., Nguyen, N. H., Sinthong, P. \\& Kalagnanam, J. A time series is\n  worth 64 words: Long-term forecasting with transformers. In \\textit{ICLR}\n  (2023).",
+      "revised_bibliography": "Nie, Y., Nguyen, N. H., Sinthong, P. \\& Kalagnanam, J. A time series is\n  worth 64 words: Long-term forecasting with transformers. In \\textit{ICLR}\n  (2023).",
+      "primary_link_check": {
+        "key": "nie2023time",
+        "url": "https://arxiv.org/abs/2211.14730",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2211.14730",
+        "title": "[2211.14730] A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "wu2023timesnet",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2210.02186"
+      ],
+      "citation_sentence": "TimesNet maps temporal variation into a two-dimensional representation~\\cite{wu2023timesnet}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 55,
+      "original_bibliography": "Wu, H. et al. TimesNet: Temporal 2D-variation modeling for general time\n  series analysis. In \\textit{ICLR} (2023).",
+      "revised_bibliography": "Wu, H. et al. TimesNet: Temporal 2D-variation modeling for general time\n  series analysis. In \\textit{ICLR} (2023).",
+      "primary_link_check": {
+        "key": "wu2023timesnet",
+        "url": "https://arxiv.org/abs/2210.02186",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2210.02186",
+        "title": "[2210.02186] TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zhang2023crossformer",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://github.com/Thinklab-SJTU/Crossformer",
+        "https://openreview.net/forum?id=vSVLM2j9eie"
+      ],
+      "citation_sentence": "Crossformer models dependencies across dimensions~\\cite{zhang2023crossformer}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 53,
+      "original_bibliography": "Zhang, Y. \\& Yan, J. Crossformer: Transformer utilizing cross-dimension\n  dependency for multivariate time series forecasting. In \\textit{ICLR}\n  (2023).",
+      "revised_bibliography": "Zhang, Y. \\& Yan, J. Crossformer: Transformer utilizing cross-dimension\n  dependency for multivariate time series forecasting. In \\textit{ICLR}\n  (2023).",
+      "primary_link_check": {
+        "key": "zhang2023crossformer",
+        "url": "https://github.com/Thinklab-SJTU/Crossformer",
+        "status_code": 200,
+        "resolved_url": "https://github.com/Thinklab-SJTU/Crossformer",
+        "title": "GitHub - Thinklab-SJTU/Crossformer: Official implementation of our ICLR 2023 paper \"Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting\" · GitHub",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "liu2024itransformer",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06625"
+      ],
+      "citation_sentence": "iTransformer represents variables as tokens to learn multivariate dependencies~\\cite{liu2024itransformer}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 54,
+      "original_bibliography": "Liu, Y. et al. iTransformer: Inverted transformers are effective for time\n  series forecasting. In \\textit{ICLR} (2024).",
+      "revised_bibliography": "Liu, Y. et al. iTransformer: Inverted transformers are effective for time\n  series forecasting. In \\textit{ICLR} (2024).",
+      "primary_link_check": {
+        "key": "liu2024itransformer",
+        "url": "https://arxiv.org/abs/2310.06625",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2310.06625",
+        "title": "[2310.06625] iTransformer: Inverted Transformers Are Effective for Time Series Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "gu2023mamba",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2312.00752v1"
+      ],
+      "citation_sentence": "Mamba develops selective state-space sequence modelling~\\cite{gu2023mamba}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 57,
+      "original_bibliography": "Gu, A. \\& Dao, T. Mamba: Linear-time sequence modeling with selective\n  state spaces. Preprint at https://arxiv.org/abs/2312.00752 (2023).",
+      "revised_bibliography": "Gu, A. \\& Dao, T. Mamba: Linear-time sequence modeling with selective\n  state spaces. Preprint at \\url{https://arxiv.org/abs/2312.00752} (2023).",
+      "primary_link_check": {
+        "key": "gu2023mamba",
+        "url": "https://arxiv.org/abs/2312.00752v1",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2312.00752v1",
+        "title": "[2312.00752v1] Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "cao2020spectral",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2103.07719"
+      ],
+      "citation_sentence": "Spectral temporal graph networks offer a frequency-domain formulation of multivariate forecasting~\\cite{cao2020spectral}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 39,
+      "original_bibliography": "Cao, D. et al. Spectral temporal graph neural network for multivariate\n  time-series forecasting. In \\textit{NeurIPS} 17766--17778 (2020).",
+      "revised_bibliography": "Cao, D. et al. Spectral temporal graph neural network for multivariate\n  time-series forecasting. In \\textit{NeurIPS} 17766--17778 (2020).",
+      "primary_link_check": {
+        "key": "cao2020spectral",
+        "url": "https://arxiv.org/abs/2103.07719",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2103.07719",
+        "title": "[2103.07719] Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "oreshkin2020nbeats",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1905.10437"
+      ],
+      "citation_sentence": "N-BEATS uses basis-expansion blocks for forecasting~\\cite{oreshkin2020nbeats}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 56,
+      "original_bibliography": "Oreshkin, B. N., Carpov, D., Chapados, N. \\& Bengio, Y. N-BEATS: Neural\n  basis expansion analysis for interpretable time series forecasting. In\n  \\textit{ICLR} (2020).",
+      "revised_bibliography": "Oreshkin, B. N., Carpov, D., Chapados, N. \\& Bengio, Y. N-BEATS: Neural\n  basis expansion analysis for interpretable time series forecasting. In\n  \\textit{ICLR} (2020).",
+      "primary_link_check": {
+        "key": "oreshkin2020nbeats",
+        "url": "https://arxiv.org/abs/1905.10437",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1905.10437",
+        "title": "[1905.10437] N-BEATS: Neural basis expansion analysis for interpretable time series forecasting",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zeng2023transformers",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/2205.13504"
+      ],
+      "citation_sentence": "Results showing the competitiveness of simple linear forecasting models further motivate careful controls when attributing gains to architecture~\\cite{zeng2023transformers}.",
+      "verification_scope": "Original bibliographic entry retained; primary source link supplied. This audit does not claim a fresh full-text check for this entry.",
+      "new_reference_number": 58,
+      "original_bibliography": "Zeng, A., Chen, M., Zhang, L. \\& Xu, Q. Are transformers effective for\n  time series forecasting? In \\textit{AAAI} 11121--11128 (2023).",
+      "revised_bibliography": "Zeng, A., Chen, M., Zhang, L. \\& Xu, Q. Are transformers effective for\n  time series forecasting? In \\textit{AAAI} 11121--11128 (2023).",
+      "primary_link_check": {
+        "key": "zeng2023transformers",
+        "url": "https://arxiv.org/abs/2205.13504",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/2205.13504",
+        "title": "[2205.13504] Are Transformers Effective for Time Series Forecasting?",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "chen2025multiscale",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-025-11072-0"
+      ],
+      "citation_sentence": "Recent traffic studies examine multi-timescale graph representations~\\cite{chen2025multiscale}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 44,
+      "original_bibliography": "Chen, H., Huang, J., Lu, Y. \\& Huang, J. Multi-scale spatio-temporal graph\n  neural network for urban traffic flow prediction. \\textit{Sci. Rep.}\n  \\textbf{15,} 26732; 10.1038/s41598-025-11072-0 (2025).",
+      "revised_bibliography": "Chen, H., Huang, J., Lu, Y. \\& Huang, J. Multi-scale spatio-temporal graph\n  neural network for urban traffic flow prediction. \\textit{Sci. Rep.}\n  \\textbf{15,} 26732; 10.1038/s41598-025-11072-0 (2025).",
+      "primary_link_check": {
+        "key": "chen2025multiscale",
+        "url": "https://www.nature.com/articles/s41598-025-11072-0",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-025-11072-0",
+        "title": "Multi-scale spatio-temporal graph neural network for urban traffic flow prediction | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "xiao2025adaptive",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-025-12261-7"
+      ],
+      "citation_sentence": "Adaptive spatiotemporal dynamic graph convolution is investigated by Zhiguo Xiao et al.~\\cite{xiao2025adaptive}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 45,
+      "original_bibliography": "Xiao, Z., Shen, Q., Li, C., Li, D. \\& Liu, Q. An adaptive spatiotemporal\n  dynamic graph convolutional network for traffic prediction.\n  \\textit{Sci. Rep.} \\textbf{15,} 27098; 10.1038/s41598-025-12261-7 (2025).",
+      "revised_bibliography": "Xiao, Z., Shen, Q., Li, C., Li, D. \\& Liu, Q. An adaptive spatiotemporal\n  dynamic graph convolutional network for traffic prediction.\n  \\textit{Sci. Rep.} \\textbf{15,} 27098; 10.1038/s41598-025-12261-7 (2025).",
+      "primary_link_check": {
+        "key": "xiao2025adaptive",
+        "url": "https://www.nature.com/articles/s41598-025-12261-7",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-025-12261-7",
+        "title": "An adaptive spatiotemporal dynamic graph convolutional network for traffic prediction | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "xiao2025graph",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-025-88706-w"
+      ],
+      "citation_sentence": "Hongbo Xiao et al. combine adaptive spatiotemporal attention with road-topology representations~\\cite{xiao2025graph}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 46,
+      "original_bibliography": "Xiao, H., Zou, B. \\& Xiao, J. Graph convolution networks based on adaptive\n  spatiotemporal attention for traffic flow forecasting. \\textit{Sci. Rep.}\n  \\textbf{15,} 8935; 10.1038/s41598-025-88706-w (2025).",
+      "revised_bibliography": "Xiao, H., Zou, B. \\& Xiao, J. Graph convolution networks based on adaptive\n  spatiotemporal attention for traffic flow forecasting. \\textit{Sci. Rep.}\n  \\textbf{15,} 8935; 10.1038/s41598-025-88706-w (2025).",
+      "primary_link_check": {
+        "key": "xiao2025graph",
+        "url": "https://www.nature.com/articles/s41598-025-88706-w",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-025-88706-w",
+        "title": "Graph convolution networks based on adaptive spatiotemporal attention for traffic flow forecasting | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "frnda2022ecmwf",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-022-11936-9"
+      ],
+      "citation_sentence": "Smaller application-specific studies also address distinct needs: neural calibration of ECMWF outputs is studied by Frnda et al.~\\cite{frnda2022ecmwf}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 12,
+      "original_bibliography": "Frnda, J. et al. ECMWF short-term prediction accuracy improvement by deep\n  learning. \\textit{Sci. Rep.} \\textbf{12,} 7898; 10.1038/s41598-022-11936-9\n  (2022).",
+      "revised_bibliography": "Frnda, J. et al. ECMWF short-term prediction accuracy improvement by deep\n  learning. \\textit{Sci. Rep.} \\textbf{12,} 7898; 10.1038/s41598-022-11936-9\n  (2022).",
+      "primary_link_check": {
+        "key": "frnda2022ecmwf",
+        "url": "https://www.nature.com/articles/s41598-022-11936-9",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-022-11936-9",
+        "title": "ECMWF short-term prediction accuracy improvement by deep learning | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zanchi2023microclimate",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-023-48028-1"
+      ],
+      "citation_sentence": "Zanchi et al. examine local microclimate prediction from global climate data~\\cite{zanchi2023microclimate}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 13,
+      "original_bibliography": "Zanchi, M., Zapperi, S. \\& La Porta, C. A. M. Harnessing deep learning to\n  forecast local microclimate using global climate data. \\textit{Sci. Rep.}\n  \\textbf{13,} 21062; 10.1038/s41598-023-48028-1 (2023).",
+      "revised_bibliography": "Zanchi, M., Zapperi, S. \\& La Porta, C. A. M. Harnessing deep learning to\n  forecast local microclimate using global climate data. \\textit{Sci. Rep.}\n  \\textbf{13,} 21062; 10.1038/s41598-023-48028-1 (2023).",
+      "primary_link_check": {
+        "key": "zanchi2023microclimate",
+        "url": "https://www.nature.com/articles/s41598-023-48028-1",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-023-48028-1",
+        "title": "Harnessing deep learning to forecast local microclimate using global climate data | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "guo2024monthly",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-024-68906-6"
+      ],
+      "citation_sentence": "Guo et al. investigate monthly climate prediction with convolutional and recurrent networks~\\cite{guo2024monthly}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 14,
+      "original_bibliography": "Guo, Q., He, Z. \\& Wang, Z. Monthly climate prediction using deep\n  convolutional neural network and long short-term memory.\n  \\textit{Sci. Rep.} \\textbf{14,} 17748; 10.1038/s41598-024-68906-6 (2024).",
+      "revised_bibliography": "Guo, Q., He, Z. \\& Wang, Z. Monthly climate prediction using deep\n  convolutional neural network and long short-term memory.\n  \\textit{Sci. Rep.} \\textbf{14,} 17748; 10.1038/s41598-024-68906-6 (2024).",
+      "primary_link_check": {
+        "key": "guo2024monthly",
+        "url": "https://www.nature.com/articles/s41598-024-68906-6",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-024-68906-6",
+        "title": "Monthly climate prediction using deep convolutional neural network and long short-term memory | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "alves2025spatiotemporal",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://www.nature.com/articles/s41598-025-17867-5"
+      ],
+      "citation_sentence": "Alves et al. study refinement of numerical wind forecasts in space and time~\\cite{alves2025spatiotemporal}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 15,
+      "original_bibliography": "Alves, D., Mendon\\c{c}a, F., Mostafa, S. S. \\& Morgado-Dias, F. A deep\n  learning approach for improving spatiotemporal resolution of numerical\n  weather prediction forecasts. \\textit{Sci. Rep.} \\textbf{15,} 32796;\n  10.1038/s41598-025-17867-5 (2025).",
+      "revised_bibliography": "Alves, D., Mendon\\c{c}a, F., Mostafa, S. S. \\& Morgado-Dias, F. A deep\n  learning approach for improving spatiotemporal resolution of numerical\n  weather prediction forecasts. \\textit{Sci. Rep.} \\textbf{15,} 32796;\n  10.1038/s41598-025-17867-5 (2025).",
+      "primary_link_check": {
+        "key": "alves2025spatiotemporal",
+        "url": "https://www.nature.com/articles/s41598-025-17867-5",
+        "status_code": 200,
+        "resolved_url": "https://www.nature.com/articles/s41598-025-17867-5",
+        "title": "A deep learning approach for improving spatiotemporal resolution of numerical weather prediction forecasts | Scientific Reports",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "seo2018structured",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1612.07659"
+      ],
+      "citation_sentence": "Graph convolutional recurrent networks insert graph filtering into recurrent sequence models~\\cite{seo2018structured}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 25,
+      "original_bibliography": "Seo, Y., Defferrard, M., Vandergheynst, P. \\& Bresson, X. Structured\n  sequence modeling with graph convolutional recurrent networks. In\n  \\textit{ICONIP} 362--373 (2018).",
+      "revised_bibliography": "Seo, Y., Defferrard, M., Vandergheynst, P. \\& Bresson, X. Structured\n  sequence modeling with graph convolutional recurrent networks. In\n  \\textit{ICONIP} 362--373 (2018).",
+      "primary_link_check": {
+        "key": "seo2018structured",
+        "url": "https://arxiv.org/abs/1612.07659",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1612.07659",
+        "title": "[1612.07659] Structured Sequence Modeling with Graph Convolutional Recurrent Networks",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "original_key": "zhao2019tgcn",
+      "status": "kept",
+      "reason": "Retained for the specific scientific background statement recorded in citation_sentence; no external benchmark score is imported.",
+      "source_urls": [
+        "https://arxiv.org/abs/1811.05320"
+      ],
+      "citation_sentence": "T-GCN couples graph convolution to gated recurrent updates~\\cite{zhao2019tgcn}.",
+      "verification_scope": "Primary publisher/author page or paper was inspected during this revision.",
+      "new_reference_number": 28,
+      "original_bibliography": "Zhao, L. et al. T-GCN: A temporal graph convolutional network for traffic\n  prediction. \\textit{IEEE Trans. Intell. Transp. Syst.} \\textbf{21,}\n  3848--3858 (2020).",
+      "revised_bibliography": "Zhao, L. et al. T-GCN: A temporal graph convolutional network for traffic\n  prediction. \\textit{IEEE Trans. Intell. Transp. Syst.} \\textbf{21,}\n  3848--3858 (2020).",
+      "primary_link_check": {
+        "key": "zhao2019tgcn",
+        "url": "https://arxiv.org/abs/1811.05320",
+        "status_code": 200,
+        "resolved_url": "https://arxiv.org/abs/1811.05320",
+        "title": "[1811.05320] T-GCN: A Temporal Graph ConvolutionalNetwork for Traffic Prediction",
+        "content_type": "text/html; charset=utf-8"
+      }
+    }
+  ],
+  "primary_link_check_summary": {
+    "checked": 58,
+    "http_200": 53,
+    "note": "HTTP/title checks establish availability and identity only, not full-text methodological validation. Browser-challenged publisher pages have author-preprint or publisher-deposited metadata alternatives where available."
+  }
+}

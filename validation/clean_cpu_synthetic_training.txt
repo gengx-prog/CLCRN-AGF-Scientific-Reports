@@ -1,0 +1,212 @@
+loading data of trn set...
+loading data of val set...
+loading data of test set...
+2026-10-08 04:43:23,292 - INFO - Total trainable parameters 457
+2026-10-08 04:43:23,350 - INFO - {'epoch': 1, 'train_mae': 0.7603950699170431, 'val_mae': 0.835938678295524, 'seconds': 0.03995869995560497, 'learning_rate': 0.00095, 'batches_seen': 3}
+2026-10-08 04:43:23,355 - INFO - Loaded checkpoint epoch 1
+2026-10-08 04:43:23,369 - INFO - Loaded checkpoint epoch 1
+loading data of trn set...
+loading data of val set...
+loading data of test set...
+2026-10-08 04:43:23,447 - INFO - Total trainable parameters 358
+2026-10-08 04:43:23,497 - INFO - {'epoch': 1, 'train_mae': 0.7688429752985636, 'val_mae': 0.8431015303013502, 'seconds': 0.03530079999472946, 'learning_rate': 0.00095, 'batches_seen': 3}
+2026-10-08 04:43:23,501 - INFO - Loaded checkpoint epoch 1
+2026-10-08 04:43:23,513 - INFO - Loaded checkpoint epoch 1
+loading data of trn set...
+loading data of val set...
+loading data of test set...
+2026-10-08 04:43:23,588 - INFO - Total trainable parameters 436
+2026-10-08 04:43:23,639 - INFO - {'epoch': 1, 'train_mae': 0.7273914416631063, 'val_mae': 0.8370262508591017, 'seconds': 0.03657160000875592, 'learning_rate': 0.00095, 'batches_seen': 3}
+2026-10-08 04:43:23,643 - INFO - Loaded checkpoint epoch 1
+2026-10-08 04:43:23,655 - INFO - Loaded checkpoint epoch 1
+loading data of trn set...
+loading data of val set...
+loading data of test set...
+2026-10-08 04:43:23,743 - INFO - Total trainable parameters 457
+2026-10-08 04:43:23,799 - INFO - {'epoch': 1, 'train_mae': 0.7673224608103434, 'val_mae': 0.85435123699052, 'seconds': 0.04760400007944554, 'learning_rate': 0.00095, 'batches_seen': 3}
+2026-10-08 04:43:23,803 - INFO - Loaded checkpoint epoch 1
+2026-10-08 04:43:23,816 - INFO - Loaded checkpoint epoch 1
+{
+  "artifact_kind": "synthetic software verification, NOT WeatherBench evidence",
+  "device": "cpu",
+  "python": "3.13.7",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.4.2",
+  "metrics": "zero/negative inclusion, explicit legacy zero exclusion, missing targets, finite gradients, invalid-prediction rejection passed",
+  "graph": "self-inclusive normalized top-k, independent dense formula, gate operand order, backward gradients, k=1 and k=N passed",
+  "runs": [
+    {
+      "variant": "agf",
+      "status": "passed",
+      "summary": {
+        "mae": 0.7512429452466743,
+        "metric_protocol": "zero_inclusive",
+        "spatial_weighting": "uniform_gridpoint",
+        "sample_count": 3,
+        "rmse": 0.9603193270974858,
+        "step_metrics": {
+          "mae_1": 0.7408537823292944,
+          "rmse_1": 0.9522213733348552,
+          "mae_2": 0.749857916807135,
+          "rmse_2": 0.9576944911718287,
+          "mae_3": 0.7512429452466743,
+          "rmse_3": 0.9603193270974858
+        },
+        "exact_step_metrics": {
+          "mae_1": 0.7408537823292944,
+          "rmse_1": 0.9522213733348552,
+          "mae_2": 0.7588620512849755,
+          "rmse_2": 0.9631365079810952,
+          "mae_3": 0.7540130021257533,
+          "rmse_3": 0.9655475923791472
+        },
+        "best_epoch": 1,
+        "best_val_mae": 0.835938678295524,
+        "training_protocol": "zero_inclusive",
+        "protocol": "zero_inclusive",
+        "validation_protocol": "zero_inclusive",
+        "epochs_completed": 1,
+        "planned_epochs": 1,
+        "training_complete": true,
+        "status": "completed",
+        "precision": "fp32",
+        "batches_seen": 3,
+        "config_sha256": "3c326ddc308c99c8100cccea799428c6101e562a0502695911841a7a37484ad4",
+        "processing_version": "curated_float32_then_train_only_standardization_v1",
+        "checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\agf\\saved_model\\epo1.tar",
+        "last_checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\agf\\saved_model\\epo1.tar"
+      },
+      "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+    },
+    {
+      "variant": "control",
+      "status": "passed",
+      "summary": {
+        "mae": 0.7683334800380247,
+        "metric_protocol": "zero_inclusive",
+        "spatial_weighting": "uniform_gridpoint",
+        "sample_count": 3,
+        "rmse": 0.9799283816399673,
+        "step_metrics": {
+          "mae_1": 0.7636222820729017,
+          "rmse_1": 0.9805581677196518,
+          "mae_2": 0.7687934478744864,
+          "rmse_2": 0.9810423177327166,
+          "mae_3": 0.7683334800380247,
+          "rmse_3": 0.9799283816399673
+        },
+        "exact_step_metrics": {
+          "mae_1": 0.7636222820729017,
+          "rmse_1": 0.9805581677196518,
+          "mae_2": 0.7739646136760712,
+          "rmse_2": 0.9815262289327984,
+          "mae_3": 0.7674135443651013,
+          "rmse_3": 0.9776967019816603
+        },
+        "best_epoch": 1,
+        "best_val_mae": 0.8431015303013502,
+        "training_protocol": "zero_inclusive",
+        "protocol": "zero_inclusive",
+        "validation_protocol": "zero_inclusive",
+        "epochs_completed": 1,
+        "planned_epochs": 1,
+        "training_complete": true,
+        "status": "completed",
+        "precision": "fp32",
+        "batches_seen": 3,
+        "config_sha256": "12cffd301136350a983cedb9ef9825d485373871058ced6bcaf4eeb13b097bc9",
+        "processing_version": "curated_float32_then_train_only_standardization_v1",
+        "checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\control\\saved_model\\epo1.tar",
+        "last_checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\control\\saved_model\\epo1.tar"
+      },
+      "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+    },
+    {
+      "variant": "mean_fusion",
+      "status": "passed",
+      "summary": {
+        "mae": 0.7557007654880484,
+        "metric_protocol": "zero_inclusive",
+        "spatial_weighting": "uniform_gridpoint",
+        "sample_count": 3,
+        "rmse": 0.9578011540543646,
+        "step_metrics": {
+          "mae_1": 0.7364433851713935,
+          "rmse_1": 0.9553308235553717,
+          "mae_2": 0.7522384254779253,
+          "rmse_2": 0.9569340167130967,
+          "mae_3": 0.7557007654880484,
+          "rmse_3": 0.9578011540543646
+        },
+        "exact_step_metrics": {
+          "mae_1": 0.7364433851713935,
+          "rmse_1": 0.9553308235553717,
+          "mae_2": 0.768033465784457,
+          "rmse_2": 0.9585345284601583,
+          "mae_3": 0.7626254455082946,
+          "rmse_3": 0.9595330778239465
+        },
+        "best_epoch": 1,
+        "best_val_mae": 0.8370262508591017,
+        "training_protocol": "zero_inclusive",
+        "protocol": "zero_inclusive",
+        "validation_protocol": "zero_inclusive",
+        "epochs_completed": 1,
+        "planned_epochs": 1,
+        "training_complete": true,
+        "status": "completed",
+        "precision": "fp32",
+        "batches_seen": 3,
+        "config_sha256": "f49b192f98f09aacc110a278bb250c04ee0866bc821c2a3681bec62998148d6d",
+        "processing_version": "curated_float32_then_train_only_standardization_v1",
+        "checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\mean_fusion\\saved_model\\epo1.tar",
+        "last_checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\mean_fusion\\saved_model\\epo1.tar"
+      },
+      "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+    },
+    {
+      "variant": "legacy_agf",
+      "status": "passed",
+      "summary": {
+        "mae": 0.751235193055537,
+        "metric_protocol": "zero_inclusive",
+        "spatial_weighting": "uniform_gridpoint",
+        "sample_count": 3,
+        "rmse": 0.9603078595101822,
+        "step_metrics": {
+          "mae_1": 0.740845022102197,
+          "rmse_1": 0.9522096010136631,
+          "mae_2": 0.7498472649604082,
+          "rmse_2": 0.9576823348945528,
+          "mae_3": 0.751235193055537,
+          "rmse_3": 0.9603078595101822
+        },
+        "exact_step_metrics": {
+          "mae_1": 0.740845022102197,
+          "rmse_1": 0.9522096010136631,
+          "mae_2": 0.7588495078186194,
+          "rmse_2": 0.9631239717064284,
+          "mae_3": 0.7540110492457947,
+          "rmse_3": 0.965537490713291
+        },
+        "best_epoch": 1,
+        "best_val_mae": 0.85435123699052,
+        "training_protocol": "legacy_zero_exclusive",
+        "protocol": "legacy_zero_exclusive",
+        "validation_protocol": "legacy_zero_exclusive",
+        "epochs_completed": 1,
+        "planned_epochs": 1,
+        "training_complete": true,
+        "status": "completed",
+        "precision": "fp32",
+        "batches_seen": 3,
+        "config_sha256": "23771b09f9ff3db826e6666b26b9b8afec8061c76162999e9fe878d7bcd24b9c",
+        "processing_version": "curated_float32_then_train_only_standardization_v1",
+        "checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\legacy_agf\\saved_model\\epo1.tar",
+        "last_checkpoint": "G:\\SR_clean_cpu_additional_checks_20261008\\training_smoke\\legacy_agf\\saved_model\\epo1.tar"
+      },
+      "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
+    }
+  ],
+  "status": "passed"
+}

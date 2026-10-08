@@ -1,0 +1,410 @@
+{
+  "scope": "Supplement local evidence and preserved figures; no raw chat history",
+  "files": [
+    {
+      "path": "data/ablation_per_seed.csv",
+      "bytes": 4459,
+      "sha256": "ce30c898dda776e2a8f09d19ecdeceb984747cd9a10c1d76eb0ba56cbc688744"
+    },
+    {
+      "path": "data/analysis_code_manifest.json",
+      "bytes": 681,
+      "sha256": "c0e9801fa55ddf07f00991d7725c9049726c96eacdfd0ca5bdea1a16349ee528"
+    },
+    {
+      "path": "data/dataset_cloud_cover.json",
+      "bytes": 1963,
+      "sha256": "31a8818d4e12fb04fab7df8e1ef87fd43f970e6bb91b528b2ace480df22fb27b"
+    },
+    {
+      "path": "data/dataset_component_of_wind.json",
+      "bytes": 1980,
+      "sha256": "8ba61432443d1b494e09bf2a630d062e68d869f248161419488a7cffc930632f"
+    },
+    {
+      "path": "data/dataset_humidity.json",
+      "bytes": 1880,
+      "sha256": "9bc918cf184ae720736a69fea54199408f3fbcbeeada81c3ead5983c28d933fc"
+    },
+    {
+      "path": "data/dataset_temperature.json",
+      "bytes": 1896,
+      "sha256": "49364087faad3aab597bf74bef70e1273f2b706982801967d810675f3354f786"
+    },
+    {
+      "path": "data/gate_histogram.csv",
+      "bytes": 77197,
+      "sha256": "f21c4b51e8a3ea1efe43d64de53b244c4897ebbafb79601e50434455fb1b82e4"
+    },
+    {
+      "path": "data/gate_per_seed.csv",
+      "bytes": 2509,
+      "sha256": "c61bc7f01e7bfacd02862e0dd17ba4a371da50aaae8aec37e482dc3504a4f0fe"
+    },
+    {
+      "path": "data/horizon_per_seed.csv",
+      "bytes": 49296,
+      "sha256": "4cd1acb63f2eab6c7ac27ae03b994b9f514247916a0ab2546611c988a26696c6"
+    },
+    {
+      "path": "data/inference_agf_cloud_cover_2021.json",
+      "bytes": 10674,
+      "sha256": "2c57a7c2ca9fc80165ede6d34908f3ad1a19a60ab1eae6a3842e6105a0a5ec55"
+    },
+    {
+      "path": "data/inference_agf_cloud_cover_2022.json",
+      "bytes": 10652,
+      "sha256": "884b54248a703515ebf762e5e20c3803dae59a27ddf7f50e985d82fae8a5f25f"
+    },
+    {
+      "path": "data/inference_agf_cloud_cover_2023.json",
+      "bytes": 10629,
+      "sha256": "8244b4bc792f98aa725f849857e35f43e04f4aefc2762e63b8e18485d0cd23b3"
+    },
+    {
+      "path": "data/inference_agf_cloud_cover_2024.json",
+      "bytes": 10661,
+      "sha256": "88f1b0708a127c30de8424de73c705e96a9d11ea4aee17244390a1199973be94"
+    },
+    {
+      "path": "data/inference_agf_cloud_cover_2025.json",
+      "bytes": 10641,
+      "sha256": "b45b3d549196455b4d528e1b7a6e0c357e02d9fa688eec789266363246433370"
+    },
+    {
+      "path": "data/inference_agf_component_of_wind_2021.json",
+      "bytes": 10498,
+      "sha256": "e4f95fedab87a1165e0f58494de1d5d80f9ed42426a559ad55511da63c36b3b4"
+    },
+    {
+      "path": "data/inference_agf_component_of_wind_2022.json",
+      "bytes": 10539,
+      "sha256": "a35df379c3a9d788b3f6e6ae00d68b367f58e785352cd0546c41a2467b06ec27"
+    },
+    {
+      "path": "data/inference_agf_component_of_wind_2023.json",
+      "bytes": 10511,
+      "sha256": "20e56795fd322bfe7abdd18a78f596c19196fcfb8014e3c61e4f51866c0f9809"
+    },
+    {
+      "path": "data/inference_agf_component_of_wind_2024.json",
+      "bytes": 10526,
+      "sha256": "563dd99feabfadb2e61f6bb6ee96727bb51b88a47c8f478a550cc389890133cd"
+    },
+    {
+      "path": "data/inference_agf_component_of_wind_2025.json",
+      "bytes": 10550,
+      "sha256": "b270d1f78269a71568be36ad6a941b9d1c4fd11bdaefdcc85172cd4fadb4d841"
+    },
+    {
+      "path": "data/inference_agf_humidity_2021.json",
+      "bytes": 10520,
+      "sha256": "f67f40ae22fdad979d4e123669a0d7cb80db0093aeeb955ebb75419ef21e39d4"
+    },
+    {
+      "path": "data/inference_agf_humidity_2022.json",
+      "bytes": 10508,
+      "sha256": "5ac994c4b383b2740ea3f05e2b151109976ce123661653e81761261898a1da07"
+    },
+    {
+      "path": "data/inference_agf_humidity_2023.json",
+      "bytes": 10514,
+      "sha256": "b1cdd888bfabd1b5da3a525b5f7e3cc0b5c312017b589f31750d83a98c3380e1"
+    },
+    {
+      "path": "data/inference_agf_humidity_2024.json",
+      "bytes": 10541,
+      "sha256": "e4c73e9984d2e3e4598c781518af5825cf5694df942b77dfeb13d0d865053510"
+    },
+    {
+      "path": "data/inference_agf_humidity_2025.json",
+      "bytes": 10552,
+      "sha256": "7ef9d684c09bbdf0ae85ee08f77c11eef57aefbc9bb1c7131fe05e2c3276e78f"
+    },
+    {
+      "path": "data/inference_agf_temperature_2021.json",
+      "bytes": 10590,
+      "sha256": "ed66c0cf1c8b79283758bb5ef3044c74e33fa539b8a27396d01ef091a7bb5e46"
+    },
+    {
+      "path": "data/inference_agf_temperature_2022.json",
+      "bytes": 10546,
+      "sha256": "2481e56177b48af1dac3789346fff8b77c2350462894a165dd6409617a29b7ac"
+    },
+    {
+      "path": "data/inference_agf_temperature_2023.json",
+      "bytes": 10477,
+      "sha256": "05fa719f961b7041cf54fa72706b7107941aa9129ec3589de0ccb34f5428c66e"
+    },
+    {
+      "path": "data/inference_agf_temperature_2024.json",
+      "bytes": 10520,
+      "sha256": "753565ba3e287928c063b0422e7b972862a4d1dd14ab28c8504ca19e2ee81b8b"
+    },
+    {
+      "path": "data/inference_agf_temperature_2025.json",
+      "bytes": 10502,
+      "sha256": "59d45535afb4ae1e1e3c128a021dda0be7da9e5f674c07fbe3e61b8567ae746c"
+    },
+    {
+      "path": "data/inference_control_cloud_cover_2021.json",
+      "bytes": 7253,
+      "sha256": "fe58b192778c1f95ad460e8665dab7231764fdd2166430a0c6ad21909358eb28"
+    },
+    {
+      "path": "data/inference_control_cloud_cover_2022.json",
+      "bytes": 7250,
+      "sha256": "5236eb3ec934a70188324a67defc42e23354545d215cdee43e10735ffb6e9122"
+    },
+    {
+      "path": "data/inference_control_cloud_cover_2023.json",
+      "bytes": 7241,
+      "sha256": "bb3b252daf4019ed762ce20584c5bf78243e314c49476d749c629142694319ea"
+    },
+    {
+      "path": "data/inference_control_cloud_cover_2024.json",
+      "bytes": 7239,
+      "sha256": "9b0132feec9ed739629c02a31f946de4b1d6b6e9f55da957956cec7c03560c81"
+    },
+    {
+      "path": "data/inference_control_cloud_cover_2025.json",
+      "bytes": 7228,
+      "sha256": "a3ef7bbeb611b59d40a5616aa97903ec59c3fba867c21855c97be59712c81cfc"
+    },
+    {
+      "path": "data/inference_control_component_of_wind_2021.json",
+      "bytes": 7231,
+      "sha256": "cb7ee9b14d494ba3ba731873411648b8f1ef980cd79101138974bc735c02ad86"
+    },
+    {
+      "path": "data/inference_control_component_of_wind_2022.json",
+      "bytes": 7221,
+      "sha256": "f271514140880d83dc8bfe2a4b1728aa90d3fea8b9f79242d04b85796510c6e1"
+    },
+    {
+      "path": "data/inference_control_component_of_wind_2023.json",
+      "bytes": 7234,
+      "sha256": "88feb32ee4a9b064df1acc62e9d03bcc978cea5d2b2f7409f7af71207f384efa"
+    },
+    {
+      "path": "data/inference_control_component_of_wind_2024.json",
+      "bytes": 7243,
+      "sha256": "734344507d227f3eb87483543b73158f9ae0a9f916e4fcace19910b0a3c8b655"
+    },
+    {
+      "path": "data/inference_control_component_of_wind_2025.json",
+      "bytes": 7205,
+      "sha256": "338762dd05b8339a7e70c3240134c520fc3e4bbb7d1143cbed39b5f1e1a446ad"
+    },
+    {
+      "path": "data/inference_control_humidity_2021.json",
+      "bytes": 7111,
+      "sha256": "103296ce7be063b691c7e4ae7a61ad89d516b32876823b20d8a89f615a085411"
+    },
+    {
+      "path": "data/inference_control_humidity_2022.json",
+      "bytes": 7103,
+      "sha256": "89e55c41c24b856a9b8607cf7ebf49d43d4f3ce5f9220fe5af397ce42af79bb3"
+    },
+    {
+      "path": "data/inference_control_humidity_2023.json",
+      "bytes": 7103,
+      "sha256": "8d770838eda9a7a1ee890f3070bc2f67e17aa36439bbd23faf3e3650426b7a71"
+    },
+    {
+      "path": "data/inference_control_humidity_2024.json",
+      "bytes": 7111,
+      "sha256": "7f3f13816654c1e2e5a2e6aea5bb86ac3746066f24955c8ecf6c455a9aad8a11"
+    },
+    {
+      "path": "data/inference_control_humidity_2025.json",
+      "bytes": 7106,
+      "sha256": "187973a2cf97d15025c9bd306460ea78da0e6b44fa628594d30309668208e4c1"
+    },
+    {
+      "path": "data/inference_control_temperature_2021.json",
+      "bytes": 7159,
+      "sha256": "a1332a9d9349b98a1268865b30034ac7f55eb326e696ee7f0a2ec26a29ee4017"
+    },
+    {
+      "path": "data/inference_control_temperature_2022.json",
+      "bytes": 7164,
+      "sha256": "6e0f85b6306ac0a600c8c32dd4b9a37ae1b5da59beb2c238cdccc842212ce899"
+    },
+    {
+      "path": "data/inference_control_temperature_2023.json",
+      "bytes": 7165,
+      "sha256": "b110b4e51a95fa8c24a6d81bd2cada1486751052dd780908e7ed4f06608f6092"
+    },
+    {
+      "path": "data/inference_control_temperature_2024.json",
+      "bytes": 7170,
+      "sha256": "6815cf0e64100782d24f004a0278053bbfbb28556cc198dc7f51e5f1649dd8c1"
+    },
+    {
+      "path": "data/inference_control_temperature_2025.json",
+      "bytes": 7159,
+      "sha256": "caa8da8224e844420e27cd4c67d5f1424cda1c7dd8944afc6b16179da41b25b3"
+    },
+    {
+      "path": "data/inference_mean_fusion_humidity_2023.json",
+      "bytes": 5171,
+      "sha256": "6918a0b455c97a6e5116dfe0cc44a49cbe2b5ad46138df4c7e063356b3c5139a"
+    },
+    {
+      "path": "data/inference_mean_fusion_humidity_2024.json",
+      "bytes": 5171,
+      "sha256": "43120f0bb7fe1b54a9c2381c78ea59045c9a292d06081db9759b0af3f02596a3"
+    },
+    {
+      "path": "data/inference_mean_fusion_humidity_2025.json",
+      "bytes": 5170,
+      "sha256": "e538ca65f095e68658bee52d837020842a8eb210b42f09099d25cfb63faa42ac"
+    },
+    {
+      "path": "data/inference_mean_fusion_temperature_2023.json",
+      "bytes": 5240,
+      "sha256": "82558686951d6dbbce74d4a7c6efab70fdf946e5ec91143f8b9c9a710e0eb282"
+    },
+    {
+      "path": "data/inference_mean_fusion_temperature_2024.json",
+      "bytes": 5228,
+      "sha256": "17a189170e2c9ed3e47fd6f7a246cb640611aaa6e7a0ba36143a26f6f32500c0"
+    },
+    {
+      "path": "data/inference_mean_fusion_temperature_2025.json",
+      "bytes": 5226,
+      "sha256": "5b7d73e69c2ec3c52e2f722a5e02ce27374590befd8d5a1d11b6be903592f4d9"
+    },
+    {
+      "path": "data/latitude_weighted_sensitivity.csv",
+      "bytes": 2281,
+      "sha256": "cd97f3eec1636d54150cf9cad7d950ff502e955e781c85c972a315beae42987c"
+    },
+    {
+      "path": "data/model_inventory_46.csv",
+      "bytes": 16078,
+      "sha256": "bddd077d27a621263a7f288742a635114a2330a3f9ddd6434a9578031d833266"
+    },
+    {
+      "path": "data/persistence_cloud_cover.json",
+      "bytes": 3023,
+      "sha256": "1f60039cbe6445ab53e901028413c0d31f68dd56b8630e659bcd2fdbcc4a0503"
+    },
+    {
+      "path": "data/persistence_component_of_wind.json",
+      "bytes": 2974,
+      "sha256": "89589da1cb5fcdae3db40ad0d77ef254c0fce7fa7732a4bff6d55bf04f268ba5"
+    },
+    {
+      "path": "data/persistence_humidity.json",
+      "bytes": 2948,
+      "sha256": "55f62abba98545f36453cea6ba9ee2b34544662c6aa748f5f71c08884bb37286"
+    },
+    {
+      "path": "data/persistence_temperature.json",
+      "bytes": 2982,
+      "sha256": "6ade781e7d63f79e1e6db4e40a3041047fcdd0ddd959795b090b8c3ecd6ee311"
+    },
+    {
+      "path": "data/primary_per_seed.csv",
+      "bytes": 11260,
+      "sha256": "ae1c0c7e333556a363c6e80589de365620b11ed656c72e1d970ef68965024f1b"
+    },
+    {
+      "path": "data/provenance_manifest.json",
+      "bytes": 87373,
+      "sha256": "eb55d3ad2cb8f5b1bb5d218848f861579ff23796d14e0509f9a04fe8e0251dd2"
+    },
+    {
+      "path": "data/raw_target_zero_fractions.csv",
+      "bytes": 542,
+      "sha256": "6b66f0a6223c2129849700009eb9f93c82aa42ea4892fcc4357f9ad44eeb43c6"
+    },
+    {
+      "path": "data/robustness_indices_cloud_cover.json",
+      "bytes": 813,
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+    },
+    {
+      "path": "data/robustness_indices_component_of_wind.json",
+      "bytes": 813,
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+    },
+    {
+      "path": "data/robustness_indices_humidity.json",
+      "bytes": 813,
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+    },
+    {
+      "path": "data/robustness_indices_temperature.json",
+      "bytes": 813,
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0"
+    },
+    {
+      "path": "data/robustness_per_seed_mask.csv",
+      "bytes": 56303,
+      "sha256": "031d9912f1b2a843cce93d8622824326720de894cd54890a11f2da1f1bc15b97"
+    },
+    {
+      "path": "data/robustness_summary.csv",
+      "bytes": 2616,
+      "sha256": "1fe426769bebda218610d5a03422f1154e63e0c3924190fdee7c909b954abb08"
+    },
+    {
+      "path": "data/table1_primary_statistics.csv",
+      "bytes": 2439,
+      "sha256": "1b7d495b3a286ed7566303c14fb464ed7731e3e2d485d8bd3f9baca4e5f0c99b"
+    },
+    {
+      "path": "data/table2_current_context.csv",
+      "bytes": 1532,
+      "sha256": "366f85e48a053c5a380dad963bb017bc8780ce19c3bfd05bc161a6ae39326741"
+    },
+    {
+      "path": "data/table3_ablation_statistics.csv",
+      "bytes": 844,
+      "sha256": "95ae6deb6b80b0511da58c7e4ac27d1a9407db2c98885ee8e2bd636cad7fc01d"
+    },
+    {
+      "path": "data/table4_gate_statistics.csv",
+      "bytes": 560,
+      "sha256": "d493250fbe4523c46c6ea7511a934ff82d0e7ea7d6090d830c93dd6f61bce409"
+    },
+    {
+      "path": "data/verification_report.json",
+      "bytes": 10229,
+      "sha256": "07631e72e1397e11dd635c5f22306726cde5e3ca34a4839f4f55200ff35f7ac0"
+    },
+    {
+      "path": "figures/fig1_motivation.pdf",
+      "bytes": 13303,
+      "sha256": "bb091fd582942f0e8f12616ba00b5aaef2ef253c3cc6414aaebb125799a301e1"
+    },
+    {
+      "path": "figures/fig3_context_current_split.pdf",
+      "bytes": 15238,
+      "sha256": "5eb9a13220ef957fc6412a5c2771739124c96aa057a8ff1a0277fc8c07e5fc1c"
+    },
+    {
+      "path": "figures/fig5_horizon_consistent.pdf",
+      "bytes": 19167,
+      "sha256": "58b7a3f183d57c40c12da67cfc55ae0d74cb4786aa7dad41c57133ffca0eb9c7"
+    },
+    {
+      "path": "figures/fig6_primary_effects.pdf",
+      "bytes": 15812,
+      "sha256": "d4a0ea0f2b00432ec0c84ac3d1568d7bc4e22c03d80d08ceadb0c0c9696de5c2"
+    },
+    {
+      "path": "figures/fig7_robustness_consistent.pdf",
+      "bytes": 19866,
+      "sha256": "1848acebe944379c5ed883f5c6696c4b13a16d2f8a523ba6d6de31232931b1c8"
+    },
+    {
+      "path": "figures/fig8_gate_consistent.pdf",
+      "bytes": 31366,
+      "sha256": "d3be45745e5f1dd1c6c361be8606561b63f3ae094b6e6f1c574afa04d810b56b"
+    }
+  ]
+}

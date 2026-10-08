@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scope": "All 30 pages inspected in contact sheets; main manuscript architecture page 5 and bibliography page 15 inspected at page scale. This supplements, rather than replaces, the automated per-page render and TeX-log checks.",
+  "issues_found": [],
+  "papers": [
+    {
+      "pdf": "Scientific_Reports_submission/main.pdf",
+      "sha256": "17ac6a1c09df556c5f82d225c081605f13a8dc6e440252313de970873b2b01ee",
+      "pages": 16,
+      "overfull_boxes": []
+    },
+    {
+      "pdf": "Supplementary_Information/supplement.pdf",
+      "sha256": "0b8cd2db7b6a35d675167997633b5b2bd2cb646cae37b854a1cbbeb4f59fec55",
+      "pages": 14,
+      "overfull_boxes": []
+    }
+  ],
+  "contacts": [
+    "validation/main_contact.png",
+    "validation/supplement_contact.png"
+  ]
+}

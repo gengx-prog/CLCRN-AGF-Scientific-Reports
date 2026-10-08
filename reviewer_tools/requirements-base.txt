@@ -1,0 +1,6 @@
+# Tested with CPython 3.13.7 on Windows 11 x86-64.
+# Windows/Linux x86-64 wheel paths are checked separately for CPU and CUDA.
+numpy==2.4.2
+scipy==1.17.0
+matplotlib==3.10.8
+pandas==3.0.0

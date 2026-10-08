@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\caption{Component ablations with a matched 100-epoch FP32 training protocol. All entries report mean$\pm$sample standard deviation over seeds 2023--2025 on the full 12-hour test forecast. Lower is better.}
+\label{tab:ablation}
+\centering
+\small
+\fitTable{\begin{tabular}{lllrr}
+\toprule
+Budget & Task & Variant & MAE & RMSE\\
+\midrule
+100 epochs, 3 seeds & Temperature & Control (no AGF) & $1.233\pm0.056$ & $2.113\pm0.043$ \\
+ &  & w/o gated fusion & $1.267\pm0.066$ & $2.047\pm0.103$ \\
+ &  & Full CLCRN-AGF & $1.250\pm0.127$ & $2.057\pm0.138$ \\
+\midrule
+100 epochs, 3 seeds & Relative humidity & Control (no AGF) & $4.636\pm0.009$ & $7.227\pm0.043$ \\
+ &  & w/o gated fusion & $4.599\pm0.024$ & $7.132\pm0.062$ \\
+ &  & Full CLCRN-AGF & $4.555\pm0.041$ & $7.040\pm0.048$ \\
+\bottomrule
+\end{tabular}}
+\vspace{2pt}\par\parbox{\linewidth}{\footnotesize The control removes the entire AGF module, including its residual projection, changing the encoder input width and parameter count. The ungated variant uses a fixed equal average of the graph and residual branches. The control and full-model rows use the same seed subset from Table~\ref{tab:primary}. Errors are in K for temperature and percentage points for relative humidity.}
+\end{table}

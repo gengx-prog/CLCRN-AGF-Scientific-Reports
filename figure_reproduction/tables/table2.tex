@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\caption{Contextual test results on the same test split. Persistence is deterministic; control and CLCRN-AGF are means across five seeds. All methods use the same zero-inclusive, spatially unweighted evaluation over the full 12-hour forecast. Lower is better.}
+\label{tab:context}
+\centering
+\small
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Method & \multicolumn{2}{c}{Temperature} & \multicolumn{2}{c}{Relative humidity} & \multicolumn{2}{c}{Surface wind} & \multicolumn{2}{c}{Cloud cover}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+& MAE & RMSE & MAE & RMSE & MAE & RMSE & MAE & RMSE\\
+\midrule
+Persistence & 1.421 & 2.700 & 6.425 & 10.447 & 1.537 & 2.535 & 0.1620 & 0.2725 \\
+CLCRN control (5 seeds) & 1.258 & 2.101 & 4.648 & 7.248 & 1.242 & 1.972 & 0.1479 & 0.2500 \\
+CLCRN-AGF (5 seeds) & 1.291 & 2.118 & 4.537 & 7.010 & 1.256 & 2.016 & 0.1484 & 0.2490 \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}\par\parbox{\linewidth}{\footnotesize Errors are in K for temperature, percentage points for relative humidity, m\,s$^{-1}$ for surface wind, and fractions for cloud cover. Variation across model seeds is reported in Table~\ref{tab:primary}.}
+\end{table}

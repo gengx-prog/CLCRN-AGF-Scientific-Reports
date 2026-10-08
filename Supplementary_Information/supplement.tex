@@ -27,6 +27,8 @@ The Conditional Local Convolution Recurrent Network (CLCRN) and Conditional Loca
 
 The 40 primary replicates use seeds 2021--2025. The mean-fusion models use seeds 2023--2025 for temperature and humidity; the other 12 ablation entries reuse the corresponding control and AGF primary models. Thus the 18 ablation entries represent 18 selected models, of which only six are additional to the 40 primary models. The complete 46-row inventory, selected epochs, validation MAE, test scores, parameter counts, relative checkpoint paths and full SHA256 hashes are supplied in \path{data/model_inventory_46.csv}.
 
+The accompanying main article reports the same 46-model evidence set. Main Figures~3--8 and Tables~1--4 share the definitions and checkpoints documented here. Main Figures~4 and~6 display MAE only; the primary tables and Supplementary Figure~S2 retain both MAE and RMSE. Main Figures~5 and~7 show the five AGF models for each task; Supplementary Figures~S6 and~S5, respectively, preserve direct control--AGF comparisons. The conceptual main Figure~1 contains no measured experimental result, and main Figure~2 depicts the corrected pre-CLConv graph/residual fusion.
+
 \section{Data, preprocessing and training protocol}
 The four WeatherBench-derived tasks are 2-m temperature, relative humidity, joint 10-m wind components ($u,v$), and total cloud cover. Hourly 2010--2018 fields occupy a regular $32\times64$ latitude--longitude grid (2,048 nodes). Each example has 12 input hours and 12 target hours. Window starts are separated by 24 hours, and the chronological, unshuffled split contains 2,300 training, 329 validation and 657 test examples. There is one fixed split; training seeds are not cross-validation folds.
 
@@ -527,6 +529,8 @@ Cloud cover & 0.4 & 819 & $35.49 \pm 2.24$ & $37.52 \pm 2.29$ \\
 
 AGF does not show uniform missing-input robustness: relative increases are slightly lower for temperature and wind, but higher for humidity and cloud cover. Relative degradation is not a comparison of absolute masked errors between models with different clean errors. Absolute clean/masked MAE and RMSE for all 520 records are supplied in \path{data/robustness_per_seed_mask.csv}. This sampled input-replacement diagnostic is not a full-test benchmark or a test of actual missing-observation patterns, and no robustness significance claim is made.
 
+Main Figure~7 overlays the four AGF task curves using a common relative-change axis. Supplementary Figure~\ref{fig:robustness_both} retains the control and AGF curves in separate task panels, using exactly the same checkpoints, windows, masks and nested aggregation as Table~\ref{tab:missing}. It provides the comparison needed to interpret the AGF-only main figure; no additional models or masks are introduced.
+
 \section{Full-test gate statistics}
 The gate is $\mathbf g=\sigma(W_g[\mathbf r\Vert\mathbf q]+b_g)$ and its value weights the graph-aggregated branch in the fusion above. Statistics are collected from all scalar gate outputs before any channel averaging. Each AGF model contributes $657\times12\times2048\times8=129{,}171{,}456$ values; the five-model task pool has 645,857,280 values. All 100 histogram bins over $[0,1]$ sum to the corresponding scalar count. A value displayed as 1.0000 can result from floating-point sigmoid saturation or rounding; it does not indicate a hard selection mechanism.
 
@@ -604,8 +608,12 @@ Cloud cover & 0.4754 & 0.2080 & 0.0023 & 0.9970 \\
 
 The pooled variance includes both within-model dispersion and differences among seed means; it is not the standard deviation of five seed means. The gate values are correlated over space and time and are not independent inferential samples. Their magnitudes do not prove physical interpretability, causal importance or forecast improvement. Both projections have learned scales, so a numerical gate coefficient alone does not measure a branch's contribution to output error.
 
+Main Figure~8 uses mirrored profiles interpolated through the recorded 100-bin histogram centres, with widths normalized separately for each task. Its boxes, median lines and whiskers denote approximate 25th--75th, 50th and 5th--95th percentiles, obtained by linear interpolation of cumulative bin counts. These are binned approximations because the package records histograms rather than individual scalar activations. The mean diamonds and reported population standard deviations use the exact streamed moments in Table~\ref{tab:gate_pool}, not moments inferred from bin centres. Supplementary Figure~\ref{fig:gate} retains the individual-seed and pooled densities from the same histogram records.
+
 \section{Forecast-lead support and reproducibility boundaries}
 Exact-lead scores use only lead $h$; cumulative scores pool leads 1 through $h$. They must not be interchanged. The machine-readable horizon file contains 480 rows ($40\times12$), each with both definitions. At lead 12, every cumulative value agrees with its primary aggregate. The table below illustrates exact-lead scores at 6 and 12 hours; all leads remain available in \path{data/horizon_per_seed.csv}. No additional per-lead significance family is claimed.
+
+Main Figure~5 plots AGF exact-lead MAE, cumulative MAE and exact-lead RMSE, each summarized over five training seeds. Supplementary Figure~\ref{fig:horizon_both} shows exact-lead and cumulative MAE for both control and AGF. The latter supplies the matched-model context without confusing the main figure's grey exact-RMSE curve with a control-model curve.
 
 \begin{table}[H]\centering\small\setlength{\tabcolsep}{5pt}\setlength{\parskip}{0pt}
 
@@ -655,12 +663,12 @@ All 46 inference records were checked against their checkpoint, configuration, s
 
 The maximum absolute difference between the new inference MAE/RMSE and the new training-summary metrics is $4.061\times10^{-10}$. Small differences arise from aggregation order; historical metrics are not used as the reference for this check.
 
-The source snapshot and supplied processed arrays are the operational reproduction boundary. Data-source JSON files record the SHA256 hashes of \path{trn.pkl}, \path{val.pkl}, \path{test.pkl} and \path{position_info.pkl}, together with dimensions and scaler moments. This package does not establish a checksum-verified reconstruction from the original ERA5 archive, broader weather-model competitiveness, uncertainty under alternative data splits, or attribution to a particular physical process. Full retraining requires the processed input arrays, frozen training source, configurations and compatible accelerator environment. Re-running \path{build_supplement.py} rebuilds this supplement and its numerical audit from the recorded results; it does not rerun inference.
+The source snapshot and processed arrays specified by the data-source records are the operational reproduction boundary. Data-source JSON files record the SHA256 hashes of \path{trn.pkl}, \path{val.pkl}, \path{test.pkl} and \path{position_info.pkl}, together with dimensions and scaler moments. This manuscript package includes the recorded results; the large processed input arrays are distributed separately in the reproduction materials. This package does not establish a checksum-verified reconstruction from the original ERA5 archive, broader weather-model competitiveness, uncertainty under alternative data splits, or attribution to a particular physical process. Full retraining requires the processed input arrays, frozen training source, configurations and compatible accelerator environment. Running \path{validate_supplement_sync.py} in this supplement directory audits the local records and the figure/data synchronization. Running \texttt{pdflatex supplement.tex} twice rebuilds the PDF; neither action reruns inference or training.
 
 No fresh training-throughput, inference-latency or memory benchmark is introduced here. Analysis wall-clock fields include evaluation and diagnostics and are not matched timing measurements. Any historical efficiency measurements discussed in the main article retain their separate provenance and must not be presented as measurements of these 46 new checkpoints.
 
 \section{Evidence files accompanying this supplement}
-The accompanying \path{data/} directory contains the following inspectable records. Complete file digests and original source locations are listed in \path{supplement_sources.json}; the supplement's own audit results are in \path{supplement_validation.json}.
+The accompanying \path{data/} directory contains the following inspectable records. File digests are listed in \path{supplement_sources.json}; the synchronization audit is in \path{supplement_validation.json}. The source provenance manifest preserves the original experimental file identities.
 \begin{itemize}
 \item \path{model_inventory_46.csv}: the complete new-model inventory with selected validation epochs and full checkpoint hashes.
 \item \path{primary_per_seed.csv}, \path{table1_primary_statistics.csv}: 40 primary model values and eight unweighted comparisons, including Welch and exact-permutation statistics.
@@ -675,7 +683,7 @@ The accompanying \path{data/} directory contains the following inspectable recor
 \item \path{verification_report.json}, \path{provenance_manifest.json}, \path{analysis_code_manifest.json}: original completion/selection checks, source identities and frozen analysis-code provenance.
 \end{itemize}
 
-Full-resolution supplementary figures follow. Figure S1 is conceptual; Figures S2--S4 are generated from the same new evidence described above. They do not introduce additional trained models or statistical families.
+Full-resolution supplementary figures follow. Figure~S1 is conceptual; Figures~S2--S6 are generated from the same new evidence described above. They do not introduce additional trained models or statistical families. Figure~S2 preserves relative primary effects and Welch intervals; S3 shows the three current-split methods in physical units; S4 retains seed-level gate densities; S5 and S6 retain both-variant missing-input and forecast-lead comparisons.
 
 \begin{thebibliography}{1}
 \bibitem{lin2022conditional} Lin, H. et al. Conditional local convolution for spatio-temporal meteorological forecasting. \textit{Proc. AAAI Conf. Artif. Intell.} \textbf{36}, 7470--7478 (2022).
@@ -713,6 +721,21 @@ physical process or that a measured form of geometric overfitting is reduced.}
 \includegraphics[width=0.96\linewidth,height=0.70\textheight,keepaspectratio]{fig8_gate_consistent.pdf}
 \caption{Full-test distributions of scalar sigmoid gates for all four tasks and the same five AGF checkpoints as the primary model tables above. Gates are collected over 657 test windows, 12 input hours, 2048 nodes and 8 output channels per seed. Thin grey curves are individual seeds and the coloured curve is the pooled 100-bin density. The gate mixes adaptive graph aggregation and a nodewise residual projection before CLConv. Gate magnitudes do not by themselves measure the relative contribution of the two branches.}
 \label{fig:gate}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\linewidth,height=0.70\textheight,keepaspectratio]{fig7_robustness_consistent.pdf}
+\caption{Control and AGF missing-input sensitivity corresponding to the AGF curves in main Figure~7 and to Table~\ref{tab:missing}. Each checkpoint is evaluated on the same 64 deterministically spaced test windows. At each nonzero ratio, node masks from seeds 11, 22 and 33 are held fixed across all input hours and signal channels, and standardized inputs at masked nodes are set to zero. Relative MAE changes use each checkpoint's clean score on the same subset. Mask repeats are averaged within a training seed before calculating the mean and sample standard deviation across five training seeds. Error bars describe seed variation; they are not confidence intervals or a robustness significance test.}
+\label{fig:robustness_both}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\linewidth,height=0.70\textheight,keepaspectratio]{fig5_horizon_consistent.pdf}
+\caption{Exact-lead and cumulative MAE for control and AGF, averaged over the same five seeds per variant as the primary tables. Exact-lead scores use lead $h$ only, while cumulative scores pool leads 1 through $h$. Shading denotes one sample standard deviation for exact-lead MAE. All models use all 657 test windows and the common zero-inclusive, spatially unweighted evaluator. Cumulative endpoints at 12 hours agree with Table~\ref{tab:primary_estimates}. Main Figure~5 shows only the AGF models and adds exact-lead RMSE; this supplementary figure preserves the direct control--AGF MAE comparison.}
+\label{fig:horizon_both}
 \end{figure}
 
 \end{document}

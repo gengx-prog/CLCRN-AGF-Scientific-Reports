@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "numeric_checks": 320,
+  "maximum_absolute_error": 1.6653345369377348e-16,
+  "pdf": "G:\\SR_review_release_20261008\\figure_reproduction\\tables\\tables_preview.pdf",
+  "compilation": {
+    "status": "passed",
+    "compiler": "C:\\Users\\xinch\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+    "layout_warnings": [],
+    "pdf_sha256": "107fc72408e784311a21098e66678c56661e5f7a6d136441fb478f1320323a7b"
+  }
+}
+

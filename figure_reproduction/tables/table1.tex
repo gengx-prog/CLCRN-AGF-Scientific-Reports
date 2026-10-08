@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\caption{Five-replicate comparison of CLCRN-AGF and the schedule-matched CLCRN control. Values are mean$\pm$sample standard deviation across seeds 2021--2025. Differences are CLCRN-AGF minus control; negative values favour CLCRN-AGF. Confidence intervals and two-sided $p$-values use Welch's unequal-variance approximation.}
+\label{tab:primary}
+\centering
+\small
+\begin{tabular}{llrrrr}
+\toprule
+Task & Metric & Control (mean$\pm s$) & CLCRN-AGF (mean$\pm s$) & Difference [95\% CI] & $p_{\mathrm{Welch}}$ \\
+\midrule
+Temperature & MAE & $1.258\pm0.060$ & $1.291\pm0.107$ & $+0.033$ [$-0.100,+0.166$] & 0.5701 \\
+ & RMSE & $2.101\pm0.045$ & $2.118\pm0.129$ & $+0.017$ [$-0.141,+0.174$] & 0.7942 \\
+Relative humidity & MAE & $4.648\pm0.017$ & $4.537\pm0.039$ & $-0.111$ [$-0.158,-0.063$] & 0.0015 \\
+ & RMSE & $7.248\pm0.043$ & $7.010\pm0.055$ & $-0.239$ [$-0.311,-0.166$] & $8.17\times10^{-5}$ \\
+Surface wind & MAE & $1.242\pm0.011$ & $1.256\pm0.037$ & $+0.014$ [$-0.032,+0.059$] & 0.4699 \\
+ & RMSE & $1.972\pm0.023$ & $2.016\pm0.093$ & $+0.043$ [$-0.071,+0.158$] & 0.3657 \\
+Cloud cover & MAE & $0.1479\pm0.0017$ & $0.1484\pm0.0020$ & $+0.0005$ [$-0.0022,+0.0031$] & 0.7077 \\
+ & RMSE & $0.2500\pm0.0017$ & $0.2490\pm0.0028$ & $-0.0010$ [$-0.0045,+0.0025$] & 0.5103 \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}\par\parbox{\linewidth}{\footnotesize All scores include valid zero targets and use equal spatial weights over the full 12-hour forecast and 657 test examples. Errors are in K for temperature, percentage points for relative humidity, m\,s$^{-1}$ for surface wind, and fractions for cloud cover. Benjamini--Hochberg correction across the eight comparisons retains only the two humidity differences at $q<0.05$ (MAE $q=0.00604$; RMSE $q=0.000653$).}
+\end{table}

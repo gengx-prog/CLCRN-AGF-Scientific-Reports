@@ -1,0 +1,191 @@
+{
+  "caption_metadata": [
+    {
+      "file": "metadata/schematics.json",
+      "sha256": "a4ba02ff35c8db133d517e8002dd4db26924d4f6d3a3c9fe30c209628247f4e8"
+    },
+    {
+      "file": "metadata/comparisons.json",
+      "sha256": "46fb09db791845da594785b88d18d9e82f12707a6918a731896fcc1a13e8d3ba"
+    },
+    {
+      "file": "metadata/diagnostics.json",
+      "sha256": "ce06c1f5950db9f6c6a8c1a28b0f7893f116b50d42bceb497caddc11243415d5"
+    }
+  ],
+  "vector_preservation": "Source PDFs embedded with show_pdf_page, except old PNG visual references. Figure 1 intentionally retains the original raster. Tables appended as original PDF pages.",
+  "portfolio_validation": [
+    {
+      "page": 1,
+      "width": 960.0,
+      "height": 740.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    },
+    {
+      "page": 2,
+      "width": 960.0,
+      "height": 740.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 3,
+      "width": 960.0,
+      "height": 740.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 4,
+      "width": 960.0,
+      "height": 740.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 5,
+      "width": 820.0,
+      "height": 970.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 6,
+      "width": 960.0,
+      "height": 740.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 7,
+      "width": 820.0,
+      "height": 970.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 8,
+      "width": 960.0,
+      "height": 740.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 9,
+      "width": 612.0,
+      "height": 792.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    },
+    {
+      "page": 10,
+      "width": 612.0,
+      "height": 792.0,
+      "raster_image_count": 0,
+      "outside_page_text": []
+    }
+  ],
+  "comparison_validation": [
+    {
+      "page": 1,
+      "width": 1450.0,
+      "height": 650.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    },
+    {
+      "page": 2,
+      "width": 1450.0,
+      "height": 650.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    },
+    {
+      "page": 3,
+      "width": 1450.0,
+      "height": 820.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    },
+    {
+      "page": 4,
+      "width": 1450.0,
+      "height": 650.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    },
+    {
+      "page": 5,
+      "width": 1450.0,
+      "height": 820.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    },
+    {
+      "page": 6,
+      "width": 1450.0,
+      "height": 650.0,
+      "raster_image_count": 1,
+      "outside_page_text": []
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "comparison_page_03.png",
+      "bytes": 247956,
+      "sha256": "5c99163effea1727547f9c3c0a09e4b0994abe5f6509ac4fbe160bbff7865f23"
+    },
+    {
+      "file": "comparison_page_06.png",
+      "bytes": 158431,
+      "sha256": "2a7852321144c7d4c057060e2556b1a155f05ea1af4b864185c44800d03ad8cf"
+    },
+    {
+      "file": "figures_and_tables_preview.pdf",
+      "bytes": 8141034,
+      "sha256": "19a48cc4319180630df47db686864f2762e0fa26d2cd78ca3481a97246cb598b"
+    },
+    {
+      "file": "figures_contact.png",
+      "bytes": 776781,
+      "sha256": "96856a738afa63df400bf8dfba31908d6e07cdfcb7a8c0edc5a1afadd79bfb15"
+    },
+    {
+      "file": "old_vs_new_contact.png",
+      "bytes": 530166,
+      "sha256": "862c4c8656ab900f53ca41488e6cc2a4c38f1efd1b81720378d6da60c28109a4"
+    },
+    {
+      "file": "old_vs_new_results.pdf",
+      "bytes": 593939,
+      "sha256": "25732de102ad51072d28eb92ce44a4349522bf064ac8a1ece4c157623e04d49c"
+    },
+    {
+      "file": "portfolio_page_02.png",
+      "bytes": 190320,
+      "sha256": "12bbb61b726c6b12da375429def9a97bb875ff16a0b97e11d240c7cc9b97dd99"
+    },
+    {
+      "file": "portfolio_page_05.png",
+      "bytes": 169500,
+      "sha256": "53723a3a7cf1cbbf29d2166910317e90116143999db214b222052460d31a7424"
+    },
+    {
+      "file": "portfolio_page_07.png",
+      "bytes": 134945,
+      "sha256": "e5d93a5200b0d4123fb28027a1624c40fd713326db71781e60fc403fb2671c7f"
+    },
+    {
+      "file": "portfolio_page_08.png",
+      "bytes": 135927,
+      "sha256": "8135c2583647fdc11f9e7423c5428c13eb27d3295460d360b104adf10f34eaf7"
+    },
+    {
+      "file": "tables_contact.png",
+      "bytes": 127754,
+      "sha256": "ff7118e9538c78b0ddd0908f21fe0db7708dd365c0931681e1b90473931cac20"
+    }
+  ],
+  "script_sha256": "ff7de244ee758e9cf5421b65716e44fd5b40e944f2a5aa8ca4f27e9d51c4a744"
+}
