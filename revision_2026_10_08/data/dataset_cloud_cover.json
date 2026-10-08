@@ -1,0 +1,72 @@
+{
+  "task": "cloud_cover",
+  "sources": [
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\trn.pkl",
+      "sha256": "7332ca33587d4257c67adf7171e0d2c2a227d7134c8c97a156d7cb2c3ff414b6",
+      "bytes": 4069785926
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\val.pkl",
+      "sha256": "71a7c32af309a4965b2a6ffed8fdd738afd7c853d245de8aecf593cec572c1b4",
+      "bytes": 582156614
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\test.pkl",
+      "sha256": "818ea17f36b10e4fa5cb231ee90866fd6919c2d6771edf130638cac37dbfc651",
+      "bytes": 1162543430
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\position_info.pkl",
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "bytes": 32933
+    }
+  ],
+  "raw_target_zeros": {
+    "train": {
+      "zero_count": 2234618,
+      "total": 56524800,
+      "fraction": 0.039533408344655796
+    },
+    "validation": {
+      "zero_count": 315357,
+      "total": 8085504,
+      "fraction": 0.039002763464095744
+    },
+    "test": {
+      "zero_count": 626840,
+      "total": 16146432,
+      "fraction": 0.038822199232623034
+    }
+  },
+  "preprocessing": "curated experiments.dataloader.Dataset: raw training x supplies scaler moments; cast split x/y to float32 BEFORE in-place standardization; Supervisor.inverse for physical units",
+  "train_mean": [
+    0.6763495802879333
+  ],
+  "train_std": [
+    0.361626535654068
+  ],
+  "train_raw_dtype": "float32",
+  "train_shape": [
+    2300,
+    12,
+    2048,
+    1
+  ],
+  "validation_raw_dtype": "float32",
+  "validation_shape": [
+    329,
+    12,
+    2048,
+    1
+  ],
+  "test_raw_dtype": "float32",
+  "test_shape": [
+    657,
+    12,
+    2048,
+    1
+  ],
+  "ntest": 657,
+  "latitude_weight": "cos(latitude) / mean(cos(latitude)); full finite-node support"
+}

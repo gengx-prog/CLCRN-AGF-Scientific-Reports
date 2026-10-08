@@ -1,0 +1,118 @@
+{
+  "captured_at_utc": "2026-10-05T20:17:20.656202+00:00",
+  "status": "verified",
+  "files": [
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\trn.pkl",
+      "bytes": 4069785926,
+      "mtime_ns": 1782234265777562700,
+      "sha256": "7332ca33587d4257c67adf7171e0d2c2a227d7134c8c97a156d7cb2c3ff414b6",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\val.pkl",
+      "bytes": 582156614,
+      "mtime_ns": 1782234267491913500,
+      "sha256": "71a7c32af309a4965b2a6ffed8fdd738afd7c853d245de8aecf593cec572c1b4",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\test.pkl",
+      "bytes": 1162543430,
+      "mtime_ns": 1782234253665650700,
+      "sha256": "818ea17f36b10e4fa5cb231ee90866fd6919c2d6771edf130638cac37dbfc651",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\position_info.pkl",
+      "bytes": 32933,
+      "mtime_ns": 1782234250196917300,
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\trn.pkl",
+      "bytes": 4069785926,
+      "mtime_ns": 1782234303840871900,
+      "sha256": "74823c934898a259a478c416ce289b3e48eb077463870e3abdb5cdfc1ac95cd2",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\val.pkl",
+      "bytes": 582156614,
+      "mtime_ns": 1782234305566738300,
+      "sha256": "98bf54405d954a3acaecfabcf64aa4ee93008e7282e2f6ea86d05b9463689061",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\test.pkl",
+      "bytes": 1162543430,
+      "mtime_ns": 1782234291685715300,
+      "sha256": "ecb2a145b69aa3e6e8124b2788b4f93165a9a2f11ccf5d6ca07fea5d77f8cf5c",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\position_info.pkl",
+      "bytes": 32933,
+      "mtime_ns": 1782234288252220200,
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\trn.pkl",
+      "bytes": 4069785926,
+      "mtime_ns": 1782234322123702000,
+      "sha256": "4847468b65e6313839ef75886bf64f84f39a27bb37b7b9cf658ca1052f2760ef",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\val.pkl",
+      "bytes": 582156614,
+      "mtime_ns": 1782234323905352500,
+      "sha256": "cff62e60ce938524b7a13a4af115995ea5dd20623f2f15fe707b7b257b877789",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\test.pkl",
+      "bytes": 1162543430,
+      "mtime_ns": 1782234309193092000,
+      "sha256": "0c45f12580c50482287c012c26627540390de1ece06e367680756d8d13693aaf",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\position_info.pkl",
+      "bytes": 32933,
+      "mtime_ns": 1782234305573738600,
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\trn.pkl",
+      "bytes": 4521984326,
+      "mtime_ns": 1782234286156230500,
+      "sha256": "16163e192a42aab4e7e5d01c09a54df28931f6caeb375e784913e3542efef6ac",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\val.pkl",
+      "bytes": 646840646,
+      "mtime_ns": 1782234288244024700,
+      "sha256": "cf446b28c1d224c061ebfa99bc015a91be13f9de5a077f6464a53cb0876864ee",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\test.pkl",
+      "bytes": 1291714886,
+      "mtime_ns": 1782234271639061000,
+      "sha256": "3d32c9829777603ea1c5aa8ee8969b85239b1f1ab9878ef0f7183e1558b18cb5",
+      "matches_prior_audited_data": true
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\position_info.pkl",
+      "bytes": 32933,
+      "mtime_ns": 1782234267499012200,
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "matches_prior_audited_data": true
+    }
+  ]
+}

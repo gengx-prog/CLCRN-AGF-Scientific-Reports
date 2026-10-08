@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.pdf binary
+*.docx binary
+*.png binary
+*.npz binary
+*.tar binary
+# Frozen sources, results, histories, and manifests are verified byte for byte.
+revision_2026_10_08/** -text
+Supplementary_Information/data/** -text

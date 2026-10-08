@@ -1,0 +1,13 @@
+﻿dataset,split,zero_count,total,fraction
+temperature,train,0,56524800,0.0
+temperature,validation,0,8085504,0.0
+temperature,test,0,16146432,0.0
+humidity,train,0,56524800,0.0
+humidity,validation,0,8085504,0.0
+humidity,test,0,16146432,0.0
+component_of_wind,train,0,113049600,0.0
+component_of_wind,validation,0,16171008,0.0
+component_of_wind,test,0,32292864,0.0
+cloud_cover,train,2234618,56524800,0.039533408344655796
+cloud_cover,validation,315357,8085504,0.039002763464095744
+cloud_cover,test,626840,16146432,0.038822199232623034

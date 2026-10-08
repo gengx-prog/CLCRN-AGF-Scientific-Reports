@@ -1,0 +1,5560 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "created_at": {
+    "utc": "2026-10-05T20:08:45+00:00",
+    "los_angeles": "2026-10-05T13:08:45-07:00"
+  },
+  "runs": [
+    {
+      "index": 1,
+      "run_id": "cloud_cover_control_2021",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "control",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "control",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "control",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control",
+            "--resume"
+          ],
+          "resume": true,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_control_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-05T20:14:36+00:00",
+            "los_angeles": "2026-10-05T13:14:36-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-05T21:33:12+00:00",
+            "los_angeles": "2026-10-05T14:33:12-07:00"
+          },
+          "wall_seconds": 4715.788345100009
+        }
+      ],
+      "previous_summary_verification_error": "cloud_cover_control_2021: summary training_complete=False; expected True",
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.05895199114456773,
+          "val_mae": 0.1472328960733477,
+          "seconds": 46.36401040002238,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "de02774b6be17c3212ba32df082b6a1ec2f46a96487a8a89be7c6421993848f6",
+        "history_sha256": "570fdc14ef7a54a28f440d3d9a72f613010ac2e5c40dc6683a9a8d1f7da98d85",
+        "best_checkpoint_sha256": "5ecfec7bca285d3f0d85224ccd157080fd5ab11e79afdded152e40fadbb6026c",
+        "final_checkpoint_sha256": "5ecfec7bca285d3f0d85224ccd157080fd5ab11e79afdded152e40fadbb6026c",
+        "best_epoch": 100,
+        "mae": 0.1466866287118511,
+        "rmse": 0.24944923507365002,
+        "epochs_completed": 100,
+        "training_seconds": 4818.552039599919
+      },
+      "completed_at": {
+        "utc": "2026-10-05T21:33:12+00:00",
+        "los_angeles": "2026-10-05T14:33:12-07:00"
+      }
+    },
+    {
+      "index": 2,
+      "run_id": "cloud_cover_agf_2021",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "agf",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "agf",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "agf",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf",
+            "--resume"
+          ],
+          "resume": true,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_agf_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-05T21:33:12+00:00",
+            "los_angeles": "2026-10-05T14:33:12-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-05T22:49:32+00:00",
+            "los_angeles": "2026-10-05T15:49:32-07:00"
+          },
+          "wall_seconds": 4581.856617500016
+        }
+      ],
+      "previous_summary_verification_error": "cloud_cover_agf_2021: summary training_complete=False; expected True",
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.05934738817935189,
+          "val_mae": 0.1487982974014523,
+          "seconds": 45.18013430002611,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "f470242934e0ae32fd897cb216366b721f174eedbd1ab089e5769d9d5b7b3b84",
+        "history_sha256": "be9fa4967b22fc222d69453bc2eeb2c67dcb202093ea2339b13595554b7edfa6",
+        "best_checkpoint_sha256": "83b00ac7593fbfd6c7b6703144d0e3218189e31d72fb2e082d45ccd712f51b59",
+        "final_checkpoint_sha256": "0dae2545fdcebfe1b98a2a9cacef9eda8f84dff66d10779fc7be3faecd4fcd8b",
+        "best_epoch": 92,
+        "mae": 0.14689708163074167,
+        "rmse": 0.24991889779927293,
+        "epochs_completed": 100,
+        "training_seconds": 4697.277622800088
+      },
+      "completed_at": {
+        "utc": "2026-10-05T22:49:32+00:00",
+        "los_angeles": "2026-10-05T15:49:32-07:00"
+      }
+    },
+    {
+      "index": 3,
+      "run_id": "cloud_cover_control_2022",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "control",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "control",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "control",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_control_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-05T22:49:32+00:00",
+            "los_angeles": "2026-10-05T15:49:32-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T00:01:28+00:00",
+            "los_angeles": "2026-10-05T17:01:28-07:00"
+          },
+          "wall_seconds": 4315.893383099989
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.05928679214169582,
+          "val_mae": 0.1523957384584035,
+          "seconds": 43.325990099983755,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "f443d4bb449d0eb3e58251158e3e0fa9b94c945a6603c70ab2eb69e68621650f",
+        "history_sha256": "5404d41f8ac7fc5ba2a0a80e931014603f191e8e66e1498e9ab83c32205d50be",
+        "best_checkpoint_sha256": "808e8bd1185b41137148dfd538159aa3c74ef4bf87a39be2ae501e69506cfe88",
+        "final_checkpoint_sha256": "fbddc8b249d08c4bb32b6bc314416e514d0e04cdb842b23bdf0a46e4678b8a26",
+        "best_epoch": 99,
+        "mae": 0.145769104687806,
+        "rmse": 0.24764359982812256,
+        "epochs_completed": 100,
+        "training_seconds": 4301.449620099971
+      },
+      "completed_at": {
+        "utc": "2026-10-06T00:01:28+00:00",
+        "los_angeles": "2026-10-05T17:01:28-07:00"
+      }
+    },
+    {
+      "index": 4,
+      "run_id": "cloud_cover_agf_2022",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "agf",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "agf",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "agf",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_agf_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T00:01:28+00:00",
+            "los_angeles": "2026-10-05T17:01:28-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T01:15:49+00:00",
+            "los_angeles": "2026-10-05T18:15:49-07:00"
+          },
+          "wall_seconds": 4461.108985800005
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.059799276344064206,
+          "val_mae": 0.15494309320161098,
+          "seconds": 44.40992040000856,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "423c1a199979b0ad9e590689460cbc6c3bd1e38d635dcd6b9bfb08c041c2999b",
+        "history_sha256": "1b75be17b6e3875f7a381d11996481bb741093295fce652d11695f0d5281b1af",
+        "best_checkpoint_sha256": "eb3ac2ac0472afa97163b251e596247fde9f65b06911495c253002f9532e8551",
+        "final_checkpoint_sha256": "957f3d504cf2e2f50ac0ce274434c7c532db2d012cd09282110b88c50c24182c",
+        "best_epoch": 99,
+        "mae": 0.14884601729344948,
+        "rmse": 0.25076435061782704,
+        "epochs_completed": 100,
+        "training_seconds": 4445.018524399784
+      },
+      "completed_at": {
+        "utc": "2026-10-06T01:15:49+00:00",
+        "los_angeles": "2026-10-05T18:15:49-07:00"
+      }
+    },
+    {
+      "index": 5,
+      "run_id": "cloud_cover_control_2023",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "control",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "control",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "control",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_control_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T01:15:49+00:00",
+            "los_angeles": "2026-10-05T18:15:49-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T02:29:00+00:00",
+            "los_angeles": "2026-10-05T19:29:00-07:00"
+          },
+          "wall_seconds": 4391.1123175999965
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.059192089933074184,
+          "val_mae": 0.15465253096436574,
+          "seconds": 42.8680738999974,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "ebfe4f2f557a9fe53ed8138ab48c6cdded4e99fcb08e7976f5ba15301d812884",
+        "history_sha256": "7d140527f65c4ff0249cf767af6a20a585d87912bd2a5585728523a3234a36b5",
+        "best_checkpoint_sha256": "735df6d3362757b48b72447d4ee38d8298155c0f91ba8223a8192ea0b37ad89c",
+        "final_checkpoint_sha256": "15f8ec54b6100651274822c754693a29212f00976b9666f24728f1ee354a413e",
+        "best_epoch": 91,
+        "mae": 0.14955605886183052,
+        "rmse": 0.25227383106624746,
+        "epochs_completed": 100,
+        "training_seconds": 4377.141933500534
+      },
+      "completed_at": {
+        "utc": "2026-10-06T02:29:00+00:00",
+        "los_angeles": "2026-10-05T19:29:00-07:00"
+      }
+    },
+    {
+      "index": 6,
+      "run_id": "cloud_cover_agf_2023",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "agf",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "agf",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "agf",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_agf_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T02:29:00+00:00",
+            "los_angeles": "2026-10-05T19:29:00-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T03:41:01+00:00",
+            "los_angeles": "2026-10-05T20:41:01-07:00"
+          },
+          "wall_seconds": 4320.816826599999
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.059295430986417666,
+          "val_mae": 0.14922698918766025,
+          "seconds": 43.46059499995317,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "d4a33c9b81707b62529ce0ee833a1c72081c63dfbaca1ddf4879bf1d7ef12617",
+        "history_sha256": "18e947895942a88ee9a453189ebc473175095a80f87f8fca348f074053b22b2e",
+        "best_checkpoint_sha256": "4aca7773fda2f2ceaa70bef8ef752401fbd7ec1fc4687e454c2ce4b7121df9a9",
+        "final_checkpoint_sha256": "8dbadf03e6c1e560f9b71f305e168afba2e6c80d4dab5d0a58e3655a41eae3d8",
+        "best_epoch": 74,
+        "mae": 0.14662283021718367,
+        "rmse": 0.2440349394854919,
+        "epochs_completed": 100,
+        "training_seconds": 4303.7919811998145
+      },
+      "completed_at": {
+        "utc": "2026-10-06T03:41:01+00:00",
+        "los_angeles": "2026-10-05T20:41:01-07:00"
+      }
+    },
+    {
+      "index": 7,
+      "run_id": "cloud_cover_control_2024",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "control",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "control",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "control",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_control_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T03:41:01+00:00",
+            "los_angeles": "2026-10-05T20:41:01-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T04:51:07+00:00",
+            "los_angeles": "2026-10-05T21:51:07-07:00"
+          },
+          "wall_seconds": 4205.812972999993
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.059258299983210035,
+          "val_mae": 0.15608070503706448,
+          "seconds": 41.648713999951724,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "6ecfc72695eb853ab6f5194c1a35deca99c58281a3b9d4e6194269d56bf652b5",
+        "history_sha256": "0fd1b2745e7aae6f80021d2d5762222df8759a2b462bf81bf3a5199c22ea0a95",
+        "best_checkpoint_sha256": "36785e671ac712ad2c284079323c013bbe323999ca36a6993ab5694b0f47fd01",
+        "final_checkpoint_sha256": "58e5aac0d6c4ccad0244ae791e2ef6cc7f58b95de4aed1b8df4f4301a3c88a06",
+        "best_epoch": 91,
+        "mae": 0.14964946541702648,
+        "rmse": 0.25051256644793857,
+        "epochs_completed": 100,
+        "training_seconds": 4177.843311300036
+      },
+      "completed_at": {
+        "utc": "2026-10-06T04:51:07+00:00",
+        "los_angeles": "2026-10-05T21:51:07-07:00"
+      }
+    },
+    {
+      "index": 8,
+      "run_id": "cloud_cover_agf_2024",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "agf",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "agf",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "agf",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_agf_2024_attempt_01.log",
+          "status": "interrupted",
+          "started_at": {
+            "utc": "2026-10-06T04:51:07+00:00",
+            "los_angeles": "2026-10-05T21:51:07-07:00"
+          },
+          "ended_at": {
+            "utc": "2026-10-06T06:01:22+00:00",
+            "los_angeles": "2026-10-05T23:01:22-07:00"
+          },
+          "interruption_reason": "user_requested_pause"
+        },
+        {
+          "number": 2,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "agf",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf",
+            "--resume"
+          ],
+          "resume": true,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_agf_2024_attempt_02.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T09:19:43+00:00",
+            "los_angeles": "2026-10-06T02:19:43-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T09:24:39+00:00",
+            "los_angeles": "2026-10-06T02:24:39-07:00"
+          },
+          "wall_seconds": 295.46040589996846
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.05889442211223973,
+          "val_mae": 0.14865766445384482,
+          "seconds": 45.36850919999415,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "feac3a1ae063b403660993cecf3ae20c3ed633e7a04fe82146598bfe3f182f09",
+        "history_sha256": "d99023fdb041d448f120f1620078aff6d13d7df364b8e067f1b571a6e2222de9",
+        "best_checkpoint_sha256": "cbf9a235977a9b513e8cc4cd25d87365e21c13cf9fadd0f1ab9e0bb7481444e4",
+        "final_checkpoint_sha256": "2ec3b32c9985478882485014dc329b05713fa34f3f8b65831be12c367ab5966a",
+        "best_epoch": 84,
+        "mae": 0.14795036013966872,
+        "rmse": 0.25065195666293505,
+        "epochs_completed": 100,
+        "training_seconds": 4400.099036299507
+      },
+      "completed_at": {
+        "utc": "2026-10-06T09:24:39+00:00",
+        "los_angeles": "2026-10-06T02:24:39-07:00"
+      }
+    },
+    {
+      "index": 9,
+      "run_id": "cloud_cover_control_2025",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "control",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "control",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "control",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_control_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T09:24:39+00:00",
+            "los_angeles": "2026-10-06T02:24:39-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T10:36:06+00:00",
+            "los_angeles": "2026-10-06T03:36:06-07:00"
+          },
+          "wall_seconds": 4286.745818299998
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.059216008676836886,
+          "val_mae": 0.15080607529692774,
+          "seconds": 43.03354749997379,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "b83597007363e779f1b7bf3acc85291ef115a479e782ebbc63589e2dbd0e8ead",
+        "history_sha256": "4b325bf2ace19eb62a4f4f438d5aab40d3f935fa73fd1040d3e9dd657e0658c0",
+        "best_checkpoint_sha256": "36891fca0203f5779cc465be3647c06300407d234f31340c49dfe60ec2865731",
+        "final_checkpoint_sha256": "e9682355de47060df61a9e357cfe31069cda1d161ca51182944c77659fd7e0fc",
+        "best_epoch": 88,
+        "mae": 0.147864071076147,
+        "rmse": 0.2500608184685096,
+        "epochs_completed": 100,
+        "training_seconds": 4271.517030800402
+      },
+      "completed_at": {
+        "utc": "2026-10-06T10:36:06+00:00",
+        "los_angeles": "2026-10-06T03:36:06-07:00"
+      }
+    },
+    {
+      "index": 10,
+      "run_id": "cloud_cover_agf_2025",
+      "group": "main",
+      "task": "cloud_cover",
+      "variant": "agf",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "cloud_cover",
+        "--variant",
+        "agf",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "cloud_cover",
+            "--variant",
+            "agf",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\cloud_cover_agf_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T10:36:06+00:00",
+            "los_angeles": "2026-10-06T03:36:06-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T11:48:42+00:00",
+            "los_angeles": "2026-10-06T04:48:42-07:00"
+          },
+          "wall_seconds": 4356.259452599974
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.059360324715574585,
+          "val_mae": 0.154049786516438,
+          "seconds": 43.411403899954166,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "022c84937e243471d27401bf2d420b63a62bfc4b30655965ad53d2148f6eea9b",
+        "history_sha256": "9e71ba2801f4033c7ce563681b1eb4105991ea9385e2600f8ecd401f4f696ec9",
+        "best_checkpoint_sha256": "61e195d0f2f507a8c36e7c49c919ac754320b746a8611d64ee25ec2f4e104112",
+        "final_checkpoint_sha256": "9ef5dc94942e4882f3d94607bb1df7667aec719aadadb9be7a7cfd893798c51b",
+        "best_epoch": 88,
+        "mae": 0.15146991888124386,
+        "rmse": 0.24947427900722205,
+        "epochs_completed": 100,
+        "training_seconds": 4342.274722899543
+      },
+      "completed_at": {
+        "utc": "2026-10-06T11:48:42+00:00",
+        "los_angeles": "2026-10-06T04:48:42-07:00"
+      }
+    },
+    {
+      "index": 11,
+      "run_id": "humidity_control_2021",
+      "group": "main",
+      "task": "humidity",
+      "variant": "control",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "control",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "control",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_control_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T11:48:42+00:00",
+            "los_angeles": "2026-10-06T04:48:42-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T13:00:29+00:00",
+            "los_angeles": "2026-10-06T06:00:29-07:00"
+          },
+          "wall_seconds": 4306.498298300023
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.083652247985204,
+          "val_mae": 4.598262252676722,
+          "seconds": 42.915307499992196,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "e4d80ad6d1e42f8de41de7208fd925b7a210df282486e2775675edc03819a6cc",
+        "history_sha256": "3f332091cbf12e104953f9394c5374cefdbf07ed50c3c535d39556683086186b",
+        "best_checkpoint_sha256": "504aac6ff00974ceea1dd951f576995d8316b0ddf929262e4e717f15c5ea8c63",
+        "final_checkpoint_sha256": "504aac6ff00974ceea1dd951f576995d8316b0ddf929262e4e717f15c5ea8c63",
+        "best_epoch": 100,
+        "mae": 4.667695835435679,
+        "rmse": 7.280818177731245,
+        "epochs_completed": 100,
+        "training_seconds": 4288.332253399654
+      },
+      "completed_at": {
+        "utc": "2026-10-06T13:00:29+00:00",
+        "los_angeles": "2026-10-06T06:00:29-07:00"
+      }
+    },
+    {
+      "index": 12,
+      "run_id": "humidity_agf_2021",
+      "group": "main",
+      "task": "humidity",
+      "variant": "agf",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "agf",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "agf",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_agf_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T13:00:29+00:00",
+            "los_angeles": "2026-10-06T06:00:29-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T14:14:50+00:00",
+            "los_angeles": "2026-10-06T07:14:50-07:00"
+          },
+          "wall_seconds": 4461.640747400001
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0938294496801164,
+          "val_mae": 8.406017630090682,
+          "seconds": 43.8241119000013,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "7e2966a9ef2a88245374d3cd0c50ffbc68125e13d415357df2af3a3b57dbc168",
+        "history_sha256": "80a8fe0b86daa3510945b69c7687ac859ddf3e7f8e9e9c906823521684364557",
+        "best_checkpoint_sha256": "3ee8e0868466d65047bce2524743c278e44df38d73eef43aefdc394092afe25e",
+        "final_checkpoint_sha256": "c3f90f2619911a58aacec452fd95fb09ef5517250fb67ac58edd165bf8cc96d7",
+        "best_epoch": 97,
+        "mae": 4.522246124244846,
+        "rmse": 6.980894369871464,
+        "epochs_completed": 100,
+        "training_seconds": 4444.187303200073
+      },
+      "completed_at": {
+        "utc": "2026-10-06T14:14:50+00:00",
+        "los_angeles": "2026-10-06T07:14:50-07:00"
+      }
+    },
+    {
+      "index": 13,
+      "run_id": "humidity_control_2022",
+      "group": "main",
+      "task": "humidity",
+      "variant": "control",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "control",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "control",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_control_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T14:14:50+00:00",
+            "los_angeles": "2026-10-06T07:14:50-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T15:25:52+00:00",
+            "los_angeles": "2026-10-06T08:25:52-07:00"
+          },
+          "wall_seconds": 4261.365803499997
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.1107138229740992,
+          "val_mae": 5.267870630217356,
+          "seconds": 42.788077000004705,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "a4105d187649d314bb429a9553099ee2678c3a95746a65d464987298677bda2d",
+        "history_sha256": "04bf43296554eb088200a663d69e04f9ac6d3139b19404429a30cafa119e489a",
+        "best_checkpoint_sha256": "ed09d909f53d2f8c3e4f6a0300d8e9e14eac2d5f63e65aea9f27c828c3c13ad9",
+        "final_checkpoint_sha256": "336bbdfc2a0a24bb004b1e006e139dccbf14d0e5ab86a4764b212c1be13d813d",
+        "best_epoch": 89,
+        "mae": 4.663802094617693,
+        "rmse": 7.2816185096222,
+        "epochs_completed": 100,
+        "training_seconds": 4246.668946700171
+      },
+      "completed_at": {
+        "utc": "2026-10-06T15:25:52+00:00",
+        "los_angeles": "2026-10-06T08:25:52-07:00"
+      }
+    },
+    {
+      "index": 14,
+      "run_id": "humidity_agf_2022",
+      "group": "main",
+      "task": "humidity",
+      "variant": "agf",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "agf",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "agf",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_agf_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T15:25:52+00:00",
+            "los_angeles": "2026-10-06T08:25:52-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T16:39:08+00:00",
+            "los_angeles": "2026-10-06T09:39:08-07:00"
+          },
+          "wall_seconds": 4396.586500699981
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0964897722005844,
+          "val_mae": 4.952673570838452,
+          "seconds": 43.581818700011354,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "ce1d25a504bedbf1f35a9f8da5a260213419dfc49a96ab74470c2ed1208c2198",
+        "history_sha256": "b61d32b5f921178cdd6c947c3aab058d3654e3dc286747e21365e1461395b0cb",
+        "best_checkpoint_sha256": "19513eb36fa660953e6e90e3c778b229d33175fb045e51fae1fd21d72404f61d",
+        "final_checkpoint_sha256": "cd0178fd02f529b8ea0b30936dfb8e9498346268797ad1fa0f83733b78269ad5",
+        "best_epoch": 85,
+        "mae": 4.498555753175935,
+        "rmse": 6.9467754536733475,
+        "epochs_completed": 100,
+        "training_seconds": 4378.638636299933
+      },
+      "completed_at": {
+        "utc": "2026-10-06T16:39:08+00:00",
+        "los_angeles": "2026-10-06T09:39:08-07:00"
+      }
+    },
+    {
+      "index": 15,
+      "run_id": "humidity_control_2023",
+      "group": "main",
+      "task": "humidity",
+      "variant": "control",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "control",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "control",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_control_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T16:39:08+00:00",
+            "los_angeles": "2026-10-06T09:39:08-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T17:50:30+00:00",
+            "los_angeles": "2026-10-06T10:50:30-07:00"
+          },
+          "wall_seconds": 4281.431627299986
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.085261411137051,
+          "val_mae": 5.024833394519762,
+          "seconds": 42.797351000015624,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "ec34a1f10457d2eeca50bf28066fcd869f47825c1e5ce6ec98f4f70d7c25db77",
+        "history_sha256": "a03c8f1f51aba541007cf6a0dcfe2fb40be8548060a1550faffdf9d15e926765",
+        "best_checkpoint_sha256": "f62968d195b8c987c5dacb205368cc18e3df3bb560e1b871c215b21e41de60a3",
+        "final_checkpoint_sha256": "2d99518cf6991fc5cfbfc4acfe6c3e7f3609601e5c8070215ec05265b37c5eca",
+        "best_epoch": 82,
+        "mae": 4.639407184135163,
+        "rmse": 7.185397949379839,
+        "epochs_completed": 100,
+        "training_seconds": 4264.955430900562
+      },
+      "completed_at": {
+        "utc": "2026-10-06T17:50:30+00:00",
+        "los_angeles": "2026-10-06T10:50:30-07:00"
+      }
+    },
+    {
+      "index": 16,
+      "run_id": "humidity_agf_2023",
+      "group": "main",
+      "task": "humidity",
+      "variant": "agf",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "agf",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "agf",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_agf_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T17:50:30+00:00",
+            "los_angeles": "2026-10-06T10:50:30-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T19:04:22+00:00",
+            "los_angeles": "2026-10-06T12:04:22-07:00"
+          },
+          "wall_seconds": 4431.770228600013
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0699718909131155,
+          "val_mae": 4.510636823849607,
+          "seconds": 44.23587460000999,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "85be65b2fe7ab2e1a29f5d7cb01f4ed1533f4830af6211e575a3a57846c4b233",
+        "history_sha256": "afc053c45a0e77e675ca185a77461486c8dd673ce6e8d187e2060384e6526ae1",
+        "best_checkpoint_sha256": "6a93eb6500932e7006c80684255958590154752065fad7bbbe6d41df79d9a15d",
+        "final_checkpoint_sha256": "224b8175ab22f74517309411017869898f62254d0777fe347087fd050bedd78f",
+        "best_epoch": 78,
+        "mae": 4.534773631195974,
+        "rmse": 7.076385319322954,
+        "epochs_completed": 100,
+        "training_seconds": 4414.394706299994
+      },
+      "completed_at": {
+        "utc": "2026-10-06T19:04:22+00:00",
+        "los_angeles": "2026-10-06T12:04:22-07:00"
+      }
+    },
+    {
+      "index": 17,
+      "run_id": "humidity_control_2024",
+      "group": "main",
+      "task": "humidity",
+      "variant": "control",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "control",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "control",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_control_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T19:04:22+00:00",
+            "los_angeles": "2026-10-06T12:04:22-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T20:16:59+00:00",
+            "los_angeles": "2026-10-06T13:16:59-07:00"
+          },
+          "wall_seconds": 4356.958343500039
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0763225605090458,
+          "val_mae": 4.690628122910574,
+          "seconds": 43.75024620001204,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "5a0c4f5f472b5103cff43566796e8c5272f57f65ec4173e80ace605c8ac940c6",
+        "history_sha256": "deae1310d71d2073402383dbd11240d4771f9fcf42d738c28f9b3773545d53dd",
+        "best_checkpoint_sha256": "9253a3a89329c84184ef53ab93ea17662840363f6c22a37a894838b1731c32bf",
+        "final_checkpoint_sha256": "33234963addc4d5ca061423afee9a5057720aaa0a12b00700885b14fc1e7def8",
+        "best_epoch": 85,
+        "mae": 4.6426453665881695,
+        "rmse": 7.271183973555101,
+        "epochs_completed": 100,
+        "training_seconds": 4339.162829799694
+      },
+      "completed_at": {
+        "utc": "2026-10-06T20:16:59+00:00",
+        "los_angeles": "2026-10-06T13:16:59-07:00"
+      }
+    },
+    {
+      "index": 18,
+      "run_id": "humidity_agf_2024",
+      "group": "main",
+      "task": "humidity",
+      "variant": "agf",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "agf",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "agf",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_agf_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T20:16:59+00:00",
+            "los_angeles": "2026-10-06T13:16:59-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T21:31:11+00:00",
+            "los_angeles": "2026-10-06T14:31:11-07:00"
+          },
+          "wall_seconds": 4452.026311299996
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0624842560953565,
+          "val_mae": 4.821602018790181,
+          "seconds": 44.25185200001579,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "1bf9bf906eaef0c169d2787d0efadf7d0cf264553a9b466bb3b5fff1ff8d0e25",
+        "history_sha256": "b268536f05b10a1588294f1b711b47728b6758a6ca948d2fb868dd78c1ce6a79",
+        "best_checkpoint_sha256": "cd5e444c13c75591f89f09b63461dc2fff1024fe184fd3265fd0d8e8c76b42d0",
+        "final_checkpoint_sha256": "a84ebe0a1c6841ab1d5e8bce45e4240548e81a81d9bb09187065ca868b40fa46",
+        "best_epoch": 87,
+        "mae": 4.527877067232042,
+        "rmse": 6.986436905798503,
+        "epochs_completed": 100,
+        "training_seconds": 4437.318549899792
+      },
+      "completed_at": {
+        "utc": "2026-10-06T21:31:11+00:00",
+        "los_angeles": "2026-10-06T14:31:11-07:00"
+      }
+    },
+    {
+      "index": 19,
+      "run_id": "humidity_control_2025",
+      "group": "main",
+      "task": "humidity",
+      "variant": "control",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "control",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "control",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_control_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T21:31:11+00:00",
+            "los_angeles": "2026-10-06T14:31:11-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T22:43:38+00:00",
+            "los_angeles": "2026-10-06T15:43:38-07:00"
+          },
+          "wall_seconds": 4346.700570299989
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0880473752816517,
+          "val_mae": 5.0952740000294785,
+          "seconds": 43.361576700001024,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "72a77d0435a2d4b28a86f6359f7b18f5d1b17a0c60e98aa1672c828dd4448913",
+        "history_sha256": "5355f8adf1fd4b4f98259b2cdda0a9fb1c9588bc2254ad7574ac1c13946f441f",
+        "best_checkpoint_sha256": "eb6637dd3fdd8e8eeee352e39b4e558703513553a3cd62721cdffc4d2bee645a",
+        "final_checkpoint_sha256": "9a14810caffb1565f1afbdd5c6d74f31ba40491fe278f702dae95b4dd238fa76",
+        "best_epoch": 66,
+        "mae": 4.6263274215027135,
+        "rmse": 7.2232034398203595,
+        "epochs_completed": 100,
+        "training_seconds": 4330.804341900279
+      },
+      "completed_at": {
+        "utc": "2026-10-06T22:43:38+00:00",
+        "los_angeles": "2026-10-06T15:43:38-07:00"
+      }
+    },
+    {
+      "index": 20,
+      "run_id": "humidity_agf_2025",
+      "group": "main",
+      "task": "humidity",
+      "variant": "agf",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "agf",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "agf",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_agf_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T22:43:38+00:00",
+            "los_angeles": "2026-10-06T15:43:38-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-06T23:58:42+00:00",
+            "los_angeles": "2026-10-06T16:58:42-07:00"
+          },
+          "wall_seconds": 4503.799379499978
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0771469109588199,
+          "val_mae": 4.774527063464468,
+          "seconds": 44.375029500050005,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "4b627abad3405f55e56ee8f7c529d9da98a929ee6e65c715148396afef00bb4c",
+        "history_sha256": "7bf9fcbbee6de8130935ca57186b242547458c6b41ab40f2d227836fb6edc022",
+        "best_checkpoint_sha256": "9cc43a815db221ea5037a3ea3ebb3f62421850905768ba66085a3ef658d1eb61",
+        "final_checkpoint_sha256": "606b2eab2f3d4e566a4697c2f75f4d54b217cca37688d6d0f188810aa0c6e816",
+        "best_epoch": 94,
+        "mae": 4.6024189052594435,
+        "rmse": 7.058047218541524,
+        "epochs_completed": 100,
+        "training_seconds": 4489.619226999464
+      },
+      "completed_at": {
+        "utc": "2026-10-06T23:58:42+00:00",
+        "los_angeles": "2026-10-06T16:58:42-07:00"
+      }
+    },
+    {
+      "index": 21,
+      "run_id": "temperature_control_2021",
+      "group": "main",
+      "task": "temperature",
+      "variant": "control",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "control",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "control",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_control_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-06T23:58:42+00:00",
+            "los_angeles": "2026-10-06T16:58:42-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T01:10:15+00:00",
+            "los_angeles": "2026-10-06T18:10:15-07:00"
+          },
+          "wall_seconds": 4293.610745200014
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.3082643461724122,
+          "val_mae": 1.5797065858424404,
+          "seconds": 42.56773200002499,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "98aa4810b138008ce3f2456a67dfcd656ad7a7365275ec8332d868af8a5942c6",
+        "history_sha256": "723ce5a7b827bb7d618c9d81f8dc6306253a185a44c6519d4a0aa8a4f07b95c0",
+        "best_checkpoint_sha256": "2ad448fbcb1f027b109767cddb0b50c6bc212158b4db26d0f985406e0ad10381",
+        "final_checkpoint_sha256": "81cc609335e43eab45b9c9b8fbf67c7e07468ad65d7dc640e30a5754253bf754",
+        "best_epoch": 90,
+        "mae": 1.2542636168847556,
+        "rmse": 2.0439888419872787,
+        "epochs_completed": 100,
+        "training_seconds": 4274.563313999912
+      },
+      "completed_at": {
+        "utc": "2026-10-07T01:10:15+00:00",
+        "los_angeles": "2026-10-06T18:10:15-07:00"
+      }
+    },
+    {
+      "index": 22,
+      "run_id": "temperature_agf_2021",
+      "group": "main",
+      "task": "temperature",
+      "variant": "agf",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "agf",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "agf",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_agf_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T01:10:15+00:00",
+            "los_angeles": "2026-10-06T18:10:15-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T02:24:29+00:00",
+            "los_angeles": "2026-10-06T19:24:29-07:00"
+          },
+          "wall_seconds": 4453.824437300034
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.39775602850649094,
+          "val_mae": 1.693261782647221,
+          "seconds": 44.335476199979894,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "94912ec1473fd53942a7d775633aa7141f4120e7d964d4704798ff7b443b024b",
+        "history_sha256": "afcff4a20f375541c04f8ca2946d1362bf7de282efbfc641abbe850ebecbc460",
+        "best_checkpoint_sha256": "b74783874d5e2bba9d0b7014d1903e40e21f05493188a0950708047f9aaa58a9",
+        "final_checkpoint_sha256": "7a4416c740b4f856ac7b5f1c6617f2fa24dd92f95017c00bcb761ef0f7ca4117",
+        "best_epoch": 67,
+        "mae": 1.3252163488816664,
+        "rmse": 2.2315546601619483,
+        "epochs_completed": 100,
+        "training_seconds": 4437.28626110038
+      },
+      "completed_at": {
+        "utc": "2026-10-07T02:24:29+00:00",
+        "los_angeles": "2026-10-06T19:24:29-07:00"
+      }
+    },
+    {
+      "index": 23,
+      "run_id": "temperature_control_2022",
+      "group": "main",
+      "task": "temperature",
+      "variant": "control",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "control",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "control",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_control_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T02:24:29+00:00",
+            "los_angeles": "2026-10-06T19:24:29-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T03:36:28+00:00",
+            "los_angeles": "2026-10-06T20:36:28-07:00"
+          },
+          "wall_seconds": 4318.654115999991
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.38778045773506165,
+          "val_mae": 1.7984467563941213,
+          "seconds": 42.88215840002522,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "406abe024ec6c5a41206bf23cf24cb7bfb5aef038a12fc52c3fc51d816464195",
+        "history_sha256": "90e6b4047380fc9cc3fdc561cf296fc14083668c4350229ed034a4152ff73f8c",
+        "best_checkpoint_sha256": "ccac018c4b93607190755ff9634b54950aaa20ad2537f198392b8d7dcad21247",
+        "final_checkpoint_sha256": "8fa865970396a132674a21718ede739b987e7c641c11099395d2d1aed41bd0cc",
+        "best_epoch": 80,
+        "mae": 1.3380426533202694,
+        "rmse": 2.1233681828388895,
+        "epochs_completed": 100,
+        "training_seconds": 4304.057556300075
+      },
+      "completed_at": {
+        "utc": "2026-10-07T03:36:28+00:00",
+        "los_angeles": "2026-10-06T20:36:28-07:00"
+      }
+    },
+    {
+      "index": 24,
+      "run_id": "temperature_agf_2022",
+      "group": "main",
+      "task": "temperature",
+      "variant": "agf",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "agf",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "agf",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_agf_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T03:36:28+00:00",
+            "los_angeles": "2026-10-06T20:36:28-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T04:50:46+00:00",
+            "los_angeles": "2026-10-06T21:50:46-07:00"
+          },
+          "wall_seconds": 4457.448314200039
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.308462028288179,
+          "val_mae": 1.3532780995601912,
+          "seconds": 44.125523500028066,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "db897d87fa8216aebd6a9cf949f2dffad66ba876bcedadba8ec03321e50a17ba",
+        "history_sha256": "962d8f130e7e347f717b997f39d57c189c12d6e30e7bc004c0f9feb9e560a9ee",
+        "best_checkpoint_sha256": "d9483ef4a5d5ad0f3cfd5e1841bfe36fbc65d6f19ddde32b78a0182f66a45e6e",
+        "final_checkpoint_sha256": "d9483ef4a5d5ad0f3cfd5e1841bfe36fbc65d6f19ddde32b78a0182f66a45e6e",
+        "best_epoch": 100,
+        "mae": 1.3796941448316802,
+        "rmse": 2.1862313222038856,
+        "epochs_completed": 100,
+        "training_seconds": 4431.6538576001185
+      },
+      "completed_at": {
+        "utc": "2026-10-07T04:50:46+00:00",
+        "los_angeles": "2026-10-06T21:50:46-07:00"
+      }
+    },
+    {
+      "index": 25,
+      "run_id": "temperature_control_2023",
+      "group": "main",
+      "task": "temperature",
+      "variant": "control",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "control",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "control",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_control_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T04:50:46+00:00",
+            "los_angeles": "2026-10-06T21:50:46-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T06:02:57+00:00",
+            "los_angeles": "2026-10-06T23:02:57-07:00"
+          },
+          "wall_seconds": 4331.669035500032
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.3050601685212718,
+          "val_mae": 1.4085791284763824,
+          "seconds": 42.59533789998386,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "b5bbdf0b3e1bb419deca5fdaf0a9db8196aa0d9644054cbf14db92e5b3fa27c4",
+        "history_sha256": "137da29c2dcbd15b9abc6aef79f01b89f00d193838aa3ad9b63cdb73ca4a2478",
+        "best_checkpoint_sha256": "c28dc357de284db02aee283955582b87a5668bfd37db639739629a1acce1d153",
+        "final_checkpoint_sha256": "c5fdba913d6fc332d36cd2a048360c5562852e75a83cbc20a12f0c8de06a0dc2",
+        "best_epoch": 92,
+        "mae": 1.1691256662342133,
+        "rmse": 2.0634446309505408,
+        "epochs_completed": 100,
+        "training_seconds": 4315.681333299726
+      },
+      "completed_at": {
+        "utc": "2026-10-07T06:02:57+00:00",
+        "los_angeles": "2026-10-06T23:02:57-07:00"
+      }
+    },
+    {
+      "index": 26,
+      "run_id": "temperature_agf_2023",
+      "group": "main",
+      "task": "temperature",
+      "variant": "agf",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "agf",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "agf",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_agf_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T06:02:57+00:00",
+            "los_angeles": "2026-10-06T23:02:57-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T07:20:20+00:00",
+            "los_angeles": "2026-10-07T00:20:20-07:00"
+          },
+          "wall_seconds": 4642.398182199977
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.30567968471182716,
+          "val_mae": 1.5536685018123646,
+          "seconds": 46.60391529998742,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "8c07bb53e5e005e88081096f9c97c4ad6a8949315d5394edd6639c85a3134e2a",
+        "history_sha256": "6429c06478ea5f531553b439178401e6ccff2e7ee08a85c48a72bf609a849a73",
+        "best_checkpoint_sha256": "ee66072380c8824de448b525421aaf50d22d1ccb86044590dc43430cc0418c9d",
+        "final_checkpoint_sha256": "bdb9e157097a28f65518c156a7c270044bef51d93a05580ef603a8db727f4c3c",
+        "best_epoch": 87,
+        "mae": 1.2861805262033676,
+        "rmse": 2.001704623077834,
+        "epochs_completed": 100,
+        "training_seconds": 4627.153894700576
+      },
+      "completed_at": {
+        "utc": "2026-10-07T07:20:20+00:00",
+        "los_angeles": "2026-10-07T00:20:20-07:00"
+      }
+    },
+    {
+      "index": 27,
+      "run_id": "temperature_control_2024",
+      "group": "main",
+      "task": "temperature",
+      "variant": "control",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "control",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "control",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_control_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T07:20:20+00:00",
+            "los_angeles": "2026-10-07T00:20:20-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T08:32:27+00:00",
+            "los_angeles": "2026-10-07T01:32:27-07:00"
+          },
+          "wall_seconds": 4326.791657300026
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.29335277775923413,
+          "val_mae": 1.7829767255133289,
+          "seconds": 42.310700199974235,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "dd50831608722938beee4e91576f53cffe4b3b3fa479e5767820a35292dd6c06",
+        "history_sha256": "60c7d2d44cc0ca4271cfbdd519ace174fece91442889608e018024dcc248356b",
+        "best_checkpoint_sha256": "302e7345507d629ac12e45bd2917aab8244c6f4d8791d40242d0294a63b50f70",
+        "final_checkpoint_sha256": "87089c76062da60d1fbd2f3514e7d683be8cdb99fcf52513b6ed0a64297adc26",
+        "best_epoch": 66,
+        "mae": 1.2722258166108094,
+        "rmse": 2.14397401476919,
+        "epochs_completed": 100,
+        "training_seconds": 4308.497862299846
+      },
+      "completed_at": {
+        "utc": "2026-10-07T08:32:27+00:00",
+        "los_angeles": "2026-10-07T01:32:27-07:00"
+      }
+    },
+    {
+      "index": 28,
+      "run_id": "temperature_agf_2024",
+      "group": "main",
+      "task": "temperature",
+      "variant": "agf",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "agf",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "agf",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_agf_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T08:32:27+00:00",
+            "los_angeles": "2026-10-07T01:32:27-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T09:45:19+00:00",
+            "los_angeles": "2026-10-07T02:45:19-07:00"
+          },
+          "wall_seconds": 4371.9338284000405
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.3003957263297505,
+          "val_mae": 1.8493437192194246,
+          "seconds": 43.49468709999928,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "1d0c22224775d20ac3e5cac913d95b83c568a0daff24cd2645068aaa4595e0e1",
+        "history_sha256": "6b2e02fad2596dcab3146efa21b1bc761e257b340bebadf983afad39143bd3c2",
+        "best_checkpoint_sha256": "89520814367d5bb69a3dd5f342542e67fc27b023e9988cf8f9665ad12adca2b6",
+        "final_checkpoint_sha256": "e3f8dbaeba5dcfcce2a834bdca79ff7e53efbcba26c1b9c19ab9b61fc0ec64d0",
+        "best_epoch": 78,
+        "mae": 1.1091033464636917,
+        "rmse": 1.9559192376721015,
+        "epochs_completed": 100,
+        "training_seconds": 4357.461210000329
+      },
+      "completed_at": {
+        "utc": "2026-10-07T09:45:19+00:00",
+        "los_angeles": "2026-10-07T02:45:19-07:00"
+      }
+    },
+    {
+      "index": 29,
+      "run_id": "temperature_control_2025",
+      "group": "main",
+      "task": "temperature",
+      "variant": "control",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "control",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "control",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_control_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T09:45:19+00:00",
+            "los_angeles": "2026-10-07T02:45:19-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T10:56:41+00:00",
+            "los_angeles": "2026-10-07T03:56:41-07:00"
+          },
+          "wall_seconds": 4281.937764600036
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.3246701467368338,
+          "val_mae": 1.5464278372644382,
+          "seconds": 42.449803700030316,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "5889400bd83bea87e4bdaddfe5b3e9eebb3939b30dd157db71910deb2565754e",
+        "history_sha256": "7262591b2bc4b0b559ae54ec321aba0014e98e8186d7dde13b15112fdb8eac34",
+        "best_checkpoint_sha256": "a7b084631e1565994b2504641d85db2d4c8c8fc9cafa55d172df079b6acef489",
+        "final_checkpoint_sha256": "8ede76c0730571d0785dd35f60c9c4d2de7f159cacfee23d7b6ecb0254a9ad8e",
+        "best_epoch": 92,
+        "mae": 1.256295064297887,
+        "rmse": 2.131386538089535,
+        "epochs_completed": 100,
+        "training_seconds": 4265.619639899698
+      },
+      "completed_at": {
+        "utc": "2026-10-07T10:56:41+00:00",
+        "los_angeles": "2026-10-07T03:56:41-07:00"
+      }
+    },
+    {
+      "index": 30,
+      "run_id": "temperature_agf_2025",
+      "group": "main",
+      "task": "temperature",
+      "variant": "agf",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "agf",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "agf",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_agf_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T10:56:41+00:00",
+            "los_angeles": "2026-10-07T03:56:41-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T12:09:38+00:00",
+            "los_angeles": "2026-10-07T05:09:38-07:00"
+          },
+          "wall_seconds": 4377.150661399995
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.3202718223134677,
+          "val_mae": 1.8829153901911524,
+          "seconds": 43.40648120001424,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "b8107878c31cff976e82ffdeebb5a608dfd219698c3fcbc9eb17b0fe5694094f",
+        "history_sha256": "d7b1553dc750fc80ae3aa890cb72bb3c38cdd74618c7c957ce74c77ddd970b65",
+        "best_checkpoint_sha256": "f0bfdfa2ff7a776752e2c24bfc30be5c8c4cfae78f2b3238bd856b0f8c4ccfb0",
+        "final_checkpoint_sha256": "9da989136872408deb87320922c5a598cd01af2fafd34765a39a82eec71fee04",
+        "best_epoch": 90,
+        "mae": 1.354845681925645,
+        "rmse": 2.214851764954894,
+        "epochs_completed": 100,
+        "training_seconds": 4359.650436600263
+      },
+      "completed_at": {
+        "utc": "2026-10-07T12:09:38+00:00",
+        "los_angeles": "2026-10-07T05:09:38-07:00"
+      }
+    },
+    {
+      "index": 31,
+      "run_id": "component_of_wind_control_2021",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "control",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "control",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "control",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_control_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T12:09:38+00:00",
+            "los_angeles": "2026-10-07T05:09:38-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T13:21:30+00:00",
+            "los_angeles": "2026-10-07T06:21:30-07:00"
+          },
+          "wall_seconds": 4312.005062200013
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.26198966345853275,
+          "val_mae": 1.3986869443010732,
+          "seconds": 42.74335559998872,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "f33cc11beadfbabc7d9a40cdda85d6e97f0c0f5e8fcf9ea8b8dcb840dd95de5d",
+        "history_sha256": "ef679528992ff404d353c9d1975c3b0aa9700a4310a1302eba2bdbf1b5ab77a9",
+        "best_checkpoint_sha256": "dcccbc9422938624b343f72d825a0ca080ded2b2aea32f790ed2a1704a67b5d1",
+        "final_checkpoint_sha256": "607abb3079d5eb3cc21dbd71dca92c567119b0d45cced61e766e6bae7f630f18",
+        "best_epoch": 78,
+        "mae": 1.244054242665279,
+        "rmse": 1.987248612760709,
+        "epochs_completed": 100,
+        "training_seconds": 4291.444145100075
+      },
+      "completed_at": {
+        "utc": "2026-10-07T13:21:30+00:00",
+        "los_angeles": "2026-10-07T06:21:30-07:00"
+      }
+    },
+    {
+      "index": 32,
+      "run_id": "component_of_wind_agf_2021",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "agf",
+      "seed": 2021,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "agf",
+        "--seed",
+        "2021",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "agf",
+            "--seed",
+            "2021",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_agf_2021_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T13:21:30+00:00",
+            "los_angeles": "2026-10-07T06:21:30-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T14:35:42+00:00",
+            "los_angeles": "2026-10-07T07:35:42-07:00"
+          },
+          "wall_seconds": 4452.272561200021
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.2586125334103902,
+          "val_mae": 1.287430422837047,
+          "seconds": 44.38229059998412,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "ca40d7817d4d744a9ad264b99faae1e6f35e7207b303957ef0fa165c3e349311",
+        "history_sha256": "b9b1ab864a894fdb94ffddbee7c1a23ca6bc2760de318fb2e035f262ab2d6d4d",
+        "best_checkpoint_sha256": "a3950948446f286d997021bd29a51ff5b01eb7943289fc96fbaf76364ecc6b7c",
+        "final_checkpoint_sha256": "ea6a6f6a6a32c2aef5e1a7bf67516c0fd211d634f440d429e7c40fa03edf6347",
+        "best_epoch": 86,
+        "mae": 1.2391839862230642,
+        "rmse": 1.9674431224403406,
+        "epochs_completed": 100,
+        "training_seconds": 4435.071384000126
+      },
+      "completed_at": {
+        "utc": "2026-10-07T14:35:42+00:00",
+        "los_angeles": "2026-10-07T07:35:42-07:00"
+      }
+    },
+    {
+      "index": 33,
+      "run_id": "component_of_wind_control_2022",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "control",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "control",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "control",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_control_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T14:35:42+00:00",
+            "los_angeles": "2026-10-07T07:35:42-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T15:47:25+00:00",
+            "los_angeles": "2026-10-07T08:47:25-07:00"
+          },
+          "wall_seconds": 4302.146499000024
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.2718796150551902,
+          "val_mae": 1.3974686668795266,
+          "seconds": 42.84060519997729,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "b183ca02dbf808446f7bf4615602d20aa40a891035c0d29b5a8d70a9c073232d",
+        "history_sha256": "deb9524f436e15d5a0cd1e9970e0acaa9e69244f4cd508d74fb44b2e0ca21b34",
+        "best_checkpoint_sha256": "f5122778fae78fc1252d0de1d34d292b78165c7efd9e1c532b9a063f47a32b58",
+        "final_checkpoint_sha256": "6a0b1f5ee208d27cddf1ef4bff52ab97d61bed2d090058753f29fe34ba8cdf96",
+        "best_epoch": 93,
+        "mae": 1.2356520635059427,
+        "rmse": 1.960663635313084,
+        "epochs_completed": 100,
+        "training_seconds": 4286.160874699999
+      },
+      "completed_at": {
+        "utc": "2026-10-07T15:47:25+00:00",
+        "los_angeles": "2026-10-07T08:47:25-07:00"
+      }
+    },
+    {
+      "index": 34,
+      "run_id": "component_of_wind_agf_2022",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "agf",
+      "seed": 2022,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "agf",
+        "--seed",
+        "2022",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "agf",
+            "--seed",
+            "2022",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_agf_2022_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T15:47:25+00:00",
+            "los_angeles": "2026-10-07T08:47:25-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T17:01:17+00:00",
+            "los_angeles": "2026-10-07T10:01:17-07:00"
+          },
+          "wall_seconds": 4432.716723699996
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.2628404533283578,
+          "val_mae": 1.2624634236370942,
+          "seconds": 45.591484699980356,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "b9590f1d367b771e385bd4793eb0a7c97b3d78a7dd8aa87570cb771a0dfb4791",
+        "history_sha256": "9b44b9f97e6e2019986f3e5e5a5142e17bcdc45ab3d73ef07f04e301827a69e7",
+        "best_checkpoint_sha256": "e01801a4adfac5ad2d30815fedfc552800c46a525d75d4bd41661ebac0e703e3",
+        "final_checkpoint_sha256": "b11851b1446f72cab465e71feb7708ce8993dbd5be50052fb4bf97b0826f34ad",
+        "best_epoch": 82,
+        "mae": 1.2547982211585786,
+        "rmse": 2.000378639776607,
+        "epochs_completed": 100,
+        "training_seconds": 4416.245023699652
+      },
+      "completed_at": {
+        "utc": "2026-10-07T17:01:17+00:00",
+        "los_angeles": "2026-10-07T10:01:17-07:00"
+      }
+    },
+    {
+      "index": 35,
+      "run_id": "component_of_wind_control_2023",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "control",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "control",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "control",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_control_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T17:01:17+00:00",
+            "los_angeles": "2026-10-07T10:01:17-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T18:14:40+00:00",
+            "los_angeles": "2026-10-07T11:14:40-07:00"
+          },
+          "wall_seconds": 4402.407172800042
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.26225032802257275,
+          "val_mae": 1.9677486396535409,
+          "seconds": 43.756209299957845,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:04+00:00",
+          "los_angeles": "2026-10-08T01:04:04-07:00"
+        },
+        "summary_sha256": "6f33346808f02665dd7b72a51355a6f9fe35868aa187c8d76087299be674d247",
+        "history_sha256": "b20e596f9457ff064cae0dbff012845cecfb8709c6a19372f8e98a9303d6f320",
+        "best_checkpoint_sha256": "f7fe065d3287dd0b1ecd6f5597fc21759c07ea56fc570c33c24a6d954687b866",
+        "final_checkpoint_sha256": "1670d1c9c95d4b74e6e8da21f946068264ad54f57b4058f94377b159b4439857",
+        "best_epoch": 98,
+        "mae": 1.2258298690380756,
+        "rmse": 1.9364526703143876,
+        "epochs_completed": 100,
+        "training_seconds": 4385.279997300066
+      },
+      "completed_at": {
+        "utc": "2026-10-07T18:14:40+00:00",
+        "los_angeles": "2026-10-07T11:14:40-07:00"
+      }
+    },
+    {
+      "index": 36,
+      "run_id": "component_of_wind_agf_2023",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "agf",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "agf",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "agf",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_agf_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T18:14:40+00:00",
+            "los_angeles": "2026-10-07T11:14:40-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T19:31:28+00:00",
+            "los_angeles": "2026-10-07T12:31:28-07:00"
+          },
+          "wall_seconds": 4607.690604300005
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.2609162171267801,
+          "val_mae": 2.0147726164858897,
+          "seconds": 45.09309789998224,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "3f4f6ecfe8c9f735ebd1f4832461f035f6d1f9f32f212ed73025022f13a35f8a",
+        "history_sha256": "a07ce02aadac157639e5c071e030d422bea3ccc41d2fe299561a807a3c4880d8",
+        "best_checkpoint_sha256": "9f0cdf074ffe481f2e14fbdea128b5987c4d110b265da52a4b5a5c2204391575",
+        "final_checkpoint_sha256": "8a54bc90b7245e586ae7ea3978a6369c202ff2c6588e6f341d2bec78969ff0ef",
+        "best_epoch": 98,
+        "mae": 1.233350958748709,
+        "rmse": 1.9667158974716157,
+        "epochs_completed": 100,
+        "training_seconds": 4591.151398199843
+      },
+      "completed_at": {
+        "utc": "2026-10-07T19:31:28+00:00",
+        "los_angeles": "2026-10-07T12:31:28-07:00"
+      }
+    },
+    {
+      "index": 37,
+      "run_id": "component_of_wind_control_2024",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "control",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "control",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "control",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_control_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T19:31:28+00:00",
+            "los_angeles": "2026-10-07T12:31:28-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T20:50:31+00:00",
+            "los_angeles": "2026-10-07T13:50:31-07:00"
+          },
+          "wall_seconds": 4743.237959299993
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.2548753786832094,
+          "val_mae": 1.3301939728574452,
+          "seconds": 43.65199030004442,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "d520ca88d6660af4a7b05f60c2064d7e06169cd7ca8653bcbb4c7b07aeba2a05",
+        "history_sha256": "00686a465934033c1b7c6225fdef559f75f619e0da313654f6fe73e0f85e0137",
+        "best_checkpoint_sha256": "dc1c1fe467b49675d753869379f6b2fe7f13cb338ad252ab4251fdd72017b5ef",
+        "final_checkpoint_sha256": "db1abed1605a5aa4190ed39a5cb9e9c3d1665867dcd616f795fe587358428ad3",
+        "best_epoch": 84,
+        "mae": 1.2533396351123338,
+        "rmse": 1.9908271044686487,
+        "epochs_completed": 100,
+        "training_seconds": 4725.180002800014
+      },
+      "completed_at": {
+        "utc": "2026-10-07T20:50:31+00:00",
+        "los_angeles": "2026-10-07T13:50:31-07:00"
+      }
+    },
+    {
+      "index": 38,
+      "run_id": "component_of_wind_agf_2024",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "agf",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "agf",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "agf",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_agf_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T20:50:31+00:00",
+            "los_angeles": "2026-10-07T13:50:31-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T22:07:19+00:00",
+            "los_angeles": "2026-10-07T15:07:19-07:00"
+          },
+          "wall_seconds": 4607.78491430002
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.25421249659525025,
+          "val_mae": 1.4824716282026222,
+          "seconds": 46.008698599995114,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "1d92fd3c4fce05a0cb92ae242807bb071483dcbfb625f17be545bc50327b2e92",
+        "history_sha256": "17642e4ef7f5e6e64e68ba45511dd09efc7e0755f1ea01d1436d348484084ef9",
+        "best_checkpoint_sha256": "4c0e2051afbc84b81ba40fe39ba653391367f4080f1b958625f6e93476fba0e5",
+        "final_checkpoint_sha256": "8cf4e9f20ed608f058a933894ade64012378fd7beb7abb0921da81ed91b4f7c9",
+        "best_epoch": 84,
+        "mae": 1.2308793236909628,
+        "rmse": 1.9629052217354754,
+        "epochs_completed": 100,
+        "training_seconds": 4592.462561699678
+      },
+      "completed_at": {
+        "utc": "2026-10-07T22:07:19+00:00",
+        "los_angeles": "2026-10-07T15:07:19-07:00"
+      }
+    },
+    {
+      "index": 39,
+      "run_id": "component_of_wind_control_2025",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "control",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "control",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "control",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_control_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T22:07:19+00:00",
+            "los_angeles": "2026-10-07T15:07:19-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-07T23:20:52+00:00",
+            "los_angeles": "2026-10-07T16:20:52-07:00"
+          },
+          "wall_seconds": 4412.721607400046
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.25862944105433094,
+          "val_mae": 1.28134159060509,
+          "seconds": 42.56812509999145,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "0e19b7b28fe451bcb4d52ec0922df9fa399f6b8e2972044bf20651ff9472100b",
+        "history_sha256": "79edffb7ac9debc3b459b7cf61d05e9e7326ea6e06b65f4de01193eed601bdd9",
+        "best_checkpoint_sha256": "f287c425f233a84830922f895cfdfbd2bde2bf4ae1cdeadf74d5847d7cb31005",
+        "final_checkpoint_sha256": "299f7720fcc655f821ec1d6a15e5a17013e5aca269a18cbb9a15b28f05724220",
+        "best_epoch": 89,
+        "mae": 1.251168859071876,
+        "rmse": 1.9862648204843507,
+        "epochs_completed": 100,
+        "training_seconds": 4392.738733700477
+      },
+      "completed_at": {
+        "utc": "2026-10-07T23:20:52+00:00",
+        "los_angeles": "2026-10-07T16:20:52-07:00"
+      }
+    },
+    {
+      "index": 40,
+      "run_id": "component_of_wind_agf_2025",
+      "group": "main",
+      "task": "component_of_wind",
+      "variant": "agf",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "component_of_wind",
+        "--variant",
+        "agf",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "component_of_wind",
+            "--variant",
+            "agf",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\component_of_wind_agf_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-07T23:20:52+00:00",
+            "los_angeles": "2026-10-07T16:20:52-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T00:36:17+00:00",
+            "los_angeles": "2026-10-07T17:36:17-07:00"
+          },
+          "wall_seconds": 4524.8646572
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.26002453371054596,
+          "val_mae": 1.3798623683759674,
+          "seconds": 45.2158876999747,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "73dff1dc5c0a5c02634c20a2c2f6e67fd4302101ab022a944663eb394b7ea7bb",
+        "history_sha256": "303e50f15fec2b6694ecb8db6ace8dad04af0065c0d6a3ce3fd72eb61d3ac2b8",
+        "best_checkpoint_sha256": "c4f8964c7c45efc183bf65bd10705f5fa59b27fee768efa7aaabfe03d7a68cb3",
+        "final_checkpoint_sha256": "f51be5b28d0af7fe3cb2905b658bd076e4b400eb6b21455b4d1d9b8f7906618d",
+        "best_epoch": 94,
+        "mae": 1.3201305725099926,
+        "rmse": 2.1802616677154454,
+        "epochs_completed": 100,
+        "training_seconds": 4506.340260299796
+      },
+      "completed_at": {
+        "utc": "2026-10-08T00:36:17+00:00",
+        "los_angeles": "2026-10-07T17:36:17-07:00"
+      }
+    },
+    {
+      "index": 41,
+      "run_id": "temperature_mean_fusion_2023",
+      "group": "ablation",
+      "task": "temperature",
+      "variant": "mean_fusion",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "mean_fusion",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "mean_fusion",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_mean_fusion_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-08T00:36:17+00:00",
+            "los_angeles": "2026-10-07T17:36:17-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T01:49:36+00:00",
+            "los_angeles": "2026-10-07T18:49:36-07:00"
+          },
+          "wall_seconds": 4399.580450400012
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.3011763013071484,
+          "val_mae": 1.5452092974819431,
+          "seconds": 44.08355650003068,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "f21824c4b221b9c70592a8c88717f491ce933f9400de99f99f64aa393f3d7197",
+        "history_sha256": "daeb5fc82a739961985890cdc6c42d911c0ae23448cbb419d05e53722f817e3f",
+        "best_checkpoint_sha256": "cc89e85662358a7c8df7f974c24089a5a723286c419a61c1a95382fe097397b5",
+        "final_checkpoint_sha256": "694fededf2ddbe5ac22e1790d5480971d73ce0e7e4cba0b89d8de2a2ce62beef",
+        "best_epoch": 89,
+        "mae": 1.2544364348273178,
+        "rmse": 1.930239000950528,
+        "epochs_completed": 100,
+        "training_seconds": 4383.061644499772
+      },
+      "completed_at": {
+        "utc": "2026-10-08T01:49:36+00:00",
+        "los_angeles": "2026-10-07T18:49:36-07:00"
+      }
+    },
+    {
+      "index": 42,
+      "run_id": "temperature_mean_fusion_2024",
+      "group": "ablation",
+      "task": "temperature",
+      "variant": "mean_fusion",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "mean_fusion",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "mean_fusion",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_mean_fusion_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-08T01:49:36+00:00",
+            "los_angeles": "2026-10-07T18:49:36-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T03:03:01+00:00",
+            "los_angeles": "2026-10-07T20:03:01-07:00"
+          },
+          "wall_seconds": 4404.374748400005
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.31078920596175724,
+          "val_mae": 1.4794878145904407,
+          "seconds": 43.71635789994616,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "3e0e0dec3271b8b50c36edb1db67d25292bf9e9d7c154e2771872ecfe1a3e7d5",
+        "history_sha256": "7084a09625dbe8d24f31303d27bfe955e1988d7240a25ae6503b39e0484a4e2a",
+        "best_checkpoint_sha256": "bd83f9dd231af9c9eebb1b9b63c5528ab779905945f626918fc7d7f212540d1d",
+        "final_checkpoint_sha256": "b60787b70561af7d8fad1e59d072ff7855e894ea37d602369d4cdbef482b85d5",
+        "best_epoch": 52,
+        "mae": 1.208926600880849,
+        "rmse": 2.124020604326262,
+        "epochs_completed": 100,
+        "training_seconds": 4388.095216800459
+      },
+      "completed_at": {
+        "utc": "2026-10-08T03:03:01+00:00",
+        "los_angeles": "2026-10-07T20:03:01-07:00"
+      }
+    },
+    {
+      "index": 43,
+      "run_id": "temperature_mean_fusion_2025",
+      "group": "ablation",
+      "task": "temperature",
+      "variant": "mean_fusion",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "temperature",
+        "--variant",
+        "mean_fusion",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "temperature",
+            "--variant",
+            "mean_fusion",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\temperature_mean_fusion_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-08T03:03:01+00:00",
+            "los_angeles": "2026-10-07T20:03:01-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T04:18:10+00:00",
+            "los_angeles": "2026-10-07T21:18:10-07:00"
+          },
+          "wall_seconds": 4509.2402820000425
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 0.34050493356254363,
+          "val_mae": 1.4495995818847731,
+          "seconds": 48.17005259997677,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "ca56ae97d70115ee28ddeccdc0a651719d7ebc5b2c00a0ba47d1013aedceb84f",
+        "history_sha256": "f436f4c2c5e6b99c97ffd18ba0830667dcb7ea7383e19fd50acd944f0eed7029",
+        "best_checkpoint_sha256": "9519fc33ec22ce40bfa9eb9932d0c77fe68d1990e7aae292b33333ce90848050",
+        "final_checkpoint_sha256": "130f874a7b747d0413e938c4eb549611ba7957876437a32b08cc64928081a7ea",
+        "best_epoch": 98,
+        "mae": 1.3382138334883766,
+        "rmse": 2.0860465058580036,
+        "epochs_completed": 100,
+        "training_seconds": 4492.675087400596
+      },
+      "completed_at": {
+        "utc": "2026-10-08T04:18:10+00:00",
+        "los_angeles": "2026-10-07T21:18:10-07:00"
+      }
+    },
+    {
+      "index": 44,
+      "run_id": "humidity_mean_fusion_2023",
+      "group": "ablation",
+      "task": "humidity",
+      "variant": "mean_fusion",
+      "seed": 2023,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "mean_fusion",
+        "--seed",
+        "2023",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "mean_fusion",
+            "--seed",
+            "2023",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_mean_fusion_2023_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-08T04:18:10+00:00",
+            "los_angeles": "2026-10-07T21:18:10-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T05:36:33+00:00",
+            "los_angeles": "2026-10-07T22:36:33-07:00"
+          },
+          "wall_seconds": 4703.419052600046
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0977607087956534,
+          "val_mae": 4.810574426896504,
+          "seconds": 43.33302299992647,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "9fd597312f123efb24932a3c20b28944f769b02165a647449f433ab902491a8e",
+        "history_sha256": "1fafeba6f0d8b812512effe23fa62741edba64e4079a5634e2d825480efd73d3",
+        "best_checkpoint_sha256": "3cd1fa2476f8f7a42d60a69a2d3c62a5662b41037051250f2e62c14011185a3e",
+        "final_checkpoint_sha256": "75456140911f9353844654bac03a3e02d4d8d729e8243690f1132fbf910041bc",
+        "best_epoch": 84,
+        "mae": 4.598103883076139,
+        "rmse": 7.101539476934226,
+        "epochs_completed": 100,
+        "training_seconds": 4668.051433599903
+      },
+      "completed_at": {
+        "utc": "2026-10-08T05:36:33+00:00",
+        "los_angeles": "2026-10-07T22:36:33-07:00"
+      }
+    },
+    {
+      "index": 45,
+      "run_id": "humidity_mean_fusion_2024",
+      "group": "ablation",
+      "task": "humidity",
+      "variant": "mean_fusion",
+      "seed": 2024,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "mean_fusion",
+        "--seed",
+        "2024",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "mean_fusion",
+            "--seed",
+            "2024",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_mean_fusion_2024_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-08T05:36:34+00:00",
+            "los_angeles": "2026-10-07T22:36:34-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T06:50:02+00:00",
+            "los_angeles": "2026-10-07T23:50:02-07:00"
+          },
+          "wall_seconds": 4408.151747200056
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.0719326850440767,
+          "val_mae": 4.732904385575287,
+          "seconds": 44.02232589991763,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "2a45f72b679715ae2767c3bc70dc1d2bda0ba14916571490a376095d8f3ee978",
+        "history_sha256": "f968ed335e7397600d0c43ad9fb17146723c3ddd0cbc5b0344d325d56d351b4f",
+        "best_checkpoint_sha256": "7e0576796b69f16f2cdaaa1d24ca1086348bdb2846ec1726b7f6836646c99683",
+        "final_checkpoint_sha256": "5c9658ef73af753a2ca5600b88937a827b8b1bcc9fae7c506b1408b62c247bdb",
+        "best_epoch": 93,
+        "mae": 4.576279673264903,
+        "rmse": 7.091293375631347,
+        "epochs_completed": 100,
+        "training_seconds": 4391.061454999493
+      },
+      "completed_at": {
+        "utc": "2026-10-08T06:50:02+00:00",
+        "los_angeles": "2026-10-07T23:50:02-07:00"
+      }
+    },
+    {
+      "index": 46,
+      "run_id": "humidity_mean_fusion_2025",
+      "group": "ablation",
+      "task": "humidity",
+      "variant": "mean_fusion",
+      "seed": 2025,
+      "output_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+        "--data-root",
+        "D:\\CLCRN-main\\Weather Bench_dataset",
+        "--task",
+        "humidity",
+        "--variant",
+        "mean_fusion",
+        "--seed",
+        "2025",
+        "--epochs",
+        "100",
+        "--batch-size",
+        "32",
+        "--eval-batch-size",
+        "32",
+        "--protocol",
+        "zero_inclusive",
+        "--device",
+        "cuda:0",
+        "--threads",
+        "4",
+        "--patience",
+        "0",
+        "--output",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion"
+      ],
+      "status": "completed",
+      "attempts": [
+        {
+          "number": 1,
+          "command": [
+            "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "-u",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+            "--data-root",
+            "D:\\CLCRN-main\\Weather Bench_dataset",
+            "--task",
+            "humidity",
+            "--variant",
+            "mean_fusion",
+            "--seed",
+            "2025",
+            "--epochs",
+            "100",
+            "--batch-size",
+            "32",
+            "--eval-batch-size",
+            "32",
+            "--protocol",
+            "zero_inclusive",
+            "--device",
+            "cuda:0",
+            "--threads",
+            "4",
+            "--patience",
+            "0",
+            "--output",
+            "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion"
+          ],
+          "resume": false,
+          "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\humidity_mean_fusion_2025_attempt_01.log",
+          "status": "completed",
+          "started_at": {
+            "utc": "2026-10-08T06:50:02+00:00",
+            "los_angeles": "2026-10-07T23:50:02-07:00"
+          },
+          "returncode": 0,
+          "ended_at": {
+            "utc": "2026-10-08T08:04:04+00:00",
+            "los_angeles": "2026-10-08T01:04:04-07:00"
+          },
+          "wall_seconds": 4442.504456500057
+        }
+      ],
+      "error": null,
+      "progress": {
+        "epochs_completed": 100,
+        "last_epoch": {
+          "epoch": 100,
+          "train_mae": 1.081012060244878,
+          "val_mae": 4.862427628280646,
+          "seconds": 47.575807200046256,
+          "learning_rate": 0.007737809374999999,
+          "batches_seen": 7200
+        }
+      },
+      "verification": {
+        "verified_at": {
+          "utc": "2026-10-08T08:04:05+00:00",
+          "los_angeles": "2026-10-08T01:04:05-07:00"
+        },
+        "summary_sha256": "7e8f46207007dda423e835042001ac57e9d9b599c4583f62220becf72bf57ef0",
+        "history_sha256": "990ec535af2d29e5ff630fb5347dddddeb5ce923ba27421740bd66dc5e652c40",
+        "best_checkpoint_sha256": "b7c73070ce36d7b83cb6bb8db9445387238414d73e9c5c5f27146e1f576ced84",
+        "final_checkpoint_sha256": "b1fd8437f56d10a52ecedcdd671f8ce4e7ab13bc915d79addec2bea5b55c44ae",
+        "best_epoch": 84,
+        "mae": 4.623429330542848,
+        "rmse": 7.203700522494522,
+        "epochs_completed": 100,
+        "training_seconds": 4424.64480400004
+      },
+      "completed_at": {
+        "utc": "2026-10-08T08:04:04+00:00",
+        "los_angeles": "2026-10-08T01:04:04-07:00"
+      }
+    }
+  ],
+  "pid": 53048,
+  "error": null,
+  "queue_sessions": [
+    {
+      "pid": 54020,
+      "started_at": {
+        "utc": "2026-10-05T20:08:45+00:00",
+        "los_angeles": "2026-10-05T13:08:45-07:00"
+      },
+      "resume": false
+    },
+    {
+      "pid": 22424,
+      "started_at": {
+        "utc": "2026-10-05T20:14:36+00:00",
+        "los_angeles": "2026-10-05T13:14:36-07:00"
+      },
+      "resume": true,
+      "ended_at": {
+        "utc": "2026-10-06T06:01:22+00:00",
+        "los_angeles": "2026-10-05T23:01:22-07:00"
+      },
+      "end_reason": "user_requested_pause"
+    },
+    {
+      "pid": 53048,
+      "started_at": {
+        "utc": "2026-10-06T09:19:43+00:00",
+        "los_angeles": "2026-10-06T02:19:43-07:00"
+      },
+      "resume": true
+    }
+  ],
+  "updated_at": {
+    "utc": "2026-10-08T08:12:07+00:00",
+    "los_angeles": "2026-10-08T01:12:07-07:00"
+  },
+  "completion_hook": {
+    "script": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\complete_revision_workflow.py",
+    "args": [
+      "--run-root",
+      "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5",
+      "--device",
+      "cuda:0"
+    ],
+    "status": "completed",
+    "command": [
+      "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "-u",
+      "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\complete_revision_workflow.py",
+      "--run-root",
+      "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5",
+      "--device",
+      "cuda:0"
+    ],
+    "started_at": {
+      "utc": "2026-10-08T08:04:05+00:00",
+      "los_angeles": "2026-10-08T01:04:05-07:00"
+    },
+    "log": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\logs\\completion_hook.log",
+    "returncode": 0,
+    "ended_at": {
+      "utc": "2026-10-08T08:12:07+00:00",
+      "los_angeles": "2026-10-08T01:12:07-07:00"
+    }
+  },
+  "user_pause_events": [
+    {
+      "paused_at": {
+        "utc": "2026-10-06T06:01:22+00:00",
+        "los_angeles": "2026-10-05T23:01:22-07:00"
+      },
+      "reason": "explicit user request: save and pause",
+      "completed_runs_preserved": 7,
+      "run_id": "cloud_cover_agf_2024",
+      "saved_epoch": 94,
+      "resume_at_epoch": 95,
+      "checkpoint": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf\\saved_model\\epo94.tar",
+      "checkpoint_sha256": "96fc3606797a920a37b9da4fe31d8639b5b711ae6a9d903c853a54c590162251",
+      "checkpoint_bytes": 1110519,
+      "validated_checkpoint_fields": [
+        "model_state_dict",
+        "optimizer_state_dict",
+        "scheduler_state_dict",
+        "scaler_state_dict",
+        "rng_state",
+        "history",
+        "best",
+        "best_epoch",
+        "wait",
+        "batches_seen",
+        "config",
+        "config_sha256",
+        "checkpoint_version",
+        "processing_version",
+        "device_type",
+        "initialization_audit"
+      ],
+      "history_and_pointer_consistent": true,
+      "config_and_training_sources_verified": true,
+      "stopped_queue_pid": 22424,
+      "stopped_worker_pid": 28700,
+      "queue_and_worker_exited": true,
+      "postprocessing": "pending; will not run while paused",
+      "in_progress_epoch_policy": "any work after the last saved epoch is recomputed on resume",
+      "resume_command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\可复现代码\\scripts\\manage_revision_training.py",
+        "--run-root",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5",
+        "--launch"
+      ],
+      "resume_requires_user_request": true
+    }
+  ],
+  "completed_at": {
+    "utc": "2026-10-08T08:04:05+00:00",
+    "los_angeles": "2026-10-08T01:04:05-07:00"
+  }
+}

@@ -1,0 +1,1735 @@
+{
+  "source_authority": "46 newly trained zero-inclusive FP32 runs; approved plan and verified new run records only",
+  "training": "40 primary plus 6 mean-fusion runs; each completed 100 epochs; validation-selected checkpoint",
+  "generated_at_utc": "2026-10-08T08:12:00.698917+00:00",
+  "sources": [
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\training_plan.json",
+      "sha256": "3aa245f071e21025eb8f5d027b9b4e78d4888fbdd822fc79d849471fe1fe3a4c",
+      "bytes": 51257
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\queue_status.json",
+      "sha256": "c1d9fb054c145cbaddf872cafc0bc9011f4e584a960675e9cf2d7cbb5b4742f5",
+      "bytes": 184337
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\trn.pkl",
+      "sha256": "7332ca33587d4257c67adf7171e0d2c2a227d7134c8c97a156d7cb2c3ff414b6",
+      "bytes": 4069785926
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\val.pkl",
+      "sha256": "71a7c32af309a4965b2a6ffed8fdd738afd7c853d245de8aecf593cec572c1b4",
+      "bytes": 582156614
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\test.pkl",
+      "sha256": "818ea17f36b10e4fa5cb231ee90866fd6919c2d6771edf130638cac37dbfc651",
+      "bytes": 1162543430
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\position_info.pkl",
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "bytes": 32933
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control\\saved_model\\epo100.tar",
+      "sha256": "5ecfec7bca285d3f0d85224ccd157080fd5ab11e79afdded152e40fadbb6026c",
+      "bytes": 602359
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control\\model_param.json",
+      "sha256": "40a5fbf9eda2e28cdb7419c12c64c66eb279075379d7f5d9e8d550bcaad18a4a",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control\\summary.json",
+      "sha256": "de02774b6be17c3212ba32df082b6a1ec2f46a96487a8a89be7c6421993848f6",
+      "bytes": 2855
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control\\training_history.json",
+      "sha256": "570fdc14ef7a54a28f440d3d9a72f613010ac2e5c40dc6683a9a8d1f7da98d85",
+      "bytes": 20389
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\control\\run_manifest.json",
+      "sha256": "e364d74befc93fe57f9d124529c3410b7ae4b94b77e30c928c0f4e61c320b4d4",
+      "bytes": 5401
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf\\saved_model\\epo92.tar",
+      "sha256": "83b00ac7593fbfd6c7b6703144d0e3218189e31d72fb2e082d45ccd712f51b59",
+      "bytes": 1110327
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf\\model_param.json",
+      "sha256": "976af19f14f7c35b50936575dead6332bbe24d7b0853f6b89964fc490372e31d",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf\\summary.json",
+      "sha256": "f470242934e0ae32fd897cb216366b721f174eedbd1ab089e5769d9d5b7b3b84",
+      "bytes": 2843
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf\\training_history.json",
+      "sha256": "be9fa4967b22fc222d69453bc2eeb2c67dcb202093ea2339b13595554b7edfa6",
+      "bytes": 20391
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\cloud_cover\\agf\\run_manifest.json",
+      "sha256": "b26f5ad10421579a5740c23fa0c2735b6aeadeda551119ab1b435221f1b9556c",
+      "bytes": 5384
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control\\saved_model\\epo99.tar",
+      "sha256": "808e8bd1185b41137148dfd538159aa3c74ef4bf87a39be2ae501e69506cfe88",
+      "bytes": 602295
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control\\model_param.json",
+      "sha256": "5cf6f16cc01c892ea95d80cdaea90612083e931f6de042aaf6366bfc950f2b00",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control\\summary.json",
+      "sha256": "f443d4bb449d0eb3e58251158e3e0fa9b94c945a6603c70ab2eb69e68621650f",
+      "bytes": 2844
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control\\training_history.json",
+      "sha256": "5404d41f8ac7fc5ba2a0a80e931014603f191e8e66e1498e9ab83c32205d50be",
+      "bytes": 20409
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\control\\run_manifest.json",
+      "sha256": "42e7acd1a1925fa6eb75c7f28caeddca85f7c617343aa025b246ecd955cf38f4",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf\\saved_model\\epo99.tar",
+      "sha256": "eb3ac2ac0472afa97163b251e596247fde9f65b06911495c253002f9532e8551",
+      "bytes": 1110903
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf\\model_param.json",
+      "sha256": "59c921889a748232177c33e9547d3e811fcadf07d7d396d596eb115f0afa61d9",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf\\summary.json",
+      "sha256": "423c1a199979b0ad9e590689460cbc6c3bd1e38d635dcd6b9bfb08c041c2999b",
+      "bytes": 2839
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf\\training_history.json",
+      "sha256": "1b75be17b6e3875f7a381d11996481bb741093295fce652d11695f0d5281b1af",
+      "bytes": 20405
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\cloud_cover\\agf\\run_manifest.json",
+      "sha256": "a350c88414cbac2a38307bb5828cf8a57a6e6918cd156012ced5695ec7e468d4",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control\\saved_model\\epo91.tar",
+      "sha256": "735df6d3362757b48b72447d4ee38d8298155c0f91ba8223a8192ea0b37ad89c",
+      "bytes": 601655
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control\\model_param.json",
+      "sha256": "8085e637caffe8857f1ddd0bb5351a6242e5c1da123762202d54b7d4d98aa5a4",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control\\summary.json",
+      "sha256": "ebfe4f2f557a9fe53ed8138ab48c6cdded4e99fcb08e7976f5ba15301d812884",
+      "bytes": 2856
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control\\training_history.json",
+      "sha256": "7d140527f65c4ff0249cf767af6a20a585d87912bd2a5585728523a3234a36b5",
+      "bytes": 20409
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\control\\run_manifest.json",
+      "sha256": "9765e31da996f3beeed479c5b4b8d66817633988d3965db78104b2761317609f",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf\\saved_model\\epo74.tar",
+      "sha256": "4aca7773fda2f2ceaa70bef8ef752401fbd7ec1fc4687e454c2ce4b7121df9a9",
+      "bytes": 1108919
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf\\model_param.json",
+      "sha256": "ed42335080a5e045e89d17963ea470472b6671bdf00f1cc9c97926bbca25d6da",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf\\summary.json",
+      "sha256": "d4a33c9b81707b62529ce0ee833a1c72081c63dfbaca1ddf4879bf1d7ef12617",
+      "bytes": 2846
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf\\training_history.json",
+      "sha256": "18e947895942a88ee9a453189ebc473175095a80f87f8fca348f074053b22b2e",
+      "bytes": 20423
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\cloud_cover\\agf\\run_manifest.json",
+      "sha256": "b2421a180f6f1e100b6d998e2317f0ab479672f1b0d0605d63d46c66dfd9275d",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control\\saved_model\\epo91.tar",
+      "sha256": "36785e671ac712ad2c284079323c013bbe323999ca36a6993ab5694b0f47fd01",
+      "bytes": 601655
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control\\model_param.json",
+      "sha256": "6caaedc5f8bca262966614209cd63d33d5af3b572af4567fc1c2d11cab7c5606",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control\\summary.json",
+      "sha256": "6ecfc72695eb853ab6f5194c1a35deca99c58281a3b9d4e6194269d56bf652b5",
+      "bytes": 2853
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control\\training_history.json",
+      "sha256": "0fd1b2745e7aae6f80021d2d5762222df8759a2b462bf81bf3a5199c22ea0a95",
+      "bytes": 20409
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\control\\run_manifest.json",
+      "sha256": "cb68771c3cb82232aacacb5053473e244e907f4c06841abde1aea6ef4f21423e",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf\\saved_model\\epo84.tar",
+      "sha256": "cbf9a235977a9b513e8cc4cd25d87365e21c13cf9fadd0f1ab9e0bb7481444e4",
+      "bytes": 1109751
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf\\model_param.json",
+      "sha256": "f7efc77dad17a1b1ad7ba504bafccc1258b77508a945acd927cbf6699a05daa0",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf\\summary.json",
+      "sha256": "feac3a1ae063b403660993cecf3ae20c3ed633e7a04fe82146598bfe3f182f09",
+      "bytes": 2840
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf\\training_history.json",
+      "sha256": "d99023fdb041d448f120f1620078aff6d13d7df364b8e067f1b571a6e2222de9",
+      "bytes": 20402
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\cloud_cover\\agf\\run_manifest.json",
+      "sha256": "2e768f4c5f657c9961625b5ee5ecd5e1a406e173a73054c74b5e9cdf3bf36563",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control\\saved_model\\epo88.tar",
+      "sha256": "36891fca0203f5779cc465be3647c06300407d234f31340c49dfe60ec2865731",
+      "bytes": 601399
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control\\model_param.json",
+      "sha256": "ccf77915986f6e9b1595e2e8fc857e3858f68443cdb8f81f8be1a1d3e10ce19d",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control\\summary.json",
+      "sha256": "b83597007363e779f1b7bf3acc85291ef115a479e782ebbc63589e2dbd0e8ead",
+      "bytes": 2847
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control\\training_history.json",
+      "sha256": "4b325bf2ace19eb62a4f4f438d5aab40d3f935fa73fd1040d3e9dd657e0658c0",
+      "bytes": 20419
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\control\\run_manifest.json",
+      "sha256": "d0fee7d720fddb7c3d2bed45a8eb184fe94c8a02a1c52d1b1b12eb5a1643e6c8",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf\\saved_model\\epo88.tar",
+      "sha256": "61e195d0f2f507a8c36e7c49c919ac754320b746a8611d64ee25ec2f4e104112",
+      "bytes": 1110007
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf\\model_param.json",
+      "sha256": "eb429d2aba8a23d1e22a821ea936bc43da06a6f9853b61094a7a68e756af93af",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf\\summary.json",
+      "sha256": "022c84937e243471d27401bf2d420b63a62bfc4b30655965ad53d2148f6eea9b",
+      "bytes": 2843
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf\\training_history.json",
+      "sha256": "9e71ba2801f4033c7ce563681b1eb4105991ea9385e2600f8ecd401f4f696ec9",
+      "bytes": 20386
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\cloud_cover\\agf\\run_manifest.json",
+      "sha256": "0d9810365efe44e6b0ed9705a7792130d4b64f82978b5746694cecf09db4ec39",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\trn.pkl",
+      "sha256": "4847468b65e6313839ef75886bf64f84f39a27bb37b7b9cf658ca1052f2760ef",
+      "bytes": 4069785926
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\val.pkl",
+      "sha256": "cff62e60ce938524b7a13a4af115995ea5dd20623f2f15fe707b7b257b877789",
+      "bytes": 582156614
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\test.pkl",
+      "sha256": "0c45f12580c50482287c012c26627540390de1ece06e367680756d8d13693aaf",
+      "bytes": 1162543430
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\position_info.pkl",
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "bytes": 32933
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control\\saved_model\\epo90.tar",
+      "sha256": "2ad448fbcb1f027b109767cddb0b50c6bc212158b4db26d0f985406e0ad10381",
+      "bytes": 601527
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control\\model_param.json",
+      "sha256": "6baa81efec19593f5636bf6ad98dffe793907d10c6b6d68a6623158f0a7b3080",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control\\summary.json",
+      "sha256": "98aa4810b138008ce3f2456a67dfcd656ad7a7365275ec8332d868af8a5942c6",
+      "bytes": 2810
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control\\training_history.json",
+      "sha256": "723ce5a7b827bb7d618c9d81f8dc6306253a185a44c6519d4a0aa8a4f07b95c0",
+      "bytes": 20197
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\control\\run_manifest.json",
+      "sha256": "117f134eb42acd24915f7992251d806fd8646042c2eaf92208c3c77f2a551e28",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf\\saved_model\\epo67.tar",
+      "sha256": "b74783874d5e2bba9d0b7014d1903e40e21f05493188a0950708047f9aaa58a9",
+      "bytes": 1108279
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf\\model_param.json",
+      "sha256": "7123d430b6d81bd57ddf847dc9e58434306403e56e49b3eb0fce8dca31dd757d",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf\\summary.json",
+      "sha256": "94912ec1473fd53942a7d775633aa7141f4120e7d964d4704798ff7b443b024b",
+      "bytes": 2794
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf\\training_history.json",
+      "sha256": "afcff4a20f375541c04f8ca2946d1362bf7de282efbfc641abbe850ebecbc460",
+      "bytes": 20192
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\temperature\\agf\\run_manifest.json",
+      "sha256": "4ed612d50c7b075002943715ed958685ce75a6e45ae4fff01bedd34516b9008d",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control\\saved_model\\epo80.tar",
+      "sha256": "ccac018c4b93607190755ff9634b54950aaa20ad2537f198392b8d7dcad21247",
+      "bytes": 600759
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control\\model_param.json",
+      "sha256": "8817cca767154bf74f9b0a10ffbdf461c846dc9d27f91e01b91f0fad381107be",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control\\summary.json",
+      "sha256": "406abe024ec6c5a41206bf23cf24cb7bfb5aef038a12fc52c3fc51d816464195",
+      "bytes": 2809
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control\\training_history.json",
+      "sha256": "90e6b4047380fc9cc3fdc561cf296fc14083668c4350229ed034a4152ff73f8c",
+      "bytes": 20180
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\control\\run_manifest.json",
+      "sha256": "e1fd4a74c9d0549e64288a34c153e82deb249adef7ffb89c9153c791aa781a43",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf\\saved_model\\epo100.tar",
+      "sha256": "d9483ef4a5d5ad0f3cfd5e1841bfe36fbc65d6f19ddde32b78a0182f66a45e6e",
+      "bytes": 1110967
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf\\model_param.json",
+      "sha256": "1d2d25501c51bf0ae612e477643a172ee17b1d41c0d22714e106e16dc88786ae",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf\\summary.json",
+      "sha256": "db897d87fa8216aebd6a9cf949f2dffad66ba876bcedadba8ec03321e50a17ba",
+      "bytes": 2797
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf\\training_history.json",
+      "sha256": "962d8f130e7e347f717b997f39d57c189c12d6e30e7bc004c0f9feb9e560a9ee",
+      "bytes": 20189
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\temperature\\agf\\run_manifest.json",
+      "sha256": "ce8804181670f0fba7777616e12b731f1c82cc4a6c037ea7473d6c33905644a0",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control\\saved_model\\epo92.tar",
+      "sha256": "c28dc357de284db02aee283955582b87a5668bfd37db639739629a1acce1d153",
+      "bytes": 601719
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control\\model_param.json",
+      "sha256": "d8eef1447ba1ac776ca2007d4f9a89382eae9633e8c20c4f96b53f66c903b1eb",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control\\summary.json",
+      "sha256": "b5bbdf0b3e1bb419deca5fdaf0a9db8196aa0d9644054cbf14db92e5b3fa27c4",
+      "bytes": 2804
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control\\training_history.json",
+      "sha256": "137da29c2dcbd15b9abc6aef79f01b89f00d193838aa3ad9b63cdb73ca4a2478",
+      "bytes": 20197
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\control\\run_manifest.json",
+      "sha256": "962cc160aed0fcffeb991973272c0c624b9638e9191d75e081f552691557cd9e",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf\\saved_model\\epo87.tar",
+      "sha256": "ee66072380c8824de448b525421aaf50d22d1ccb86044590dc43430cc0418c9d",
+      "bytes": 1109943
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf\\model_param.json",
+      "sha256": "a1433133bd6e03896d36e8ca4e45aee0b90efc1712659d71ddc1180263c1810d",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf\\summary.json",
+      "sha256": "8c07bb53e5e005e88081096f9c97c4ad6a8949315d5394edd6639c85a3134e2a",
+      "bytes": 2797
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf\\training_history.json",
+      "sha256": "6429c06478ea5f531553b439178401e6ccff2e7ee08a85c48a72bf609a849a73",
+      "bytes": 20212
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\agf\\run_manifest.json",
+      "sha256": "0137558711e66d4bf6756fc8d0fe954a804bd768528ee0828e282655bf0fd404",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control\\saved_model\\epo66.tar",
+      "sha256": "302e7345507d629ac12e45bd2917aab8244c6f4d8791d40242d0294a63b50f70",
+      "bytes": 599671
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control\\model_param.json",
+      "sha256": "c30bc2022c9a4f59f314ef8ba5310a5105a9b06944f4425b59445966cdb9bf45",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control\\summary.json",
+      "sha256": "dd50831608722938beee4e91576f53cffe4b3b3fa479e5767820a35292dd6c06",
+      "bytes": 2808
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control\\training_history.json",
+      "sha256": "60c7d2d44cc0ca4271cfbdd519ace174fece91442889608e018024dcc248356b",
+      "bytes": 20197
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\control\\run_manifest.json",
+      "sha256": "de66e83a278e9ef5eaa9b93809641e4833339b2d22e4fadc443bb316cbd53ff0",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf\\saved_model\\epo78.tar",
+      "sha256": "89520814367d5bb69a3dd5f342542e67fc27b023e9988cf8f9665ad12adca2b6",
+      "bytes": 1109239
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf\\model_param.json",
+      "sha256": "0b3bdc60e95970a9e58663bf37ee8558b79b0ec002ce7402ed78c4ee24cd63a7",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf\\summary.json",
+      "sha256": "1d0c22224775d20ac3e5cac913d95b83c568a0daff24cd2645068aaa4595e0e1",
+      "bytes": 2801
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf\\training_history.json",
+      "sha256": "6b2e02fad2596dcab3146efa21b1bc761e257b340bebadf983afad39143bd3c2",
+      "bytes": 20203
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\agf\\run_manifest.json",
+      "sha256": "a506e6053084bd2d3b17324f279890e9df3791c1989b5510dd9456cfaf6d7196",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control\\saved_model\\epo92.tar",
+      "sha256": "a7b084631e1565994b2504641d85db2d4c8c8fc9cafa55d172df079b6acef489",
+      "bytes": 601719
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control\\model_param.json",
+      "sha256": "d85c5e9cfe0f288a383ff2ce3cf4965a47f3195992ad684858739727ec711a6a",
+      "bytes": 1490
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control\\summary.json",
+      "sha256": "5889400bd83bea87e4bdaddfe5b3e9eebb3939b30dd157db71910deb2565754e",
+      "bytes": 2805
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control\\training_history.json",
+      "sha256": "7262591b2bc4b0b559ae54ec321aba0014e98e8186d7dde13b15112fdb8eac34",
+      "bytes": 20191
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\control\\run_manifest.json",
+      "sha256": "c4d44464ae0774836947605551622c3d58ad226a90ab600466bd798d06e0e1c7",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf\\saved_model\\epo90.tar",
+      "sha256": "f0bfdfa2ff7a776752e2c24bfc30be5c8c4cfae78f2b3238bd856b0f8c4ccfb0",
+      "bytes": 1110135
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf\\model_param.json",
+      "sha256": "d056b75b95d99f608afa6f52055c08bdc275eb1510097477e841457a6c400384",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf\\summary.json",
+      "sha256": "b8107878c31cff976e82ffdeebb5a608dfd219698c3fcbc9eb17b0fe5694094f",
+      "bytes": 2791
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf\\training_history.json",
+      "sha256": "d7b1553dc750fc80ae3aa890cb72bb3c38cdd74618c7c957ce74c77ddd970b65",
+      "bytes": 20186
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\agf\\run_manifest.json",
+      "sha256": "e03bdc7a1a995f04e413edd5d0da4e49f8409227b6d328a675ce67d38bc22688",
+      "bytes": 5347
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion\\saved_model\\epo89.tar",
+      "sha256": "cc89e85662358a7c8df7f974c24089a5a723286c419a61c1a95382fe097397b5",
+      "bytes": 1106183
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion\\model_param.json",
+      "sha256": "e7f7cedf69fb5900ae283e60bb76be31665607caa882543239722c050a2cd285",
+      "bytes": 1492
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion\\summary.json",
+      "sha256": "f21824c4b221b9c70592a8c88717f491ce933f9400de99f99f64aa393f3d7197",
+      "bytes": 2820
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion\\training_history.json",
+      "sha256": "daeb5fc82a739961985890cdc6c42d911c0ae23448cbb419d05e53722f817e3f",
+      "bytes": 20198
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\temperature\\mean_fusion\\run_manifest.json",
+      "sha256": "cb1c4ce233e2e61f414af315f5a77373276d22d108ad4dcbe6cec992ce48e767",
+      "bytes": 5378
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion\\saved_model\\epo52.tar",
+      "sha256": "bd83f9dd231af9c9eebb1b9b63c5528ab779905945f626918fc7d7f212540d1d",
+      "bytes": 1103239
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion\\model_param.json",
+      "sha256": "e09cb32b4df76bf4411e58fcea220beba6edb5bbd571e33e4981e8252e04ed7f",
+      "bytes": 1492
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion\\summary.json",
+      "sha256": "3e0e0dec3271b8b50c36edb1db67d25292bf9e9d7c154e2771872ecfe1a3e7d5",
+      "bytes": 2820
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion\\training_history.json",
+      "sha256": "7084a09625dbe8d24f31303d27bfe955e1988d7240a25ae6503b39e0484a4e2a",
+      "bytes": 20208
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\temperature\\mean_fusion\\run_manifest.json",
+      "sha256": "0df4124cf8250885ac3fd1986546580c47eebe4bbb018652bd9ffc0f7826c528",
+      "bytes": 5378
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion\\saved_model\\epo98.tar",
+      "sha256": "9519fc33ec22ce40bfa9eb9932d0c77fe68d1990e7aae292b33333ce90848050",
+      "bytes": 1106823
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion\\model_param.json",
+      "sha256": "3345949818e402ff67eaee6b19a000ccde9ef58def27dae9c238f805c0f6f1b6",
+      "bytes": 1492
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion\\summary.json",
+      "sha256": "ca56ae97d70115ee28ddeccdc0a651719d7ebc5b2c00a0ba47d1013aedceb84f",
+      "bytes": 2826
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion\\training_history.json",
+      "sha256": "f436f4c2c5e6b99c97ffd18ba0830667dcb7ea7383e19fd50acd944f0eed7029",
+      "bytes": 20204
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\temperature\\mean_fusion\\run_manifest.json",
+      "sha256": "31a2bf3dd372d2abbd7c0b3e0888c2f877236610b0be448294e9c1b2ca0713bf",
+      "bytes": 5378
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\trn.pkl",
+      "sha256": "74823c934898a259a478c416ce289b3e48eb077463870e3abdb5cdfc1ac95cd2",
+      "bytes": 4069785926
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\val.pkl",
+      "sha256": "98bf54405d954a3acaecfabcf64aa4ee93008e7282e2f6ea86d05b9463689061",
+      "bytes": 582156614
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\test.pkl",
+      "sha256": "ecb2a145b69aa3e6e8124b2788b4f93165a9a2f11ccf5d6ca07fea5d77f8cf5c",
+      "bytes": 1162543430
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\position_info.pkl",
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "bytes": 32933
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control\\saved_model\\epo100.tar",
+      "sha256": "504aac6ff00974ceea1dd951f576995d8316b0ddf929262e4e717f15c5ea8c63",
+      "bytes": 602295
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control\\model_param.json",
+      "sha256": "97508835c0c30d03419b20eda69b2a7152695175d59279c02b09f9024fe49d93",
+      "bytes": 1481
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control\\summary.json",
+      "sha256": "e4d80ad6d1e42f8de41de7208fd925b7a210df282486e2775675edc03819a6cc",
+      "bytes": 2767
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control\\training_history.json",
+      "sha256": "3f332091cbf12e104953f9394c5374cefdbf07ed50c3c535d39556683086186b",
+      "bytes": 20086
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\control\\run_manifest.json",
+      "sha256": "7fbc2d4a01e5fba827856d8fee05bb2c3eb91598bc6ea7be520e06a525c73e6b",
+      "bytes": 5346
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf\\saved_model\\epo97.tar",
+      "sha256": "3ee8e0868466d65047bce2524743c278e44df38d73eef43aefdc394092afe25e",
+      "bytes": 1110711
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf\\model_param.json",
+      "sha256": "325eb6a469b9fb6439b19236461d1f3a7d7aa2b8b7b34dbf8238dca93b2dddde",
+      "bytes": 1476
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf\\summary.json",
+      "sha256": "7e2966a9ef2a88245374d3cd0c50ffbc68125e13d415357df2af3a3b57dbc168",
+      "bytes": 2756
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf\\training_history.json",
+      "sha256": "80a8fe0b86daa3510945b69c7687ac859ddf3e7f8e9e9c906823521684364557",
+      "bytes": 20105
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\humidity\\agf\\run_manifest.json",
+      "sha256": "40413ca8ec73c8a85dee32efcf29b64a25480fbc1da1ea22bced6229c1119ec5",
+      "bytes": 5329
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control\\saved_model\\epo89.tar",
+      "sha256": "ed09d909f53d2f8c3e4f6a0300d8e9e14eac2d5f63e65aea9f27c828c3c13ad9",
+      "bytes": 601463
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control\\model_param.json",
+      "sha256": "709a4ac4287dd6c1f3c99b4659473462de29320719dfb87c027ea8e0c6687af4",
+      "bytes": 1481
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control\\summary.json",
+      "sha256": "a4105d187649d314bb429a9553099ee2678c3a95746a65d464987298677bda2d",
+      "bytes": 2763
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control\\training_history.json",
+      "sha256": "04bf43296554eb088200a663d69e04f9ac6d3139b19404429a30cafa119e489a",
+      "bytes": 20109
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\control\\run_manifest.json",
+      "sha256": "0275991382ed852cb5d997296f066ddfcb18ae177afeb39a366359f9fbb08612",
+      "bytes": 5346
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf\\saved_model\\epo85.tar",
+      "sha256": "19513eb36fa660953e6e90e3c778b229d33175fb045e51fae1fd21d72404f61d",
+      "bytes": 1109751
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf\\model_param.json",
+      "sha256": "1638c34165be1c6cd30dcf390e8f7edbd447d6f6ae3f27ed01f8f67e5940346e",
+      "bytes": 1476
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf\\summary.json",
+      "sha256": "ce1d25a504bedbf1f35a9f8da5a260213419dfc49a96ab74470c2ed1208c2198",
+      "bytes": 2760
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf\\training_history.json",
+      "sha256": "b61d32b5f921178cdd6c947c3aab058d3654e3dc286747e21365e1461395b0cb",
+      "bytes": 20123
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity\\agf\\run_manifest.json",
+      "sha256": "13e35bd95da013888d8b166901be5c449eeae04e8f40ba0d88bc36ac5c506843",
+      "bytes": 5329
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control\\saved_model\\epo82.tar",
+      "sha256": "f62968d195b8c987c5dacb205368cc18e3df3bb560e1b871c215b21e41de60a3",
+      "bytes": 600951
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control\\model_param.json",
+      "sha256": "1a4254e35c7c07f4343f552e070b687c62393d54c7bc6927c244f46663c23160",
+      "bytes": 1481
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control\\summary.json",
+      "sha256": "ec34a1f10457d2eeca50bf28066fcd869f47825c1e5ce6ec98f4f70d7c25db77",
+      "bytes": 2765
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control\\training_history.json",
+      "sha256": "a03c8f1f51aba541007cf6a0dcfe2fb40be8548060a1550faffdf9d15e926765",
+      "bytes": 20085
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\control\\run_manifest.json",
+      "sha256": "c6c976d6925a551f8521cfd3084067038e538e61c5b271ab36627a3933a52d6f",
+      "bytes": 5346
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf\\saved_model\\epo78.tar",
+      "sha256": "6a93eb6500932e7006c80684255958590154752065fad7bbbe6d41df79d9a15d",
+      "bytes": 1109239
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf\\model_param.json",
+      "sha256": "b35405a3969e3122f48594c97e401d8be7876486bd2250345a255286333591d8",
+      "bytes": 1476
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf\\summary.json",
+      "sha256": "85be65b2fe7ab2e1a29f5d7cb01f4ed1533f4830af6211e575a3a57846c4b233",
+      "bytes": 2753
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf\\training_history.json",
+      "sha256": "afc053c45a0e77e675ca185a77461486c8dd673ce6e8d187e2060384e6526ae1",
+      "bytes": 20095
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\agf\\run_manifest.json",
+      "sha256": "b14e18549e4cf48600e8a336f00e8543012d017792e6a050cd119d1d89b8f8fe",
+      "bytes": 5329
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control\\saved_model\\epo85.tar",
+      "sha256": "9253a3a89329c84184ef53ab93ea17662840363f6c22a37a894838b1731c32bf",
+      "bytes": 601143
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control\\model_param.json",
+      "sha256": "723a7f3aa702d8588e26c250ae00e8966e5529e177d613e7857aadcbdaa8ff90",
+      "bytes": 1481
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control\\summary.json",
+      "sha256": "5a0c4f5f472b5103cff43566796e8c5272f57f65ec4173e80ace605c8ac940c6",
+      "bytes": 2769
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control\\training_history.json",
+      "sha256": "deae1310d71d2073402383dbd11240d4771f9fcf42d738c28f9b3773545d53dd",
+      "bytes": 20086
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\control\\run_manifest.json",
+      "sha256": "c5fefde2cff600a174b3ee2e77700273d4fa569f47e57ec894691882d42a771d",
+      "bytes": 5346
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf\\saved_model\\epo87.tar",
+      "sha256": "cd5e444c13c75591f89f09b63461dc2fff1024fe184fd3265fd0d8e8c76b42d0",
+      "bytes": 1109943
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf\\model_param.json",
+      "sha256": "b6dc134a4a566131d242e035a12905a1c403523489c312c8a3c4ff354c714c08",
+      "bytes": 1476
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf\\summary.json",
+      "sha256": "1bf9bf906eaef0c169d2787d0efadf7d0cf264553a9b466bb3b5fff1ff8d0e25",
+      "bytes": 2755
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf\\training_history.json",
+      "sha256": "b268536f05b10a1588294f1b711b47728b6758a6ca948d2fb868dd78c1ce6a79",
+      "bytes": 20099
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\agf\\run_manifest.json",
+      "sha256": "301ff63c3b743566f9282b62360e75a1790f7542635f5f6e4612272be2a3fffd",
+      "bytes": 5329
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control\\saved_model\\epo66.tar",
+      "sha256": "eb6637dd3fdd8e8eeee352e39b4e558703513553a3cd62721cdffc4d2bee645a",
+      "bytes": 599607
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control\\model_param.json",
+      "sha256": "ea4d1a756cdafd81ecc3acf462fc360843df28598d0305325b33fb62c84c0c05",
+      "bytes": 1481
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control\\summary.json",
+      "sha256": "72a77d0435a2d4b28a86f6359f7b18f5d1b17a0c60e98aa1672c828dd4448913",
+      "bytes": 2763
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control\\training_history.json",
+      "sha256": "5355f8adf1fd4b4f98259b2cdda0a9fb1c9588bc2254ad7574ac1c13946f441f",
+      "bytes": 20092
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\control\\run_manifest.json",
+      "sha256": "ea9e97d653888660c575c9d884b7e2d8ae4afe1f1179aa74cc5bd7b9a7862a77",
+      "bytes": 5346
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf\\saved_model\\epo94.tar",
+      "sha256": "9cc43a815db221ea5037a3ea3ebb3f62421850905768ba66085a3ef658d1eb61",
+      "bytes": 1110455
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf\\model_param.json",
+      "sha256": "97260efd56da0f1c93572ad6d0aeab7892b8b3674d69c7573de78c58c6b7e329",
+      "bytes": 1476
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf\\summary.json",
+      "sha256": "4b627abad3405f55e56ee8f7c529d9da98a929ee6e65c715148396afef00bb4c",
+      "bytes": 2764
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf\\training_history.json",
+      "sha256": "7bf9fcbbee6de8130935ca57186b242547458c6b41ab40f2d227836fb6edc022",
+      "bytes": 20088
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\agf\\run_manifest.json",
+      "sha256": "50fe9943b7b876039582b38a67844ead8f58bbd763170b094b7969703c94e75d",
+      "bytes": 5329
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion\\saved_model\\epo84.tar",
+      "sha256": "3cd1fa2476f8f7a42d60a69a2d3c62a5662b41037051250f2e62c14011185a3e",
+      "bytes": 1105799
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion\\model_param.json",
+      "sha256": "db234270cdc5cff3de1af5246c50d8a11c9708dba840f1d5a6ebc59bd8a3a3fa",
+      "bytes": 1483
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion\\summary.json",
+      "sha256": "9fd597312f123efb24932a3c20b28944f769b02165a647449f433ab902491a8e",
+      "bytes": 2783
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion\\training_history.json",
+      "sha256": "1fafeba6f0d8b812512effe23fa62741edba64e4079a5634e2d825480efd73d3",
+      "bytes": 20098
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\humidity\\mean_fusion\\run_manifest.json",
+      "sha256": "7315b906c362a50a9df2a2a641f50983754bee42cb2fdac4a6222eeee146b23c",
+      "bytes": 5360
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion\\saved_model\\epo93.tar",
+      "sha256": "7e0576796b69f16f2cdaaa1d24ca1086348bdb2846ec1726b7f6836646c99683",
+      "bytes": 1106503
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion\\model_param.json",
+      "sha256": "9ad0a4d08aaaec8c2c49cbf052d6f1fef3a93dda1bd15fdd56a0028c9bd82735",
+      "bytes": 1483
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion\\summary.json",
+      "sha256": "2a45f72b679715ae2767c3bc70dc1d2bda0ba14916571490a376095d8f3ee978",
+      "bytes": 2774
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion\\training_history.json",
+      "sha256": "f968ed335e7397600d0c43ad9fb17146723c3ddd0cbc5b0344d325d56d351b4f",
+      "bytes": 20104
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\humidity\\mean_fusion\\run_manifest.json",
+      "sha256": "c347fc0e6a54eb2621f9f5059a77c515e3a48cebb23feb7e5ddc4b529bad20e9",
+      "bytes": 5360
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion\\saved_model\\epo84.tar",
+      "sha256": "b7c73070ce36d7b83cb6bb8db9445387238414d73e9c5c5f27146e1f576ced84",
+      "bytes": 1105671
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion\\model_param.json",
+      "sha256": "47ebe06d79bef8f13470e4a18ffe79b1c5aa826e6b0e848fc2b99ebab0214ef4",
+      "bytes": 1483
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion\\summary.json",
+      "sha256": "7e8f46207007dda423e835042001ac57e9d9b599c4583f62220becf72bf57ef0",
+      "bytes": 2778
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion\\training_history.json",
+      "sha256": "990ec535af2d29e5ff630fb5347dddddeb5ce923ba27421740bd66dc5e652c40",
+      "bytes": 20085
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\humidity\\mean_fusion\\run_manifest.json",
+      "sha256": "0f4d9aedb50c4e14b822cafc67efa0939725a0126a47f2a6fc08d740ef519d80",
+      "bytes": 5360
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\trn.pkl",
+      "sha256": "16163e192a42aab4e7e5d01c09a54df28931f6caeb375e784913e3542efef6ac",
+      "bytes": 4521984326
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\val.pkl",
+      "sha256": "cf446b28c1d224c061ebfa99bc015a91be13f9de5a077f6464a53cb0876864ee",
+      "bytes": 646840646
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\test.pkl",
+      "sha256": "3d32c9829777603ea1c5aa8ee8969b85239b1f1ab9878ef0f7183e1558b18cb5",
+      "bytes": 1291714886
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\position_info.pkl",
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "bytes": 32933
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control\\saved_model\\epo78.tar",
+      "sha256": "dcccbc9422938624b343f72d825a0ca080ded2b2aea32f790ed2a1704a67b5d1",
+      "bytes": 602615
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control\\model_param.json",
+      "sha256": "e63381f79b5c7f05765c7424690b8482ac2d649f6d7c6d5d71e4ca48ab1dde17",
+      "bytes": 1508
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control\\summary.json",
+      "sha256": "f33cc11beadfbabc7d9a40cdda85d6e97f0c0f5e8fcf9ea8b8dcb840dd95de5d",
+      "bytes": 2823
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control\\training_history.json",
+      "sha256": "ef679528992ff404d353c9d1975c3b0aa9700a4310a1302eba2bdbf1b5ab77a9",
+      "bytes": 20234
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\control\\run_manifest.json",
+      "sha256": "2765b6117c2532a3ae87acb4c79f1390524c0ba884c052bcc4954fbdbfac663e",
+      "bytes": 5400
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf\\saved_model\\epo86.tar",
+      "sha256": "a3950948446f286d997021bd29a51ff5b01eb7943289fc96fbaf76364ecc6b7c",
+      "bytes": 1111927
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf\\model_param.json",
+      "sha256": "d43910f8183f3819f832f99583ee18fd0a2c9a4026b97bc54ddceed99db01f18",
+      "bytes": 1503
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf\\summary.json",
+      "sha256": "ca40d7817d4d744a9ad264b99faae1e6f35e7207b303957ef0fa165c3e349311",
+      "bytes": 2815
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf\\training_history.json",
+      "sha256": "b9b1ab864a894fdb94ffddbee7c1a23ca6bc2760de318fb2e035f262ab2d6d4d",
+      "bytes": 20223
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2021\\component_of_wind\\agf\\run_manifest.json",
+      "sha256": "efac0ff94e653d6395a8cc91d2ffc1b88b957b7c049abee7fe6946f949cb86d6",
+      "bytes": 5383
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control\\saved_model\\epo93.tar",
+      "sha256": "f5122778fae78fc1252d0de1d34d292b78165c7efd9e1c532b9a063f47a32b58",
+      "bytes": 603895
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control\\model_param.json",
+      "sha256": "3ded4c9ff4e3350557fb61cd10fe18b10fb88b4661bdff1ac40417857a0a145e",
+      "bytes": 1508
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control\\summary.json",
+      "sha256": "b183ca02dbf808446f7bf4615602d20aa40a891035c0d29b5a8d70a9c073232d",
+      "bytes": 2824
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control\\training_history.json",
+      "sha256": "deb9524f436e15d5a0cd1e9970e0acaa9e69244f4cd508d74fb44b2e0ca21b34",
+      "bytes": 20218
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\control\\run_manifest.json",
+      "sha256": "822641aeaba1807960c4ae553e0fa6a32437be40a87eb687a6ec487f7678196d",
+      "bytes": 5400
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf\\saved_model\\epo82.tar",
+      "sha256": "e01801a4adfac5ad2d30815fedfc552800c46a525d75d4bd41661ebac0e703e3",
+      "bytes": 1111543
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf\\model_param.json",
+      "sha256": "d76f437ceeaff8505afcd9f22849f4a09fdc005164b6a4f4bdbc86e9fbbd5df5",
+      "bytes": 1503
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf\\summary.json",
+      "sha256": "b9590f1d367b771e385bd4793eb0a7c97b3d78a7dd8aa87570cb771a0dfb4791",
+      "bytes": 2815
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf\\training_history.json",
+      "sha256": "9b44b9f97e6e2019986f3e5e5a5142e17bcdc45ab3d73ef07f04e301827a69e7",
+      "bytes": 20233
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\component_of_wind\\agf\\run_manifest.json",
+      "sha256": "19ec6643d112d33ac95d33cc84481ec84eedf0226a328c72ae57ae0a44212426",
+      "bytes": 5383
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control\\saved_model\\epo98.tar",
+      "sha256": "f7fe065d3287dd0b1ecd6f5597fc21759c07ea56fc570c33c24a6d954687b866",
+      "bytes": 604215
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control\\model_param.json",
+      "sha256": "017665716c7fe3ee643fe34808143d28cb8c0cbb20dadf7cfb1cf00e2088e1e3",
+      "bytes": 1508
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control\\summary.json",
+      "sha256": "6f33346808f02665dd7b72a51355a6f9fe35868aa187c8d76087299be674d247",
+      "bytes": 2827
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control\\training_history.json",
+      "sha256": "b20e596f9457ff064cae0dbff012845cecfb8709c6a19372f8e98a9303d6f320",
+      "bytes": 20245
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\control\\run_manifest.json",
+      "sha256": "8286345aaa5badb417c2165d469f1b8683bac42533a6508adb702585cf06b5c6",
+      "bytes": 5400
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf\\saved_model\\epo98.tar",
+      "sha256": "9f0cdf074ffe481f2e14fbdea128b5987c4d110b265da52a4b5a5c2204391575",
+      "bytes": 1112887
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf\\model_param.json",
+      "sha256": "399164538fe3544a3316ed96789654e915930444ca2751ab6231455c82ab33a3",
+      "bytes": 1503
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf\\summary.json",
+      "sha256": "3f4f6ecfe8c9f735ebd1f4832461f035f6d1f9f32f212ed73025022f13a35f8a",
+      "bytes": 2810
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf\\training_history.json",
+      "sha256": "a07ce02aadac157639e5c071e030d422bea3ccc41d2fe299561a807a3c4880d8",
+      "bytes": 20211
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2023\\component_of_wind\\agf\\run_manifest.json",
+      "sha256": "cd4d3b41ab2bfaf4228fd87d1a42890236768b62e3fdfd3c533637bcb76c673f",
+      "bytes": 5383
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control\\saved_model\\epo84.tar",
+      "sha256": "dc1c1fe467b49675d753869379f6b2fe7f13cb338ad252ab4251fdd72017b5ef",
+      "bytes": 603191
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control\\model_param.json",
+      "sha256": "8448166a54c8d1bbd826de60cbfb47700d3b81eb0371ad906f146c81bf21003d",
+      "bytes": 1508
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control\\summary.json",
+      "sha256": "d520ca88d6660af4a7b05f60c2064d7e06169cd7ca8653bcbb4c7b07aeba2a05",
+      "bytes": 2832
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control\\training_history.json",
+      "sha256": "00686a465934033c1b7c6225fdef559f75f619e0da313654f6fe73e0f85e0137",
+      "bytes": 20206
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\control\\run_manifest.json",
+      "sha256": "4c591ab6332aa57c677dd57f8448147ad325260fc46b26a9c9cf62fc7b782119",
+      "bytes": 5400
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf\\saved_model\\epo84.tar",
+      "sha256": "4c0e2051afbc84b81ba40fe39ba653391367f4080f1b958625f6e93476fba0e5",
+      "bytes": 1111799
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf\\model_param.json",
+      "sha256": "142e792d2c8ec4cbd314224a78dd08757ff88f11e412ff653e7139bb21b7e0fb",
+      "bytes": 1503
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf\\summary.json",
+      "sha256": "1d92fd3c4fce05a0cb92ae242807bb071483dcbfb625f17be545bc50327b2e92",
+      "bytes": 2817
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf\\training_history.json",
+      "sha256": "17642e4ef7f5e6e64e68ba45511dd09efc7e0755f1ea01d1436d348484084ef9",
+      "bytes": 20226
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2024\\component_of_wind\\agf\\run_manifest.json",
+      "sha256": "8440acbf6140143c8b61b35fc6f84929d6e7d8d2858bf17d6335a54e64fe03f3",
+      "bytes": 5383
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control\\saved_model\\epo89.tar",
+      "sha256": "f287c425f233a84830922f895cfdfbd2bde2bf4ae1cdeadf74d5847d7cb31005",
+      "bytes": 603511
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control\\model_param.json",
+      "sha256": "428703301b9d656ad27768230a34c66ecd97562aff4bcbb886329bc53de4e6a2",
+      "bytes": 1508
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control\\summary.json",
+      "sha256": "0e19b7b28fe451bcb4d52ec0922df9fa399f6b8e2972044bf20651ff9472100b",
+      "bytes": 2821
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control\\training_history.json",
+      "sha256": "79edffb7ac9debc3b459b7cf61d05e9e7326ea6e06b65f4de01193eed601bdd9",
+      "bytes": 20236
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\control\\run_manifest.json",
+      "sha256": "cb91617f3b6fc92b0db7bd029f24772c1d0518cc387ab44ea00665568b60643d",
+      "bytes": 5400
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf\\saved_model\\epo94.tar",
+      "sha256": "c4f8964c7c45efc183bf65bd10705f5fa59b27fee768efa7aaabfe03d7a68cb3",
+      "bytes": 1112567
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf\\model_param.json",
+      "sha256": "c85fffa80f38dc86a0d3c1ea18a9470d48fde6bda2bd7b1ae06697a3c1d3a6ba",
+      "bytes": 1503
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf\\summary.json",
+      "sha256": "73dff1dc5c0a5c02634c20a2c2f6e67fd4302101ab022a944663eb394b7ea7bb",
+      "bytes": 2813
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf\\training_history.json",
+      "sha256": "303e50f15fec2b6694ecb8db6ace8dad04af0065c0d6a3ce3fd72eb61d3ac2b8",
+      "bytes": 20232
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2025\\component_of_wind\\agf\\run_manifest.json",
+      "sha256": "7a95d743e9a95f31f1fa2a2f3503686c7d1a47fcabf6ea7eb1a8570b87817ecd",
+      "bytes": 5383
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\supervisor.py",
+      "sha256": "670535471521b0b4196dba4ac05029d12301adf4e59ea0f85fad17354502877f",
+      "bytes": 17418
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\run_revision.py",
+      "sha256": "7e711903002ecbb68ccfa3a5572441bbf866b2eb9dc6b34f6eaea9254a1e2f63",
+      "bytes": 10572
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\experiments\\dataloader.py",
+      "sha256": "3bc59497e7d99844f77fa3fb2a1f1e08ada9b1316c115fe83608d60ee98a66fb",
+      "bytes": 9203
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\model\\loss.py",
+      "sha256": "0491bfd83824b600a38d959ddeffda04d04c30e4a8984d8dfa37e5a97138b020",
+      "bytes": 2430
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\model\\clcnn\\adaptive_attention.py",
+      "sha256": "05b1fc67eda9bb1fba160e5c48a70de7d401a34c63ef4fbb19640ace36b0d82e",
+      "bytes": 4037
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot\\model\\clcnn\\recurrent\\seq2seq_model.py",
+      "sha256": "8d2d73688a3f0d179451dad738d8e54a2ade45082fd4ccbac49d4dc252156960",
+      "bytes": 8550
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\finish_revision_retraining.py",
+      "sha256": "9b74a5fa2885d075ed7113a5e76097d5c48f2a856669bdfca080ba83678d1581",
+      "bytes": 27468
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\retrain_build_artifacts.py",
+      "sha256": "11ff7ec41db2d50c62ea2765f91858221c60086e1e7738dd474bb64828a7f7a4",
+      "bytes": 22275
+    }
+  ],
+  "generated": [
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\ablation_per_seed.csv",
+      "sha256": "ce30c898dda776e2a8f09d19ecdeceb984747cd9a10c1d76eb0ba56cbc688744",
+      "bytes": 4459
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\dataset_cloud_cover.json",
+      "sha256": "31a8818d4e12fb04fab7df8e1ef87fd43f970e6bb91b528b2ace480df22fb27b",
+      "bytes": 1963
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\dataset_component_of_wind.json",
+      "sha256": "8ba61432443d1b494e09bf2a630d062e68d869f248161419488a7cffc930632f",
+      "bytes": 1980
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\dataset_humidity.json",
+      "sha256": "9bc918cf184ae720736a69fea54199408f3fbcbeeada81c3ead5983c28d933fc",
+      "bytes": 1880
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\dataset_temperature.json",
+      "sha256": "49364087faad3aab597bf74bef70e1273f2b706982801967d810675f3354f786",
+      "bytes": 1896
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\gate_histogram.csv",
+      "sha256": "f21c4b51e8a3ea1efe43d64de53b244c4897ebbafb79601e50434455fb1b82e4",
+      "bytes": 77197
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\gate_per_seed.csv",
+      "sha256": "c61bc7f01e7bfacd02862e0dd17ba4a371da50aaae8aec37e482dc3504a4f0fe",
+      "bytes": 2509
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\horizon_per_seed.csv",
+      "sha256": "4cd1acb63f2eab6c7ac27ae03b994b9f514247916a0ab2546611c988a26696c6",
+      "bytes": 49296
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_cloud_cover_2021.json",
+      "sha256": "2c57a7c2ca9fc80165ede6d34908f3ad1a19a60ab1eae6a3842e6105a0a5ec55",
+      "bytes": 10674
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_cloud_cover_2022.json",
+      "sha256": "884b54248a703515ebf762e5e20c3803dae59a27ddf7f50e985d82fae8a5f25f",
+      "bytes": 10652
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_cloud_cover_2023.json",
+      "sha256": "8244b4bc792f98aa725f849857e35f43e04f4aefc2762e63b8e18485d0cd23b3",
+      "bytes": 10629
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_cloud_cover_2024.json",
+      "sha256": "88f1b0708a127c30de8424de73c705e96a9d11ea4aee17244390a1199973be94",
+      "bytes": 10661
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_cloud_cover_2025.json",
+      "sha256": "b45b3d549196455b4d528e1b7a6e0c357e02d9fa688eec789266363246433370",
+      "bytes": 10641
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_component_of_wind_2021.json",
+      "sha256": "e4f95fedab87a1165e0f58494de1d5d80f9ed42426a559ad55511da63c36b3b4",
+      "bytes": 10498
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_component_of_wind_2022.json",
+      "sha256": "a35df379c3a9d788b3f6e6ae00d68b367f58e785352cd0546c41a2467b06ec27",
+      "bytes": 10539
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_component_of_wind_2023.json",
+      "sha256": "20e56795fd322bfe7abdd18a78f596c19196fcfb8014e3c61e4f51866c0f9809",
+      "bytes": 10511
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_component_of_wind_2024.json",
+      "sha256": "563dd99feabfadb2e61f6bb6ee96727bb51b88a47c8f478a550cc389890133cd",
+      "bytes": 10526
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_component_of_wind_2025.json",
+      "sha256": "b270d1f78269a71568be36ad6a941b9d1c4fd11bdaefdcc85172cd4fadb4d841",
+      "bytes": 10550
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_humidity_2021.json",
+      "sha256": "f67f40ae22fdad979d4e123669a0d7cb80db0093aeeb955ebb75419ef21e39d4",
+      "bytes": 10520
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_humidity_2022.json",
+      "sha256": "5ac994c4b383b2740ea3f05e2b151109976ce123661653e81761261898a1da07",
+      "bytes": 10508
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_humidity_2023.json",
+      "sha256": "b1cdd888bfabd1b5da3a525b5f7e3cc0b5c312017b589f31750d83a98c3380e1",
+      "bytes": 10514
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_humidity_2024.json",
+      "sha256": "e4c73e9984d2e3e4598c781518af5825cf5694df942b77dfeb13d0d865053510",
+      "bytes": 10541
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_humidity_2025.json",
+      "sha256": "7ef9d684c09bbdf0ae85ee08f77c11eef57aefbc9bb1c7131fe05e2c3276e78f",
+      "bytes": 10552
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_temperature_2021.json",
+      "sha256": "ed66c0cf1c8b79283758bb5ef3044c74e33fa539b8a27396d01ef091a7bb5e46",
+      "bytes": 10590
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_temperature_2022.json",
+      "sha256": "2481e56177b48af1dac3789346fff8b77c2350462894a165dd6409617a29b7ac",
+      "bytes": 10546
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_temperature_2023.json",
+      "sha256": "05fa719f961b7041cf54fa72706b7107941aa9129ec3589de0ccb34f5428c66e",
+      "bytes": 10477
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_temperature_2024.json",
+      "sha256": "753565ba3e287928c063b0422e7b972862a4d1dd14ab28c8504ca19e2ee81b8b",
+      "bytes": 10520
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_agf_temperature_2025.json",
+      "sha256": "59d45535afb4ae1e1e3c128a021dda0be7da9e5f674c07fbe3e61b8567ae746c",
+      "bytes": 10502
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_cloud_cover_2021.json",
+      "sha256": "fe58b192778c1f95ad460e8665dab7231764fdd2166430a0c6ad21909358eb28",
+      "bytes": 7253
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_cloud_cover_2022.json",
+      "sha256": "5236eb3ec934a70188324a67defc42e23354545d215cdee43e10735ffb6e9122",
+      "bytes": 7250
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_cloud_cover_2023.json",
+      "sha256": "bb3b252daf4019ed762ce20584c5bf78243e314c49476d749c629142694319ea",
+      "bytes": 7241
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_cloud_cover_2024.json",
+      "sha256": "9b0132feec9ed739629c02a31f946de4b1d6b6e9f55da957956cec7c03560c81",
+      "bytes": 7239
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_cloud_cover_2025.json",
+      "sha256": "a3ef7bbeb611b59d40a5616aa97903ec59c3fba867c21855c97be59712c81cfc",
+      "bytes": 7228
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_component_of_wind_2021.json",
+      "sha256": "cb7ee9b14d494ba3ba731873411648b8f1ef980cd79101138974bc735c02ad86",
+      "bytes": 7231
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_component_of_wind_2022.json",
+      "sha256": "f271514140880d83dc8bfe2a4b1728aa90d3fea8b9f79242d04b85796510c6e1",
+      "bytes": 7221
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_component_of_wind_2023.json",
+      "sha256": "88feb32ee4a9b064df1acc62e9d03bcc978cea5d2b2f7409f7af71207f384efa",
+      "bytes": 7234
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_component_of_wind_2024.json",
+      "sha256": "734344507d227f3eb87483543b73158f9ae0a9f916e4fcace19910b0a3c8b655",
+      "bytes": 7243
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_component_of_wind_2025.json",
+      "sha256": "338762dd05b8339a7e70c3240134c520fc3e4bbb7d1143cbed39b5f1e1a446ad",
+      "bytes": 7205
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_humidity_2021.json",
+      "sha256": "103296ce7be063b691c7e4ae7a61ad89d516b32876823b20d8a89f615a085411",
+      "bytes": 7111
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_humidity_2022.json",
+      "sha256": "89e55c41c24b856a9b8607cf7ebf49d43d4f3ce5f9220fe5af397ce42af79bb3",
+      "bytes": 7103
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_humidity_2023.json",
+      "sha256": "8d770838eda9a7a1ee890f3070bc2f67e17aa36439bbd23faf3e3650426b7a71",
+      "bytes": 7103
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_humidity_2024.json",
+      "sha256": "7f3f13816654c1e2e5a2e6aea5bb86ac3746066f24955c8ecf6c455a9aad8a11",
+      "bytes": 7111
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_humidity_2025.json",
+      "sha256": "187973a2cf97d15025c9bd306460ea78da0e6b44fa628594d30309668208e4c1",
+      "bytes": 7106
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_temperature_2021.json",
+      "sha256": "a1332a9d9349b98a1268865b30034ac7f55eb326e696ee7f0a2ec26a29ee4017",
+      "bytes": 7159
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_temperature_2022.json",
+      "sha256": "6e0f85b6306ac0a600c8c32dd4b9a37ae1b5da59beb2c238cdccc842212ce899",
+      "bytes": 7164
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_temperature_2023.json",
+      "sha256": "b110b4e51a95fa8c24a6d81bd2cada1486751052dd780908e7ed4f06608f6092",
+      "bytes": 7165
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_temperature_2024.json",
+      "sha256": "6815cf0e64100782d24f004a0278053bbfbb28556cc198dc7f51e5f1649dd8c1",
+      "bytes": 7170
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_control_temperature_2025.json",
+      "sha256": "caa8da8224e844420e27cd4c67d5f1424cda1c7dd8944afc6b16179da41b25b3",
+      "bytes": 7159
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_mean_fusion_humidity_2023.json",
+      "sha256": "6918a0b455c97a6e5116dfe0cc44a49cbe2b5ad46138df4c7e063356b3c5139a",
+      "bytes": 5171
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_mean_fusion_humidity_2024.json",
+      "sha256": "43120f0bb7fe1b54a9c2381c78ea59045c9a292d06081db9759b0af3f02596a3",
+      "bytes": 5171
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_mean_fusion_humidity_2025.json",
+      "sha256": "e538ca65f095e68658bee52d837020842a8eb210b42f09099d25cfb63faa42ac",
+      "bytes": 5170
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_mean_fusion_temperature_2023.json",
+      "sha256": "82558686951d6dbbce74d4a7c6efab70fdf946e5ec91143f8b9c9a710e0eb282",
+      "bytes": 5240
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_mean_fusion_temperature_2024.json",
+      "sha256": "17a189170e2c9ed3e47fd6f7a246cb640611aaa6e7a0ba36143a26f6f32500c0",
+      "bytes": 5228
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\inference_mean_fusion_temperature_2025.json",
+      "sha256": "5b7d73e69c2ec3c52e2f722a5e02ce27374590befd8d5a1d11b6be903592f4d9",
+      "bytes": 5226
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\latitude_weighted_sensitivity.csv",
+      "sha256": "cd97f3eec1636d54150cf9cad7d950ff502e955e781c85c972a315beae42987c",
+      "bytes": 2281
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\manuscript_assets.json",
+      "sha256": "df90e94fac8ad590d550a70b8df314706f9e36a563f70f1108eabc41f78a5e0a",
+      "bytes": 17583
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\persistence_cloud_cover.json",
+      "sha256": "1f60039cbe6445ab53e901028413c0d31f68dd56b8630e659bcd2fdbcc4a0503",
+      "bytes": 3023
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\persistence_component_of_wind.json",
+      "sha256": "89589da1cb5fcdae3db40ad0d77ef254c0fce7fa7732a4bff6d55bf04f268ba5",
+      "bytes": 2974
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\persistence_humidity.json",
+      "sha256": "55f62abba98545f36453cea6ba9ee2b34544662c6aa748f5f71c08884bb37286",
+      "bytes": 2948
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\persistence_temperature.json",
+      "sha256": "6ade781e7d63f79e1e6db4e40a3041047fcdd0ddd959795b090b8c3ecd6ee311",
+      "bytes": 2982
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\primary_per_seed.csv",
+      "sha256": "ae1c0c7e333556a363c6e80589de365620b11ed656c72e1d970ef68965024f1b",
+      "bytes": 11260
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\raw_target_zero_fractions.csv",
+      "sha256": "6b66f0a6223c2129849700009eb9f93c82aa42ea4892fcc4357f9ad44eeb43c6",
+      "bytes": 542
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\robustness_indices_cloud_cover.json",
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0",
+      "bytes": 813
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\robustness_indices_component_of_wind.json",
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0",
+      "bytes": 813
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\robustness_indices_humidity.json",
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0",
+      "bytes": 813
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\robustness_indices_temperature.json",
+      "sha256": "46dd07e4f4c5c4b82d2959b48a78eaaaa50e9227307235dfa703d221411631a0",
+      "bytes": 813
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\robustness_per_seed_mask.csv",
+      "sha256": "031d9912f1b2a843cce93d8622824326720de894cd54890a11f2da1f1bc15b97",
+      "bytes": 56303
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\robustness_summary.csv",
+      "sha256": "1fe426769bebda218610d5a03422f1154e63e0c3924190fdee7c909b954abb08",
+      "bytes": 2616
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table1_body.tex",
+      "sha256": "c0fd36b43a43fb09e2325927a8da03433d39a9a7674c186119d82cd836a39493",
+      "bytes": 872
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table1_primary_statistics.csv",
+      "sha256": "1b7d495b3a286ed7566303c14fb464ed7731e3e2d485d8bd3f9baca4e5f0c99b",
+      "bytes": 2439
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table2_body.tex",
+      "sha256": "ccf88766b766e749ac363b3a3a45dc9ee42db07f0236d04cd16a51239928ba75",
+      "bytes": 311
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table2_current_context.csv",
+      "sha256": "366f85e48a053c5a380dad963bb017bc8780ce19c3bfd05bc161a6ae39326741",
+      "bytes": 1532
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table3_ablation_statistics.csv",
+      "sha256": "95ae6deb6b80b0511da58c7e4ac27d1a9407db2c98885ee8e2bd636cad7fc01d",
+      "bytes": 844
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table3_body.tex",
+      "sha256": "e92eacd9149a9cbd2baa3d03ab9bc50ec752029a170f0071e6eadfcd5cd3dce9",
+      "bytes": 476
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table4_body.tex",
+      "sha256": "f34c92b5d36c4ed39a6dc6d0cacd53b3d59e8b8fc41df3d43a3ee8d6cbe0f401",
+      "bytes": 199
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\data\\table4_gate_statistics.csv",
+      "sha256": "d493250fbe4523c46c6ea7511a934ff82d0e7ea7d6090d830c93dd6f61bce409",
+      "bytes": 560
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig3_context_current_split.pdf",
+      "sha256": "5eb9a13220ef957fc6412a5c2771739124c96aa057a8ff1a0277fc8c07e5fc1c",
+      "bytes": 15238
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig3_context_current_split.png",
+      "sha256": "05bf7f2ede1332ba3f887e021a382ad0a4766ae5bfd16c712cda3c1d0891ee3d",
+      "bytes": 44343
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig4_primary_replicates.pdf",
+      "sha256": "838a7a35c2355006e9f7f5254d39c9f6489ad7d2423d5e2c407f41bab87d238b",
+      "bytes": 24251
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig4_primary_replicates.png",
+      "sha256": "df7c16c7c03f93d0dd2d44631e4402a3f6a4cc06d2736463048561403079b3b0",
+      "bytes": 104843
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig5_horizon_consistent.pdf",
+      "sha256": "58b7a3f183d57c40c12da67cfc55ae0d74cb4786aa7dad41c57133ffca0eb9c7",
+      "bytes": 19167
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig5_horizon_consistent.png",
+      "sha256": "12f17ded5a9f5b0e2fceb0e64207d806c39ccce6a8e0cca89e057dc5fb2d0bb2",
+      "bytes": 177864
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig6_primary_effects.pdf",
+      "sha256": "d4a0ea0f2b00432ec0c84ac3d1568d7bc4e22c03d80d08ceadb0c0c9696de5c2",
+      "bytes": 15812
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig6_primary_effects.png",
+      "sha256": "4892ff8d924dee192978097f1c5bbe4609b2f70903936b4795de6a37fe20c9a0",
+      "bytes": 41125
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig7_robustness_consistent.pdf",
+      "sha256": "1848acebe944379c5ed883f5c6696c4b13a16d2f8a523ba6d6de31232931b1c8",
+      "bytes": 19866
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig7_robustness_consistent.png",
+      "sha256": "923ae274f9e37cc9d6b461505f13991b29feb7ffa88e649e10839ad241add700",
+      "bytes": 112793
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig8_gate_consistent.pdf",
+      "sha256": "d3be45745e5f1dd1c6c361be8606561b63f3ae094b6e6f1c574afa04d810b56b",
+      "bytes": 31366
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\新训练结果\\figures\\fig8_gate_consistent.png",
+      "sha256": "a212bef92a2ce76ee6493947c61228164b8c5f47a04f38b71a3502146a86a4a3",
+      "bytes": 112048
+    }
+  ],
+  "software": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.2",
+    "device": "cuda:0"
+  },
+  "manuscript_updated": false
+}

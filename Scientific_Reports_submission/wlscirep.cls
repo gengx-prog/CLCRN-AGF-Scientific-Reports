@@ -20,9 +20,7 @@
 \ProcessOptions*
 \LoadClass{article}
 \RequirePackage{amsmath,amsfonts,amssymb}
-\RequirePackage{mathptmx}   % Loads the Times-Roman Math Fonts
-\RequirePackage{helvet}
-\RequirePackage{courier}
+\RequirePackage{lmodern}
 \RequirePackage{ifpdf}
 
 \RequirePackage{graphicx,xcolor}
@@ -31,8 +29,8 @@
 % Settings for the author block
 \RequirePackage{authblk}
 \setlength{\affilsep}{1.5em}
-\renewcommand\Authfont{\fontsize{12}{12}\usefont{OT1}{phv}{b}{n}}
-\renewcommand\Affilfont{\fontsize{10}{12}\usefont{OT1}{phv}{m}{n}}
+\renewcommand\Authfont{\fontsize{12}{12}\usefont{OT1}{cmr}{b}{n}}
+\renewcommand\Affilfont{\fontsize{10}{12}\usefont{OT1}{cmr}{m}{n}}
 
 \RequirePackage[left=2cm,%
                 right=2cm,%
@@ -67,7 +65,7 @@
 % Footers
 \lfoot{}%
 \cfoot{}%
-\rfoot{\small\sffamily\bfseries\thepage/\pageref{LastPage}}%
+\rfoot{}\cfoot{\thepage}%
 \renewcommand{\headrulewidth}{0pt}% % No header rule
 \renewcommand{\footrulewidth}{0pt}% % No footer rule
 
@@ -160,7 +158,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %
 \renewcommand{\@maketitle}{%
 {%
-\thispagestyle{empty}%
+\thispagestyle{plain}%
 \vskip-36pt%
 {\raggedright\sffamily\bfseries\fontsize{20}{25}\selectfont \@title\par}%
 \vskip10pt
@@ -175,7 +173,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \noindent
 \colorbox{color2}{%
 \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
-\sffamily\small\textbf\\\theabstract
+\RaggedRight\small\theabstract
 }%
 }%
 % \vskip18pt%

@@ -1,0 +1,65 @@
+{
+  "csv_files_rebuilt": 13,
+  "all_identical": true,
+  "comparisons": [
+    {
+      "file": "ablation_per_seed.csv",
+      "identical": true
+    },
+    {
+      "file": "gate_histogram.csv",
+      "identical": true
+    },
+    {
+      "file": "gate_per_seed.csv",
+      "identical": true
+    },
+    {
+      "file": "horizon_per_seed.csv",
+      "identical": true
+    },
+    {
+      "file": "latitude_weighted_sensitivity.csv",
+      "identical": true
+    },
+    {
+      "file": "primary_per_seed.csv",
+      "identical": true
+    },
+    {
+      "file": "raw_target_zero_fractions.csv",
+      "identical": true
+    },
+    {
+      "file": "robustness_per_seed_mask.csv",
+      "identical": true
+    },
+    {
+      "file": "robustness_summary.csv",
+      "identical": true
+    },
+    {
+      "file": "table1_primary_statistics.csv",
+      "identical": true
+    },
+    {
+      "file": "table2_current_context.csv",
+      "identical": true
+    },
+    {
+      "file": "table3_ablation_statistics.csv",
+      "identical": true
+    },
+    {
+      "file": "table4_gate_statistics.csv",
+      "identical": true
+    }
+  ],
+  "checkpoint_reevaluation": {
+    "run_id": "temperature_agf_2021",
+    "test_windows": 657,
+    "mae_difference": 0.0,
+    "rmse_difference": 3.2173730346585216e-10
+  },
+  "scope": "All quantitative tables rebuilt. Representative real-data inference tested on one supplied selected checkpoint; not a fresh inference rerun of all 46 models."
+}

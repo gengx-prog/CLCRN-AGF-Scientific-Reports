@@ -1,0 +1,26 @@
+Share with caveats
+46-run independent audit: 46 runs; 4600 epoch files inventoried.
+Checks: 15839; findings: 1; maximum reevaluation difference: 4.06086275717e-10.
+
+temperature mae: control 1.2579906 (SD 0.060259), AGF 1.291008 (SD 0.1075); change +2.6246%; Welch/BH q=0.7600722; exact/BH q=0.77097506.
+temperature rmse: control 2.1012324 (SD 0.044528), AGF 2.1180523 (SD 0.12916); change +0.8005%; Welch/BH q=0.79423441; exact/BH q=0.77777778.
+humidity mae: control 4.6479756 (SD 0.017391), AGF 4.5371743 (SD 0.038934); change -2.3839%; Welch/BH q=0.0060398556; exact/BH q=0.031746032.
+humidity rmse: control 7.2484444 (SD 0.042655), AGF 7.0097079 (SD 0.055034); change -3.2936%; Welch/BH q=0.00065340592; exact/BH q=0.031746032.
+component_of_wind mae: control 1.2420089 (SD 0.011387), AGF 1.2556686 (SD 0.037217); change +1.0998%; Welch/BH q=0.7600722; exact/BH q=0.77097506.
+component_of_wind rmse: control 1.9722914 (SD 0.023357), AGF 2.0155409 (SD 0.093315); change +2.1929%; Welch/BH q=0.7600722; exact/BH q=0.77097506.
+cloud_cover mae: control 0.14790507 (SD 0.0017188), AGF 0.14835724 (SD 0.0019515); change +0.3057%; Welch/BH q=0.79423441; exact/BH q=0.77097506.
+cloud_cover rmse: control 0.24998801 (SD 0.0016802), AGF 0.24896888 (SD 0.0028088); change -0.4077%; Welch/BH q=0.7600722; exact/BH q=0.77097506.
+
+Findings:
+{"severity": "warning", "check": "provenance_hash:D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\queue_status.json", "detail": {"recorded": "c1d9fb054c145cbaddf872cafc0bc9011f4e584a960675e9cf2d7cbb5b4742f5", "current": "d2a69f5b48664295add6c3a534d1c420053171c5b9aa0b00b35a15d79c515ebd", "explanation": "Queue status is rewritten after the analysis snapshot when the completion hook finishes."}}
+
+Scope and interpretation limits:
+Audit rederived all reported statistics and error-sum metrics; it did not rerun prediction or training.
+Raw per-window predictions/gates are not stored; their extraction is checked by recorded sufficient statistics and provenance, not an independent new inference.
+Raw input SHA256 was independently rechecked.
+Welch/BH primary results cover eight comparisons; exact randomization sensitivity assumes exchangeability and uses all 252 five-versus-five partitions.
+Five training seeds quantify initialization/training variation on one fixed test split, not uncertainty over climate years, sites or operational deployment.
+The ablation uses three seeds and reports descriptive mean/SD; it cannot alone establish a causal or significant mechanism.
+Missing-input diagnostics use 64 deterministic test windows and three masks; they are not whole-test accuracy or formal significance tests.
+Pooled gate spread is across gates and seeds; gate magnitude is not branch information contribution or a physical mechanism.
+Manuscript wording, page layout, bibliography and submission packaging are reviewed by other task owners.

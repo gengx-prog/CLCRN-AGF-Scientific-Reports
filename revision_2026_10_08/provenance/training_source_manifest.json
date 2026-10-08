@@ -1,0 +1,35 @@
+{
+  "sha256": "e00cef9e4aeb117967f52c3be459069856f14a30680ef6421856280b5cbeef94",
+  "files": {
+    "configs/primary.json": "bcda89e17af589d2ff672fddfed88f0bef23349d7c8a01b43b7339e2ef6ef8c2",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/dataloader.py": "3bc59497e7d99844f77fa3fb2a1f1e08ada9b1316c115fe83608d60ee98a66fb",
+    "lib/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lib/utils.py": "de22fe84de71339cc012ccb5915cc8f3d5c42453f24b6295439a9fe81c4b9791",
+    "model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/clcnn/__init__.py": "96142fa6c06408ae5f595bb9d4c234dfbdf022eec33703b8d8fff168db41d90d",
+    "model/clcnn/adaptive_attention.py": "05b1fc67eda9bb1fba160e5c48a70de7d401a34c63ef4fbb19640ace36b0d82e",
+    "model/clcnn/clccell.py": "0c3969b955c81df03b91bf54bb8bc7174c2328a0168181032509db6b514d3a8d",
+    "model/clcnn/clconv.py": "c07dfd30df610c0a16464aa1dd05493cc44352b180ceee24c47f334ea56e5906",
+    "model/clcnn/graphconv.py": "3ecf10196756ef6500f7697db8f5164916e032888914d052508b8c1a570d86f1",
+    "model/clcnn/recurrent/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/clcnn/recurrent/decoder.py": "49e1f6d8ef23e11cad4d0a0a6497d6fa528b265e55f23fa5b38404022f98e6d6",
+    "model/clcnn/recurrent/encoder.py": "5040035c6e4b8616e65eb9ea1e6c2a93c97f89ece8711faf0d63fd6d8bbe25f5",
+    "model/clcnn/recurrent/seq2seq_model.py": "8d2d73688a3f0d179451dad738d8e54a2ade45082fd4ccbac49d4dc252156960",
+    "model/clcnn/seq2seq.py": "2036d809fab8b1073cedcd50378baab2a78517f35756dff813e6f79a4717e61e",
+    "model/clcnn/sgp.py": "b7a225485d5fcff04623a7688d62895b7633c6e97938559a4d394765e2124b4c",
+    "model/clcnn/temporal_encoding.py": "7d86a63d2bd304761ffe8ae5ae819ce2ff2787a464f4e373ea820144a1650982",
+    "model/loss.py": "0491bfd83824b600a38d959ddeffda04d04c30e4a8984d8dfa37e5a97138b020",
+    "model/manifold/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/manifold/sphere.py": "be55fcde9036ec763d8574a3b129fa86e075c208fa2218cf79e1d90f316e1558",
+    "run_revision.py": "7e711903002ecbb68ccfa3a5572441bbf866b2eb9dc6b34f6eaea9254a1e2f63",
+    "smoke.py": "b0f962eddf4498a0475b7a01b83abc6dd0eae3bca3d99d5164f9cc7bfe2b7482",
+    "supervisor.py": "670535471521b0b4196dba4ac05029d12301adf4e59ea0f85fad17354502877f"
+  },
+  "captured_at": {
+    "utc": "2026-10-05T20:08:45+00:00",
+    "los_angeles": "2026-10-05T13:08:45-07:00"
+  },
+  "source_root": "D:\\CLCRN-main\\修改稿2026_10_5\\可复现代码",
+  "frozen_root": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot"
+}

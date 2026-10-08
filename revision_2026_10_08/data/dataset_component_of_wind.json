@@ -1,0 +1,74 @@
+{
+  "task": "component_of_wind",
+  "sources": [
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\trn.pkl",
+      "sha256": "16163e192a42aab4e7e5d01c09a54df28931f6caeb375e784913e3542efef6ac",
+      "bytes": 4521984326
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\val.pkl",
+      "sha256": "cf446b28c1d224c061ebfa99bc015a91be13f9de5a077f6464a53cb0876864ee",
+      "bytes": 646840646
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\test.pkl",
+      "sha256": "3d32c9829777603ea1c5aa8ee8969b85239b1f1ab9878ef0f7183e1558b18cb5",
+      "bytes": 1291714886
+    },
+    {
+      "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\position_info.pkl",
+      "sha256": "784e1d04106d28ff4878a037932038b4a220816d4e5b4c9364ee494ae3e01dd8",
+      "bytes": 32933
+    }
+  ],
+  "raw_target_zeros": {
+    "train": {
+      "zero_count": 0,
+      "total": 113049600,
+      "fraction": 0.0
+    },
+    "validation": {
+      "zero_count": 0,
+      "total": 16171008,
+      "fraction": 0.0
+    },
+    "test": {
+      "zero_count": 0,
+      "total": 32292864,
+      "fraction": 0.0
+    }
+  },
+  "preprocessing": "curated experiments.dataloader.Dataset: raw training x supplies scaler moments; cast split x/y to float32 BEFORE in-place standardization; Supervisor.inverse for physical units",
+  "train_mean": [
+    -0.11169575154781342,
+    0.22041867673397064
+  ],
+  "train_std": [
+    5.610858917236328,
+    4.809388160705566
+  ],
+  "train_raw_dtype": "float32",
+  "train_shape": [
+    2300,
+    12,
+    2048,
+    2
+  ],
+  "validation_raw_dtype": "float32",
+  "validation_shape": [
+    329,
+    12,
+    2048,
+    2
+  ],
+  "test_raw_dtype": "float32",
+  "test_shape": [
+    657,
+    12,
+    2048,
+    2
+  ],
+  "ntest": 657,
+  "latitude_weight": "cos(latitude) / mean(cos(latitude)); full finite-node support"
+}

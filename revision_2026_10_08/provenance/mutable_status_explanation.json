@@ -1,0 +1,10 @@
+{
+  "explanation": "The original provenance manifest captured the mutable queue status before completion_hook finished. Frozen source, checkpoints and data hashes pass. The original manifest is retained without editing. final_queue_status.json is the final completed snapshot.",
+  "original_record": {
+    "path": "D:\\CLCRN-main\\\u4fee\u6539\u7a3f2026_10_5\\\u91cd\u65b0\u8bad\u7ec32026_10_5\\queue_status.json",
+    "sha256": "c1d9fb054c145cbaddf872cafc0bc9011f4e584a960675e9cf2d7cbb5b4742f5",
+    "bytes": 184337
+  },
+  "final_snapshot_sha256": "d2a69f5b48664295add6c3a534d1c420053171c5b9aa0b00b35a15d79c515ebd",
+  "final_workflow_sha256": "fc6dbcb3e93cfee29de5b93677f4ad6c9a589755a5cee37e8b80839bb1a80772"
+}

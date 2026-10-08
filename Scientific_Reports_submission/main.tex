@@ -5,9 +5,12 @@
 \usepackage{placeins}
 \usepackage{multirow}
 \usepackage{bm}
+\usepackage{xurl}
+\usepackage{ragged2e}
+\AtBeginDocument{\RaggedRight}
 
 \newcommand{\R}{\mathbb{R}}
-\graphicspath{{figs/}}
+\graphicspath{{figs_revised/}}
 
 % Float placement tuning: forbid sparse float-only pages so figures/tables
 % stay interleaved with the surrounding text instead of stranding whitespace.
@@ -18,960 +21,525 @@
 \setcounter{topnumber}{3}
 \setcounter{totalnumber}{4}
 
-\title{Adaptive Graph Fusion for Conditional Local Convolution: A Schedule-Matched, Multi-Seed Evaluation on WeatherBench}
 
+\title{Evaluating adaptive graph fusion for short-range weather forecasting with conditional local convolution}
 \author[1,*]{Xinchen Geng}
-\author[1]{Hung-Yu Lin}
 \affil[1]{University of Southern California, Los Angeles, CA 90089, USA}
 \affil[*]{Corresponding author: gengx@usc.edu}
-
-\keywords{Weather forecasting; Spatio-temporal graph neural networks; Adaptive graph learning; Spherical grids; Reproducibility}
-
+\keywords{Weather forecasting; Adaptive graph learning; Conditional local convolution; Reproducibility}
 \begin{abstract}
-Conditional Local Convolution Recurrent Network (CLCRN) is an established
-graph-recurrent model for meteorological forecasting. Rather than pursuing a
-leaderboard result, we ask whether augmenting this backbone with a compact
-adaptive graph-fusion (AGF) encoder---which learns non-local node dependencies
-before the unchanged recurrent backbone---yields reproducible,
-architecture-attributable gains, and for which variables. The extension builds
-a directed adjacency from trainable source and destination node embeddings,
-keeps a renormalized top-$k$ neighbourhood, and fuses the graph-aggregated
-representation with a residual projection through a learned gate. Using the
-WeatherBench preprocessing and four tasks from the original CLCRN study (2-m
-temperature, relative humidity, 10-m surface wind, and total cloud cover), we
-compare CLCRN-AGF with a schedule-matched CLCRN control over five seed
-replicates. The clearest effect is on relative humidity, where CLCRN-AGF
-reduces mean absolute error by 2.28\% and root mean squared error by 3.02\%,
-improving in every replicate and surviving multiple-comparison correction.
-Effects on temperature, wind, and cloud cover are small or metric-dependent,
-and component ablations attribute the humidity gain chiefly to the adaptive
-graph branch. The study shows how schedule-matched controls, multi-seed
-replication, and significance testing separate genuine architectural gains
-from optimization and reporting effects.
+I evaluate an adaptive graph-fusion (AGF) extension to the Conditional Local Convolution Recurrent Network (CLCRN), originally proposed by Haitao Lin et al., on four coarse-grid WeatherBench-derived tasks. The encoder gates a graph-aggregated projection against a node-wise residual projection before the CLConv recurrent backbone. I newly train 40 primary models (two variants, four tasks and five seeds) and six mean-fusion ablations, each for 100 epochs in FP32. Training, validation and testing consistently include finite targets equal to zero; checkpoints are selected using validation MAE alone. Across five training seeds per variant, AGF reduces relative-humidity MAE by 2.38\% and RMSE by 3.29\% (Benjamini--Hochberg adjusted $q=0.00604$ and $0.000653$, respectively, across eight primary tests). The other six comparisons do not establish a difference at $q<0.05$. I additionally report latitude-weighted scores, horizon-specific errors and sampled missing-input diagnostics. The evidence concerns training-seed variability on one fixed split and does not establish competitive skill against large-scale global weather models.
 \end{abstract}
-
+\hypersetup{pdfauthor={Xinchen Geng},pdftitle={Evaluating adaptive graph fusion for short-range weather forecasting with conditional local convolution}}
 \begin{document}
-\flushbottom
+\raggedbottom
 \maketitle
-\thispagestyle{empty}
+\thispagestyle{plain}
 
-\section{Introduction}
+\section{Introduction}\label{sec:introduction}
+Numerical weather prediction integrates physical governing equations and
+remains central to operational forecasting~\cite{bauer2015quiet}.
+WeatherBench and the ERA5 reanalysis have also enabled systematic evaluation
+of data-driven weather models~\cite{rasp2020weatherbench,hersbach2020era5}.
+Recent global models, including FourCastNet, Pangu-Weather, GraphCast, and
+probabilistic forecasters, address multivariate medium-range prediction at
+much finer spatial resolution than small graph-recurrent
+benchmarks~\cite{pathak2022fourcastnet,bi2023accurate,lam2023learning,price2025probabilistic}.
+Compact models remain useful for controlled experiments on training cost,
+task-specific adaptation, and reproducibility, provided that their narrower
+forecasting scope is stated explicitly.
 
-Numerical weather prediction (NWP) remains the operational standard for
-atmospheric forecasting because it explicitly integrates the governing
-physical equations~\cite{bauer2015quiet}. Its accuracy, however, comes at a
-substantial computational cost, and recent years have seen data-driven models
-emerge as fast and increasingly capable alternatives for selected forecasting
-tasks. The release of WeatherBench established a common benchmark built on the ERA5
-reanalysis that made systematic comparison of such models
-possible~\cite{rasp2020weatherbench,hersbach2020era5},
-and early convolutional sequence models on regular or cubed-sphere grids
-demonstrated that deep networks can learn skillful short-range
-dynamics~\cite{weyn2020improving}. At the large-model end of the spectrum,
-FourCastNet, Pangu-Weather, GraphCast, ClimaX, spherical Fourier neural
-operators, neural general circulation models, and probabilistic diffusion
-forecasters now rival or exceed operational NWP at global
-scale~\cite{pathak2022fourcastnet,bi2023accurate,lam2023learning,nguyen2023climax,bonev2023spherical,kochkov2024neural,price2025probabilistic}.
-Smaller graph-recurrent systems nonetheless remain relevant whenever
-retraining cost, task-specific adaptation, controlled ablation, and
-reproducibility matter more than raw global skill.
+This study builds on the Conditional Local Convolution Recurrent Network
+(CLCRN), proposed by Haitao Lin et al.~\cite{lin2022conditional}. CLCRN and its
+Conditional Local Convolution (CLConv) operator are contributions of that
+prior work. The present study adds an AGF input extension and evaluates
+its effects under matched conditions. CLConv uses geographic information to construct
+location-dependent kernels. The present data occupy a regular
+$32\times64$ latitude--longitude grid embedded on the sphere, rather than
+an irregular sampling grid. Geometry-conditioned local aggregation is the
+published backbone contribution. The question studied here is whether
+augmenting that backbone with a learned graph yields a reproducible benefit
+for 12-hour forecasting (Supplementary Fig.~S1).
+
+
+Learned adjacency and gating are established ideas. Diffusion and
+graph-convolutional recurrent networks~\cite{li2018diffusion,seo2018structured}
+and spatio-temporal graph convolution~\cite{yu2018spatio} provide fixed-graph
+baselines. Graph WaveNet, AGCRN, and learned graph-structure
+models~\cite{wu2019graph,bai2020adaptive,shang2021discrete} motivate topology
+estimated from data. Attention-based forecasting further demonstrates the
+value of learned dependencies~\cite{vaswani2017attention,liu2023spatio}.
+The adaptive-graph and fusion design is inspired by ASTTN~\cite{feng2022adaptive},
+which combines representations from geographical and learned graphs.
+Here I use a compact graph aggregation and node-wise residual projection
+before CLConv, without ASTTN's Gumbel graph masking or spatial--temporal
+multi-head attention.
+I do not claim the ingredients of the AGF encoder as individually novel.
+It is a compact combination of node embeddings, directed adjacency,
+top-$k$ aggregation, and gated residual mixing used to test an incremental
+change to an existing geometry-conditioned model.
+
+The contribution of this study is the AGF input extension to the published
+CLCRN framework and its controlled empirical evaluation: identical
+data, training schedules, and budgets for CLCRN and CLCRN-AGF; five seed
+replicates; uncertainty estimates and multiplicity correction; and a
+traceable connection between results, checkpoints, and figures. I also
+report component ablations, diagnostic analyses, and negative or inconclusive
+results. The manuscript follows a Methods--Results--Discussion structure
+so that the implementation and evaluation conventions are specified before
+the numerical findings.
+
+\section{Methods}\label{sec:methods}
+\subsection{Data, chronological split, and normalization}\label{sec:data}
+I use the four WeatherBench-derived tasks adopted by
+CLCRN~\cite{lin2022conditional,rasp2020weatherbench}: 2-m temperature (K),
+relative humidity (percentage points), 10-m wind components ($u,v$;
+m\,s$^{-1}$), and total cloud cover (fraction). The two wind components are
+predicted together; the other tasks are trained separately. Hourly data
+from 1 January 2010 through 31 December 2018 are supplied on a regular
+$32\times64$ latitude--longitude grid ($N=2{,}048$).
+
+Each example contains 12 hourly inputs followed by 12 hourly targets.
+Windows start 24 hours apart, yielding 3,286 examples. Chronological,
+unshuffled train/validation/test partitions contain 2,300/329/657 examples.
+Thus successive examples do not share a 24-hour input--target window.
+For each physical variable (and separately for each wind component), the
+normalization mean and standard deviation are computed over the training
+input arrays across examples, input times, and nodes. The same statistics
+transform inputs and targets. In the frozen implementation, these statistics are computed from the original training-input arrays. Inputs and targets are then cast to float32 before in-place subtraction of the training mean and division by the training standard deviation. This float32-before-standardization order is used for training, validation and test inference and is recorded in the processing-version manifest. Forecast errors are calculated after inverse standardization.
+
+\subsection{Backbone and implementation-aligned AGF encoder}\label{sec:architecture}
+The CLConv--GRU encoder--decoder is based on the public CLCRN implementation.
+CLConv uses coordinates, geodesic distance, and orientation information to
+condition local convolution. These operators and the recurrent update are
+retained; AGF augments the encoder input rather than replacing CLConv.
+Both local variants use trainable node embeddings, whereas the upstream
+reference implementation registers its node embeddings as a fixed buffer.
+Thus the control is a matched local CLCRN implementation retaining the
+published CLConv--GRU operators, rather than an unchanged reproduction
+of every upstream implementation choice.
+During training, the autoregressive decoder uses curriculum-based teacher
+forcing. At evaluation, it consumes its own previous predictions.
+
+Let $\bar{\mathbf{x}}_{bti}\in\mathbb{R}^{C}$ be the standardized input at
+example $b$, time $t$, and node $i$. A linear weather projection and a learned
+node embedding, each of dimension 8, form the AGF input
+\begin{equation}
+\mathbf{F}_{bti}=\phi_x(\bar{\mathbf{x}}_{bti})\Vert\mathbf{e}^{\mathrm{node}}_i
+\in\mathbb{R}^{16}.
+\label{eq:agf_input}
+\end{equation}
+Source and destination embeddings $\mathbf{E}_s,\mathbf{E}_t\in\mathbb{R}^{N\times10}$
+define a directed, row-normalized adjacency,
+\begin{equation}
+A_{ij}=\frac{\exp(\mathbf{e}^{s\top}_i\mathbf{e}^t_j)}
+{\sum_{\ell=1}^N\exp(\mathbf{e}^{s\top}_i\mathbf{e}^t_\ell)}.
+\label{eq:adaptive_adjacency}
+\end{equation}
+This adjacency uses the same softmax of source--destination embedding
+products as ASTTN (Eq.~8)~\cite{feng2022adaptive}; the graph aggregation
+and fusion implementation used here is specified below.
+This graph is parameter dependent but does not change with the input
+weather sample. The implementation retains the self-edge and the largest
+$k-1$ non-self entries, with $k=4$, then renormalizes:
+\begin{equation}
+\mathcal{T}_k(i)=\{i\}\cup\operatorname{top}_{k-1}\{A_{ij}:j\ne i\},
+\qquad
+\widetilde A_{ij}=\frac{A_{ij}}{\sum_{\ell\in\mathcal{T}_k(i)}A_{i\ell}}
+\quad(j\in\mathcal{T}_k(i)).
+\label{eq:topk_normalization}
+\end{equation}
+Here $\operatorname{top}_{k-1}$ returns indices. Selection does not exclude
+geographically nearby nodes, so the learned edges are potentially long-range
+but are not guaranteed to be nonlocal.
+Aggregation, projections, and fusion follow the source-code order:
+\begin{align}
+\mathbf{m}_{bti}&=\sum_{j\in\mathcal{T}_k(i)}\widetilde A_{ij}\mathbf{F}_{btj},\\
+\mathbf{q}_{bti}&=\mathbf{W}_m\mathbf{m}_{bti}+\mathbf{b}_m,
+&\mathbf{r}_{bti}&=\mathbf{W}_r\mathbf{F}_{bti}+\mathbf{b}_r,\\
+\mathbf{g}_{bti}&=\sigma\left(\mathbf{W}_g[\mathbf{r}_{bti}\Vert\mathbf{q}_{bti}]
++\mathbf{b}_g\right),\\
+\mathbf{z}_{bti}&=\mathbf{g}_{bti}\odot\mathbf{q}_{bti}
++(1-\mathbf{g}_{bti})\odot\mathbf{r}_{bti}\in\mathbb{R}^{8}.
+\label{eq:agf_fusion}
+\end{align}
+Both branches act on the same pre-CLConv input. In particular,
+$\mathbf r$ is a node-wise residual linear projection, not a
+geometry-conditioned CLConv representation. The encoder receives
+$[\mathbf F\Vert\bar{\mathbf x}\Vert\mathbf z]$; the control receives
+$[\mathbf F\Vert\bar{\mathbf x}]$. The corresponding input widths are
+25 versus 17 for the scalar tasks and 26 versus 18 for wind. There is no
+calendar input, periodic encoding, or multi-head attention in the primary
+configuration. Figure~\ref{fig:overview} shows the corrected computation.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{fig1_background.png}
-\caption{\textbf{Motivation: forecasting on the Earth's curved, non-Euclidean
-manifold.} Left: on the spherical surface, geodesic distance, relative
-orientation, and spatial scale all vary with location, so a single
-convolution kernel shared across the grid is geometrically mismatched.
-Right: a graph model built on the curved mesh must adapt the scale and
-strength of its connections to each neighbourhood. Geometric regularization
-narrows a kernel supported on a wide region of the unit sphere (top) to a
-compact local support (bottom), driving geometric overfitting from high to
-low. This motivates the geometry-conditioned CLConv backbone retained in
-this study, and raises the question of what a learned non-local graph adds
-on top of it.}
-\label{fig:background}
-\end{figure}
-
-Because the atmosphere is sampled on an irregular spherical grid rather than a
-Euclidean image lattice (Fig.~\ref{fig:background}), graph neural networks
-(GNNs) are a natural inductive bias for these data. On the curved manifold,
-geodesic distance, relative orientation, and spatial scale all vary across the
-globe, so a single shared convolution kernel is geometrically mismatched and
-geometry-unaware models are prone to overfitting; geometry-conditioned graph
-convolution with appropriate regularization is therefore better suited to the
-data. Directly relevant to the present study, the Conditional Local Convolution
-Recurrent Network (CLCRN)~\cite{lin2022conditional} introduced a Conditional
-Local Convolution (CLConv) that generates \emph{location-dependent} kernels
-from spherical coordinates, geodesic distance, and directional information,
-thereby addressing the spatially shared-kernel limitation of conventional
-graph convolution on an unstructured spherical grid. We review the broader
-spatio-temporal graph, attention-based, and weather-forecasting literature in
-Sections~\ref{sec:rw-stgnn}--\ref{sec:rw-weather}.
-
-Despite this progress, an open question persists for geometry-aware backbones
-such as CLCRN. CLConv already encodes geographically local structure through
-its coordinate-conditioned kernels, yet many meteorological variables exhibit
-dependencies that are not fully described by spatial proximity—moisture
-transport, large-scale circulation, and teleconnections couple regions that
-are geodesically distant. It is therefore unclear whether adding a learned,
-\emph{non-local} adaptive graph on top of a backbone that is already
-geometry-conditioned yields genuine and reproducible gains, or merely adds
-parameters. Two confounds make this hard to answer in practice. First,
-reported improvements often entangle architectural changes with optimization
-and software-environment differences, so single best-run comparisons can be
-misleading. Second, gains can be task-specific, and aggregate averages hide
-which variables actually benefit. Resolving these issues requires a
-schedule-matched control, multiple random-seed replicates with explicit
-significance testing, and a clean separation of published reference values
-from newly generated results—an evaluation discipline that the recent
-benchmarking literature increasingly emphasizes.
-
-To address this question we propose \textbf{CLCRN-AGF} (Fig.~\ref{fig:overview}),
-which inserts a compact adaptive graph-fusion encoder before the original
-CLCRN recurrent backbone, leaving the backbone unchanged. Trainable source and
-destination node embeddings define a directed similarity matrix; a sparse
-top-$k$ neighbourhood aggregates node features; and a learned gate mixes the
-graph-aggregated representation with a residual projection. The design tests
-the focused hypothesis that non-local learned dependencies add value beyond
-CLCRN's geographically conditioned local convolution, particularly for
-variables whose dynamics are not fully described by local proximity. The study
-is deliberately framed as a controlled evaluation and reproducibility analysis
-rather than a leaderboard entry, and its primary contribution is methodological.
-
-The main contributions of this paper are as follows:
-\begin{itemize}
-\item \textbf{Controlled Evaluation Protocol.} A schedule-matched control,
-five-seed replication, confidence intervals, Welch tests,
-false-discovery-rate correction, and a distribution-free check that together
-separate architectural effects from optimization and reporting effects.
-\item \textbf{Adaptive Graph-Fusion (AGF) Encoder.} The compact adaptive
-top-$k$ graph-fusion encoder that is the object of this evaluation, attached
-to the established CLCRN backbone while leaving the backbone unchanged.
-\item \textbf{Component Ablations and Diagnostics.} Ablations separating the
-adaptive graph branch from the learned fusion gate, together with
-gate-activation, robustness, and convergence diagnostics.
-\item \textbf{Transparent Reporting.} A transparent separation between
-published reference values, independent reproduction, and newly generated
-results.
-\item \textbf{A Positive as well as Negative Result.} The extension
-consistently helps relative humidity but gives small or metric-dependent
-changes for the other tasks.
-\end{itemize}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{fig_architecture_overview.png}
-\caption{\textbf{Architecture of the evaluated CLCRN-AGF model.} (a)~Overall
-encoder--decoder pipeline. A 12-step input sequence on the
-$N=2{,}048$-node spherical grid is processed by a stacked-CLCRNCell encoder;
-a learned gate $g\in(0,1)$ fuses the geometry-conditioned local
-representation with the adaptive graph representation, and an autoregressive
-decoder with teacher forcing emits the 12-step forecast.
-(b)~Conditional Local Convolution (CLConv), the unchanged backbone operator
-of Lin et al.~\cite{lin2022conditional}. For each node, an MLP kernel
-generator conditioned on centre--neighbour spherical coordinates produces a
-location-dependent kernel over the $K=25$-node local neighbourhood; the
-kernel is modulated by geodesic decay and angular normalization and applied
-through multi-hop aggregation followed by an output projection.
-(c)~Construction of the relational structure. Geographic binary and
-distance-weighted neighbourhoods encode the local spherical topology
-exploited by the CLConv backbone, whereas the adaptive attention
-graph---learned jointly with the model parameters from trainable source and
-destination node embeddings ($d_e=10$) and sparsified by top-$k$ selection
-(Methods)---supplies the learned non-local dependencies whose contribution
-this study isolates.}
+\includegraphics[width=\linewidth]{fig2_architecture.pdf}
+\caption{\textbf{Implementation-aligned architecture.} (a) AGF augments the
+input before the CLConv--GRU encoder. The original weather and node features
+are retained through concatenation. (b) The graph-aggregated projection
+$\mathbf q$ and residual projection $\mathbf r$ share the same input
+$\mathbf F$. The gate mixes these projections; it does not directly mix a
+CLConv output with a graph output. The geographic CLConv operations occur
+downstream.}
 \label{fig:overview}
 \end{figure}
 
-\subsection{Spatio-temporal graph neural networks: from fixed to learned topology}
-\label{sec:rw-stgnn}
-Three strands of prior work frame the design summarized in
-Fig.~\ref{fig:overview}. The first supplies the graph-convolutional machinery
-itself: spectral and spatial graph
-convolutions~\cite{defferrard2016chebnet,kipf2017semi}, graph
-attention~\cite{velickovic2018graph}, and inductive neighborhood
-aggregation~\cite{hamilton2017inductive} established the basic operator
-toolbox, while gauge-equivariant convolutions designed for icosahedral and
-spherical meshes~\cite{cohen2019gauge} brought that toolbox to the curved
-domains that weather data inhabit.
+\subsection{Matched new training and checkpoint selection}\label{sec:training}
+Both models use two recurrent layers with 32 hidden units, 8-dimensional
+feature and node embeddings, one CLConv propagation view, and 25 geographic
+neighbours. Adam uses learning rate 0.01 and $\epsilon=0.001$, batch size 32,
+gradient-norm clipping at 5, and MultiStepLR milestones $\{10,20,30,40,50\}$
+with factor 0.95. Every run completes 100 epochs; early stopping is disabled.
+The curriculum-learning decay parameter is 2,000. All primary and ablation
+runs use FP32, with automatic mixed precision and TF32 disabled.
+Training and validation MAE are evaluated after inverse standardization,
+including every finite target, including physically valid zero values.
+Testing uses the same zero-inclusive support. Every epoch is saved atomically;
+the earliest epoch attaining the minimum full-validation MAE is selected,
+without consulting the test set. Checkpoints retain optimizer, scheduler,
+random-number-generator and scaler states to permit interruption recovery.
+All trainable parameters are materialized before optimizer construction,
+and optimizer membership and gradient coverage are checked explicitly.
 
-Building on these operators, spatio-temporal GNNs (STGNNs) for structured
-forecasting initially consumed a fixed, pre-computed topology---diffusion
-convolution within recurrent encoders~\cite{li2018diffusion}, fully
-convolutional spatio-temporal graphs~\cite{yu2018spatio}, and
-attention-augmented graph convolution~\cite{guo2019attention} all operate on
-distance-thresholded geographic graphs of the kind shown in
-Fig.~\ref{fig:overview}c (binary and distance-weighted adjacency). A second
-wave learned the topology itself: self-adaptive
-adjacency~\cite{wu2019graph}, node-adaptive parameter
-learning~\cite{bai2020adaptive}, jointly learned mix-hop
-graphs~\cite{wu2020connecting}, multi-attention networks~\cite{zheng2020gman},
-continuous-time graph ODEs~\cite{fang2021spatial}, and dynamic
-spatial--temporal aware graphs~\cite{lan2022dstagnn} infer edges from
-trainable node embeddings, the lineage that the adaptive attention graph in
-Fig.~\ref{fig:overview}c follows. Comprehensive surveys document this
-trajectory~\cite{jin2023spatio}, and recent work extends graph forecasting to
-scalable, probabilistic, state-space, and irregularly-sampled
-settings~\cite{cini2023scalable,zambon2023graph,wen2023diffstg,oskarsson2023temporal}.
-Most of these STGNNs, however, assume a Euclidean or generic graph domain;
-geometry-conditioned operators such as CLConv
-(Fig.~\ref{fig:overview}b) remain comparatively rare, which motivates
-retaining CLCRN as the fixed, unmodified backbone of this study.
+The prior archive used a zero-exclusive objective. Its scores are superseded
+by the newly trained results reported here. The correction therefore applies
+to optimization and validation selection, rather than solely rescoring
+historical checkpoints. Code is frozen before training, and per-run manifests
+record source hashes, configuration, seed, precision and environment.
 
-\subsection{Attention-based and long-sequence forecasting models}
-\label{sec:rw-attention}
-A second strand removes the pre-specified graph altogether and lets attention
-or probabilistic structure learning discover the dependency pattern. Examples
-include discrete graph-structure inference~\cite{shang2021discrete}, position-
-and edge-conditioned processing on point
-clouds~\cite{qi2017pointnet,wang2019dynamic}, and propagation-delay-aware or
-adaptive-embedding transformers for spatio-temporal
-data~\cite{jiang2023pdformer,liu2023spatio,feng2022adaptive,huang2023adaptive}.
-General-purpose long-sequence forecasters point the same way: the
-Transformer~\cite{vaswani2017attention} and its forecasting descendants
-Informer~\cite{zhou2021informer}, Autoformer~\cite{wu2021autoformer},
-PatchTST~\cite{nie2023time}, TimesNet~\cite{wu2023timesnet},
-Crossformer~\cite{zhang2023crossformer}, and
-iTransformer~\cite{liu2024itransformer}, alongside selective state-space
-models~\cite{gu2023mamba}, spectral graph forecasters~\cite{cao2020spectral},
-pure deep stacks such as N-BEATS~\cite{oreshkin2020nbeats}, and the
-deliberately simple DLinear~\cite{zeng2023transformers}, repeatedly show that
-learned, non-local dependency structure can substitute for a pre-specified
-topology. This is precisely the hypothesis that the gated fusion of local and
-graph representations in Fig.~\ref{fig:overview}a is designed to test on a
-geometry-conditioned backbone: if non-local learned structure carries signal
-that the local CLConv kernel misses, the gate has room to exploit it.
+The recorded training interpreter is Python 3.13.7, with PyTorch 2.10.0+cu128. GPU information is recorded as ``NVIDIA GeForce RTX 5090 Laptop GPU, 610.88, 24463 MiB''.
 
-\subsection{Deep learning for weather and climate prediction}
-\label{sec:rw-weather}
-The third strand is the application domain itself. Within
-\textit{Scientific Reports}, adaptive and multi-scale spatio-temporal graph
-networks have become a recurring theme for traffic and environmental
-forecasting~\cite{chen2025multiscale,xiao2025adaptive,xiao2025graph}, as have
-deep models for climate and microclimate
-prediction~\cite{frnda2022ecmwf,zanchi2023microclimate,guo2024monthly,alves2025spatiotemporal}.
-The present study follows this trajectory but inverts the usual emphasis:
-rather than proposing a larger model, it treats the geometry-conditioned
-CLCRN backbone of Fig.~\ref{fig:overview}b as a fixed substrate and asks,
-under a controlled, schedule-matched, multi-seed protocol, whether the
-learned non-local graph of Fig.~\ref{fig:overview}c adds reproducible,
-architecture-attributable value.
 
-\section{Results}
+\subsection{Test metrics and replicate-level inference}\label{sec:metrics}
+The primary MAE and RMSE pool all finite targets over test examples, the
+12 forecast times, nodes, and output components with equal weight:
+\begin{equation}
+\mathrm{MAE}=\frac{1}{M}\sum_{a=1}^M|\widehat y_a-y_a|,
+\qquad
+\mathrm{RMSE}=\sqrt{\frac{1}{M}\sum_{a=1}^M(\widehat y_a-y_a)^2}.
+\label{eq:metrics}
+\end{equation}
+These are unweighted grid-point metrics, not area-weighted scores. I also
+report a latitude-weighted sensitivity analysis, replacing the unit weights
+with $w_i=\cos\phi_i$ (latitude $\phi_i$ in radians) and dividing weighted error sums by the sum of weights
+over valid entries. This changes the evaluation metric only; it does not
+change the training objective or checkpoint selection. For cumulative horizon $h$, errors pool steps
+$1,\ldots,h$; exact-step scores use only step $h$. Persistence repeats the
+last input observation and is scored by the same test implementation.
 
-\subsection{Experimental setup}
-\subsubsection{Datasets}
-We evaluate on the four WeatherBench-derived tasks defined
-by the original CLCRN study~\cite{lin2022conditional,rasp2020weatherbench}:
-2-m temperature (K), relative humidity (percentage points), 10-m surface wind
-components ($u,v$; m\,s$^{-1}$), and total cloud cover (fraction). Hourly ERA5
-records from 1~January 2010 to 31~December 2018 are mapped to a $32\times64$
-latitude--longitude grid with $N=2{,}048$ nodes. Each example uses 12
-consecutive hourly observations to forecast the next 12 hours; starting
-windows are sampled once per day, yielding 3,286 examples split
-chronologically into 70\%/10\%/20\% for train/validation/test.
+Each primary task has five independently trained control and five AGF
+replicates. Reusing seed labels does not create matched random streams,
+because AGF changes the parameter initialization sequence. I report means,
+sample standard deviations, AGF-minus-control differences, two-sided Welch
+95\% confidence intervals, and two-sided Welch tests. Benjamini--Hochberg
+correction is applied across the eight task/metric tests. The 95\% intervals are marginal, not simultaneous or multiplicity-adjusted intervals; the adjusted $q$ values govern the primary significance statements. A two-sided exact
+permutation test of the difference in means provides a sensitivity check
+under the null of exchangeable group labels, over the
+$\binom{10}{5}=252$ group allocations. This
+replaces the previous paired sign-test interpretation. With only five seeds
+per group, these intervals characterize training variability on one fixed
+split; they do not quantify uncertainty across climates, datasets, or test
+periods. A non-significant result is not evidence of equivalence. With five replicates per group, distributional assumptions are difficult to assess; the exact permutation check is also conditional on exchangeability and does not remove this small-sample limitation.
 
-\subsubsection{Baselines and comparison protocol}
-The primary, causal comparison is
-between CLCRN-AGF and a \emph{schedule-matched control}: the original CLCRN
-backbone trained with the identical data, optimizer, training budget, and
-random seeds but with the AGF module disabled. As external context we also
-report (i) persistence on the current split; (ii) the published CLCRN
-reference values~\cite{lin2022conditional}; (iii) a single independent
-reproduction of the public CLCRN implementation; and (iv) the family of graph
-forecasting baselines benchmarked in the original CLCRN study—STGCN~\cite{yu2018spatio},
-DCRNN~\cite{li2018diffusion}, AGCRN~\cite{bai2020adaptive},
-ASTGCN and MSTGCN~\cite{guo2019attention}, a graph-convolutional
-GRU~\cite{seo2018structured}, and a temporal GCN~\cite{zhao2019tgcn}—whose
-relative standing against the CLCRN backbone is summarized
-in Fig.~\ref{fig:baselines}. These external numbers combine architecture,
-software, and protocol effects and are therefore used only to situate the
-backbone, not to attribute the AGF effect.
+\subsection{Provenance and supplementary experiments}\label{sec:provenance}
+The fixed experiment manifest contains 40 newly trained primary models:
+control and AGF for four tasks and seeds 2021--2025. Six additional newly
+trained mean-fusion models cover temperature and humidity with seeds
+2023--2025. Every model completes the same 100-epoch FP32 protocol.
+The corresponding control and gated-AGF ablation rows reuse exactly those
+three seeds from the primary experiment; they are not separately selected
+favourable runs. Without AGF, the entire input augmentation is removed.
+Without a learned gate, the fusion is $\mathbf z=(\mathbf q+\mathbf r)/2$.
 
-\subsubsection{Evaluation metrics and significance}
-We report mean absolute error (MAE) and
-root mean squared error (RMSE) computed after inverse standardization, using a
-corrected zero-inclusive evaluator (zero wind and zero cloud cover are
-physically meaningful and are not treated as missing). The primary analysis
-uses five random-seed replicates $\{2021,\dots,2025\}$; for each metric we
-report the mean and standard deviation across seeds, the mean difference, a
-two-sided 95\% Welch confidence interval, and a two-sided Welch test.
+All accuracy tables, horizon plots, weighted scores and gate diagnostics
+are regenerated from this common set of new checkpoints. Missing-input
+diagnostics use a documented shared subset. Historical tuning trials and
+short screening runs are not used as substitutes for these replicates.
+Source and checkpoint hashes, seed-level CSV files, validation-selection
+records and figure metadata are retained with the analysis.
 
-\subsubsection{Implementation details}
-Both variants use two recurrent layers with 32 hidden
-units; CLCRN-AGF adds $d_e=10$-dimensional adaptive source/destination node
-embeddings, an 8-dimensional AGF output, and $k=4$ selected neighbours
-(self-edge included).
-Training uses Adam (learning rate 0.01, batch size 32, gradient clipping 5)
-with a MultiStepLR schedule for up to 100 epochs, selecting the
-lowest-validation-MAE checkpoint. All runs use Python 3.13, PyTorch 2.10,
-CUDA 12.8, and a single NVIDIA GeForce RTX 5090 Laptop GPU. Full
-hyperparameters are listed in Methods.
+The external CLCRN reference means are traceable to Table~2 of the published
+AAAI paper~\cite{lin2022conditional}. Temperature and wind scores retain
+their displayed units; humidity errors are multiplied by 10 and cloud-cover
+errors divided by 10 to match the units used here. These historical values were not
+recomputed with the present evaluator. WeatherBench's standard evaluator
+uses cosine-latitude weights, whereas the released CLCRN evaluator uses
+unweighted means and masks zero targets. I therefore state both conventions
+explicitly without assuming that a historical reference shares the corrected
+zero-inclusive protocol. The source audit and unit-conversion table are
+retained in the accompanying reproducibility materials under \texttt{historical\_context}; the primary table contains only matched scores.
 
-\subsection{Backbone standing among graph baselines}
-Before evaluating the extension, Fig.~\ref{fig:baselines} situates the CLCRN
-backbone relative to seven graph forecasting baselines reported in the
-original CLCRN benchmark, across all four variables and both metrics. The
-backbone is consistently strong, which is the reason it is adopted here as a
-fixed substrate: the present study does not claim CLCRN or CLConv as new
-contributions, and these external values are shown only as context for the
-backbone rather than as the causal test of AGF.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{fig_A1_main_baselines.pdf}
-\caption{\textbf{Standing of the CLCRN backbone among seven graph forecasting
-baselines on the four WeatherBench tasks.} Cells are rank-normalized within
-each metric column (greener is better). These values are reported by the
-original CLCRN benchmark and are shown only to situate the backbone; they are
-not the causal comparison for the AGF extension.}
-\label{fig:baselines}
-\end{figure}
+\subsection{Computational scope}\label{sec:cost}
+The AGF implementation constructs a dense $N\times N$ similarity matrix before top-$k$ selection, so graph construction has quadratic intermediate memory despite sparse aggregation. CLConv also materializes dense kernel operators. The recorded trainable parameter counts are 39,268 for the scalar control and 80,892 for scalar AGF; wind uses 39,437 and 81,061, respectively. The inherited inference microbenchmark is identified separately as a measurement of historical weights. Its timings are not relabelled as measurements of the newly trained checkpoints.
 
-\subsection{Primary replicate comparison}
-The primary comparison uses five random-seed replicates. The control is the
-original CLCRN backbone trained with the same revised schedule as CLCRN-AGF.
-Table~\ref{tab:primary} reports mean and standard deviation across seeds, the
-mean difference (CLCRN-AGF minus control), a 95\% Welch confidence interval,
-and a two-sided Welch test. The same seed labels are used in both queues, but
-the AGF module changes model initialization order; the analysis is therefore
-treated as a replicate comparison rather than a strict common-random-number
-paired design.
+
+\paragraph{AI-assisted preparation.}
+AI tools assisted language editing, code review, analysis scripting and figure
+preparation. Their use is described in the Generative AI and AI-Assisted
+Technologies Disclosure section.
+
+\section{Results}\label{sec:results}
+
+\subsection{Primary five-seed comparison}\label{sec:primary}
+
+The primary results use the same zero-inclusive, spatially unweighted evaluator for all 40 newly trained primary checkpoints. Table~\ref{tab:primary} and Fig.~\ref{fig:primary} show the five-seed comparison. Only relative-humidity MAE and RMSE meet the primary threshold after Benjamini--Hochberg correction across eight tests. The remaining comparisons are inconclusive at $q<0.05$.
+
+For relative humidity, mean MAE decreases from 4.648 to 4.537 percentage points (2.38\%; $q=0.00604$), and mean RMSE from 7.248 to 7.010 percentage points (3.29\%; $q=0.000653$). Temperature and wind have higher point estimates for both metrics with AGF, while cloud-cover MAE is slightly higher and RMSE slightly lower. The intervals for all six of these differences include zero; the experiment does not establish either improvement or equivalence for these tasks.
 
 \begin{table}[htbp]
-\caption{Five-replicate comparison of CLCRN-AGF and the schedule-matched
-CLCRN control. Negative differences favour CLCRN-AGF. Confidence intervals
-and $p$-values use Welch's unequal-variance approximation.}
+\centering\small
+\caption{New five-seed comparison. Values are mean and sample standard deviation; differences are AGF minus control. Two-sided Welch tests and 95\% intervals describe independent training replicates. BH correction covers all eight rows; the 95\% intervals are unadjusted marginal intervals. Units are K for temperature, percentage points for relative humidity, m\,s$^{-1}$ for wind, and fraction for cloud cover.}
 \label{tab:primary}
-\centering
-\small
-\begin{tabular}{llrrrr}
+\resizebox{\linewidth}{!}{\begin{tabular}{llrrrrr}
 \toprule
-Task & Metric & Control ($\mu\pm\sigma$) & CLCRN-AGF ($\mu\pm\sigma$)
-& Difference [95\% CI] & $p_{\mathrm{Welch}}$ \\
+Task & Metric & Control ($\mu\pm s$) & AGF ($\mu\pm s$) & Difference [95\% CI] & $p$ & BH $q$ \\
 \midrule
-Temperature & MAE  & $1.229\pm0.057$ & $1.233\pm0.032$ & $+0.004$ [$-0.067,+0.075$] & 0.8985 \\
-            & RMSE & $2.097\pm0.073$ & $2.020\pm0.047$ & $-0.076$ [$-0.169,+0.016$] & 0.0921 \\
-Relative humidity & MAE  & $4.633\pm0.032$ & $4.528\pm0.013$ & $-0.106$ [$-0.144,-0.067$] & $7.6{\times}10^{-4}$ \\
-                  & RMSE & $7.237\pm0.051$ & $7.019\pm0.040$ & $-0.218$ [$-0.285,-0.151$] & $8.4{\times}10^{-5}$ \\
-Surface wind & MAE  & $1.244\pm0.005$ & $1.240\pm0.007$ & $-0.004$ [$-0.014,+0.006$] & 0.3495 \\
-             & RMSE & $1.977\pm0.008$ & $1.973\pm0.017$ & $-0.004$ [$-0.024,+0.017$] & 0.6851 \\
-Cloud cover & MAE  & $0.1487\pm0.0007$ & $0.1480\pm0.0013$ & $-0.0007$ [$-0.0023,+0.0009$] & 0.3106 \\
-            & RMSE & $0.2473\pm0.0019$ & $0.2470\pm0.0027$ & $-0.0003$ [$-0.0038,+0.0031$] & 0.8368 \\
+Temperature & MAE & $1.258\pm0.060$ & $1.291\pm0.107$ & $+0.033$ [$-0.100,+0.166$] & 0.5701 & 0.7601 \\
+Temperature & RMSE & $2.101\pm0.045$ & $2.118\pm0.129$ & $+0.017$ [$-0.141,+0.174$] & 0.7942 & 0.7942 \\
+Relative humidity & MAE & $4.648\pm0.017$ & $4.537\pm0.039$ & $-0.111$ [$-0.158,-0.063$] & 0.00151 & 0.00604 \\
+Relative humidity & RMSE & $7.248\pm0.043$ & $7.010\pm0.055$ & $-0.239$ [$-0.311,-0.166$] & 8.168e-05 & 0.0006534 \\
+Surface wind & MAE & $1.242\pm0.011$ & $1.256\pm0.037$ & $+0.014$ [$-0.032,+0.059$] & 0.4699 & 0.7601 \\
+Surface wind & RMSE & $1.972\pm0.023$ & $2.016\pm0.093$ & $+0.043$ [$-0.071,+0.158$] & 0.3657 & 0.7601 \\
+Cloud cover & MAE & $0.1479\pm0.0017$ & $0.1484\pm0.0020$ & $+0.0005$ [$-0.0022,+0.0031$] & 0.7077 & 0.7942 \\
+Cloud cover & RMSE & $0.2500\pm0.0017$ & $0.2490\pm0.0028$ & $-0.0010$ [$-0.0045,+0.0025$] & 0.5103 & 0.7601 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-Relative humidity is the only task for which every seed label favours
-CLCRN-AGF for both metrics (Fig.~\ref{fig:primary}). Its mean MAE decreases by
-2.28\% and RMSE by 3.02\%. Temperature shows a metric-dependent result: MAE is
-essentially unchanged, whereas mean RMSE decreases by 3.64\% with an interval
-that includes zero. Wind and cloud-cover changes are small relative to seed
-variability.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{fig_primary_replicate_comparison.pdf}
-\caption{\textbf{Test MAE for the schedule-matched control and CLCRN-AGF.}
-Dots show individual seed replicates; diamonds show mean $\pm$ one standard
-deviation. The humidity improvement is consistent across all five seed labels,
-whereas the other tasks show overlapping or mixed changes.}
+\includegraphics[width=0.90\linewidth]{fig4_primary_replicates.pdf}
+\caption{Cumulative 12-hour MAE (top) and RMSE (bottom) from the same 40 checkpoints used in Table~\ref{tab:primary}. Coloured points are five independently trained replicates per variant; black diamonds/error bars denote mean plus or minus sample standard deviation. No pairing of seed labels is assumed.}
 \label{fig:primary}
 \end{figure}
 
-\subsection{Statistical significance analysis}
-Because eight task/metric comparisons are evaluated jointly, we control the
-false discovery rate across them with the Benjamini--Hochberg procedure. Only
-the two relative-humidity improvements remain significant after correction
-(adjusted $p=6.7\times10^{-4}$ for RMSE and $3.0\times10^{-3}$ for MAE), while
-every other comparison---including the temperature RMSE difference (adjusted
-$p=0.25$)---is not significant (adjusted $p\ge0.25$). As a distribution-free
-check that does not rely on the normality assumption at $n=5$, a one-sided sign
-test on the humidity replicates---all five seeds favour CLCRN-AGF for both
-metrics---gives $p=0.031$. The humidity effect is therefore the only one that
-survives both multiple-comparison correction and a non-parametric test. These
-results demonstrate that the observed humidity gain is not caused by random
-initialization.
 
-\subsection{Per-step error growth}
-Figure~\ref{fig:horizon} reports how exact and cumulative error grow with the
-forecast horizon for each task. As expected for short-range forecasting, error
-increases monotonically from $t{+}1$ to $t{+}12$, but the shape of the growth is
-variable-specific: temperature and wind accumulate error close to linearly,
-humidity follows a concave-up profile driven by nonlinear moisture transport,
-and cloud cover grows sub-linearly beyond roughly $t{+}4$, consistent with
-semi-periodic cloud cycles. This profile indicates that the humidity advantage
-in Table~\ref{tab:primary} is not an artifact of a single lead time but accrues
-across the horizon where errors are largest.
+\subsection{Statistical and spatial-weighting sensitivity}\label{sec:statistics}
+
+The exact permutation analysis supports the same two relative-humidity comparisons after separate BH correction across its eight tests ($q=0.03175$ for both MAE and RMSE). The other six adjusted values range from 0.771 to 0.778. Welch tests remain the primary analysis; the permutation results are a sensitivity check with the exchangeability qualification in Methods. Supplementary Fig.~S2 displays the primary mean differences and marginal Welch intervals on a relative scale.
+
+Latitude weighting changes only the evaluation metric. The Supplementary Information section ``Latitude-weighted sensitivity'' reports cosine-latitude-weighted scores from the same new checkpoints. Relative humidity again has lower mean MAE and RMSE (2.73\% and 3.86\%, respectively); its adjusted values are 0.01076 and 0.000871. These eight Welch tests form a separate sensitivity family, not additional primary discoveries.
+
+
+\subsection{Common-split context and forecast horizon}\label{sec:context}
+
+Persistence repeats the final input observation. The Supplementary Information section ``Persistence on the same split'' and Supplementary Fig.~S3 compare persistence with the new model means in each target's physical units. Published CLCRN scores remain source context rather than matched baselines. The exact-step and cumulative horizon curves (Fig.~\ref{fig:horizon}) use the same seeds; the cumulative 12-hour endpoints equal Table~\ref{tab:primary}.
+
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{fig_A2_horizon_curves.pdf}
-\caption{\textbf{Per-step forecast error against prediction horizon.} Exact MAE
-(solid), cumulative MAE (dashed), and exact RMSE (dotted) for the four tasks
-over the 12-step (12-hour) horizon. Error grows monotonically with lead time;
-humidity and temperature exhibit the steepest accumulation.}
+\includegraphics[width=0.90\linewidth]{fig5_horizon_consistent.pdf}
+\caption{Exact-lead MAE (solid) and cumulative MAE from lead 1 to each plotted hour (dashed), averaged over the same five seeds per variant as Table~\ref{tab:primary}. Shading denotes plus or minus sample SD across seeds for exact-lead MAE. Cumulative endpoints at 12 hours equal the corresponding Table~\ref{tab:primary} MAEs; panels use task-specific units.}
 \label{fig:horizon}
 \end{figure}
 
-\subsection{Contextual benchmarks}
-Table~\ref{tab:context} distinguishes results generated in this study from
-external published values. Persistence is evaluated directly on the current
-test split. ``Published CLCRN'' is copied from Lin et al.~\cite{lin2022conditional}
-after restoring the humidity and cloud-cover reporting scales used by the
-current evaluation code. ``Reproduced CLCRN'' is a single independent run of
-the public implementation. The two final rows are five-seed results generated
-under the revised schedule.
+
+\subsection{Precision-matched component comparison}\label{sec:ablation}
+
+The temperature and humidity ablations use seeds 2023--2025 for all three variants, each with 100 epochs and FP32. Control and gated AGF are the corresponding primary subset; six mean-fusion runs are newly trained under the same protocol. The means and sample standard deviations describe these three replicates. For humidity, the gated model has lower mean MAE and RMSE than mean fusion. For temperature, the ordering depends on the metric: the control has the lowest MAE, whereas mean fusion has the lowest RMSE (Table~\ref{tab:ablation}). These are descriptive comparisons with only three replicates per variant; they neither establish a universal gate benefit nor enter the eight-test primary family. Removing AGF removes the complete augmentation, including its residual projection, and changes parameter count, so this comparison does not isolate the learned adjacency alone.
 
 \begin{table}[htbp]
-\caption{Contextual test results. Published CLCRN values are external
-references, not newly generated results. Reproduced CLCRN is a single run;
-control and CLCRN-AGF are five-seed means. Lower is better.}
-\label{tab:context}
-\centering
-\small
-\begin{tabular}{lrrrrrrrr}
-\toprule
-Method & \multicolumn{2}{c}{Temperature} & \multicolumn{2}{c}{Relative humidity}
-& \multicolumn{2}{c}{Surface wind} & \multicolumn{2}{c}{Cloud cover}\\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
-& MAE & RMSE & MAE & RMSE & MAE & RMSE & MAE & RMSE\\
-\midrule
-Persistence (current split) & 1.421 & 2.700 & 6.425 & 10.447 & 1.537 & 2.535 & 0.1620 & 0.2725\\
-Published CLCRN~\cite{lin2022conditional} & 1.169 & 1.883 & 4.531 & 7.078 & 1.326 & 2.129 & 0.1491 & 0.2456\\
-Reproduced CLCRN (one seed) & 1.192 & 2.246 & 4.677 & 7.309 & 1.384 & 2.266 & 0.1564 & 0.2574\\
-Schedule-matched control (five seeds) & 1.229 & 2.097 & 4.633 & 7.237 & 1.244 & 1.977 & 0.1487 & 0.2473\\
-CLCRN-AGF (five seeds) & 1.233 & 2.020 & 4.528 & 7.019 & 1.240 & 1.973 & 0.1480 & 0.2470\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The contextual comparison shows why the extension should not be described as
-uniformly superior. CLCRN-AGF improves on the published reference for
-relative humidity and wind, is mixed for cloud cover, and does not improve
-temperature. Differences from the external reference also combine
-architecture, software environment, and training-protocol effects; the
-schedule-matched control in Table~\ref{tab:primary} is therefore the primary
-causal comparison.
-
-\subsection{Component ablations}
-The experiment archive also contains component ablations. Table~\ref{tab:ablation}
-separates three kinds of evidence: 100-epoch, three-seed ablations for
-temperature and relative humidity, and a 20-epoch single-seed screening run
-over all four tasks. The full-budget humidity comparison uses seeds
-2023--2025. The w/o gated fusion humidity completion was trained with
-automatic mixed precision after repeated standard-precision runs exhausted
-the local CUDA allocator; checkpoint selection and test evaluation still use
-the same corrected zero-inclusive evaluator.
-
-In the 100-epoch temperature ablation, removing the entire adaptive graph
-branch worsens RMSE relative to the full model, while replacing the learned
-gate by mean fusion gives similar or slightly lower mean errors. Thus the
-gate is not uniformly beneficial for temperature. In the full-budget humidity
-ablation, both adaptive-graph variants improve on the model without the
-adaptive graph branch. The full gated model has the lowest mean MAE and RMSE,
-but the mean-fusion variant remains close and was completed under the
-mixed-precision caveat described above. We therefore treat this block as
-sensitivity evidence that supports adaptive graph mixing, not as a definitive
-precision-matched test of the gate. The 20-epoch screening
-run reaches the same qualitative warning: relative humidity is the most
-sensitive task, whereas wind, temperature, and cloud-cover screening results
-are mixed.
-
-\begin{table}[htbp]
-\caption{Component ablations. The first two blocks report 100-epoch
-three-seed ablations at the full 12-hour horizon; the final block reports a
-20-epoch single-seed screening ablation for all four tasks. Lower is better.}
+\centering\small
+\caption{Full-budget component comparison, seeds 2023--2025. Values are means $\pm$ sample SD (K for temperature and percentage points for humidity); these three-seed summaries are descriptive. Removing AGF also changes input width and parameter count.}
 \label{tab:ablation}
-\centering
-\small
 \begin{tabular}{lllrr}
 \toprule
-Budget & Task & Variant & MAE & RMSE\\
+Task & Variant & Precision & MAE & RMSE \\
 \midrule
-100 epochs, 3 seeds & Temperature & w/o adaptive graph & $1.265\pm0.046$ & $2.143\pm0.024$\\
-                    &             & w/o gated fusion   & $1.189\pm0.098$ & $2.018\pm0.079$\\
-                    &             & Full CLCRN-AGF     & $1.222\pm0.026$ & $2.032\pm0.062$\\
-\midrule
-100 epochs, 3 seeds & Relative humidity & w/o adaptive graph & $4.615\pm0.021$ & $7.223\pm0.043$\\
-                    &             & w/o gated fusion   & $4.575\pm0.042$ & $7.077\pm0.076$\\
-                    &             & Full CLCRN-AGF     & $4.529\pm0.013$ & $7.011\pm0.015$\\
-\midrule
-20 epochs, 1 seed & Temperature & w/o adaptive graph & 2.105 & 3.193\\
-                  &             & w/o gated fusion   & 2.716 & 3.665\\
-                  &             & Full CLCRN-AGF     & 2.356 & 3.273\\
-                  & Relative humidity & w/o adaptive graph & 13.390 & 18.739\\
-                  &             & w/o gated fusion   & 5.356 & 8.641\\
-                  &             & Full CLCRN-AGF     & 5.151 & 8.097\\
-                  & Surface wind & w/o adaptive graph & 1.371 & 2.199\\
-                  &             & w/o gated fusion   & 1.542 & 2.478\\
-                  &             & Full CLCRN-AGF     & 1.483 & 2.319\\
-                  & Cloud cover & w/o adaptive graph & 0.1550 & 0.2511\\
-                  &             & w/o gated fusion   & 0.1557 & 0.2551\\
-                  &             & Full CLCRN-AGF     & 0.1559 & 0.2529\\
+Temperature & Control (no AGF) & FP32 & $1.2325\pm0.0555$ & $2.1129\pm0.0433$ \\
+Temperature & Mean fusion & FP32 & $1.2672\pm0.0656$ & $2.0468\pm0.1027$ \\
+Temperature & Full CLCRN-AGF & FP32 & $1.2500\pm0.1268$ & $2.0575\pm0.1382$ \\
+Relative humidity & Control (no AGF) & FP32 & $4.6361\pm0.0086$ & $7.2266\pm0.0430$ \\
+Relative humidity & Mean fusion & FP32 & $4.5993\pm0.0236$ & $7.1322\pm0.0622$ \\
+Relative humidity & Full CLCRN-AGF & FP32 & $4.5550\pm0.0412$ & $7.0403\pm0.0475$ \\
 \bottomrule
 \end{tabular}
-\vspace{2pt}
-
-\parbox{\linewidth}{\footnotesize Values are mean$\pm$sample standard deviation
-for the three-seed blocks. The humidity w/o gated fusion run used automatic
-mixed precision for training; all reported test metrics use the same
-zero-inclusive evaluator.}
 \end{table}
 
-\subsection{Decomposing the improvement: schedule versus structure}
-A central reproducibility concern is that apparent architectural gains may in
-fact originate from the training schedule. Figure~\ref{fig:decomp} decomposes
-the test MAE of four configurations—an original reproduction, the
-schedule-matched control (revised schedule, no adaptive branch), the full
-CLCRN-AGF model, and the published paper target. The revised schedule alone
-accounts for most of the improvement on wind and cloud cover, with the
-additional AGF contribution being small; for humidity, the adaptive branch adds
-a further, consistent reduction on top of the schedule. This decomposition is
-the reason the five-replicate, schedule-matched control—rather than a single
-best run—is treated as the primary causal comparison throughout.
+
+\subsection{Missing-input robustness}\label{sec:robustness}
+
+Both variants are evaluated on 64 deterministically spaced common test windows. Node-mask ratios 0.1, 0.2, 0.3 and 0.4 use mask seeds 11, 22 and 33, shared between variants. Masks remain fixed across input hours and signal channels; masked standardized values are replaced by zero, corresponding to the training mean. Masks are averaged within each training seed before summarizing five seeds. These sampled diagnostics (Fig.~\ref{fig:robust}) neither establish full-test robustness nor provide a significance test for robustness differences.
+
+At 40\% masking, mean relative MAE changes from each checkpoint's clean score are Temperature: AGF +465.9\%, control +474.1\%; Relative humidity: AGF +74.7\%, control +73.0\%; Surface wind: AGF +84.7\%, control +85.7\%; Cloud cover: AGF +37.5\%, control +35.5\%. Each checkpoint supplies its own clean-score denominator, and all variants share the evaluated windows and mask seeds. The large temperature degradation reflects this training-mean-imputation stress test and does not demonstrate behaviour under naturally occurring missingness.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{fig_B2_schedule_decomp_mae.pdf}
-\caption{\textbf{Decomposition of MAE into training-schedule and
-model-structure effects.} Bars compare the original reproduction, the
-schedule-matched control, the full CLCRN-AGF model, and the published target.
-Error bars show $\pm1$ standard deviation over five seeds for the control. The
-revised schedule explains most of the wind and cloud-cover gains; the adaptive
-branch adds a further reduction chiefly for humidity.}
-\label{fig:decomp}
-\end{figure}
-
-\subsection{Reproducibility, stability, and convergence}
-Because the schedule-matched comparison is the basis of our conclusions, we
-characterize its run-to-run stability directly. Across the five seeds in
-Table~\ref{tab:primary}, CLCRN-AGF is highly repeatable: the per-seed standard
-deviation of test MAE is at most $0.032$ (temperature) and is much smaller for
-the other variables ($0.013$ for humidity, $0.007$ for wind, and $0.0013$ for
-cloud cover), with RMSE dispersion bounded by $0.047$. Temperature is the most
-seed-sensitive variable---consistent with its smoother, more isotropic spatial
-field, for which optimization noise has a relatively larger influence on the
-final error---whereas humidity, wind, and cloud cover converge to nearly
-identical solutions once the schedule is fixed. The five-seed means also track
-the published CLCRN reference closely for humidity and cloud cover, indicating
-that the reported operating point is representative rather than a favourable
-single run.
-
-Convergence behaviour reinforces the need for the longer schedule. Under the
-100-epoch budget, the best validation checkpoint is reached on average at epoch
-$78$ (temperature), $87$ (humidity), $86$ (wind), and $93$ (cloud cover), and
-in several seeds approaches the budget ceiling. A short schedule would
-therefore systematically under-train the model and blur the separation between
-optimization and architectural effects that Fig.~\ref{fig:decomp} is designed
-to expose; humidity additionally shows the widest seed-to-seed spread in
-stopping epoch, so convergence speed is itself task-dependent.
-
-\subsection{Robustness and computational cost}
-To probe robustness, Fig.~\ref{fig:robust} measures degradation under
-increasing missing-node ratios at inference, simulating sensor dropout on the
-spherical grid. Cloud cover is essentially insensitive, wind degrades slowly,
-and temperature and humidity degrade more steeply, mirroring the per-task error
-magnitudes in Fig.~\ref{fig:horizon}. On cost, the AGF encoder approximately
-doubles the trainable parameters (from 39.3k to 80.9k for temperature) and
-increases peak inference memory (from 352 to 635~MB) because it forms a dense
-$N\times N$ similarity matrix before top-$k$ selection, while per-batch
-inference latency rises only marginally (202.6 to 211.9~ms). The extension is
-compact relative to global foundation models, but it is not cost-free and is
-not asymptotically linear in the number of nodes (Methods).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{fig_missing_nodes_mae.pdf}
-\caption{\textbf{Robustness of the improved CLCRN under missing-node stress.}
-Test MAE as a function of the fraction of nodes randomly masked at inference.
-Cloud cover is nearly flat; wind degrades slowly; temperature and humidity are
-more sensitive, consistent with their larger baseline error magnitudes.}
+\includegraphics[width=0.90\linewidth]{fig7_robustness_consistent.pdf}
+\caption{Exploratory missing-input stress test using 64 deterministically spaced test windows, the same five trained seeds per variant as Table~\ref{tab:primary}, and three mask seeds (11, 22, 33) at each nonzero ratio. A node mask is fixed across 12 input hours and all signal channels; standardized inputs are set to zero (training-mean imputation). Changes are relative to the clean score on the same 64 windows for each checkpoint. Masks are averaged within a trained seed; points/error bars show mean plus or minus sample SD across five trained seeds. These are sampled diagnostics, not complete-test performance or statistical significance tests.}
 \label{fig:robust}
 \end{figure}
 
-\subsection{Gate-activation diagnostics}
-The fusion gate $\mathbf{g}\in(0,1)$ controls, per node and channel, the
-balance between the graph-aggregated representation $\mathbf{q}$ and the
-residual/local representation $\mathbf{r}$ ($\mathbf{z}=\mathbf{g}\odot\mathbf{q}+(1-\mathbf{g})\odot\mathbf{r}$).
-Table~\ref{tab:gate} summarizes the learned gate values over the full test set,
-and Figure~\ref{fig:gate} shows their distribution (gate activations were
-exported for the three non-temperature variables). For each of these variables
-the mean gate is close to $0.5$ (humidity $\mu=0.55$, wind $\mu=0.47$, cloud
-cover $\mu=0.45$), so the model does not collapse onto either pathway; it uses
-both the non-local graph and the local residual. Humidity places slightly more
-weight on the graph branch and has the most concentrated distribution
-($\sigma=0.043$), consistent with its being the variable that benefits most
-from the adaptive graph; cloud cover has the widest spread ($\sigma=0.106$),
-indicating a more sample-dependent balance. We report these statistics only as
-internal diagnostics: a non-degenerate gate distribution is consistent with,
-but does not by itself prove, a physical interpretation of either pathway.
+
+\subsection{Full-test gate diagnostics}\label{sec:gate}
+
+Gate statistics retain all scalar channels, nodes, input hours, test windows and five AGF seeds per task (Table~\ref{tab:gate}; Supplementary Fig.~S4). The pooled activation standard deviation is not a between-seed standard error. A coefficient near one half does not imply equal information contribution, and a gate pattern alone does not establish a meteorological mechanism.
 
 \begin{table}[htbp]
-\caption{Gate-activation statistics over the test set (per-variable). The gate
-balances the graph-aggregated ($\mathbf{q}$) and residual ($\mathbf{r}$)
-representations; values near $0.5$ indicate balanced use of both pathways.}
+\centering\small
+\caption{Gate statistics pooled across the five newly trained AGF seeds. Rounded extrema may equal 0 or 1; this does not imply universal saturation.}
 \label{tab:gate}
-\centering
-\small
-\begin{tabular}{lrrrr}
+\begin{tabular}{lrrrrr}
 \toprule
-Variable & Mean $\mu$ & Std $\sigma$ & Min & Max\\
+Task & Mean & Pooled SD & Min & Max & Scalar gates \\
 \midrule
-Relative humidity & 0.550 & 0.043 & 0.392 & 0.692\\
-Surface wind      & 0.474 & 0.047 & 0.333 & 0.648\\
-Cloud cover       & 0.451 & 0.106 & 0.229 & 0.758\\
+Temperature & 0.600 & 0.196 & 0.001 & 1.000 & 645,857,280 \\
+Relative humidity & 0.570 & 0.244 & 0.001 & 1.000 & 645,857,280 \\
+Surface wind & 0.508 & 0.130 & 0.049 & 0.954 & 645,857,280 \\
+Cloud cover & 0.475 & 0.208 & 0.002 & 0.997 & 645,857,280 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+
+\subsection{Computational cost in context}\label{sec:cost_results}
+
+Across the 46 completed runs, the sum of recorded epoch training-plus-validation durations is 56.34 GPU wall-clock hours on a serial single-GPU queue. This sum excludes initialization, final test inference, interruption/restart overhead and supplementary analysis; it is not an end-to-end campaign-duration or energy estimate.
+
+\paragraph{Historical-weight inference microbenchmark.}
+
+The following inherited timing evidence uses archived temperature seed-2021 weights, not the newly trained weights in the accuracy tables. It measures a fixed batch of 32 standardized windows, FP32, 12 inputs and 12 outputs, on an RTX 5090 Laptop GPU after 10 warm-up iterations and 30 synchronized repetitions. Historical control/AGF mean batch latencies were 220.53/205.60 ms (iteration SD 18.53/5.43 ms), with peak allocated memory 333.65/614.50 MiB. This sequential repeated-batch profile does not establish a speed advantage, does not measure new-weight inference, and excludes preprocessing. The historical benchmark data remain separately labelled in the supplied revision package.
+
+\paragraph{Context relative to recent global weather models.}
+The scope of CLCRN-AGF is a controlled, task-specific forecast on a
+$32\times64$ grid, using 12 hourly inputs to predict the next 12 hours.
+Recent global ensemble systems address a substantially broader task
+(Table~\ref{tab:large_weather_context}). WeatherNext~3 reports improved
+probabilistic skill over WeatherNext~2 for most upper-level targets and
+surface fields in its 2024 evaluation, with some exceptions at short lead
+times~\cite{rasp2026weathernext3}. FourCastNet~3 reports skill competitive
+with GenCast and better than IFS-ENS in its 2020 WeatherBench~2-style
+evaluation~\cite{bonev2025fourcastnet3}. These reports do not establish an
+accuracy ranking against CLCRN-AGF: the verification years, initial
+conditions, spatial resolutions, variables, forecast horizons, spatial
+weighting and deterministic versus probabilistic scores differ. In
+particular, pressure-level specific humidity is not interchangeable with
+the relative-humidity target used here. A numerical head-to-head comparison would
+require harmonized data and verification.
+
+\paragraph{Training cost and practical scope.}
+The reported training resources also differ substantially. WeatherNext~3
+uses about 6.7 wall-clock days per model seed; its two seeds jointly
+require about 4.8 TPUv4 chip-years and 8.9 TPU7x chip-years~\cite{rasp2026weathernext3}.
+FourCastNet~3 reports three stages: 78~h on 1,024 H100 GPUs, 15~h on
+512 A100 GPUs, and 8~h on 256 H100 GPUs~\cite{bonev2025fourcastnet3}.
+These resources are reported separately from inference, and different
+accelerator types are not converted into a common cost unit. The
+single-member inference timings in Table~\ref{tab:large_weather_context}
+are neither full-ensemble timings nor measurements on the hardware used here.
+CLCRN-AGF is therefore positioned as a compact setting for retraining and
+controlled methodological studies; this experiment does not establish
+competitive operational forecast skill or superior speed at matched
+resolution and forecast coverage.
+
+\begin{table}[htbp]
 \centering
-\includegraphics[width=\linewidth]{fig_gate_distribution.pdf}
-\caption{\textbf{Distribution of learned fusion-gate activations.} Violin plots
-of the gate value $\mathbf{g}\in(0,1)$ for three variables in a representative
-trained CLCRN-AGF model. The horizontal violin encodes density; the line spans
-the 5--95\% interval, the white box marks the interquartile range, the internal
-tick marks the median, and the diamond marks the mean. The dashed reference
-line marks $g=0.5$. All variables are centred near $0.5$, indicating balanced
-use of the graph-aggregated and residual pathways; cloud cover's wider spread
-reflects the intermittency of convective cloud formation. The plot is an
-internal diagnostic and is not, on its own, evidence that either branch
-corresponds to a specific physical process.}
-\label{fig:gate}
-\end{figure}
+\small
+\caption{Context from published global-model reports, not a common-test
+accuracy or hardware benchmark. WeatherNext~3 specifications are taken
+from the official documentation checked on 8 October 2026. Timings are
+per ensemble member as reported by the respective research papers.}
+\label{tab:large_weather_context}
+\begin{tabular}{p{0.15\linewidth}p{0.26\linewidth}p{0.26\linewidth}p{0.22\linewidth}}
+\toprule
+System & Spatial/temporal output and horizon & Predicted fields & Reported inference \\
+\midrule
+CLCRN-AGF (this study) & $32\times64$; hourly; 12~h & Separate temperature, relative-humidity, wind and cloud-cover tasks & Single RTX 5090 Laptop GPU; historical-weight batch profile only; no new-weight timing claim \\
+WeatherNext~3~\cite{rasp2026weathernext3,google2026wn3docs} & $0.1^\circ$ surface, $0.25^\circ$ pressure levels, $0.05^\circ$ station head; hourly surface output; 15~days for main cycles & Surface/upper-air fields, cloud, radiation, precipitation and station temperature/dewpoint & About 6.3~min per member on 4 TPUv5p chips \\
+FourCastNet~3~\cite{bonev2025fourcastnet3} & $0.25^\circ$; 6-hourly; 15-day skill evaluation, rollouts assessed to 60~days & 72 channels: 7 surface fields and 5 variables at 13 pressure levels & About 1~min per 15-day member on one H100 GPU \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\section{Discussion}
 
-\paragraph{What does the replicate experiment establish?}
-The replicate experiment supports a narrow conclusion. Adding adaptive graph
-fusion to CLCRN is beneficial for relative humidity under the tested setup:
-the improvement is consistent across all five seed labels and the Welch
-confidence interval excludes zero for both MAE and RMSE. For temperature,
-wind, and cloud cover, the evidence does not support a general claim of
-architectural superiority.
+\section{Discussion}\label{sec:discussion}
+The evidence supports a modest relative-humidity improvement from AGF under this fixed protocol, with lower MAE and RMSE after the eight-test correction. It does not support a general improvement across weather targets. The temperature, wind and cloud-cover estimates remain inconclusive, and the broad temperature and wind intervals leave room for both benefit and harm.
 
-\paragraph{Why does relative humidity benefit the most?}
-This task dependence is plausible but should not be over-interpreted.
-Relative humidity may benefit from dependencies that are not captured by the
-fixed local neighbourhood alone, which is consistent with the long-range and
-adaptive-graph motivations in the broader spatio-temporal forecasting
-literature~\cite{wu2019graph,bai2020adaptive,shang2021discrete,chen2025multiscale,xiao2025adaptive}.
-The current experiment does not, however, demonstrate that the learned edges
-correspond to teleconnections or moisture corridors. Establishing such a claim
-would require spatial edge analysis, comparisons with meteorological indices,
-and perturbation tests.
+The results now address the corrected optimization protocol directly: all
+primary and mean-fusion models are newly trained with zero-inclusive
+training and validation, saved every epoch and selected by validation alone.
+This resolves the earlier training/evaluation support mismatch in the
+reported accuracy study. It does not guarantee that AGF improves a given
+target. Negative and inconclusive outcomes are retained in the same tables.
 
-\paragraph{Separating optimization from architectural effects.}
-The study also separates optimization effects from architectural effects.
-The revised schedule substantially improves wind and cloud-cover results even
-without AGF, while the additional AGF gain is small (Fig.~\ref{fig:decomp}).
-Reporting only the best single run would obscure this distinction. The
-five-replicate design is therefore central to the present conclusions. The
-ablations further show that the two AGF components do not contribute uniformly.
-For humidity, removing the adaptive graph branch gives the weakest full-budget
-result, whereas mean fusion without the learned gate remains close to the full
-model. For temperature, mean fusion can also match or outperform the learned
-gate. The evidence therefore supports the adaptive graph branch more strongly
-than it supports a universal benefit from gated fusion, although the humidity
-gate comparison should be interpreted cautiously because one ablation variant
-used mixed-precision training.
+The gate combines graph and residual projections of a common pre-CLConv
+input. Neither its learned edges nor its scalar coefficients are identified
+as meteorological teleconnections, moisture transport or causal contribution.
+The component comparison is precision matched, but only three seeds and two
+tasks are available for the mean-fusion ablation. Missing-input diagnostics
+use a sampled test subset and should not be generalized to other types of
+missingness. No new season-stratified experiment is claimed.
 
-\paragraph{Limitations and future work.}
-Several limitations remain. First, the study inherits the compact
-single-variable setup of the original CLCRN paper rather than evaluating
-full-state medium-range weather prediction as in recent global
-forecasters~\cite{bi2023accurate,lam2023learning,kochkov2024neural,price2025probabilistic}.
-Second, the current baseline set contains persistence, the published CLCRN
-reference, and a schedule-matched control; modern graph and non-graph
-baselines~\cite{liu2023spatio,nie2023time,liu2024itransformer,gu2023mamba}
-still need to be retrained under the identical data and optimization pipeline.
-Third, the top-$k$ graph is obtained from a dense $N\times N$ similarity
-matrix, giving quadratic intermediate cost; sparse or linear-attention
-formulations are a natural remedy. Fourth, full-budget component ablations are
-now available for temperature and relative humidity, but wind and cloud cover
-still rely on the shorter 20-epoch component screening and should not be
-over-interpreted. The humidity mean-fusion completion used mixed-precision
-training, so a fully precision-matched ablation grid would be useful before
-making stronger claims about the gate.
+Five independently initialized runs per variant on one chronological split
+give limited precision and no uncertainty assessment across different climate
+periods. These seed-level intervals do not treat individual correlated grid points or forecast hours as independent experimental replicates. The fixed test split was used in earlier development and revision work; the new seeds therefore do not constitute an evaluation on a newly reserved test period. The coarse grid, separate task targets and 12-hour horizon remain
+distinct from modern multivariate medium-range forecasting. Contemporary
+models require harmonized data, compute and verification before a direct
+accuracy ranking is meaningful. Dense graph construction limits scaling,
+and the historical-weight microbenchmark is not a new-weight runtime study.
 
-\section{Conclusion}
 
-This work presents a controlled evaluation of an adaptive graph-fusion
-extension to the published CLCRN weather-forecasting model, with the central
-aim of measuring---rather than asserting---when such an extension helps. Through
-a schedule-matched control, five-seed replication, and significance testing,
-the manuscript cleanly distinguishes prior CLCRN contributions, external
-published values, independent reproduction, and new experiments. Under this
-protocol, CLCRN-AGF consistently improves relative-humidity forecasting, while
-changes for temperature, wind, and cloud cover are small or metric-dependent,
-and a schedule-versus-structure decomposition shows that much of the apparent
-gain over the published reference is attributable to the optimized training
-schedule rather than the architecture. The results therefore support adaptive
-graph fusion as a task-dependent extension rather than a universally better
-replacement for the original CLCRN encoder. Beyond this specific model, the
-study's main takeaway is methodological: schedule-matched, multi-seed,
-significance-tested evaluation is a low-cost discipline that separates genuine
-architectural gains from optimization and reporting effects, and is directly
-transferable to other spatio-temporal forecasting systems.
+\section{Conclusion}\label{sec:conclusion}
+In this controlled experiment, AGF lowers relative-humidity MAE and RMSE by 2.38\% and 3.29\%, respectively, with both comparisons meeting the eight-test BH threshold. No difference is established for the other six primary comparisons. The result is a task-specific finding about training-seed variability on the existing chronological split.
+The completed 40-run primary study and six precision-matched ablations provide a traceable test of an incremental AGF input augmentation. The revised claims follow the observed effects, marginal uncertainty intervals and multiplicity-adjusted tests; they do not assert architectural priority for the individual AGF ingredients or parity with global weather models.
 
-\section{Methods}
-
-\subsection{Data and preprocessing}
-We use the same four WeatherBench-derived tasks and public preprocessing
-pipeline as the original CLCRN study~\cite{lin2022conditional,rasp2020weatherbench}:
-2-m temperature (K), relative humidity (percentage points), 10-m surface wind
-components ($u$ and $v$, m\,s$^{-1}$), and total cloud cover (fraction).
-Hourly ERA5 records from 1 January 2010 through 31 December 2018 are mapped to
-a $32\times64$ latitude--longitude grid with $N=2{,}048$ nodes.
-We denote the spherical grid by
-\begin{equation}
-\mathcal{V}=\{(\lambda_i,\phi_i)\}_{i=1}^{N},\qquad N=32\times64=2{,}048,
-\label{eq:grid}
-\end{equation}
-where $\lambda_i$ and $\phi_i$ are longitude and latitude.
-
-Each example contains 12 consecutive hourly observations and targets the next
-12 hours. Starting windows are sampled once per day (step size 24), producing
-3,286 examples. The split is chronological and unshuffled: 2,300 training
-examples (70\%), 329 validation examples (10\%), and 657 test examples
-(20\%). Input and target variables are standardized with means and
-standard deviations computed from the training subset only; metrics are
-calculated after inverse transformation.
-For a starting index $s$, the input--target pair is
-\begin{equation}
-\mathbf{X}^{(s)}=\big[\mathbf{x}_{s},\ldots,\mathbf{x}_{s+T-1}\big],\qquad
-\mathbf{Y}^{(s)}=\big[\mathbf{x}_{s+T},\ldots,\mathbf{x}_{s+T+H-1}\big],
-\quad T=H=12,
-\label{eq:window}
-\end{equation}
-with $\mathbf{x}_t\in\R^{N\times C}$. Standardization uses training statistics,
-\begin{equation}
-\bar{\mathbf{x}}_{t}
-=\big(\mathbf{x}_{t}-\boldsymbol{\mu}_{\mathrm{train}}\big)
-\oslash\boldsymbol{\sigma}_{\mathrm{train}},
-\label{eq:standardization}
-\end{equation}
-where $\oslash$ denotes element-wise division.
-
-\subsection{CLCRN backbone}
-The backbone is the public CLCRN implementation of Lin et
-al.~\cite{lin2022conditional}. CLConv generates a location-dependent kernel
-from each centre--neighbour coordinate pair and multiplies it by
-geodesic-distance and orientation factors. The resulting operator replaces the
-linear transforms in a graph-convolutional GRU and is used in a
-sequence-to-sequence encoder--decoder over $T=12$ input steps and $H=12$
-forecast steps with autoregressive teacher forcing. We retain this backbone
-without claiming its architecture as a contribution of the present study.
-For node $i$ and neighbour $j$, the geometric descriptor can be written as
-\begin{equation}
-\boldsymbol{\xi}_{ij}
-=\big[\lambda_i,\phi_i,\lambda_j,\phi_j,d_{ij},\theta_{ij}\big],
-\label{eq:geometry_descriptor}
-\end{equation}
-where $d_{ij}$ is geodesic distance and $\theta_{ij}$ is relative orientation.
-The local CLConv kernel is therefore location dependent,
-\begin{equation}
-\mathbf{K}_{ij}^{(\ell)}
-=f_{\ell}\!\left(\boldsymbol{\xi}_{ij}\right)
-\rho_{d}(d_{ij})\,\rho_{\theta}(\theta_{ij}),
-\label{eq:clconv_kernel}
-\end{equation}
-where $f_{\ell}$ is the learned kernel generator for propagation view $\ell$
-and $\rho_d,\rho_\theta$ denote the distance and orientation modulations. For
-node features $\mathbf{h}_j$, the CLConv aggregation is
-\begin{equation}
-\operatorname{CLConv}(\mathbf{h})_{i}
-=\sum_{\ell}\sum_{j\in\mathcal{N}(i)}
-\mathbf{K}_{ij}^{(\ell)}\mathbf{h}_{j},
-\label{eq:clconv_operator}
-\end{equation}
-with $\mathcal{N}(i)$ denoting the local spherical neighbourhood. In the
-recurrent backbone, CLConv replaces the affine maps in the GRU gates:
-\begin{equation}
-\begin{aligned}
-\mathbf{r}_{t}&=\sigma\!\left(\operatorname{CLConv}_{r}([\mathbf{x}_{t}\Vert\mathbf{h}_{t-1}])\right),\\
-\mathbf{u}_{t}&=\sigma\!\left(\operatorname{CLConv}_{u}([\mathbf{x}_{t}\Vert\mathbf{h}_{t-1}])\right),\\
-\tilde{\mathbf{h}}_{t}&=\tanh\!\left(\operatorname{CLConv}_{c}([\mathbf{x}_{t}\Vert(\mathbf{r}_{t}\odot\mathbf{h}_{t-1})])\right),\\
-\mathbf{h}_{t}&=\mathbf{u}_{t}\odot\mathbf{h}_{t-1}
- +(1-\mathbf{u}_{t})\odot\tilde{\mathbf{h}}_{t}.
-\end{aligned}
-\label{eq:clconv_gru}
-\end{equation}
-
-\subsection{Adaptive graph-fusion encoder}
-The AGF encoder is applied to the embedded node features before the recurrent
-backbone (Fig.~\ref{fig:overview}a; the graph construction is detailed in
-Fig.~\ref{fig:overview}c). The per-node feature is formed by
-concatenating a projected weather feature with a learned node embedding:
-\begin{equation}
-\mathbf{F}_{bti}
-=\phi_x\!\left(\bar{\mathbf{x}}_{bti}\right)\Vert\mathbf{e}^{\mathrm{node}}_{i},
-\qquad
-\mathbf{F}\in\R^{B\times T\times N\times d}.
-\label{eq:agf_input}
-\end{equation}
-Trainable source and destination embeddings
-$\mathbf{E}_{s},\mathbf{E}_{t}\in\R^{N\times d_e}$ ($d_e=10$) define a directed
-adjacency
-\begin{equation}
-A_{ij}
-=\frac{\exp(\mathbf{e}^{s}_{i}{}^{\top}\mathbf{e}^{t}_{j})}
-{\sum_{\ell=1}^{N}\exp(\mathbf{e}^{s}_{i}{}^{\top}\mathbf{e}^{t}_{\ell})},
-\label{eq:adaptive_adjacency}
-\end{equation}
-equivalent to applying a row-wise softmax to
-$\mathbf{E}_{s}\mathbf{E}_{t}^{\top}$. For each node the implementation retains
-the self-edge and the $k-1$ largest remaining entries, then renormalizes the
-selected weights:
-\begin{equation}
-\mathcal{T}_{k}(i)=\{i\}\cup
-\operatorname*{arg\,top}_{\substack{j\ne i\\ k-1}} A_{ij},\qquad
-\tilde A_{ij}=\frac{A_{ij}}{\sum_{\ell\in\mathcal{T}_{k}(i)}A_{i\ell}},
-\quad j\in\mathcal{T}_{k}(i).
-\label{eq:topk_normalization}
-\end{equation}
-With $k=4$, the graph-mixed feature is
-\begin{equation}
-\mathbf{m}_{bti}=\sum_{j\in\mathcal{T}_k(i)}\tilde A_{ij}\,\mathbf{F}_{btj}.
-\label{eq:graph_mixing}
-\end{equation}
-The graph-aggregated and residual features are projected separately,
-\begin{equation}
-\mathbf{q}_{bti}=\mathbf{W}_{m}\mathbf{m}_{bti}+\mathbf{b}_{m},\qquad
-\mathbf{r}_{bti}=\mathbf{W}_{r}\mathbf{F}_{bti}+\mathbf{b}_{r},
-\label{eq:agf_projections}
-\end{equation}
-and the learned gate is
-\begin{equation}
-\mathbf{g}_{bti}
-=\sigma\!\big(\mathbf{W}_{g}[\mathbf{r}_{bti}\Vert\mathbf{q}_{bti}]
-+\mathbf{b}_{g}\big).
-\label{eq:agf_gate}
-\end{equation}
-The fused AGF output is
-\begin{equation}
-\mathbf{z}_{bti}
-=\mathbf{g}_{bti}\odot\mathbf{q}_{bti}
-+(1-\mathbf{g}_{bti})\odot\mathbf{r}_{bti}.
-\label{eq:agf_fusion}
-\end{equation}
-The fused output $\mathbf{z}$ (dimension $8$) is concatenated with the standard
-CLCRN encoder inputs before the unchanged recurrent encoder. The
-schedule-matched control disables the entire AGF encoder, removing both the
-adaptive top-$k$ mixing and its gate; the ablations in
-Table~\ref{tab:ablation} replace the gate by the mean
-$\tfrac12(\mathbf{q}_i+\mathbf{r}_i)$ (\emph{w/o gated fusion}) or disable the
-adaptive branch (\emph{w/o adaptive graph}).
-
-\subsection{Training configuration}
-Both variants use two recurrent layers, 32 hidden units, an 8-dimensional
-weather-feature embedding, an 8-dimensional CLConv embedding, one CLConv
-propagation view, and curriculum learning in the autoregressive decoder.
-CLCRN-AGF uses $d_e=10$-dimensional adaptive source/destination node
-embeddings, an 8-dimensional AGF output, and $k=4$ selected neighbours
-including the self-edge. Training uses
-Adam with learning rate 0.01, batch size 32, gradient-norm clipping at 5,
-and a MultiStepLR schedule with milestones
-$\{10,20,30,40,50\}$ and multiplicative factor 0.95. Models train for at
-most 100 epochs and the checkpoint with the lowest validation MAE is used for
-test evaluation.
-
-Experiments were run with Python 3.13, PyTorch 2.10, CUDA 12.8, and an NVIDIA
-GeForce RTX 5090 Laptop GPU. Seeds 2021--2025 are applied to NumPy and all
-PyTorch random-number generators. We do not claim bitwise deterministic
-reproducibility across hardware or library versions.
-Primary control and CLCRN-AGF runs were trained in standard precision. The
-additional relative-humidity w/o gated fusion ablation in
-Table~\ref{tab:ablation} was completed with PyTorch automatic mixed precision
-and batch size 32 because standard-precision attempts repeatedly failed with
-CUDA allocator exhaustion on the available Windows GPU.
-
-\subsection{Metrics and statistical analysis}
-MAE and RMSE are computed after inverse scaling. The corrected evaluator
-includes all finite target values; zero is not treated as missing because zero
-wind components and zero cloud cover are physically meaningful. Persistence
-repeats the final input observation over the complete forecast horizon. The
-primary analysis compares five seed replicates for each variant. For each
-metric we report the mean and sample standard deviation across seeds, the mean
-difference, a two-sided 95\% Welch confidence interval, and a two-sided Welch
-test. All reported test rows use this zero-inclusive evaluator. For archived
-runs with existing checkpoints, validation selection was recomputed with the
-same corrected MAE among the saved checkpoints before test evaluation.
-For $M$ finite target entries and seed-level metric values $m$, the reported
-quantities are
-\begin{equation}
-\begin{aligned}
-\mathrm{MAE}&=\frac{1}{M}\sum_{a=1}^{M}\left|\hat y_a-y_a\right|,
-&\qquad
-\mathrm{RMSE}&=\left(\frac{1}{M}\sum_{a=1}^{M}(\hat y_a-y_a)^2\right)^{1/2},\\
-\Delta_m&=\bar m_{\mathrm{AGF}}-\bar m_{\mathrm{ctrl}},
-&\qquad
-t_W&=\frac{\bar m_{\mathrm{AGF}}-\bar m_{\mathrm{ctrl}}}
-{\sqrt{s_{\mathrm{AGF}}^{2}/n_{\mathrm{AGF}}+s_{\mathrm{ctrl}}^{2}/n_{\mathrm{ctrl}}}}.
-\end{aligned}
-\label{eq:metrics_welch}
-\end{equation}
-
-\subsection{Computational complexity}
-The original CLConv implementation materializes dense $N\times N$ kernel
-operators, and the AGF encoder forms a dense $N\times N$ similarity matrix
-$\mathbf{E}_s\mathbf{E}_t^{\top}$ before top-$k$ selection. The implementation
-therefore has quadratic intermediate memory and similarity-computation cost in
-$N$, despite the sparse aggregation that follows selection. Claims of linear
-scaling are not made.
-
-\FloatBarrier
 
 \section{Funding}
 This research received no specific grant from any funding agency in the
 public, commercial, or not-for-profit sectors.
 
 \section{Author Contributions}
-X.G. conceived the extension, implemented the software, conducted the
-experiments and analysis, prepared the visualizations, and wrote the original
-draft. H.-Y.L. supervised the study and reviewed and edited the manuscript.
-Both authors reviewed and approved the final manuscript.
+Xinchen Geng conceived the extension, implemented the software, conducted
+the experiments and analysis, prepared the visualizations, and drafted,
+reviewed and revised the manuscript.
+
 
 \section{Data Availability}
-The raw ERA5 variables are available through the
-\href{https://github.com/pangeo-data/WeatherBench}{WeatherBench GitHub
-repository} and the Copernicus Climate Data Store. The original CLCRN project
-also provides preprocessed WeatherBench files through the data link described
-in its public README. The preprocessing
-period, variables, temporal windows, and chronological split used here are
-specified fully in the Methods, so the exact arrays can be regenerated
-deterministically from the public ERA5/WeatherBench sources. Because the
-preprocessed arrays are derived from third-party data whose licence governs
-redistribution, we provide the preprocessing and split scripts together with
-fixed configuration files in the public code repository and the deposited
-review archive, rather than redistributing the third-party arrays themselves.
-The archive additionally contains the corrected metric tables and per-seed
-summaries needed to reproduce every reported table and figure.
+The ERA5-derived WeatherBench data are available from
+\url{https://mediatum.ub.tum.de/1524895}; underlying ERA5 data are available
+through \url{https://cds.climate.copernicus.eu/}. The original CLCRN
+preprocessed-data link is documented at
+\url{https://github.com/EDAPINENUT/CLCRN}. Third-party weather arrays are
+not duplicated in full in the revision package. A standardized 32-window temperature batch is retained under \texttt{historical\_context} solely for the separately labelled historical inference microbenchmark.
+The supplementary analysis files
+contain the primary seed-level metrics, checkpoint provenance, refreshed
+figure data, and validation records. The earlier public archive at
+\url{https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports/releases/tag/v0.1-review}
+is a historical release; it should not be assumed to contain the software
+and figures supplied with this revision. The new seed-level results and revised analysis are provided in the dated release
+\url{https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports/releases/tag/v0.2-retraining-20261008}.
 
 \section{Code Availability}
-The study uses the public CLCRN implementation, extended with the AGF module
-and the corrected evaluation scripts described in this manuscript. The source
-files, run configurations, corrected evaluation script, humidity
-component-ablation completion script, and per-seed result summaries are
-included in the supplementary software/review archive submitted with this
-manuscript. The same materials are deposited in a public GitHub repository
-(\href{https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports}{gengx-prog/CLCRN-AGF-Scientific-Reports}),
-with the review archive attached to release
-\href{https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports/releases/tag/v0.1-review}{v0.1-review}.
+The accompanying review package contains frozen training and analysis sources,
+the fixed 46-run plan, configurations, dependency and environment records,
+seed-level metrics, and scripts to regenerate the tables and figures. It
+includes one validation-selected checkpoint for each of the 46 runs, together
+with the complete 100-epoch training histories, run summaries, model
+configurations and checkpoint hashes. These selected checkpoints support
+re-evaluation; the package does not contain all 4,600 epoch checkpoints.
+The full epoch archives remain in the local experiment directory. Recovery
+states stored in a selected checkpoint pertain to its selected epoch, not
+necessarily epoch 100. Third-party weather arrays must be obtained from the
+cited sources and are not included in full.
+The existing public repository is
+\url{https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports}.
+The new training results, revised software and selected checkpoints are
+provided in release \texttt{v0.2-retraining-20261008} (8 October 2026):
+\url{https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports/releases/tag/v0.2-retraining-20261008}.
+
 
 \section{Competing Interests}
-The authors declare no competing interests.
+The author declares no competing interests.
 
 \section{Generative AI and AI-Assisted Technologies Disclosure}
-During preparation of this manuscript, the authors used AI-assisted language
-editing to improve readability and organization. The authors reviewed and
-edited all generated content and take full responsibility for the final
-manuscript.
+During preparation of this revision, the author used AI tools for language
+editing and assistance with code review, analysis scripting, and figure
+preparation. These tools assisted preparation of the materials; scientific interpretation and responsibility for the manuscript rest with the author.
 
-\begin{thebibliography}{58}
-
+\begin{thebibliography}{20}
 \bibitem{bauer2015quiet}
   Bauer, P., Thorpe, A. \& Brunet, G. The quiet revolution of numerical
   weather prediction. \textit{Nature} \textbf{525,} 47--55 (2015).
@@ -984,12 +552,6 @@ manuscript.
 \bibitem{hersbach2020era5}
   Hersbach, H. et al. The ERA5 global reanalysis. \textit{Q. J. R. Meteorol.
   Soc.} \textbf{146,} 1999--2049 (2020).
-
-\bibitem{weyn2020improving}
-  Weyn, J. A., Durran, D. R. \& Caruana, R. Improving data-driven global
-  weather prediction using deep convolutional neural networks on a cubed
-  sphere. \textit{J. Adv. Model. Earth Syst.} \textbf{12,} e2020MS002109
-  (2020).
 
 \bibitem{pathak2022fourcastnet}
   Pathak, J. et al. FourCastNet: A global data-driven high-resolution weather
@@ -1004,21 +566,6 @@ manuscript.
   Lam, R. et al. Learning skillful medium-range global weather forecasting.
   \textit{Science} \textbf{382,} 1416--1421 (2023).
 
-\bibitem{nguyen2023climax}
-  Nguyen, T., Brandstetter, J., Kapoor, A., Gupta, J. K. \& Grover, A.
-  ClimaX: A foundation model for weather and climate. In
-  \textit{International Conference on Machine Learning (ICML)} 25904--25938
-  (2023).
-
-\bibitem{bonev2023spherical}
-  Bonev, B. et al. Spherical Fourier neural operators: Learning stable
-  dynamics on the sphere. In \textit{International Conference on Machine
-  Learning (ICML)} 2806--2823 (2023).
-
-\bibitem{kochkov2024neural}
-  Kochkov, D. et al. Neural general circulation models for weather and
-  climate. \textit{Nature} \textbf{632,} 1060--1066 (2024).
-
 \bibitem{price2025probabilistic}
   Price, I. et al. Probabilistic weather forecasting with machine learning.
   \textit{Nature} \textbf{637,} 84--90 (2025).
@@ -1026,29 +573,7 @@ manuscript.
 \bibitem{lin2022conditional}
   Lin, H. et al. Conditional local convolution for spatio-temporal
   meteorological forecasting. \textit{Proc. AAAI Conf. Artif. Intell.}
-  \textbf{36,} 7470--7478 (2022).
-
-\bibitem{defferrard2016chebnet}
-  Defferrard, M., Bresson, X. \& Vandergheynst, P. Convolutional neural
-  networks on graphs with fast localized spectral filtering. In
-  \textit{NeurIPS} 3844--3852 (2016).
-
-\bibitem{kipf2017semi}
-  Kipf, T. N. \& Welling, M. Semi-supervised classification with graph
-  convolutional networks. In \textit{ICLR} (2017).
-
-\bibitem{velickovic2018graph}
-  Veli\v{c}kovi\'c, P. et al. Graph attention networks. In \textit{ICLR}
-  (2018).
-
-\bibitem{hamilton2017inductive}
-  Hamilton, W. L., Ying, R. \& Leskovec, J. Inductive representation
-  learning on large graphs. In \textit{NeurIPS} 1024--1034 (2017).
-
-\bibitem{cohen2019gauge}
-  Cohen, T. S., Geiger, M., K\"ohler, J. \& Welling, M. Gauge equivariant
-  convolutional networks and the icosahedral CNN. In \textit{International
-  Conference on Machine Learning (ICML)} 1321--1330 (2019).
+  \textbf{36,} 7470--7478 (2022). \url{https://doi.org/10.1609/aaai.v36i7.20711}.
 
 \bibitem{li2018diffusion}
   Li, Y., Yu, R., Shahabi, C. \& Liu, Y. Diffusion convolutional recurrent
@@ -1059,11 +584,6 @@ manuscript.
   deep learning framework for traffic forecasting. In \textit{IJCAI}
   3634--3640 (2018).
 
-\bibitem{guo2019attention}
-  Guo, S., Lin, Y., Feng, N., Song, C. \& Wan, H. Attention based
-  spatial-temporal graph convolutional networks for traffic flow
-  forecasting. In \textit{AAAI} 922--929 (2019).
-
 \bibitem{wu2019graph}
   Wu, Z., Pan, S., Long, G., Jiang, J. \& Zhang, C. Graph WaveNet for deep
   spatial-temporal graph modeling. In \textit{IJCAI} 1907--1913 (2019).
@@ -1073,171 +593,42 @@ manuscript.
   convolutional recurrent network for traffic forecasting. In
   \textit{NeurIPS} 17804--17815 (2020).
 
-\bibitem{wu2020connecting}
-  Wu, Z. et al. Connecting the dots: Multivariate time series forecasting
-  with graph neural networks. In \textit{KDD} 753--763 (2020).
-
-\bibitem{zheng2020gman}
-  Zheng, C., Fan, X., Wang, C. \& Qi, J. GMAN: A graph multi-attention
-  network for traffic prediction. In \textit{AAAI} 1234--1241 (2020).
-
-\bibitem{fang2021spatial}
-  Fang, Z., Long, Q., Song, G. \& Xie, K. Spatial-temporal graph ODE
-  networks for traffic flow forecasting. In \textit{KDD} 364--373 (2021).
-
-\bibitem{lan2022dstagnn}
-  Lan, S. et al. DSTAGNN: Dynamic spatial-temporal aware graph neural
-  network for traffic flow forecasting. In \textit{International Conference
-  on Machine Learning (ICML)} 11906--11917 (2022).
-
-\bibitem{jin2023spatio}
-  Jin, G. et al. Spatio-temporal graph neural networks for predictive
-  learning in urban computing: A survey. \textit{IEEE Trans. Knowl. Data
-  Eng.} \textbf{36,} 5388--5408 (2023).
-
-\bibitem{cini2023scalable}
-  Cini, A., Marisca, I., Bianchi, F. M. \& Alippi, C. Scalable
-  spatiotemporal graph neural networks. In \textit{AAAI} 7218--7226 (2023).
-
-\bibitem{zambon2023graph}
-  Zambon, D., Cini, A., Livi, L. \& Alippi, C. Graph state-space models.
-  Preprint at https://arxiv.org/abs/2301.01741 (2023).
-
-\bibitem{wen2023diffstg}
-  Wen, H. et al. DiffSTG: Probabilistic spatio-temporal graph forecasting
-  with denoising diffusion models. In \textit{ACM SIGSPATIAL} 1--12 (2023).
-
-\bibitem{oskarsson2023temporal}
-  Oskarsson, J., Sid\'en, P. \& Lindsten, F. Temporal graph neural networks
-  for irregular data. In \textit{AISTATS} 4515--4531 (2023).
-
 \bibitem{shang2021discrete}
   Shang, C., Chen, J. \& Bi, J. Discrete graph structure learning for
   forecasting multiple time series. In \textit{ICLR} (2021).
-
-\bibitem{qi2017pointnet}
-  Qi, C. R., Su, H., Mo, K. \& Guibas, L. J. PointNet: Deep learning on
-  point sets for 3D classification and segmentation. In \textit{CVPR}
-  652--660 (2017).
-
-\bibitem{wang2019dynamic}
-  Wang, Y. et al. Dynamic graph CNN for learning on point clouds.
-  \textit{ACM Trans. Graph.} \textbf{38,} 146 (2019).
-
-\bibitem{jiang2023pdformer}
-  Jiang, J., Han, C., Zhao, W. X. \& Wang, J. PDFormer: Propagation
-  delay-aware dynamic long-range transformer for traffic flow prediction.
-  In \textit{AAAI} 4365--4373 (2023).
 
 \bibitem{liu2023spatio}
   Liu, H. et al. Spatio-temporal adaptive embedding makes vanilla
   transformer SOTA for traffic forecasting. In \textit{CIKM} 4125--4129
   (2023).
 
-\bibitem{feng2022adaptive}
-  Feng, A. \& Tassiulas, L. Adaptive graph spatial-temporal transformer
-  network for traffic flow forecasting. Preprint at
-  https://arxiv.org/abs/2207.05064 (2022).
-
-\bibitem{huang2023adaptive}
-  Huang, B. et al. Adaptive spatiotemporal transformer graph network for
-  traffic flow forecasting by IoT loop detectors. \textit{IEEE Internet
-  Things J.} \textbf{10,} 1642--1653 (2023).
-
 \bibitem{vaswani2017attention}
   Vaswani, A. et al. Attention is all you need. In \textit{NeurIPS}
   5998--6008 (2017).
-
-\bibitem{zhou2021informer}
-  Zhou, H. et al. Informer: Beyond efficient transformer for long sequence
-  time-series forecasting. In \textit{AAAI} 11106--11115 (2021).
-
-\bibitem{wu2021autoformer}
-  Wu, H., Xu, J., Wang, J. \& Long, M. Autoformer: Decomposition
-  transformers with auto-correlation for long-term series forecasting. In
-  \textit{NeurIPS} 22419--22430 (2021).
-
-\bibitem{nie2023time}
-  Nie, Y., Nguyen, N. H., Sinthong, P. \& Kalagnanam, J. A time series is
-  worth 64 words: Long-term forecasting with transformers. In \textit{ICLR}
-  (2023).
-
-\bibitem{wu2023timesnet}
-  Wu, H. et al. TimesNet: Temporal 2D-variation modeling for general time
-  series analysis. In \textit{ICLR} (2023).
-
-\bibitem{zhang2023crossformer}
-  Zhang, Y. \& Yan, J. Crossformer: Transformer utilizing cross-dimension
-  dependency for multivariate time series forecasting. In \textit{ICLR}
-  (2023).
-
-\bibitem{liu2024itransformer}
-  Liu, Y. et al. iTransformer: Inverted transformers are effective for time
-  series forecasting. In \textit{ICLR} (2024).
-
-\bibitem{gu2023mamba}
-  Gu, A. \& Dao, T. Mamba: Linear-time sequence modeling with selective
-  state spaces. Preprint at https://arxiv.org/abs/2312.00752 (2023).
-
-\bibitem{cao2020spectral}
-  Cao, D. et al. Spectral temporal graph neural network for multivariate
-  time-series forecasting. In \textit{NeurIPS} 17766--17778 (2020).
-
-\bibitem{oreshkin2020nbeats}
-  Oreshkin, B. N., Carpov, D., Chapados, N. \& Bengio, Y. N-BEATS: Neural
-  basis expansion analysis for interpretable time series forecasting. In
-  \textit{ICLR} (2020).
-
-\bibitem{zeng2023transformers}
-  Zeng, A., Chen, M., Zhang, L. \& Xu, Q. Are transformers effective for
-  time series forecasting? In \textit{AAAI} 11121--11128 (2023).
-
-\bibitem{chen2025multiscale}
-  Chen, H., Huang, J., Lu, Y. \& Huang, J. Multi-scale spatio-temporal graph
-  neural network for urban traffic flow prediction. \textit{Sci. Rep.}
-  \textbf{15,} 26732; 10.1038/s41598-025-11072-0 (2025).
-
-\bibitem{xiao2025adaptive}
-  Xiao, Z., Shen, Q., Li, C., Li, D. \& Liu, Q. An adaptive spatiotemporal
-  dynamic graph convolutional network for traffic prediction.
-  \textit{Sci. Rep.} \textbf{15,} 27098; 10.1038/s41598-025-12261-7 (2025).
-
-\bibitem{xiao2025graph}
-  Xiao, H., Zou, B. \& Xiao, J. Graph convolution networks based on adaptive
-  spatiotemporal attention for traffic flow forecasting. \textit{Sci. Rep.}
-  \textbf{15,} 8935; 10.1038/s41598-025-88706-w (2025).
-
-\bibitem{frnda2022ecmwf}
-  Frnda, J. et al. ECMWF short-term prediction accuracy improvement by deep
-  learning. \textit{Sci. Rep.} \textbf{12,} 7898; 10.1038/s41598-022-11936-9
-  (2022).
-
-\bibitem{zanchi2023microclimate}
-  Zanchi, M., Zapperi, S. \& La Porta, C. A. M. Harnessing deep learning to
-  forecast local microclimate using global climate data. \textit{Sci. Rep.}
-  \textbf{13,} 21062; 10.1038/s41598-023-48028-1 (2023).
-
-\bibitem{guo2024monthly}
-  Guo, Q., He, Z. \& Wang, Z. Monthly climate prediction using deep
-  convolutional neural network and long short-term memory.
-  \textit{Sci. Rep.} \textbf{14,} 17748; 10.1038/s41598-024-68906-6 (2024).
-
-\bibitem{alves2025spatiotemporal}
-  Alves, D., Mendon\c{c}a, F., Mostafa, S. S. \& Morgado-Dias, F. A deep
-  learning approach for improving spatiotemporal resolution of numerical
-  weather prediction forecasts. \textit{Sci. Rep.} \textbf{15,} 32796;
-  10.1038/s41598-025-17867-5 (2025).
 
 \bibitem{seo2018structured}
   Seo, Y., Defferrard, M., Vandergheynst, P. \& Bresson, X. Structured
   sequence modeling with graph convolutional recurrent networks. In
   \textit{ICONIP} 362--373 (2018).
 
-\bibitem{zhao2019tgcn}
-  Zhao, L. et al. T-GCN: A temporal graph convolutional network for traffic
-  prediction. \textit{IEEE Trans. Intell. Transp. Syst.} \textbf{21,}
-  3848--3858 (2020).
+\bibitem{rasp2026weathernext3}
+Rasp, S. et al. WeatherNext 3: Increasing resolution and performance of
+global weather models with raw observations. \textit{arXiv preprint}
+arXiv:2609.03582 (2026). \url{https://doi.org/10.48550/arXiv.2609.03582}.
+
+\bibitem{google2026wn3docs}
+Google. WeatherNext 3. \textit{Google for Developers}
+\url{https://developers.google.com/weathernext/guides/models}
+(updated 28 September 2026; accessed 8 October 2026).
+
+\bibitem{bonev2025fourcastnet3}
+Bonev, B. et al. FourCastNet 3: A geometric approach to probabilistic
+machine-learning weather forecasting at scale. \textit{arXiv preprint}
+arXiv:2507.12144 (2025). \url{https://doi.org/10.48550/arXiv.2507.12144}.
+\bibitem{feng2022adaptive}
+  Feng, A. \& Tassiulas, L. Adaptive graph spatial-temporal transformer
+  network for traffic flow forecasting. Preprint at
+  \url{https://arxiv.org/abs/2207.05064} (2022).
 
 \end{thebibliography}
-
 \end{document}

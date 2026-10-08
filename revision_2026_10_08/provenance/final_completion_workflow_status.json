@@ -1,0 +1,39 @@
+{
+  "status": "drafts_ready_for_author_review",
+  "steps": [
+    {
+      "name": "new_training_analysis",
+      "status": "completed",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\finish_revision_retraining.py",
+        "--run-root",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5",
+        "--full-analysis",
+        "--device",
+        "cuda:0"
+      ],
+      "child_pid": 18452,
+      "returncode": 0
+    },
+    {
+      "name": "manuscript_and_response_drafts",
+      "status": "completed",
+      "command": [
+        "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-u",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\write_retrained_revision_draft.py",
+        "--run-root",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5",
+        "--revision-root",
+        "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\revision_inputs"
+      ],
+      "child_pid": 19324,
+      "returncode": 0
+    }
+  ],
+  "author_review_required": true,
+  "updated_at_utc": "2026-10-08T08:12:07.972030+00:00",
+  "note": "New evidence and drafts generated; no journal submission or public upload performed."
+}

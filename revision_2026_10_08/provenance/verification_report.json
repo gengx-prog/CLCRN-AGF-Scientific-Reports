@@ -1,0 +1,298 @@
+{
+  "generated_at_utc": "2026-10-08T08:04:07.018292+00:00",
+  "status": "passed",
+  "expected_runs": 46,
+  "run_root": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5",
+  "checks": [
+    {
+      "run_id": "cloud_cover_control_2021",
+      "status": "passed",
+      "best_epoch": 100,
+      "checkpoint_sha256": "5ecfec7bca285d3f0d85224ccd157080fd5ab11e79afdded152e40fadbb6026c"
+    },
+    {
+      "run_id": "cloud_cover_agf_2021",
+      "status": "passed",
+      "best_epoch": 92,
+      "checkpoint_sha256": "83b00ac7593fbfd6c7b6703144d0e3218189e31d72fb2e082d45ccd712f51b59"
+    },
+    {
+      "run_id": "cloud_cover_control_2022",
+      "status": "passed",
+      "best_epoch": 99,
+      "checkpoint_sha256": "808e8bd1185b41137148dfd538159aa3c74ef4bf87a39be2ae501e69506cfe88"
+    },
+    {
+      "run_id": "cloud_cover_agf_2022",
+      "status": "passed",
+      "best_epoch": 99,
+      "checkpoint_sha256": "eb3ac2ac0472afa97163b251e596247fde9f65b06911495c253002f9532e8551"
+    },
+    {
+      "run_id": "cloud_cover_control_2023",
+      "status": "passed",
+      "best_epoch": 91,
+      "checkpoint_sha256": "735df6d3362757b48b72447d4ee38d8298155c0f91ba8223a8192ea0b37ad89c"
+    },
+    {
+      "run_id": "cloud_cover_agf_2023",
+      "status": "passed",
+      "best_epoch": 74,
+      "checkpoint_sha256": "4aca7773fda2f2ceaa70bef8ef752401fbd7ec1fc4687e454c2ce4b7121df9a9"
+    },
+    {
+      "run_id": "cloud_cover_control_2024",
+      "status": "passed",
+      "best_epoch": 91,
+      "checkpoint_sha256": "36785e671ac712ad2c284079323c013bbe323999ca36a6993ab5694b0f47fd01"
+    },
+    {
+      "run_id": "cloud_cover_agf_2024",
+      "status": "passed",
+      "best_epoch": 84,
+      "checkpoint_sha256": "cbf9a235977a9b513e8cc4cd25d87365e21c13cf9fadd0f1ab9e0bb7481444e4"
+    },
+    {
+      "run_id": "cloud_cover_control_2025",
+      "status": "passed",
+      "best_epoch": 88,
+      "checkpoint_sha256": "36891fca0203f5779cc465be3647c06300407d234f31340c49dfe60ec2865731"
+    },
+    {
+      "run_id": "cloud_cover_agf_2025",
+      "status": "passed",
+      "best_epoch": 88,
+      "checkpoint_sha256": "61e195d0f2f507a8c36e7c49c919ac754320b746a8611d64ee25ec2f4e104112"
+    },
+    {
+      "run_id": "humidity_control_2021",
+      "status": "passed",
+      "best_epoch": 100,
+      "checkpoint_sha256": "504aac6ff00974ceea1dd951f576995d8316b0ddf929262e4e717f15c5ea8c63"
+    },
+    {
+      "run_id": "humidity_agf_2021",
+      "status": "passed",
+      "best_epoch": 97,
+      "checkpoint_sha256": "3ee8e0868466d65047bce2524743c278e44df38d73eef43aefdc394092afe25e"
+    },
+    {
+      "run_id": "humidity_control_2022",
+      "status": "passed",
+      "best_epoch": 89,
+      "checkpoint_sha256": "ed09d909f53d2f8c3e4f6a0300d8e9e14eac2d5f63e65aea9f27c828c3c13ad9"
+    },
+    {
+      "run_id": "humidity_agf_2022",
+      "status": "passed",
+      "best_epoch": 85,
+      "checkpoint_sha256": "19513eb36fa660953e6e90e3c778b229d33175fb045e51fae1fd21d72404f61d"
+    },
+    {
+      "run_id": "humidity_control_2023",
+      "status": "passed",
+      "best_epoch": 82,
+      "checkpoint_sha256": "f62968d195b8c987c5dacb205368cc18e3df3bb560e1b871c215b21e41de60a3"
+    },
+    {
+      "run_id": "humidity_agf_2023",
+      "status": "passed",
+      "best_epoch": 78,
+      "checkpoint_sha256": "6a93eb6500932e7006c80684255958590154752065fad7bbbe6d41df79d9a15d"
+    },
+    {
+      "run_id": "humidity_control_2024",
+      "status": "passed",
+      "best_epoch": 85,
+      "checkpoint_sha256": "9253a3a89329c84184ef53ab93ea17662840363f6c22a37a894838b1731c32bf"
+    },
+    {
+      "run_id": "humidity_agf_2024",
+      "status": "passed",
+      "best_epoch": 87,
+      "checkpoint_sha256": "cd5e444c13c75591f89f09b63461dc2fff1024fe184fd3265fd0d8e8c76b42d0"
+    },
+    {
+      "run_id": "humidity_control_2025",
+      "status": "passed",
+      "best_epoch": 66,
+      "checkpoint_sha256": "eb6637dd3fdd8e8eeee352e39b4e558703513553a3cd62721cdffc4d2bee645a"
+    },
+    {
+      "run_id": "humidity_agf_2025",
+      "status": "passed",
+      "best_epoch": 94,
+      "checkpoint_sha256": "9cc43a815db221ea5037a3ea3ebb3f62421850905768ba66085a3ef658d1eb61"
+    },
+    {
+      "run_id": "temperature_control_2021",
+      "status": "passed",
+      "best_epoch": 90,
+      "checkpoint_sha256": "2ad448fbcb1f027b109767cddb0b50c6bc212158b4db26d0f985406e0ad10381"
+    },
+    {
+      "run_id": "temperature_agf_2021",
+      "status": "passed",
+      "best_epoch": 67,
+      "checkpoint_sha256": "b74783874d5e2bba9d0b7014d1903e40e21f05493188a0950708047f9aaa58a9"
+    },
+    {
+      "run_id": "temperature_control_2022",
+      "status": "passed",
+      "best_epoch": 80,
+      "checkpoint_sha256": "ccac018c4b93607190755ff9634b54950aaa20ad2537f198392b8d7dcad21247"
+    },
+    {
+      "run_id": "temperature_agf_2022",
+      "status": "passed",
+      "best_epoch": 100,
+      "checkpoint_sha256": "d9483ef4a5d5ad0f3cfd5e1841bfe36fbc65d6f19ddde32b78a0182f66a45e6e"
+    },
+    {
+      "run_id": "temperature_control_2023",
+      "status": "passed",
+      "best_epoch": 92,
+      "checkpoint_sha256": "c28dc357de284db02aee283955582b87a5668bfd37db639739629a1acce1d153"
+    },
+    {
+      "run_id": "temperature_agf_2023",
+      "status": "passed",
+      "best_epoch": 87,
+      "checkpoint_sha256": "ee66072380c8824de448b525421aaf50d22d1ccb86044590dc43430cc0418c9d"
+    },
+    {
+      "run_id": "temperature_control_2024",
+      "status": "passed",
+      "best_epoch": 66,
+      "checkpoint_sha256": "302e7345507d629ac12e45bd2917aab8244c6f4d8791d40242d0294a63b50f70"
+    },
+    {
+      "run_id": "temperature_agf_2024",
+      "status": "passed",
+      "best_epoch": 78,
+      "checkpoint_sha256": "89520814367d5bb69a3dd5f342542e67fc27b023e9988cf8f9665ad12adca2b6"
+    },
+    {
+      "run_id": "temperature_control_2025",
+      "status": "passed",
+      "best_epoch": 92,
+      "checkpoint_sha256": "a7b084631e1565994b2504641d85db2d4c8c8fc9cafa55d172df079b6acef489"
+    },
+    {
+      "run_id": "temperature_agf_2025",
+      "status": "passed",
+      "best_epoch": 90,
+      "checkpoint_sha256": "f0bfdfa2ff7a776752e2c24bfc30be5c8c4cfae78f2b3238bd856b0f8c4ccfb0"
+    },
+    {
+      "run_id": "component_of_wind_control_2021",
+      "status": "passed",
+      "best_epoch": 78,
+      "checkpoint_sha256": "dcccbc9422938624b343f72d825a0ca080ded2b2aea32f790ed2a1704a67b5d1"
+    },
+    {
+      "run_id": "component_of_wind_agf_2021",
+      "status": "passed",
+      "best_epoch": 86,
+      "checkpoint_sha256": "a3950948446f286d997021bd29a51ff5b01eb7943289fc96fbaf76364ecc6b7c"
+    },
+    {
+      "run_id": "component_of_wind_control_2022",
+      "status": "passed",
+      "best_epoch": 93,
+      "checkpoint_sha256": "f5122778fae78fc1252d0de1d34d292b78165c7efd9e1c532b9a063f47a32b58"
+    },
+    {
+      "run_id": "component_of_wind_agf_2022",
+      "status": "passed",
+      "best_epoch": 82,
+      "checkpoint_sha256": "e01801a4adfac5ad2d30815fedfc552800c46a525d75d4bd41661ebac0e703e3"
+    },
+    {
+      "run_id": "component_of_wind_control_2023",
+      "status": "passed",
+      "best_epoch": 98,
+      "checkpoint_sha256": "f7fe065d3287dd0b1ecd6f5597fc21759c07ea56fc570c33c24a6d954687b866"
+    },
+    {
+      "run_id": "component_of_wind_agf_2023",
+      "status": "passed",
+      "best_epoch": 98,
+      "checkpoint_sha256": "9f0cdf074ffe481f2e14fbdea128b5987c4d110b265da52a4b5a5c2204391575"
+    },
+    {
+      "run_id": "component_of_wind_control_2024",
+      "status": "passed",
+      "best_epoch": 84,
+      "checkpoint_sha256": "dc1c1fe467b49675d753869379f6b2fe7f13cb338ad252ab4251fdd72017b5ef"
+    },
+    {
+      "run_id": "component_of_wind_agf_2024",
+      "status": "passed",
+      "best_epoch": 84,
+      "checkpoint_sha256": "4c0e2051afbc84b81ba40fe39ba653391367f4080f1b958625f6e93476fba0e5"
+    },
+    {
+      "run_id": "component_of_wind_control_2025",
+      "status": "passed",
+      "best_epoch": 89,
+      "checkpoint_sha256": "f287c425f233a84830922f895cfdfbd2bde2bf4ae1cdeadf74d5847d7cb31005"
+    },
+    {
+      "run_id": "component_of_wind_agf_2025",
+      "status": "passed",
+      "best_epoch": 94,
+      "checkpoint_sha256": "c4f8964c7c45efc183bf65bd10705f5fa59b27fee768efa7aaabfe03d7a68cb3"
+    },
+    {
+      "run_id": "temperature_mean_fusion_2023",
+      "status": "passed",
+      "best_epoch": 89,
+      "checkpoint_sha256": "cc89e85662358a7c8df7f974c24089a5a723286c419a61c1a95382fe097397b5"
+    },
+    {
+      "run_id": "temperature_mean_fusion_2024",
+      "status": "passed",
+      "best_epoch": 52,
+      "checkpoint_sha256": "bd83f9dd231af9c9eebb1b9b63c5528ab779905945f626918fc7d7f212540d1d"
+    },
+    {
+      "run_id": "temperature_mean_fusion_2025",
+      "status": "passed",
+      "best_epoch": 98,
+      "checkpoint_sha256": "9519fc33ec22ce40bfa9eb9932d0c77fe68d1990e7aae292b33333ce90848050"
+    },
+    {
+      "run_id": "humidity_mean_fusion_2023",
+      "status": "passed",
+      "best_epoch": 84,
+      "checkpoint_sha256": "3cd1fa2476f8f7a42d60a69a2d3c62a5662b41037051250f2e62c14011185a3e"
+    },
+    {
+      "run_id": "humidity_mean_fusion_2024",
+      "status": "passed",
+      "best_epoch": 93,
+      "checkpoint_sha256": "7e0576796b69f16f2cdaaa1d24ca1086348bdb2846ec1726b7f6836646c99683"
+    },
+    {
+      "run_id": "humidity_mean_fusion_2025",
+      "status": "passed",
+      "best_epoch": 84,
+      "checkpoint_sha256": "b7c73070ce36d7b83cb6bb8db9445387238414d73e9c5c5f27146e1f576ced84"
+    }
+  ],
+  "errors": [],
+  "manuscript_updated": false,
+  "fixture": false,
+  "plan": {
+    "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\training_plan.json",
+    "sha256": "3aa245f071e21025eb8f5d027b9b4e78d4888fbdd822fc79d849471fe1fe3a4c",
+    "bytes": 51257
+  },
+  "queue_status": {
+    "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\queue_status.json",
+    "sha256": "c1d9fb054c145cbaddf872cafc0bc9011f4e584a960675e9cf2d7cbb5b4742f5",
+    "bytes": 184337
+  },
+  "verified_runs": 46
+}

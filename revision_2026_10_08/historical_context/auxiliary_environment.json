@@ -1,0 +1,18 @@
+{
+  "torch": "2.10.0+cu128",
+  "numpy": "2.4.2",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "source": {
+    "path": "experiments/corrected_publication_metrics/rows.json",
+    "sha256": "709219a3416e846bb0fb8c87625895b769617199519bc034f54d7575bc459394",
+    "bytes": 45531
+  },
+  "activity": "fresh inference of archived checkpoints; no training or validation re-selection performed by this script",
+  "robustness_examples": 64,
+  "robustness_mask_seeds": [
+    11,
+    22,
+    33
+  ]
+}

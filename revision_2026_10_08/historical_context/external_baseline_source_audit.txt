@@ -1,0 +1,118 @@
+External baseline source audit
+Revision and source access date: 5 October 2026
+
+Purpose and scope
+
+This audit identifies the historical baseline means and their display-unit
+conversions. The accompanying external_baselines_published.csv contains
+8 models x 4 tasks = 32 records. The values are transcribed from a published
+table, not newly measured in this revision. Unit conversion does not align
+different evaluation masks, checkpoint selection, weighting, or other
+experimental conditions. These records provide historical context only and
+are excluded from the primary matched comparison.
+
+Published source
+
+Haitao Lin, Zhangyang Gao, Yongjie Xu, Lirong Wu, Ling Li and Stan Z. Li.
+Conditional Local Convolution for Spatio-Temporal Meteorological Forecasting.
+Proceedings of the AAAI Conference on Artificial Intelligence 36(7),
+7470--7478 (2022). DOI: 10.1609/aaai.v36i7.20711.
+https://doi.org/10.1609/aaai.v36i7.20711
+https://ojs.aaai.org/index.php/AAAI/article/view/20711
+Publisher PDF:
+https://ojs.aaai.org/index.php/AAAI/article/download/20711/20470
+
+The numerical source is Table 2, printed page 7476 (PDF page 7 of 9).
+Table 1 compares the spatial and temporal architectures, rather than error
+scores. The author's preprint arXiv:2101.01000v3 (11 December 2021) gives
+the same Table 2 means and also standard deviations:
+https://arxiv.org/html/2101.01000v3
+https://arxiv.org/pdf/2101.01000v3
+The local archived original_clcrn_aaai2022.pdf/.txt corresponds to the
+9-page proceedings version. The supplementary CSV preserves source-table
+spelling of the model names, including GCGRU.
+
+Display-unit conversions
+
+The original Section 5.1 lists the display units for temperature, cloud,
+humidity, and wind as K, % x 10^-1, % x 10, and m s^-1, respectively.
+The CSV uses the following mapping to the units of this revision:
+
+task                current units       multiplier applied to MAE and RMSE
+temperature         K                   1
+humidity            percentage points   10
+component_of_wind   m s^-1               1
+cloud_cover         fraction            0.1
+
+For the CLCRN row, the published MAE/RMSE pairs and converted pairs are:
+temperature: 1.1688/1.8825 -> 1.1688/1.8825;
+humidity: 0.4531/0.7078 -> 4.5310/7.0780;
+wind: 1.3260/2.1292 -> 1.3260/2.1292;
+cloud: 1.4906/2.4559 -> 0.14906/0.24559.
+Rounding the cloud pair to four decimal places yields 0.1491/0.2456.
+These converted means match the local PAPER_REFERENCE constants in
+scripts/publication_utils.py. Their appearance in a local source file does
+not make them unpublished repository-only results; the published table is
+the primary numerical source.
+
+CSV field definitions
+
+model: label in the published Table 2.
+task: canonical task identifier used in the revision.
+mae_published, rmse_published: the original printed mean values.
+conversion_factor: multiplicative display-unit conversion applied to both
+    error measures; no other transformation or rescoring is performed.
+mae_current_units, rmse_current_units: exact products at the precision
+    supported by the printed source, before additional manuscript rounding.
+source_url: publisher PDF containing the table.
+source_table: Table 2.
+
+Spatial weighting and zero-target masking
+
+Standard WeatherBench and the released CLCRN code must be distinguished.
+The arXiv v3 Appendix D1 metric formulas do not specify a latitude factor.
+The following statements about the released implementation are based on its
+actual evaluation call path; they do not retrospectively certify the exact
+software state that generated every published score.
+
+The upstream repository is https://github.com/EDAPINENUT/CLCRN ; the older
+https://github.com/BIRD-TAO/CLCRN address redirects to it. The checked
+upstream revision is commit 3229a3bb9cba70dba16f95c8f9ce474ceaf8adf2,
+dated 2022-03-06T07:44:29Z (commit subject: Update README.md).
+
+Permanent evaluation references:
+https://github.com/EDAPINENUT/CLCRN/blob/3229a3bb9cba70dba16f95c8f9ce474ceaf8adf2/supervisor.py#L133-L170
+https://github.com/EDAPINENUT/CLCRN/blob/3229a3bb9cba70dba16f95c8f9ce474ceaf8adf2/supervisor.py#L275-L284
+https://github.com/EDAPINENUT/CLCRN/blob/3229a3bb9cba70dba16f95c8f9ce474ceaf8adf2/model/loss.py#L3-L19
+
+Supervisor.evaluate calls masked_mae_loss and masked_mse_loss imported from
+model.loss. Inverse standardization occurs before loss evaluation. Both
+loss functions mask targets equal to zero, normalize that mask by its mean,
+and take an arithmetic mean of masked errors. No cosine-latitude factor is
+applied. The upstream lib/metrics.py contains a separate labels > 1e-2
+filter, but that is not the evaluator invoked by this Supervisor path.
+It should not be conflated with the code path identified above.
+
+Standard WeatherBench scoring source:
+https://github.com/pangeo-data/WeatherBench/blob/master/src/score.py
+https://raw.githubusercontent.com/pangeo-data/WeatherBench/master/src/score.py
+The compute_weighted_rmse function (lines 27--40) and compute_weighted_mae
+function (lines 76--89) construct cos(latitude) weights, normalize the
+weights by their mean, and weight squared/absolute errors before averaging.
+RMSE is the square root of the resulting weighted mean squared error.
+
+For this revision's primary metrics all valid finite grid entries, including
+zero-valued targets, receive equal weights. Its latitude-weighted sensitivity
+analysis uses the same checkpoints and targets, with cosine-latitude weights.
+Thus the sensitivity analysis changes the scoring convention, not the
+historical training objective. The historical published scores have not
+been regenerated under either current scoring variant.
+
+Interpretation limits
+
+The confirmed numerical provenance is the published Table 2 plus explicit
+unit conversion. No evidence identified in this audit establishes a
+different latitude-weighted original CLCRN Table 1. It is therefore accurate
+to acknowledge insufficient earlier traceability, document the original
+table and conversions, and distinguish the scoring conventions, without
+asserting an undocumented weighted protocol for the historical scores.

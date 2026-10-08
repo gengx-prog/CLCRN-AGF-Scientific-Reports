@@ -1,0 +1,16 @@
+{
+  "scripts": [
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\finish_revision_retraining.py",
+      "sha256": "9b74a5fa2885d075ed7113a5e76097d5c48f2a856669bdfca080ba83678d1581",
+      "bytes": 27468
+    },
+    {
+      "path": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\analysis_snapshot\\retrain_build_artifacts.py",
+      "sha256": "11ff7ec41db2d50c62ea2765f91858221c60086e1e7738dd474bb64828a7f7a4",
+      "bytes": 22275
+    }
+  ],
+  "training_source_root": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\source_snapshot",
+  "generated_at_utc": "2026-10-08T08:12:00.697516+00:00"
+}
