@@ -38,6 +38,8 @@ Validation regenerated all 13 CSV tables byte for byte. One representative selec
 
 ## File layout and earlier versions
 
+The [historical review supplement](HISTORICAL_REVIEW_SUPPLEMENT.md) recovers experiment files for the original 16-page SR manuscript, with all 40 primary saved models re-evaluated and known manuscript issues disclosed. Its [separate release](https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports/releases/tag/v0.1-review-supplement-20261008) does not replace the current 46-run revision.
+
 - `Scientific_Reports_submission/`: current single-author manuscript, four main figures, and standalone LaTeX dependencies.
 - `Supplementary_Information/`: current supplement with 17 tables, four figures, and numeric source tables.
 - `revision_2026_10_08/`: frozen training code, fresh inference data, full training histories, 46 selected checkpoints, and provenance/validation.
