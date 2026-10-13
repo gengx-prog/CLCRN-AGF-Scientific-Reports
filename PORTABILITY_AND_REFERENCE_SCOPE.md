@@ -19,7 +19,7 @@ The CPU and CUDA dependency recipes target CPython 3.13.7 on Windows/Linux x86-6
 
 ## Data, hardware and numerical limits
 
-The external processed dataset consists of 16 files totaling approximately 22.26 GiB. Fixed-checkpoint evaluation requires the file sizes and SHA256 values in [`data_sha256.json`](revision_2026_10_08/provenance/data_sha256.json), including the training split used for standardization. The loader materializes training, validation and test arrays and the evaluator uses batch size 32. Sufficient system RAM and, for GPU execution, VRAM are therefore necessary.
+The external processed dataset consists of 16 files totaling approximately 22.26 GiB. Fixed-checkpoint evaluation requires the file sizes and SHA256 values in [`data_sha256.json`](experiments/provenance/data_sha256.json), including the training split used for standardization. The loader materializes training, validation and test arrays and the evaluator uses batch size 32. Sufficient system RAM and, for GPU execution, VRAM are therefore necessary.
 
 The recorded Windows machine, RTX 5090 Laptop GPU, approximately 64 GB RAM and complete environment snapshot describe execution of the supplied experiments. They are not a universal hardware minimum or a required computer model. Current entry points accept your own data/output paths; absolute paths in execution metadata do not have to exist elsewhere.
 

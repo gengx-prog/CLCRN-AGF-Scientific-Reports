@@ -6,7 +6,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',required=True,type=Path);a=p.parse_args()
     output=a.output.resolve()
     repo=ROOT.parent
-    for name in ('revision_2026_10_08','reviewer_tools','model','lib','experiments',
+    for name in ('experiments','reviewer_tools','model','lib',
                  'analysis','scripts','validation','.git','.github'):
         if output.is_relative_to((repo/name).resolve()):
             raise ValueError('Output must be outside supplied source/evidence directories.')

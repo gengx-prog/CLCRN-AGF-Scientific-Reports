@@ -403,9 +403,9 @@ def main():
     parser.add_argument("--device", default="cpu", help="cpu or cuda:0; quick/smoke always use CPU")
     args = parser.parse_args()
     repo, output = args.repo_root.resolve(), args.output.resolve()
-    revision = repo / "revision_2026_10_08"
-    require(revision.is_dir(), f"Cannot find revision_2026_10_08 under {repo}; pass --repo-root or run from a complete checkout")
-    protected_directories = ("revision_2026_10_08", "reviewer_tools", "model", "lib", "experiments",
+    revision = repo / "experiments"
+    require(revision.is_dir(), f"Cannot find experiments under {repo}; pass --repo-root or run from a complete checkout")
+    protected_directories = ("experiments", "reviewer_tools", "model", "lib",
                              "analysis", "scripts", "validation", ".git", ".github")
     for protected in (repo / name for name in protected_directories):
         require(not output.is_relative_to(protected.resolve()), f"Output must not overwrite supplied materials: {output}")

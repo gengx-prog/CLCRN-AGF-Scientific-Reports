@@ -44,7 +44,7 @@ WeatherBench_processed/
   cloud_cover/       trn.pkl  val.pkl  test.pkl  position_info.pkl
 ```
 
-These 16 external files total approximately **22.26 GiB** and are not bundled here. Their exact sizes and SHA256 hashes must match [the data manifest](revision_2026_10_08/provenance/data_sha256.json). Raw WeatherBench files or another preprocessing/split are not interchangeable with these inputs. The loader reads the training and validation arrays as well as the test array; allow sufficient system memory.
+These 16 external files total approximately **22.26 GiB** and are not bundled here. Their exact sizes and SHA256 hashes must match [the data manifest](experiments/provenance/data_sha256.json). Raw WeatherBench files or another preprocessing/split are not interchangeable with these inputs. The loader reads the training and validation arrays as well as the test array; allow sufficient system memory.
 
 Using the Python executable from your environment, replace the example data path with your own:
 
@@ -66,7 +66,7 @@ python reviewer_tools/reviewer_verify.py evaluate --data-root "/path/to/WeatherB
 After verifying the processed data, start a new training run:
 
 ```bash
-python revision_2026_10_08/code/run_revision.py --data-root "/path/to/WeatherBench_processed" --task temperature --variant agf --seed 2021 --epochs 100 --batch-size 32 --eval-batch-size 32 --patience 0 --protocol zero_inclusive --device cuda:0 --threads 4 --output new_temperature_agf_2021
+python experiments/code/run_revision.py --data-root "/path/to/WeatherBench_processed" --task temperature --variant agf --seed 2021 --epochs 100 --batch-size 32 --eval-batch-size 32 --patience 0 --protocol zero_inclusive --device cuda:0 --threads 4 --output new_temperature_agf_2021
 ```
 
 Use `--device cpu` if needed. The recorded experiment contains 40 primary runs (four tasks, control/AGF, seeds 2021-2025) and six mean-fusion runs (temperature/humidity, seeds 2023-2025). All runs completed 100 epochs in FP32 without early stopping or AMP/TF32. Checkpoints were selected by the earliest minimum validation MAE. Training, validation and evaluation include finite zero-valued targets.
@@ -82,12 +82,12 @@ See the [detailed command guide](reviewer_tools/README.md) for output files, num
 ## Experiment files
 
 - `reviewer_tools/`: demo, verification commands, pinned dependencies and regression checks.
-- `revision_2026_10_08/code/`: frozen training/model implementation.
-- `revision_2026_10_08/analysis/`: regenerate numerical and PNG diagnostics with the processed weather data.
-- `revision_2026_10_08/selected_runs/`: 46 selected checkpoints and complete 100-epoch training histories.
-- `revision_2026_10_08/selected_checkpoints.json`: run identities, checkpoint paths, hashes and reference scores.
-- `revision_2026_10_08/data/`: recorded inference outputs and 13 statistical CSVs.
-- `revision_2026_10_08/provenance/`: data fingerprints, recorded environment, frozen source hashes and distribution metadata.
+- `experiments/code/`: frozen training/model implementation.
+- `experiments/analysis/`: regenerate numerical and PNG diagnostics with the processed weather data.
+- `experiments/selected_runs/`: 46 selected checkpoints and complete 100-epoch training histories.
+- `experiments/selected_checkpoints.json`: run identities, checkpoint paths, hashes and reference scores.
+- `experiments/data/`: recorded inference outputs and 13 statistical CSVs.
+- `experiments/provenance/`: data fingerprints, recorded environment, frozen source hashes and distribution metadata.
 - `validation/`: verification reports and execution logs.
 
 The package retains one selected checkpoint per run and the records needed to check these experiments. Current commands accept your own data/output paths. Absolute paths in recorded execution metadata describe the original runs; they are not required local paths. The recorded computer model and complete environment snapshot are not universal requirements for running experiments.

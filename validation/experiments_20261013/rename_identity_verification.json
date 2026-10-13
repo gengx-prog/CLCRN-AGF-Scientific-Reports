@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "same_383_manifest_members": true,
+  "unchanged_file_counts": {
+    "code": 24,
+    "data": 71,
+    "selected_runs": 276
+  },
+  "checkpoint_count": 46,
+  "analysis_helper_AST_unchanged": [
+    "now",
+    "read",
+    "write",
+    "sha",
+    "record",
+    "require",
+    "GateStats",
+    "metric_arrays",
+    "sampled_predictions",
+    "dataset_metadata"
+  ],
+  "runtime_dated_directory_references": 0,
+  "guard_tests_passed": 11,
+  "manifest_sha256": "a40a26c01e10b4087ae69bff9a51ec8ea77594a951ca361b9f1c0067d0401dbf"
+}

@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "mode": "quick",
-  "started_utc": "2026-10-13T11:45:07.368564+00:00",
+  "started_utc": "2026-10-13T12:12:33.005353+00:00",
   "environment": {
     "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
     "executable": "D:\\CLCRN-main\\.tmp\\reviewer_cpu_20261013\\Scripts\\python.exe",
@@ -15,7 +15,7 @@
       "matplotlib": "3.10.8"
     }
   },
-  "repository": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish",
+  "repository": "D:\\CLCRN-main\\github_experiments_latest",
   "training_performed": false,
   "offline": {
     "manifest_files_verified": 383,
@@ -525,7 +525,7 @@
           1
         ],
         "all_finite": true,
-        "seconds": 0.9586003000149503,
+        "seconds": 1.4062311000016052,
         "prediction_mean_diagnostic_only": 0.020816484466195107
       },
       {
@@ -537,7 +537,7 @@
           2
         ],
         "all_finite": true,
-        "seconds": 0.941474899998866,
+        "seconds": 1.5272677000029944,
         "prediction_mean_diagnostic_only": 0.16424460709095
       },
       {
@@ -549,7 +549,7 @@
           1
         ],
         "all_finite": true,
-        "seconds": 0.9266419000050519,
+        "seconds": 1.4841073999996297,
         "prediction_mean_diagnostic_only": 0.21714217960834503
       },
       {
@@ -561,7 +561,7 @@
           1
         ],
         "all_finite": true,
-        "seconds": 0.9285635999985971,
+        "seconds": 1.64096150000114,
         "prediction_mean_diagnostic_only": 0.15049244463443756
       },
       {
@@ -573,7 +573,7 @@
           1
         ],
         "all_finite": true,
-        "seconds": 0.9559867999923881,
+        "seconds": 1.4455533000000287,
         "prediction_mean_diagnostic_only": 0.1938711553812027
       },
       {
@@ -585,7 +585,7 @@
           1
         ],
         "all_finite": true,
-        "seconds": 0.9483574999903794,
+        "seconds": 1.5000431999797001,
         "prediction_mean_diagnostic_only": 0.20772568881511688
       }
     ],
@@ -615,5 +615,5 @@
     },
     "torch": "2.10.0+cpu"
   },
-  "seconds": 11.740743300004397
+  "seconds": 16.099136200005887
 }

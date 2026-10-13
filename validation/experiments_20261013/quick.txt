@@ -7,4 +7,4 @@ CPU smoke: synthetic coordinates/input; checking all 46 real checkpoint state di
   temperature_agf_2021: real weights, synthetic input, finite 12-step prediction
   temperature_control_2021: real weights, synthetic input, finite 12-step prediction
   humidity_mean_fusion_2023: real weights, synthetic input, finite 12-step prediction
-PASSED: D:\CLCRN-main\.tmp\latest_only_20261013\demo_run\quick\verification_report.json
+PASSED: D:\CLCRN-main\.tmp\rename_experiments_20261013\final_demo\quick\verification_report.json

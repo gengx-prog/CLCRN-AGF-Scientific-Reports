@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-13T11:44:43.652252+00:00",
+  "updated_utc": "2026-10-13T12:11:14.939957+00:00",
   "scope": "Latest 46 selected experiments and portable execution utilities.",
   "unchanged_scientific_files": {
     "code": 24,
@@ -10,14 +10,14 @@
   "selected_checkpoint_inventory_sha256": "39dea6e6287fa91468c780229dc5ed270b5be9f01801b244c78ab7c30790c1d5",
   "retained_checkpoint_count": 46,
   "adaptations": {
-    "analysis/analyze_selected.py": "Portable selected-run and external-data paths replace private training-queue orchestration. The ten extracted helper bodies are AST-identical to the recorded analysis source.",
+    "analysis/analyze_selected.py": "Portable selected-run and external-data paths replace private training-queue orchestration. The ten extracted helper bodies are AST-identical to the recorded analysis source. Output protection follows the portable experiments directory.",
     "analysis/retrain_build_artifacts.py": "Produces the same 13 numerical CSVs plus PNG diagnostics from current inference JSONs.",
-    "rebuild_tables.py": "Portable reconstruction from recorded JSON inputs."
+    "rebuild_tables.py": "Portable reconstruction from recorded JSON inputs. Output protection follows the portable experiments directory."
   },
   "analysis_source_hashes": {
-    "analysis/analyze_selected.py": "5ec8095221baa03b1c1bf028c4012e3f2fa3fd7ae50ef0243bbde590e084a76d",
+    "analysis/analyze_selected.py": "c1f65d76fbf69be1fc87bb22f435e9f5581f9cf5b871a9bcddd5b82b1c9426e2",
     "analysis/retrain_build_artifacts.py": "6bd53519c6cbf4d669e1e640ad42883d6ae5ffa17b0025dd4eb331519b9b1e94",
-    "rebuild_tables.py": "4dca07597a303d595835410b12fb6aa713805ce928aead483c71541ea00a9de3"
+    "rebuild_tables.py": "52d33dc8f4f2fb5f1d0241898861f0045860426a494a42dac89d5fb4a992f97b"
   },
   "analysis_helper_names": [
     "now",

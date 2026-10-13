@@ -1,31 +1,3 @@
-loading data of trn set...
-loading data of val set...
-loading data of test set...
-2026-10-13 04:45:21,322 - INFO - Total trainable parameters 457
-2026-10-13 04:45:21,373 - INFO - {'epoch': 1, 'train_mae': 0.7603950699170431, 'val_mae': 0.835938678295524, 'seconds': 0.04322289998526685, 'learning_rate': 0.00095, 'batches_seen': 3}
-2026-10-13 04:45:21,378 - INFO - Loaded checkpoint epoch 1
-2026-10-13 04:45:21,391 - INFO - Loaded checkpoint epoch 1
-loading data of trn set...
-loading data of val set...
-loading data of test set...
-2026-10-13 04:45:21,476 - INFO - Total trainable parameters 358
-2026-10-13 04:45:21,524 - INFO - {'epoch': 1, 'train_mae': 0.7688429752985636, 'val_mae': 0.8431015303013502, 'seconds': 0.04093489999650046, 'learning_rate': 0.00095, 'batches_seen': 3}
-2026-10-13 04:45:21,528 - INFO - Loaded checkpoint epoch 1
-2026-10-13 04:45:21,542 - INFO - Loaded checkpoint epoch 1
-loading data of trn set...
-loading data of val set...
-loading data of test set...
-2026-10-13 04:45:21,620 - INFO - Total trainable parameters 436
-2026-10-13 04:45:21,670 - INFO - {'epoch': 1, 'train_mae': 0.7273914416631063, 'val_mae': 0.8370262508591017, 'seconds': 0.04189089999999851, 'learning_rate': 0.00095, 'batches_seen': 3}
-2026-10-13 04:45:21,674 - INFO - Loaded checkpoint epoch 1
-2026-10-13 04:45:21,687 - INFO - Loaded checkpoint epoch 1
-loading data of trn set...
-loading data of val set...
-loading data of test set...
-2026-10-13 04:45:21,774 - INFO - Total trainable parameters 457
-2026-10-13 04:45:21,824 - INFO - {'epoch': 1, 'train_mae': 0.7673224608103434, 'val_mae': 0.85435123699052, 'seconds': 0.04176059999736026, 'learning_rate': 0.00095, 'batches_seen': 3}
-2026-10-13 04:45:21,829 - INFO - Loaded checkpoint epoch 1
-2026-10-13 04:45:21,842 - INFO - Loaded checkpoint epoch 1
 {
   "artifact_kind": "synthetic software verification, NOT WeatherBench evidence",
   "device": "cpu",
@@ -71,10 +43,10 @@ loading data of test set...
         "status": "completed",
         "precision": "fp32",
         "batches_seen": 3,
-        "config_sha256": "64fbb689d3eda7e894117b2b01a26bbc510ac76b60ec6d0ed867e4625458194e",
+        "config_sha256": "09e1bc8c9ff3eb4a4321a97275c32d5f186d2cf8b753c715f890a01db0514839",
         "processing_version": "curated_float32_then_train_only_standardization_v1",
-        "checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\agf\\saved_model\\epo1.tar",
-        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\agf\\saved_model\\epo1.tar"
+        "checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\agf\\saved_model\\epo1.tar",
+        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\agf\\saved_model\\epo1.tar"
       },
       "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
     },
@@ -114,10 +86,10 @@ loading data of test set...
         "status": "completed",
         "precision": "fp32",
         "batches_seen": 3,
-        "config_sha256": "f8c3c300d201eecc4971b88f144a36cc967be25c052b2e213f84b14a809b4bf9",
+        "config_sha256": "5b07591d49ad2de9e1d561bc253cd5d362e275f9eb28024c4e032987dcc46c93",
         "processing_version": "curated_float32_then_train_only_standardization_v1",
-        "checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\control\\saved_model\\epo1.tar",
-        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\control\\saved_model\\epo1.tar"
+        "checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\control\\saved_model\\epo1.tar",
+        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\control\\saved_model\\epo1.tar"
       },
       "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
     },
@@ -157,10 +129,10 @@ loading data of test set...
         "status": "completed",
         "precision": "fp32",
         "batches_seen": 3,
-        "config_sha256": "07051dac53588fe34ec05206fd0d39821a342473727620df779c9c9c1b120fd8",
+        "config_sha256": "f00f4ddcc1dead72382db7812661cb36194191dbeca2bf95e540fe30ed9ebf80",
         "processing_version": "curated_float32_then_train_only_standardization_v1",
-        "checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\mean_fusion\\saved_model\\epo1.tar",
-        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\mean_fusion\\saved_model\\epo1.tar"
+        "checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\mean_fusion\\saved_model\\epo1.tar",
+        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\mean_fusion\\saved_model\\epo1.tar"
       },
       "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
     },
@@ -200,10 +172,10 @@ loading data of test set...
         "status": "completed",
         "precision": "fp32",
         "batches_seen": 3,
-        "config_sha256": "3ab224990b825b62a5dc353c10ddfd86235f5772253b2eb91b0b53b44d1b2058",
+        "config_sha256": "4f3ae8f939b80c8d1cb4cd15a7ad43a849bd9280c36859dfee09ddeb6ade437b",
         "processing_version": "curated_float32_then_train_only_standardization_v1",
-        "checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\legacy_agf\\saved_model\\epo1.tar",
-        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training\\legacy_agf\\saved_model\\epo1.tar"
+        "checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\legacy_agf\\saved_model\\epo1.tar",
+        "last_checkpoint": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training\\legacy_agf\\saved_model\\epo1.tar"
       },
       "checks": "optimizer changed parameters; geometry; configured eval batch size; strict checkpoint round trip; independent NumPy MAE"
     }

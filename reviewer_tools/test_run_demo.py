@@ -24,7 +24,7 @@ class DemoGuards(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 prepare_output(existing, repo)
             self.assertEqual(sentinel.read_text(encoding="utf-8"), "preserved")
-            for name in ("revision_2026_10_08", "reviewer_tools", "model", "lib"):
+            for name in ("experiments", "reviewer_tools", "model", "lib"):
                 with self.subTest(name=name), self.assertRaises(ValueError):
                     prepare_output(repo / name / "new_output", repo)
                 self.assertFalse((repo / name).exists())

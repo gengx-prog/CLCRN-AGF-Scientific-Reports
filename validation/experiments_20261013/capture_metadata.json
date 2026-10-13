@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-13T12:14:50.435488+00:00",
+  "scope": "Experiment directory rename; unchanged scientific files; CPU checkpoint/record/CSV and synthetic train-save-reload verification. No full weather-data re-evaluation.",
+  "guard_tests": 11,
+  "package_manifest_members": 383,
+  "selected_checkpoints": 46,
+  "frozen_sources": 24,
+  "statistical_csv_checks": 13,
+  "demo_seconds": 19.332695999997668,
+  "files_sha256": {
+    "demo_report.json": "d844b4ace184b4acd56f0d0160e299129829f56a325da8f473f7e651d5e4718b",
+    "quick/rebuild_records.txt": "1348f9a390270f3f8df1bc320cfe9e53bdcdda5c6ef96f3498a8f03111088130",
+    "quick/verification_report.json": "2b91fbe55bc73b4f641267dfed3f167c444b8df73184dcecb3cbee9e63ad45ce",
+    "quick.txt": "3f7aaa7e1bbc4a33cc8699ad9e09d6255be087e3f8b4e057804f0641b6d36bba",
+    "rename_identity_verification.json": "b3465fcdf403ecfdaf6e1b76107dcf52859749bcb5f4d5484d8ae834748df6d7",
+    "training/smoke_results.json": "6b906976bdb1142a4e72f122a1a01a9ef518998c29c3831efb69a70b7e238c6a",
+    "training.txt": "0993a1b69734d6d64918dbb04084c385cfcb52db196545cda73c364f2c591f4b"
+  }
+}

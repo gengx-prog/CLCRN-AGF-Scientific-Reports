@@ -4,7 +4,7 @@ The [CPU workflow](https://github.com/gengx-prog/CLCRN-AGF-Scientific-Reports/ac
 
 ## Latest package
 
-The local verification records in `latest_only_20261013/` cover the retained package: exact frozen-source and checkpoint hashes, all 46 training records, 13 reconstructed statistical CSVs, six synthetic forwards and four tiny CPU train/save/reload runs. Synthetic checks establish software execution, not weather prediction accuracy. The reports record the tested source hashes, environment and execution time.
+The local verification records in `experiments_20261013/` cover the retained package: exact frozen-source and checkpoint hashes, all 46 training records, 13 reconstructed statistical CSVs, six synthetic forwards and four tiny CPU train/save/reload runs. Synthetic checks establish software execution, not weather prediction accuracy. The reports record the tested source hashes, environment and execution time.
 
 ## Weather-data evaluation of the selected checkpoints
 

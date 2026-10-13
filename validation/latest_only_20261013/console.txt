@@ -1,5 +1,0 @@
-Running quick; log: D:\CLCRN-main\.tmp\latest_only_20261013\demo_run\quick.txt
-PASSED: quick (12.06 s)
-Running training; log: D:\CLCRN-main\.tmp\latest_only_20261013\demo_run\training.txt
-PASSED: training (2.82 s)
-PASSED: D:\CLCRN-main\.tmp\latest_only_20261013\demo_run\demo_report.json

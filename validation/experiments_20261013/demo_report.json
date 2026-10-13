@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "started_utc": "2026-10-13T11:45:07.206206+00:00",
+  "started_utc": "2026-10-13T12:12:32.839016+00:00",
   "scope": "Archived evidence and real checkpoint checks on synthetic inputs, followed by four tiny synthetic CPU train/save/reload runs. Not WeatherBench accuracy or full benchmark retraining.",
   "environment": {
     "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
@@ -15,8 +15,8 @@
       "matplotlib": "3.10.8"
     }
   },
-  "repository": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish",
-  "output": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run",
+  "repository": "D:\\CLCRN-main\\github_experiments_latest",
+  "output": "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo",
   "quick_threads": 4,
   "training_threads": 2,
   "child_assertions_enabled": true,
@@ -30,24 +30,24 @@
         "-B",
         "-X",
         "utf8",
-        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish\\reviewer_tools\\reviewer_verify.py",
+        "D:\\CLCRN-main\\github_experiments_latest\\reviewer_tools\\reviewer_verify.py",
         "quick",
         "--repo-root",
-        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish",
+        "D:\\CLCRN-main\\github_experiments_latest",
         "--output",
-        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\quick"
+        "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\quick"
       ],
-      "started_utc": "2026-10-13T11:45:07.293517+00:00",
+      "started_utc": "2026-10-13T12:12:32.928593+00:00",
       "status": "passed",
       "returncode": 0,
-      "seconds": 12.06365579998237,
+      "seconds": 16.49836750002578,
       "validation": {
         "strict_checkpoint_load_count": 46,
         "synthetic_forward_count": 6,
         "frozen_source_files_verified": 24,
         "manifest_files_verified": 383
       },
-      "report_sha256": "140f6a87630387194a459f9e1579dd8ac6f602f5b4874f47e0864362cc698c37"
+      "report_sha256": "2b91fbe55bc73b4f641267dfed3f167c444b8df73184dcecb3cbee9e63ad45ce"
     },
     {
       "name": "training",
@@ -58,19 +58,19 @@
         "-B",
         "-X",
         "utf8",
-        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish\\revision_2026_10_08\\code\\run_revision.py",
+        "D:\\CLCRN-main\\github_experiments_latest\\experiments\\code\\run_revision.py",
         "--smoke",
         "--device",
         "cpu",
         "--threads",
         "2",
         "--output",
-        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training"
+        "D:\\CLCRN-main\\.tmp\\rename_experiments_20261013\\final_demo\\training"
       ],
-      "started_utc": "2026-10-13T11:45:19.358656+00:00",
+      "started_utc": "2026-10-13T12:12:49.428650+00:00",
       "status": "passed",
       "returncode": 0,
-      "seconds": 2.8151408999983687,
+      "seconds": 2.7410683000052813,
       "validation": {
         "device": "cpu",
         "variants_passed": [
@@ -81,22 +81,22 @@
         ],
         "epochs_per_variant": 1
       },
-      "report_sha256": "fad3cb1296cb236215ae9ba66982c1bca5b345877911311d6f9ea7cce8e3ce47"
+      "report_sha256": "6b906976bdb1142a4e72f122a1a01a9ef518998c29c3831efb69a70b7e238c6a"
     }
   ],
   "source_sha256": {
-    "reviewer_tools/run_demo.py": "5b592012658a10f6774323fe629674828e31c62af0d7f07c4c103a821bd22772",
-    "reviewer_tools/reviewer_verify.py": "188b9d5f7bd86b3865b4799202f9aaea6c1d402aaf0fe2475b9a9cfbab09fb65",
-    "revision_2026_10_08/code/run_revision.py": "7e711903002ecbb68ccfa3a5572441bbf866b2eb9dc6b34f6eaea9254a1e2f63",
-    "revision_2026_10_08/code/smoke.py": "b0f962eddf4498a0475b7a01b83abc6dd0eae3bca3d99d5164f9cc7bfe2b7482"
+    "reviewer_tools/run_demo.py": "c084f920ea68cd64fac25234bef41e5f76b4a20213841b97605016f2cd852fee",
+    "reviewer_tools/reviewer_verify.py": "2d9cdc076e38d320d433bab5af0828d4e945b9281be42d978a369ac9fa647a19",
+    "experiments/code/run_revision.py": "7e711903002ecbb68ccfa3a5572441bbf866b2eb9dc6b34f6eaea9254a1e2f63",
+    "experiments/code/smoke.py": "b0f962eddf4498a0475b7a01b83abc6dd0eae3bca3d99d5164f9cc7bfe2b7482"
   },
   "frozen_manifest_sha256": {
-    "revision_2026_10_08/SHA256_MANIFEST.json": "d0b08ce8b72127785705172a005a08ea41a1b39b7fa5d02143a9af1bb49b99a8",
-    "revision_2026_10_08/provenance/training_source_manifest.json": "2dd0ad9a328dc4ecf3e27248eb1c7e936b4693158ee0d0da21416ff31c6cbfca",
-    "revision_2026_10_08/selected_checkpoints.json": "39dea6e6287fa91468c780229dc5ed270b5be9f01801b244c78ab7c30790c1d5"
+    "experiments/SHA256_MANIFEST.json": "a40a26c01e10b4087ae69bff9a51ec8ea77594a951ca361b9f1c0067d0401dbf",
+    "experiments/provenance/training_source_manifest.json": "2dd0ad9a328dc4ecf3e27248eb1c7e936b4693158ee0d0da21416ff31c6cbfca",
+    "experiments/selected_checkpoints.json": "39dea6e6287fa91468c780229dc5ed270b5be9f01801b244c78ab7c30790c1d5"
   },
   "frozen_manifests_unchanged": true,
-  "finished_utc": "2026-10-13T11:45:22.176484+00:00",
-  "seconds": 14.969717400002992,
+  "finished_utc": "2026-10-13T12:12:52.172245+00:00",
+  "seconds": 19.332695999997668,
   "exit_code": 0
 }

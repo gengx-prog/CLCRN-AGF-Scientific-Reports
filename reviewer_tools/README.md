@@ -63,7 +63,7 @@ The 13 CSVs are regenerated from the supplied inference JSON records, without co
 To run only tiny-model training/save/reload:
 
 ```bash
-python revision_2026_10_08/code/run_revision.py --smoke --device cpu --threads 2 --output training_smoke
+python experiments/code/run_revision.py --smoke --device cpu --threads 2 --output training_smoke
 ```
 
 Run this direct command without `-O` or `PYTHONOPTIMIZE`, because its checks use assertions. The combined demo enables assertions in its child processes.
@@ -82,7 +82,7 @@ WeatherBench_processed/
   cloud_cover/       trn.pkl  val.pkl  test.pkl  position_info.pkl
 ```
 
-The 16 files total approximately **22.26 GiB**. Exact sizes and SHA256 values are in [`data_sha256.json`](../revision_2026_10_08/provenance/data_sha256.json). The verifier uses portable `task/filename` suffixes, so original drive paths in execution metadata need not exist on your machine.
+The 16 files total approximately **22.26 GiB**. Exact sizes and SHA256 values are in [`data_sha256.json`](../experiments/provenance/data_sha256.json). The verifier uses portable `task/filename` suffixes, so original drive paths in execution metadata need not exist on your machine.
 
 Replace `/path/to/WeatherBench_processed` with your actual directory:
 
@@ -108,9 +108,9 @@ With the CUDA environment, evaluate all 46:
 python reviewer_tools/reviewer_verify.py evaluate --data-root "/path/to/WeatherBench_processed" --all-runs --device cuda:0 --output test_all_46
 ```
 
-CPU supports `--all-runs` but can take substantially longer. Repeat `--run-id` to select multiple models. Run identities and reference scores are in [`selected_checkpoints.json`](../revision_2026_10_08/selected_checkpoints.json).
+CPU supports `--all-runs` but can take substantially longer. Repeat `--run-id` to select multiple models. Run identities and reference scores are in [`selected_checkpoints.json`](../experiments/selected_checkpoints.json).
 
-The wrapper delegates inference to `revision_2026_10_08/evaluate_selected.py` and the frozen model implementation. Every selected run uses all **657 test windows, 12 forecast steps and 2,048 grid points**. Wind has two output channels; other tasks have one. MAE and RMSE include finite zero and negative physical targets, use uniform gridpoint weighting and accumulate all forecast horizons.
+The wrapper delegates inference to `experiments/evaluate_selected.py` and the frozen model implementation. Every selected run uses all **657 test windows, 12 forecast steps and 2,048 grid points**. Wind has two output channels; other tasks have one. MAE and RMSE include finite zero and negative physical targets, use uniform gridpoint weighting and accumulate all forecast horizons.
 
 The absolute acceptance tolerance is `2e-5` in each metric's physical units. Signed differences are preserved; an out-of-tolerance result fails without replacing reference values. Hardware and library changes can affect roundoff and need investigation if checks fail.
 
@@ -121,7 +121,7 @@ Outputs include one log and `inference/<run_id>/reevaluation.json` per model, `p
 After checking dataset hashes:
 
 ```bash
-python revision_2026_10_08/code/run_revision.py --data-root "/path/to/WeatherBench_processed" --task temperature --variant agf --seed 2021 --epochs 100 --batch-size 32 --eval-batch-size 32 --patience 0 --protocol zero_inclusive --device cuda:0 --threads 4 --output new_temperature_agf_2021
+python experiments/code/run_revision.py --data-root "/path/to/WeatherBench_processed" --task temperature --variant agf --seed 2021 --epochs 100 --batch-size 32 --eval-batch-size 32 --patience 0 --protocol zero_inclusive --device cuda:0 --threads 4 --output new_temperature_agf_2021
 ```
 
 Use `--device cpu` where appropriate. Available tasks are `temperature`, `humidity`, `component_of_wind` and `cloud_cover`; variants are `control`, `agf` and `mean_fusion`.
@@ -135,7 +135,7 @@ All 46 selected checkpoints and full 100-epoch histories are supplied. Intermedi
 With the matching processed weather data and CUDA environment:
 
 ```bash
-python revision_2026_10_08/analysis/analyze_selected.py --data-root "/path/to/WeatherBench_processed" --device cuda:0 --output supplementary_analysis
+python experiments/analysis/analyze_selected.py --data-root "/path/to/WeatherBench_processed" --device cuda:0 --output supplementary_analysis
 ```
 
 Use `--device cpu` where appropriate. This script checks package, training and data hashes, then performs all 46 full-test inferences, latitude/horizon metrics, gate summaries, persistence comparisons and deterministic 64-window masking diagnostics. It writes fresh JSON, CSV and PNG outputs, and requires substantially more compute than the CPU demo.

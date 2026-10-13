@@ -291,7 +291,7 @@ def main(argv=None):
     parser.add_argument('--device', default='cpu', help='cpu or cuda:0')
     args = parser.parse_args(argv)
     output = args.output.resolve()
-    for name in ('revision_2026_10_08', 'reviewer_tools', 'validation', '.git', '.github'):
+    for name in ('experiments', 'reviewer_tools', 'validation', '.git', '.github'):
         require(not output.is_relative_to((REPO / name).resolve()), 'Output must be outside supplied sources and evidence.')
     require(not output.exists(), 'Use a fresh output directory.')
     output.mkdir(parents=True)

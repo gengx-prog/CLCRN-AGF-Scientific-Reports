@@ -23,7 +23,7 @@ import traceback
 REPO = Path(__file__).resolve().parent.parent
 VARIANTS = {"agf", "control", "mean_fusion", "legacy_agf"}
 PROTECTED = (
-    "revision_2026_10_08", "reviewer_tools", "model", "lib", "experiments",
+    "experiments", "reviewer_tools", "model", "lib",
     "analysis", "scripts", "validation", ".git", ".github",
 )
 
@@ -140,7 +140,7 @@ def main(argv=None):
               "child_assertions_enabled": True, "stages": []}
     exit_code = 0
     try:
-        revision = REPO / "revision_2026_10_08"
+        revision = REPO / "experiments"
         source_paths = [Path(__file__).resolve(), REPO / "reviewer_tools/reviewer_verify.py",
                         revision / "code/run_revision.py", revision / "code/smoke.py"]
         manifest_paths = [revision / "SHA256_MANIFEST.json",
