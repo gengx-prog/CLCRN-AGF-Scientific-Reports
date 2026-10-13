@@ -1,0 +1,10 @@
+Checking frozen sources, selected-run evidence and all archive hashes...
+Rebuilding all 13 CSV tables from recorded inference results...
+CPU smoke: synthetic coordinates/input; checking all 46 real checkpoint state dictionaries...
+  cloud_cover_agf_2021: real weights, synthetic input, finite 12-step prediction
+  component_of_wind_agf_2021: real weights, synthetic input, finite 12-step prediction
+  humidity_agf_2021: real weights, synthetic input, finite 12-step prediction
+  temperature_agf_2021: real weights, synthetic input, finite 12-step prediction
+  temperature_control_2021: real weights, synthetic input, finite 12-step prediction
+  humidity_mean_fusion_2023: real weights, synthetic input, finite 12-step prediction
+PASSED: D:\CLCRN-main\.tmp\latest_only_20261013\demo_run\quick\verification_report.json

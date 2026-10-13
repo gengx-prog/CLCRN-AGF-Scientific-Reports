@@ -1,0 +1,13 @@
+﻿dataset,method,n_seed,mae,rmse,metric_definition
+temperature,Persistence,1,1.4213722371697077,2.700103725447809,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+temperature,Control,5,1.257990563469587,2.101232441384352,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+temperature,CLCRN-AGF,5,1.2910080096612102,2.1180523212478155,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+humidity,Persistence,1,6.424777759608583,10.447111321293935,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+humidity,Control,5,4.647975580455883,7.2484444098746454,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+humidity,CLCRN-AGF,5,4.537174296221648,7.009707853270365,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+component_of_wind,Persistence,1,1.5371871151764573,2.5353753795448086,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+component_of_wind,Control,5,1.2420089338787013,1.972291368664053,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+component_of_wind,CLCRN-AGF,5,1.2556686124662615,2.0155409098225077,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+cloud_cover,Persistence,1,0.16199090954891296,0.2725298396854077,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+cloud_cover,Control,5,0.1479050657509322,0.24998801017821437,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"
+cloud_cover,CLCRN-AGF,5,0.1483572416324575,0.2489688847143126,"zero-inclusive, spatially unweighted, cumulative t+1:t+12"

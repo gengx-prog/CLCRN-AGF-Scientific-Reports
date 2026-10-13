@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "unchanged_file_counts": {
+    "code": 24,
+    "data": 71,
+    "selected_runs": 276
+  },
+  "unchanged_selected_checkpoint_inventory": true,
+  "original_analysis_helper_AST_identity": [
+    "now",
+    "read",
+    "write",
+    "sha",
+    "record",
+    "require",
+    "GateStats",
+    "metric_arrays",
+    "sampled_predictions",
+    "dataset_metadata"
+  ],
+  "synthetic_checks": [
+    "uniform/weighted/horizon metrics vs NumPy",
+    "reject nonfinite predictions",
+    "scalar gate counts, histogram and moments",
+    "persistence predictions",
+    "deterministic missing-node sampling vs independent NumPy mask"
+  ],
+  "full_supplementary_46_run_execution_performed": false
+}

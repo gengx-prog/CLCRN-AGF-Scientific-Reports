@@ -1,0 +1,4 @@
+# Optional tested Windows/Linux x86-64 recipe; not a universal hardware/OS requirement.
+--extra-index-url https://download.pytorch.org/whl/cu128
+-r requirements-base.txt
+torch==2.10.0+cu128

@@ -1,0 +1,22 @@
+{
+  "captured_at": {
+    "utc": "2026-10-05T20:08:45+00:00",
+    "los_angeles": "2026-10-05T13:08:45-07:00"
+  },
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\xinch\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "pandas": "3.0.0",
+    "tzdata": "2025.3"
+  },
+  "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU, 610.88, 24463 MiB",
+  "precision": "fp32",
+  "amp": false,
+  "device": "cuda:0",
+  "queue_script": "D:\\CLCRN-main\\修改稿2026_10_5\\可复现代码\\scripts\\run_revision_queue.py",
+  "queue_script_sha256": "88b2baca1e171648b4d14e38c816565955283a1fa2330f25119499c52dd98a41"
+}

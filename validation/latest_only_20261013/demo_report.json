@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-13T11:45:07.206206+00:00",
+  "scope": "Archived evidence and real checkpoint checks on synthetic inputs, followed by four tiny synthetic CPU train/save/reload runs. Not WeatherBench accuracy or full benchmark retraining.",
+  "environment": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "D:\\CLCRN-main\\.tmp\\reviewer_cpu_20261013\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "packages": {
+      "torch": "2.10.0+cpu",
+      "numpy": "2.4.2",
+      "scipy": "1.17.0",
+      "pandas": "3.0.0",
+      "matplotlib": "3.10.8"
+    }
+  },
+  "repository": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish",
+  "output": "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run",
+  "quick_threads": 4,
+  "training_threads": 2,
+  "child_assertions_enabled": true,
+  "stages": [
+    {
+      "name": "quick",
+      "log": "quick.txt",
+      "report": "quick/verification_report.json",
+      "command": [
+        "D:\\CLCRN-main\\.tmp\\reviewer_cpu_20261013\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish\\reviewer_tools\\reviewer_verify.py",
+        "quick",
+        "--repo-root",
+        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish",
+        "--output",
+        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\quick"
+      ],
+      "started_utc": "2026-10-13T11:45:07.293517+00:00",
+      "status": "passed",
+      "returncode": 0,
+      "seconds": 12.06365579998237,
+      "validation": {
+        "strict_checkpoint_load_count": 46,
+        "synthetic_forward_count": 6,
+        "frozen_source_files_verified": 24,
+        "manifest_files_verified": 383
+      },
+      "report_sha256": "140f6a87630387194a459f9e1579dd8ac6f602f5b4874f47e0864362cc698c37"
+    },
+    {
+      "name": "training",
+      "log": "training.txt",
+      "report": "training/smoke_results.json",
+      "command": [
+        "D:\\CLCRN-main\\.tmp\\reviewer_cpu_20261013\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\publish\\revision_2026_10_08\\code\\run_revision.py",
+        "--smoke",
+        "--device",
+        "cpu",
+        "--threads",
+        "2",
+        "--output",
+        "D:\\CLCRN-main\\.tmp\\latest_only_20261013\\demo_run\\training"
+      ],
+      "started_utc": "2026-10-13T11:45:19.358656+00:00",
+      "status": "passed",
+      "returncode": 0,
+      "seconds": 2.8151408999983687,
+      "validation": {
+        "device": "cpu",
+        "variants_passed": [
+          "agf",
+          "control",
+          "mean_fusion",
+          "legacy_agf"
+        ],
+        "epochs_per_variant": 1
+      },
+      "report_sha256": "fad3cb1296cb236215ae9ba66982c1bca5b345877911311d6f9ea7cce8e3ce47"
+    }
+  ],
+  "source_sha256": {
+    "reviewer_tools/run_demo.py": "5b592012658a10f6774323fe629674828e31c62af0d7f07c4c103a821bd22772",
+    "reviewer_tools/reviewer_verify.py": "188b9d5f7bd86b3865b4799202f9aaea6c1d402aaf0fe2475b9a9cfbab09fb65",
+    "revision_2026_10_08/code/run_revision.py": "7e711903002ecbb68ccfa3a5572441bbf866b2eb9dc6b34f6eaea9254a1e2f63",
+    "revision_2026_10_08/code/smoke.py": "b0f962eddf4498a0475b7a01b83abc6dd0eae3bca3d99d5164f9cc7bfe2b7482"
+  },
+  "frozen_manifest_sha256": {
+    "revision_2026_10_08/SHA256_MANIFEST.json": "d0b08ce8b72127785705172a005a08ea41a1b39b7fa5d02143a9af1bb49b99a8",
+    "revision_2026_10_08/provenance/training_source_manifest.json": "2dd0ad9a328dc4ecf3e27248eb1c7e936b4693158ee0d0da21416ff31c6cbfca",
+    "revision_2026_10_08/selected_checkpoints.json": "39dea6e6287fa91468c780229dc5ed270b5be9f01801b244c78ab7c30790c1d5"
+  },
+  "frozen_manifests_unchanged": true,
+  "finished_utc": "2026-10-13T11:45:22.176484+00:00",
+  "seconds": 14.969717400002992,
+  "exit_code": 0
+}

@@ -1,0 +1,10 @@
+{
+  "warmup": "fixed_training_sample_0_eval_no_grad_before_optimizer",
+  "lazy_parameter_names": [],
+  "replaced_parameter_names": [],
+  "rng_preserved": true,
+  "trainable_parameter_count": 81061,
+  "parameter_tensor_count": 47,
+  "optimizer_coverage": "all_trainable_parameters_exactly_once",
+  "gradient_coverage": "all_trainable_parameters_have_gradients"
+}

@@ -1,0 +1,65 @@
+{
+  "updated_utc": "2026-10-13T11:44:43.652252+00:00",
+  "scope": "Latest 46 selected experiments and portable execution utilities.",
+  "unchanged_scientific_files": {
+    "code": 24,
+    "data": 71,
+    "selected_runs": 276
+  },
+  "training_source_manifest_sha256": "2dd0ad9a328dc4ecf3e27248eb1c7e936b4693158ee0d0da21416ff31c6cbfca",
+  "selected_checkpoint_inventory_sha256": "39dea6e6287fa91468c780229dc5ed270b5be9f01801b244c78ab7c30790c1d5",
+  "retained_checkpoint_count": 46,
+  "adaptations": {
+    "analysis/analyze_selected.py": "Portable selected-run and external-data paths replace private training-queue orchestration. The ten extracted helper bodies are AST-identical to the recorded analysis source.",
+    "analysis/retrain_build_artifacts.py": "Produces the same 13 numerical CSVs plus PNG diagnostics from current inference JSONs.",
+    "rebuild_tables.py": "Portable reconstruction from recorded JSON inputs."
+  },
+  "analysis_source_hashes": {
+    "analysis/analyze_selected.py": "5ec8095221baa03b1c1bf028c4012e3f2fa3fd7ae50ef0243bbde590e084a76d",
+    "analysis/retrain_build_artifacts.py": "6bd53519c6cbf4d669e1e640ad42883d6ae5ffa17b0025dd4eb331519b9b1e94",
+    "rebuild_tables.py": "4dca07597a303d595835410b12fb6aa713805ce928aead483c71541ea00a9de3"
+  },
+  "analysis_helper_names": [
+    "now",
+    "read",
+    "write",
+    "sha",
+    "record",
+    "require",
+    "GateStats",
+    "metric_arrays",
+    "sampled_predictions",
+    "dataset_metadata"
+  ],
+  "adaptation_validation": {
+    "status": "passed",
+    "unchanged_file_counts": {
+      "code": 24,
+      "data": 71,
+      "selected_runs": 276
+    },
+    "unchanged_selected_checkpoint_inventory": true,
+    "original_analysis_helper_AST_identity": [
+      "now",
+      "read",
+      "write",
+      "sha",
+      "record",
+      "require",
+      "GateStats",
+      "metric_arrays",
+      "sampled_predictions",
+      "dataset_metadata"
+    ],
+    "synthetic_checks": [
+      "uniform/weighted/horizon metrics vs NumPy",
+      "reject nonfinite predictions",
+      "scalar gate counts, histogram and moments",
+      "persistence predictions",
+      "deterministic missing-node sampling vs independent NumPy mask"
+    ],
+    "full_supplementary_46_run_execution_performed": false
+  },
+  "omitted_scope": "Older model trees, historical experiments, private queue/workflow notes and duplicate verification records.",
+  "full_supplementary_validation_scope": "Original numerical helpers retained unchanged and synthetic checks passed. The new orchestration was not rerun over all 46 full weather-data analyses during this cleanup."
+}

@@ -1,0 +1,63 @@
+{
+  "log_level": "INFO",
+  "data": {
+    "batch_size": 32,
+    "test_batch_size": 32,
+    "num_workers": 0,
+    "include_context": false,
+    "k_neighbors": 25,
+    "local_map": "fast",
+    "dataset_dir": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity",
+    "position_file": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\position_info.pkl",
+    "val_batch_size": 32
+  },
+  "model": {
+    "model_name": "CLCRN",
+    "cl_decay_steps": 2000,
+    "horizon": 12,
+    "input_dim": 1,
+    "output_dim": 1,
+    "max_view": 1,
+    "node_num": 2048,
+    "layer_num": 2,
+    "rnn_units": 32,
+    "seq_len": 12,
+    "use_curriculum_learning": true,
+    "embed_dim": 8,
+    "lck_structure": [
+      10,
+      8,
+      6
+    ],
+    "location_dim": 2,
+    "use_asttn_encoder": false,
+    "asttn_node_dim": 10,
+    "asttn_hidden_dim": 8,
+    "asttn_topk": 4,
+    "asttn_fusion_mode": "gated",
+    "context_dim": 0
+  },
+  "train": {
+    "base_lr": 0.01,
+    "epoch": 0,
+    "epochs": 100,
+    "epsilon": 0.001,
+    "lr_decay_ratio": 0.95,
+    "max_grad_norm": 5,
+    "patience": 0,
+    "steps": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "loss_protocol": "zero_inclusive",
+    "validation_protocol": "zero_inclusive",
+    "seed": 2022,
+    "use_amp": false,
+    "log_dir": "D:\\CLCRN-main\\修改稿2026_10_5\\重新训练2026_10_5\\runs\\seed_2022\\humidity",
+    "experiment_name": "control"
+  },
+  "gpu": 0
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\trn.pkl",
+    "bytes": 4069785926,
+    "mtime_ns": 1782234265777562700
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\val.pkl",
+    "bytes": 582156614,
+    "mtime_ns": 1782234267491913500
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\test.pkl",
+    "bytes": 1162543430,
+    "mtime_ns": 1782234253665650700
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\cloud_cover\\position_info.pkl",
+    "bytes": 32933,
+    "mtime_ns": 1782234250196917300
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\trn.pkl",
+    "bytes": 4069785926,
+    "mtime_ns": 1782234303840871900
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\val.pkl",
+    "bytes": 582156614,
+    "mtime_ns": 1782234305566738300
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\test.pkl",
+    "bytes": 1162543430,
+    "mtime_ns": 1782234291685715300
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\humidity\\position_info.pkl",
+    "bytes": 32933,
+    "mtime_ns": 1782234288252220200
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\trn.pkl",
+    "bytes": 4069785926,
+    "mtime_ns": 1782234322123702000
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\val.pkl",
+    "bytes": 582156614,
+    "mtime_ns": 1782234323905352500
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\test.pkl",
+    "bytes": 1162543430,
+    "mtime_ns": 1782234309193092000
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\temperature\\position_info.pkl",
+    "bytes": 32933,
+    "mtime_ns": 1782234305573738600
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\trn.pkl",
+    "bytes": 4521984326,
+    "mtime_ns": 1782234286156230500
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\val.pkl",
+    "bytes": 646840646,
+    "mtime_ns": 1782234288244024700
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\test.pkl",
+    "bytes": 1291714886,
+    "mtime_ns": 1782234271639061000
+  },
+  {
+    "path": "D:\\CLCRN-main\\Weather Bench_dataset\\component_of_wind\\position_info.pkl",
+    "bytes": 32933,
+    "mtime_ns": 1782234267499012200
+  }
+]
